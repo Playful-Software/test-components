@@ -1,6 +1,8 @@
 import { CanvasDescription } from "./canvas.js";
 import { DweetDescription } from "./dweet.js";
 
+export { CanvasDescription, DweetDescription };
+
 // TODO: export const KitDescription?
 export const kit = {
   title: "Test Kit",
