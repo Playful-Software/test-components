@@ -1,5 +1,5 @@
-import { CanvasDescription } from "./canvas";
-import { DweetDescription } from "./dweet";
+import { CanvasDescription } from "./canvas.js";
+import { DweetDescription } from "./dweet.js";
 
 // TODO: export const KitDescription?
 export const kit = {
