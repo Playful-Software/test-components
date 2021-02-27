@@ -8,7 +8,7 @@
 // Dweet component
 //
 
-import { CanvasPrototype } from "./canvas";
+import { CanvasPrototype } from "./canvas.js";
 
 // TODO: React form. Can eliminate DweetPrototype?
 
