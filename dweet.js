@@ -70,7 +70,7 @@ Reflect.setPrototypeOf(DweetPrototype, CanvasPrototype);
 
 // TODO: anything that can be removed? title?
 export const DweetDescription = {
-  title: "Canvas",
+  title: "Dweet",
   description: `
   u(t) is called 60 times per second.
   t: elapsed time in seconds.

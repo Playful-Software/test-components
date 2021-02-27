@@ -1,6 +1,7 @@
 import { CanvasDescription } from "./canvas.js";
 import { DweetDescription } from "./dweet.js";
 
+// TODO: remove requirement to export these since they're listed in the kit?
 export { CanvasDescription, DweetDescription };
 
 // TODO: export const KitDescription?
