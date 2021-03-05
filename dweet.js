@@ -86,8 +86,7 @@ export const DweetDescription = {
   properties: {
     // TODO: placeholder: { type: "String", default: "" }?
     link: { type: "string", default: "" },
-    // TODO: sample dweet?
-    dweet: { type: "string", default: "" },
+    dweet: { type: "string", default: "c.width=2e3;t*=4;x.translate(980,540);for(i=0;i<32;)x.rotate(!i*C(t-=.03)+!(i++%4)*S(t)/9+1.57),x.fillRect(9*i,9*i,99,99)" },
     author: { type: "string", default: "" },
     // TODO: allow type-inferred simple form ala pause: false?
     pause: { type: "boolean", default: false },
