@@ -26,8 +26,8 @@ const DweetPrototype = {
     */
   },
 
-  update(dirty) {
-    super.update(dirty);
+  update(changed) {
+    super.update(changed);
 
     // This makes sure t == 0 for the first update.
     const currentTime = Date.now();
@@ -81,9 +81,10 @@ export const DweetDescription = {
   T: Math.tan
   R: Generates rgba-strings, ex.: R(255, 255, 255, 0.5)
 `,
+  extends: "Canvas",
   prototype: DweetPrototype,
   properties: {
-    // TODO: placeholder?
+    // TODO: placeholder: { type: "String", default: "" }?
     link: { type: "String", default: "" },
     // TODO: sample dweet?
     dweet: { type: "String", default: "" },
