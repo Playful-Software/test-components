@@ -47,7 +47,7 @@ export const CanvasDescription = {
   prototype: CanvasPrototype,
   extends: "Play Kit/View",
   properties: {
-    width: { type: "Number", default: 300 },
-    height: { type: "Number", default: 150 },
+    width: { type: "number", default: 300 },
+    height: { type: "number", default: 150 },
   },
 };

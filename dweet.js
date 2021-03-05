@@ -85,16 +85,16 @@ export const DweetDescription = {
   prototype: DweetPrototype,
   properties: {
     // TODO: placeholder: { type: "String", default: "" }?
-    link: { type: "String", default: "" },
+    link: { type: "string", default: "" },
     // TODO: sample dweet?
-    dweet: { type: "String", default: "" },
-    author: { type: "String", default: "" },
+    dweet: { type: "string", default: "" },
+    author: { type: "string", default: "" },
     // TODO: allow type-inferred simple form ala pause: false?
-    pause: { type: "Boolean", default: false },
-    title: { type: "String", default: "" },
-    backgroundColor: { type: "Color", default: "#ffffff" },
-    width: { type: "Number", default: 568 },
-    height: { type: "Number", default: 320 },
+    pause: { type: "boolean", default: false },
+    title: { type: "string", default: "" },
+    backgroundColor: { type: "string", default: "#ffffff", editor: "Color" },
+    width: { type: "number", default: 568 },
+    height: { type: "number", default: 320 },
     canvasWidth: { type: "Number", default: 1920 },
     canvasHeight: { type: "Number", default: 1080 },
   },
