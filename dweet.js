@@ -95,7 +95,7 @@ export const DweetDescription = {
     backgroundColor: { type: "string", default: "#ffffff", editor: "Color" },
     width: { type: "number", default: 568 },
     height: { type: "number", default: 320 },
-    canvasWidth: { type: "Number", default: 1920 },
-    canvasHeight: { type: "Number", default: 1080 },
+    canvasWidth: { type: "number", default: 1920 },
+    canvasHeight: { type: "number", default: 1080 },
   },
 };
