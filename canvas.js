@@ -6,24 +6,26 @@
 
 export const CanvasPrototype = {
   mount(container, insertBefore) {
-    this.element = document.createElement("canvas");
-    this.element.className = "view"; // TODO: how are these known?
-    container.appendChild(this.element. insertBefore);
+    this._element = document.createElement("canvas");
+    this._element.className = "view"; // TODO: how are these known?
+    // TODO: insertBefore?
+    container.appendChild(this._element);
     super.mount(container, insertBefore);
 
-    this.context = this.element.getContext("2d");
+    this.context = this._element.getContext("2d");
   },
 
   update(changed) {
     super.update(changed);
+    const element = this._element;
 
     // Canvas has a display width "width" and a backing-store width "canvasWidth".
     // If canvasWidth is not set the display width is used as the backing-store width.
     if (changed.width || changed.canvasHeight) {
       const width = this.canvasWidth || this.width;
       // Be careful to only set the element.width if it has really changed because it clears the canvas.
-      if (this.element.width !== width) {
-        this.element.width = width;
+      if (element.width !== width) {
+        element.width = width;
       }
     }
 
@@ -32,8 +34,8 @@ export const CanvasPrototype = {
     if (changed.height || changed.canvasHeight) {
       const height = this.canvasHeight || this.height;
       // Be careful to only set the element.height if it has really changed because it clears the canvas.
-      if (this.element.height !== height) {
-        this.element.height = height;
+      if (element.height !== height) {
+        element.height = height;
       }
     }
   },
