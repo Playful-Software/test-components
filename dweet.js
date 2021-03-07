@@ -50,7 +50,9 @@ const DweetPrototype = {
       if (this.dweet) {
         try {
           u = new Function("t,c,x,S,C,T,R", this.dweet).bind(this);
-          delete this.$error;
+          if (this.$error) {
+            delete this.$error;
+          }
         } catch (err) {
           this.$error = err.toString();
         }
@@ -81,7 +83,7 @@ export const DweetDescription = {
   T: Math.tan
   R: Generates rgba-strings, ex.: R(255, 255, 255, 0.5)
 `,
-  extends: "Canvas",
+  extends: "Play Kit/View",
   prototype: DweetPrototype,
   properties: {
     // TODO: placeholder: { type: "String", default: "" }?
