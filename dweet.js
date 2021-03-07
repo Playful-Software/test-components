@@ -55,7 +55,7 @@ const DweetPrototype = {
           this.$error = err.toString();
         }
       }
-      u(t, this.element, this.context, Math.sin, Math.cos, Math.tan, R);
+      u(t, this._element, this.context, Math.sin, Math.cos, Math.tan, R);
     }
   },
 
