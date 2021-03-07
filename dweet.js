@@ -1,6 +1,6 @@
 // TODO: non-obvious stuff
 // - lifecycle: mount, unmount
-// - update model: triggers, dirty, invalidate
+// - update model: triggers, changed, invalidate
 // - Reactor methods and properties: invalidate, update
 // - underscore (private) properties
 
@@ -24,6 +24,11 @@ const DweetPrototype = {
     T: Math.tan
     R: Generates rgba-strings, ex.: R(255, 255, 255, 0.5)
     */
+  },
+
+  mount(container, insertBefore) {
+    super.mount(container, insertBefore);
+    delete this._startTime; // May be left over from previous run.
   },
 
   update(changed) {
@@ -60,11 +65,6 @@ const DweetPrototype = {
       u(t, this._element, this.context, Math.sin, Math.cos, Math.tan, R);
     }
   },
-
-  mount(container, insertBefore) {
-    super.mount(container, insertBefore);
-    delete this._startTime; // May be left over from previous run.
-  },
 };
 
 // TODO: ComponentDescription.inherit? extends? which inherits description.properties and .prototype
@@ -83,7 +83,9 @@ export const DweetDescription = {
   T: Math.tan
   R: Generates rgba-strings, ex.: R(255, 255, 255, 0.5)
 `,
-  extends: "Play Kit/View",
+  // TODO: IF this worked
+  extends: "Canvas",
+  // TODO: wouldn't need this.
   prototype: DweetPrototype,
   properties: {
     // TODO: placeholder: { type: "String", default: "" }?
