@@ -6,13 +6,13 @@
 
 export const CanvasPrototype = {
   mount(container, insertBefore) {
-    this._element = document.createElement("canvas");
-    this._element.className = "view"; // TODO: how are these known?
+    this._element = document.createElement('canvas');
+    this._element.className = 'view'; // TODO: how are these known?
     // TODO: insertBefore?
     container.appendChild(this._element);
     super.mount(container, insertBefore);
 
-    this.context = this._element.getContext("2d");
+    this.context = this._element.getContext('2d');
   },
 
   update(changed) {
@@ -46,11 +46,11 @@ export const CanvasPrototype = {
 };
 
 export const CanvasDescription = {
-  title: "Canvas",
+  title: 'Canvas',
   prototype: CanvasPrototype,
-  extends: "Play Kit/View",
+  extends: 'Play Kit/View',
   properties: {
-    width: { type: "number", default: 300 },
-    height: { type: "number", default: 150 },
+    width: { type: 'number', default: 300 },
+    height: { type: 'number', default: 150 },
   },
 };

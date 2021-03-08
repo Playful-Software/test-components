@@ -8,8 +8,6 @@
 // Dweet component
 //
 
-import { CanvasPrototype } from "./canvas.js";
-
 // TODO: React form. Can eliminate DweetPrototype?
 
 const DweetPrototype = {
@@ -49,12 +47,12 @@ const DweetPrototype = {
 
     if (!this.pause) {
       // Force an update every frame. TODO: proper 60 FPS timing
-      this.invalidate("_update_");
+      this.invalidate('_update_');
 
       let u = this.u.bind(this);
       if (this.dweet) {
         try {
-          u = new Function("t,c,x,S,C,T,R", this.dweet).bind(this);
+          u = new Function('t,c,x,S,C,T,R', this.dweet).bind(this);
           if (this.$error) {
             delete this.$error;
           }
@@ -69,7 +67,7 @@ const DweetPrototype = {
 
 // TODO: anything that can be removed? title?
 export const DweetDescription = {
-  title: "Dweet",
+  title: 'Dweet',
   description: `
   u(t) is called 60 times per second.
   t: elapsed time in seconds.
@@ -80,20 +78,20 @@ export const DweetDescription = {
   T: Math.tan
   R: Generates rgba-strings, ex.: R(255, 255, 255, 0.5)
 `,
-  extends: "Test Kit/Canvas",
+  extends: 'Test Kit/Canvas',
   prototype: DweetPrototype,
   properties: {
     // TODO: placeholder: { type: "String", default: "" }?
-    link: { type: "string", default: "" },
-    dweet: { type: "string", default: "c.width=2e3;t*=4;x.translate(980,540);for(i=0;i<32;)x.rotate(!i*C(t-=.03)+!(i++%4)*S(t)/9+1.57),x.fillRect(9*i,9*i,99,99)" },
-    author: { type: "string", default: "" },
+    link: { type: 'string', default: '' },
+    dweet: { type: 'string', default: 'c.width=2e3;t*=4;x.translate(980,540);for(i=0;i<32;)x.rotate(!i*C(t-=.03)+!(i++%4)*S(t)/9+1.57),x.fillRect(9*i,9*i,99,99)' },
+    author: { type: 'string', default: '' },
     // TODO: allow type-inferred simple form ala pause: false?
-    pause: { type: "boolean", default: false },
-    title: { type: "string", default: "" },
-    backgroundColor: { type: "string", default: "#ffffff", editor: "Color" },
-    width: { type: "number", default: 568 },
-    height: { type: "number", default: 320 },
-    canvasWidth: { type: "number", default: 1920 },
-    canvasHeight: { type: "number", default: 1080 },
+    pause: { type: 'boolean', default: false },
+    title: { type: 'string', default: '' },
+    backgroundColor: { type: 'string', default: '#ffffff', editor: 'Color' },
+    width: { type: 'number', default: 568 },
+    height: { type: 'number', default: 320 },
+    canvasWidth: { type: 'number', default: 1920 },
+    canvasHeight: { type: 'number', default: 1080 },
   },
 };
