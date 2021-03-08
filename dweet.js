@@ -67,9 +67,6 @@ const DweetPrototype = {
   },
 };
 
-// TODO: ComponentDescription.inherit? extends? which inherits description.properties and .prototype
-Reflect.setPrototypeOf(DweetPrototype, CanvasPrototype);
-
 // TODO: anything that can be removed? title?
 export const DweetDescription = {
   title: "Dweet",
@@ -83,9 +80,7 @@ export const DweetDescription = {
   T: Math.tan
   R: Generates rgba-strings, ex.: R(255, 255, 255, 0.5)
 `,
-  // TODO: IF this worked
-  extends: "Canvas",
-  // TODO: wouldn't need this.
+  extends: "Test Kit/Canvas",
   prototype: DweetPrototype,
   properties: {
     // TODO: placeholder: { type: "String", default: "" }?
