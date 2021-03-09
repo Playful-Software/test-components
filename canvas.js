@@ -7,9 +7,6 @@
 export const CanvasPrototype = {
   mount(container, insertBefore) {
     this._element = document.createElement('canvas');
-    this._element.className = 'view'; // TODO: how are these known?
-    // TODO: insertBefore?
-    container.appendChild(this._element);
     super.mount(container, insertBefore);
 
     this.context = this._element.getContext('2d');
