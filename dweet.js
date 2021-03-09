@@ -29,6 +29,7 @@ const DweetPrototype = {
   },
 
   unmount() {
+    super.unmount();
     this.play = false;
     this.removeBrowserGlobals();
   },
