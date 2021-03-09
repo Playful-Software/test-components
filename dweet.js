@@ -30,7 +30,7 @@ const DweetPrototype = {
 
   unmount() {
     super.unmount();
-    this.play = false;
+    this._playing = false;
     this.removeBrowserGlobals();
   },
 
@@ -42,6 +42,7 @@ const DweetPrototype = {
     }
 
     if (changed.play) {
+      this._playing = this.play;
       if (this.play) {
         requestAnimationFrame(this.loop.bind(this));
       }
@@ -81,7 +82,7 @@ const DweetPrototype = {
   },
 
   loop(frame_time) {
-    if (this.play) {
+    if (this._playing) {
       requestAnimationFrame(this.loop.bind(this));
       var epsilon = 1.5; // Acounts for different timestamp resolution and slight jitter
       if (frame_time < this._nextFrameMs - epsilon) {
