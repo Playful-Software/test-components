@@ -43,7 +43,7 @@ export const CanvasPrototype = {
 };
 
 export const CanvasDescription = {
-  title: 'Canvas',
+  name: 'Canvas',
   prototype: CanvasPrototype,
   extends: 'Play Kit/View',
   properties: {

@@ -172,7 +172,7 @@ const DweetPrototype = {
 
 // TODO: anything that can be removed? title?
 export const DweetDescription = {
-  title: 'Dweet',
+  name: 'Dweet',
   description: `
   dweet(t) is called 60 times per second.
   t: elapsed time in seconds.
