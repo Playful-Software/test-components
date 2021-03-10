@@ -186,17 +186,16 @@ export const DweetDescription = {
   extends: 'Play Kit/View',
   prototype: DweetPrototype,
   properties: {
-    // TODO: placeholder: { type: "String", default: "" }?
-    link: { type: 'string', default: '' },
     dweet: {
       type: 'string',
       default:
         'c.width=2e3;t*=4;x.translate(980,540);for(i=0;i<32;)x.rotate(!i*C(t-=.03)+!(i++%4)*S(t)/9+1.57),x.fillRect(9*i,9*i,99,99)',
     },
+    title: { type: 'string', default: '' },
     author: { type: 'string', default: '' },
+    link: { type: 'string', default: '' },
     // TODO: allow type-inferred simple form ala pause: false?
     play: { type: 'boolean', default: true },
-    title: { type: 'string', default: '' },
     backgroundColor: { type: 'string', default: '#ffffff', editor: 'Color' },
     width: { type: 'number', default: 568 },
     height: { type: 'number', default: 320 },
