@@ -73,8 +73,6 @@ export const TriangularMeshDescription = {
   extends: 'Test Kit/Canvas',
   properties: {
     color: { type: 'string', title: 'Color', default: '#ec91d8', editor: 'Color' },
-    width: { type: 'number', title: 'Width', default: 400 },
-    height: { type: 'number', title: 'Height', default: 400 },
     gap: {
       type: 'number',
       title: 'Gap',
@@ -94,6 +92,8 @@ export const TriangularMeshDescription = {
       editor: { type: 'Number', min: 1, max: 10000, step: 1 },
     },
     credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
+    width: { type: 'number', title: 'Width', default: 400 },
+    height: { type: 'number', title: 'Height', default: 400 },
   },
 };
 

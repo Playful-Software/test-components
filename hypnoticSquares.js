@@ -51,8 +51,6 @@ export const HypnoticSquaresDescription = {
   extends: 'Test Kit/Canvas',
   properties: {
     color: { type: 'string', title: 'Color', default: '#b17902', editor: 'Color' },
-    width: { type: 'number', title: 'Width', default: 400 },
-    height: { type: 'number', title: 'Height', default: 400 },
     finalSize: {
       type: 'number',
       title: 'Final Size',
@@ -72,6 +70,8 @@ export const HypnoticSquaresDescription = {
       editor: { type: 'Number', min: 1, max: 10000, step: 1 },
     },
     credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
+    width: { type: 'number', title: 'Width', default: 400 },
+    height: { type: 'number', title: 'Height', default: 400 },
   },
 };
 

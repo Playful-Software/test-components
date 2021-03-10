@@ -115,8 +115,6 @@ export const MondrianDescription = {
   prototype: MondrianPrototype,
   extends: 'Test Kit/Canvas',
   properties: {
-    width: { type: 'number', title: 'Width', default: 400 },
-    height: { type: 'number', title: 'Height', default: 400 },
     color1: { type: 'string', title: 'Color 1', default: '#D40920', editor: 'Color' },
     color2: { type: 'string', title: 'Color 2', default: '#1356A2', editor: 'Color' },
     color3: { type: 'string', title: 'Color 3', default: '#00ff00', editor: 'Color' },
@@ -146,6 +144,8 @@ export const MondrianDescription = {
       editor: { type: 'Number', min: 1, max: 10000, step: 1 },
     },
     credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
+    width: { type: 'number', title: 'Width', default: 400 },
+    height: { type: 'number', title: 'Height', default: 400 },
   },
 };
 

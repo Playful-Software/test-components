@@ -47,8 +47,6 @@ export const CubicDisarrayDescription = {
   extends: 'Test Kit/Canvas',
   properties: {
     color: { type: 'string', title: 'Color', default: '#056905', editor: 'Color' },
-    width: { type: 'number', title: 'Width', default: 400 },
-    height: { type: 'number', title: 'Height', default: 400 },
     displacement: {
       type: 'number',
       title: 'Displacement',
@@ -86,6 +84,8 @@ export const CubicDisarrayDescription = {
       editor: { type: 'Number', min: 1, max: 10000, step: 1 },
     },
     credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
+    width: { type: 'number', title: 'Width', default: 400 },
+    height: { type: 'number', title: 'Height', default: 400 },
   },
 };
 
