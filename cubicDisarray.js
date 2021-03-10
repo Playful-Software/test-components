@@ -71,13 +71,13 @@ export const CubicDisarrayDescription = {
       type: 'number',
       title: 'Square Size',
       default: 30,
-      editor: { type: 'Number', min: 1, max: 500, step: 1 },
+      editor: { type: 'Number', min: 4, max: 100, step: 1 },
     },
     lineWidth: {
       type: 'number',
       title: 'Line Thickness',
       default: 2,
-      editor: { type: 'Number', min: 1, max: 50, step: 1 },
+      editor: { type: 'Number', min: 1, max: 25, step: 1 },
     },
     seed: {
       type: 'number',

@@ -13,7 +13,7 @@ const HypnoticSquaresPrototype = {
 
     var finalSize = this.finalSize;
     var startSteps;
-    var offset = this.offset;
+    var offset = 11;
     var tileStep = (size - offset * 2) / 7;
     var startSize = tileStep;
     var directions = [-1, 0, 1];
@@ -57,13 +57,7 @@ export const HypnoticSquaresDescription = {
       type: 'number',
       title: 'Final Size',
       default: 3,
-      editor: { type: 'Number', min: 1, max: 1000 },
-    },
-    offset: {
-      type: 'number',
-      title: 'Offset',
-      default: 11,
-      editor: { type: 'Number', min: 1, max: 500, step: 1 },
+      editor: { type: 'Number', min: 1, max: 50 },
     },
     lineWidth: {
       type: 'number',

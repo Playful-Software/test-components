@@ -9,16 +9,17 @@ const UnDeuxTroisPrototype = {
     context.strokeStyle = this.color;
 
     var size = Math.min(this.width, this.height);
-    context.lineWidth = 4;
+    context.lineWidth = this.lineWidth;
     context.lineCap = 'round';
 
-    var step = 20;
+    var rotateMultiplier = this.rotateMultiplier;
+    var step = this.step;
     var aThirdOfHeight = size / 3;
 
     function draw(x, y, width, height, positions) {
       context.save();
       context.translate(x + width / 2, y + height / 2);
-      context.rotate(random() * 5);
+      context.rotate(random() * rotateMultiplier);
       context.translate(-width / 2, -height / 2);
 
       for (var i = 0; i <= positions.length; i++) {
@@ -54,6 +55,24 @@ export const UnDeuxTroisDescription = {
     color: { type: 'string', title: 'Color', default: '#af0202', editor: 'Color' },
     width: { type: 'number', title: 'Width', default: 400 },
     height: { type: 'number', title: 'Height', default: 400 },
+    step: {
+      type: 'number',
+      title: 'Step',
+      default: 20,
+      editor: { type: 'Number', min: 4, max: 30 },
+    },
+    rotateMultiplier: {
+      type: 'number',
+      title: 'Rotate Multiplier',
+      default: 5,
+      editor: { type: 'Number', min: 1, max: 10, step: 0.1 },
+    },
+    lineWidth: {
+      type: 'number',
+      title: 'Line Thickness',
+      default: 4,
+      editor: { type: 'Number', min: 1, max: 20, step: 1 },
+    },
     seed: {
       type: 'number',
       title: 'Random Seed',

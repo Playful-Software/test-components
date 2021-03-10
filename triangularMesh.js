@@ -79,13 +79,13 @@ export const TriangularMeshDescription = {
       type: 'number',
       title: 'Gap',
       default: 8,
-      editor: { type: 'Number', min: 1, max: 1000 },
+      editor: { type: 'Number', min: 1, max: 50 },
     },
     lineWidth: {
       type: 'number',
       title: 'Line Thickness',
       default: 2,
-      editor: { type: 'Number', min: 1, max: 50, step: 1 },
+      editor: { type: 'Number', min: 1, max: 25, step: 1 },
     },
     seed: {
       type: 'number',

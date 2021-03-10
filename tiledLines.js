@@ -50,13 +50,13 @@ export const TiledLinesDescription = {
       type: 'number',
       title: 'Step',
       default: 20,
-      editor: { type: 'Number', min: 1, max: 1000 },
+      editor: { type: 'Number', min: 4, max: 50 },
     },
     lineWidth: {
       type: 'number',
       title: 'Line Thickness',
       default: 2,
-      editor: { type: 'Number', min: 1, max: 50, step: 1 },
+      editor: { type: 'Number', min: 1, max: 25, step: 1 },
     },
     seed: {
       type: 'number',

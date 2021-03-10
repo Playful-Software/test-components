@@ -107,13 +107,13 @@ export const CirclePackingDescription = {
       type: 'number',
       title: 'Min Radius',
       default: 1,
-      editor: { type: 'Number', min: 1, max: 500, step: 1 },
+      editor: { type: 'Number', min: 1, max: 200, step: 1 },
     },
     maxRadius: {
       type: 'number',
       title: 'Max Radius',
       default: 100,
-      editor: { type: 'Number', min: 1, max: 500, step: 1 },
+      editor: { type: 'Number', min: 1, max: 100, step: 1 },
     },
     seed: {
       type: 'number',
