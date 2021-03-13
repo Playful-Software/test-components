@@ -190,7 +190,11 @@ export const DweetDescription = {
       type: 'string',
       default:
         'c.width=2e3;t*=4;x.translate(980,540);for(i=0;i<32;)x.rotate(!i*C(t-=.03)+!(i++%4)*S(t)/9+1.57),x.fillRect(9*i,9*i,99,99)',
-      editor: 'MultilineString',
+      editor: {
+        type: 'MultilineString',
+        minRows: 3,
+        maxRows: 10,
+      },
     },
     title: { type: 'string', default: '' },
     author: { type: 'string', default: '' },
