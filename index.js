@@ -1,13 +1,13 @@
 import { CanvasDescription } from './canvas.js';
+import { CirclePackingDescription } from './CreativeArtistry/circlepacking.js';
+import { CubicDisarrayDescription } from './CreativeArtistry/cubicDisarray.js';
+import { HypnoticSquaresDescription } from './CreativeArtistry/hypnoticSquares.js';
+import { MondrianDescription } from './CreativeArtistry/mondrian.js';
+import { RidgelineDescription } from './CreativeArtistry/ridgeline.js';
+import { TiledLinesDescription } from './CreativeArtistry/tiledLines.js';
+import { TriangularMeshDescription } from './CreativeArtistry/triangularMesh.js';
+import { UnDeuxTroisDescription } from './CreativeArtistry/unDeuxTrois.js';
 import { DweetDescription } from './dweet.js';
-import { CirclePackingDescription } from './circlepacking.js';
-import { RidgelineDescription } from './ridgeline.js';
-import { HypnoticSquaresDescription } from './hypnoticSquares.js';
-import { MondrianDescription } from './mondrian.js';
-import { TiledLinesDescription } from './tiledLines.js';
-import { UnDeuxTroisDescription } from './unDeuxTrois.js';
-import { CubicDisarrayDescription } from './cubicDisarray.js';
-import { TriangularMeshDescription } from './triangularMesh.js';
 
 // TODO: remove requirement to export these since they're listed in the kit?
 export {
