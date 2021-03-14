@@ -8,11 +8,13 @@ import { TiledLinesDescription } from './CreativeArtistry/tiledLines.js';
 import { TriangularMeshDescription } from './CreativeArtistry/triangularMesh.js';
 import { UnDeuxTroisDescription } from './CreativeArtistry/unDeuxTrois.js';
 import { DweetDescription } from './dweet.js';
+import { QRCodeDescription } from './qrcode.js';
 
 // TODO: remove requirement to export these since they're listed in the kit?
 export {
   CanvasDescription,
   DweetDescription,
+  QRCodeDescription,
   CirclePackingDescription,
   RidgelineDescription,
   HypnoticSquaresDescription,
@@ -31,6 +33,7 @@ export const kit = {
   components: [
     DweetDescription,
     CanvasDescription,
+    QRCodeDescription,
     CirclePackingDescription,
     RidgelineDescription,
     HypnoticSquaresDescription,
