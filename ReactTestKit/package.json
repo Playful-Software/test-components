@@ -1,0 +1,27 @@
+{
+  "name": "react-components",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "http-server -p 8081 --cors"
+  },
+  "dependencies": {
+    "chart.xkcd": "^1.1.13",
+    "chart.xkcd-react": "^0.0.6",
+    "react-three-fiber": "5.3.19",
+    "three": "0.126.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.3",
+    "@types/react-dom": "17.0.2",
+    "@types/three": "0.126.0",
+    "esbuild": "^0.9.3",
+    "http-server": "0.12.3",
+    "typescript": "4.1.2"
+  }
+}
