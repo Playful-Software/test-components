@@ -14,6 +14,7 @@
     "react-jss": "^10.6.0",
     "react-three-fiber": "5.3.19",
     "react-timezone-select": "^0.10.7",
+    "spacetime": "^6.14.0",
     "three": "0.126.1"
   },
   "peerDependencies": {

@@ -738,7 +738,7 @@ spacetime-informal@^0.5.0:
   resolved "https://registry.yarnpkg.com/spacetime-informal/-/spacetime-informal-0.5.0.tgz#0301d45621d7207d6573d97ba0e6700dab37c667"
   integrity sha512-cdSsniJJfJJTBdeVvXtooxyXzrRfoBVjAl3usQl9DgGExB3XN3deA3MwjInnD/26C/lANf3dU54bT2YweAGrOw==
 
-spacetime@^6.12.3:
+spacetime@^6.12.3, spacetime@^6.14.0:
   version "6.14.0"
   resolved "https://registry.yarnpkg.com/spacetime/-/spacetime-6.14.0.tgz#3acb5e82d1d93637cd95c26eacc3a4aca9ccd3d8"
   integrity sha512-pz/nMIRGNSJeFfDFvhPjMHXhFU1NcrYnpydMuSS2Zsk0NEoHJc2rRKXugkmlqUv/l/fPxWVJVnj8isVS0//vbQ==

@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Clock from 'react-clock';
 import { createUseStyles } from 'react-jss';
 import TimezoneSelect, { TimezoneSelectOption } from 'react-timezone-select';
+import spacetime from 'spacetime';
 
 const useStyles = createUseStyles<'react_clock', ClockProps>({
   react_clock: {
@@ -79,7 +80,7 @@ function ClockRenderer(props: ClockProps) {
   const [value, setValue] = useState(new Date());
   const intervalRef = useRef<number | null>(null);
   const classes = useStyles(props);
-  console.log();
+
   const {
     timezone,
     showNumbers,
@@ -124,20 +125,18 @@ function ClockRenderer(props: ClockProps) {
   );
 }
 
-// This is a dubious stack overflow solution.
 function changeTimezone(date: Date, ianatz: string) {
-  // suppose the date is 12:00 UTC
-  const dateString = date.toLocaleString('en-US', {
-    timeZone: ianatz,
-  });
-  const invdate = new Date(dateString);
-
-  // then invdate will be 07:00 in Toronto
-  // and the diff is 5 hours
-  const diff = date.getTime() - invdate.getTime();
-
-  // so 12:00 in Toronto is 17:00 UTC
-  return new Date(date.getTime() - diff); // needs to substract
+  let st = spacetime(date);
+  st = st.goto(ianatz);
+  return new Date(
+    st.year(),
+    st.month(),
+    st.day(),
+    st.hour(),
+    st.minute(),
+    st.second(),
+    st.millisecond()
+  );
 }
 
 const ClockPrototype = {
