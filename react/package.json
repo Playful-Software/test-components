@@ -7,9 +7,13 @@
     "serve": "http-server -p 8081 --cors"
   },
   "dependencies": {
+    "@types/react-clock": "^3.0.0",
     "chart.xkcd": "^1.1.13",
     "chart.xkcd-react": "^0.0.6",
+    "react-clock": "^3.0.0",
+    "react-jss": "^10.6.0",
     "react-three-fiber": "5.3.19",
+    "react-timezone-select": "^0.10.7",
     "three": "0.126.1"
   },
   "peerDependencies": {
