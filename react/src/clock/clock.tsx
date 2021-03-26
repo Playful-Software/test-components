@@ -71,6 +71,8 @@ type ClockProps = {
   showNumbers: boolean;
   showMinuteMarks: boolean;
   showHourMarks: boolean;
+  showSecondHand: boolean;
+  showMinuteHand: boolean;
 };
 
 function ClockRenderer(props: ClockProps) {
@@ -78,7 +80,15 @@ function ClockRenderer(props: ClockProps) {
   const intervalRef = useRef<number | null>(null);
   const classes = useStyles(props);
   console.log();
-  const { timezone, showNumbers, showMinuteMarks, showHourMarks } = props;
+  const {
+    timezone,
+    showNumbers,
+    showMinuteMarks,
+    showHourMarks,
+    showSecondHand,
+    showMinuteHand,
+  } = props;
+
   useEffect(() => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
@@ -107,6 +117,8 @@ function ClockRenderer(props: ClockProps) {
         renderHourMarks={showHourMarks}
         renderMinuteMarks={showMinuteMarks}
         renderNumbers={showNumbers}
+        renderSecondHand={showSecondHand}
+        renderMinuteHand={showMinuteHand}
       />
     </div>
   );
@@ -143,13 +155,15 @@ export const ClockDescription: ComponentDescription = {
   properties: {
     width: { type: 'number', title: 'Width', default: 100 },
     height: { type: 'number', title: 'Height', default: 100 },
-    handColor: { type: 'string', title: 'Hand Color', default: 'black', editor: 'Color' },
-    faceColor: { type: 'string', title: 'Face Color', default: 'black', editor: 'Color' },
-    numberColor: { type: 'string', title: 'Number Color', default: 'black', editor: 'Color' },
-    borderColor: { type: 'string', title: 'Border Color', default: 'black', editor: 'Color' },
+    handColor: { type: 'string', title: 'Hand Color', default: 'white', editor: 'Color' },
+    faceColor: { type: 'string', title: 'Face Color', default: 'white', editor: 'Color' },
+    numberColor: { type: 'string', title: 'Number Color', default: 'white', editor: 'Color' },
+    borderColor: { type: 'string', title: 'Border Color', default: 'white', editor: 'Color' },
     showNumbers: { type: 'boolean', title: 'Show Numbers', default: false },
     showMinuteMarks: { type: 'boolean', title: 'Show Minute Marks', default: true },
     showHourMarks: { type: 'boolean', title: 'Show Hour Marks', default: true },
+    showSecondHand: { type: 'boolean', title: 'Show Second Hand', default: true },
+    showMinuteHand: { type: 'boolean', title: 'Show Minute Hand', default: true },
     timezone: {
       type: 'string',
       title: 'Time Zone',
