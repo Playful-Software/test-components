@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build": "node build.js",
-    "serve": "http-server -p 8081 --cors"
+    "serve": "http-server build -p 8081 --cors"
   },
   "dependencies": {
     "@types/react-clock": "^3.0.0",
