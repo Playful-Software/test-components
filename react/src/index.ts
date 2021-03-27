@@ -1,6 +1,6 @@
-import type { KitDescription } from "@playful/runtime";
-import { ThreeDescription } from "./r3f";
-import { XKCDDescription } from "./xkcd";
+import type { KitDescription } from '@playful/runtime';
+import { ThreeDescription } from './r3f';
+import { XKCDDescription } from './xkcd';
 import {
   LineChartDescription,
   BarChartDescription,
@@ -8,7 +8,8 @@ import {
   XYChartDescription,
   StackedBarChartDescription,
   RadarChartDescription,
-} from "./chart.xkcd/chart-xkcd";
+} from './chart.xkcd/chart-xkcd';
+import { ClockDescription } from './clock/clock';
 
 export {
   ThreeDescription,
@@ -19,12 +20,13 @@ export {
   XYChartDescription,
   StackedBarChartDescription,
   RadarChartDescription,
+  ClockDescription,
 };
 
 export const kit: KitDescription = {
-  title: "React Test Kit",
-  description: "React Test Kit contains React components used to test Play.",
-  author: "Playful Software",
+  title: 'React Test Kit',
+  description: 'React Test Kit contains React components used to test Play.',
+  author: 'Playful Software',
   components: [
     ThreeDescription,
     XKCDDescription,
@@ -34,5 +36,6 @@ export const kit: KitDescription = {
     XYChartDescription,
     StackedBarChartDescription,
     RadarChartDescription,
+    ClockDescription,
   ],
 };

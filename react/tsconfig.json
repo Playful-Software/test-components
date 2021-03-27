@@ -15,9 +15,10 @@
     "noEmit": true,
     "jsx": "react",
     "paths": {
-      "@playful/runtime": ["../play/js/src/runtime"]
+      "@playful/runtime": ["../../play/js/src/runtime"]
     },
-    "importsNotUsedAsValues": "error"
+    "importsNotUsedAsValues": "error",
+    "typeRoots" : ["node_modules/@types"]
   },
   "include": ["./src"]
 }
