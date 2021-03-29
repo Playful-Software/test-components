@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../qrcode/src/index.js"],
+  "sourcesContent": ["import { QRCodeDescription } from './qrcode.js';\n\n// TODO: remove requirement to export these since they're listed in the kit?\nexport { QRCodeDescription };\n\n// TODO: export const KitDescription?\nexport const kit = {\n  title: 'QRCode',\n  description: 'QRCode components',\n  author: 'Playful Software',\n  components: [QRCodeDescription],\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,oBAAkC;AAM3B,MAAM,MAAM;AAAA,EACjB,OAAO;AAAA,EACP,aAAa;AAAA,EACb,QAAQ;AAAA,EACR,YAAY,CAAC;AAAA;",
+  "names": []
+}
