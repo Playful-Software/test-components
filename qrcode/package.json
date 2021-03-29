@@ -1,0 +1,15 @@
+{
+  "name": "qrcode",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.js && cp src/qrcode.min.js ${BUILD_DIR:-build} ",
+    "serve": "http-server -p 8081 --cors build"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "esbuild": "^0.9.3",
+    "http-server": "0.12.3"
+  }
+}
