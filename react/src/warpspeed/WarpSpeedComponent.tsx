@@ -1,6 +1,6 @@
 import type { ComponentDescription, ComponentProperties } from '@playful/runtime';
-import React, { useEffect, useRef, useState } from 'react';
-import WarpSpeed from 'WarpSpeed';
+import React, { useCallback, useEffect, useState } from 'react';
+import WarpSpeed from './WarpSpeed';
 
 type WarpSpeedProperties = {
   speed: number;
@@ -34,7 +34,7 @@ function WarpSpeedComponent(props: WarpSpeedProperties) {
     preset,
   } = props;
   const [warpspeed, setWarpspeed] = useState<WarpSpeed>();
-  const canvasEl = useRef<HTMLCanvasElement>(null);
+  const [canvas, setCanvas] = useState<HTMLCanvasElement>();
 
   function createWarpSpeed(id: string) {
     if (warpspeed) {
@@ -59,12 +59,14 @@ function WarpSpeedComponent(props: WarpSpeedProperties) {
     setWarpspeed(ws);
   }
 
+  const canvasCallback = useCallback((canvas) => setCanvas(canvas), []);
+
   useEffect(() => {
-    if (canvasEl.current) {
+    if (canvas) {
       createWarpSpeed(componentObject!.id.toString());
     }
     return () => warpspeed?.destroy();
-  }, [canvasEl, density]);
+  }, [canvas, density]);
 
   /* TODO: good way to handle presets
   useEffect(() => {
@@ -126,7 +128,7 @@ function WarpSpeedComponent(props: WarpSpeedProperties) {
     <canvas
       style={{ width: '100%', height: '100%' }}
       id={componentObject!.id.toString()}
-      ref={canvasEl}
+      ref={canvasCallback}
     ></canvas>
   );
 }
