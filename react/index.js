@@ -5199,7 +5199,7 @@ var require_web = __commonJS((exports2, module2) => {
   __export(exports2, {
     default: () => web_default
   });
-  var import_react19 = __toModule(require("react"));
+  var import_react20 = __toModule(require("react"));
   var import_debounce = __toModule(require_debounce());
   function useMeasure2({
     debounce: debounce$1,
@@ -5214,7 +5214,7 @@ var require_web = __commonJS((exports2, module2) => {
     if (!ResizeObserver) {
       throw new Error("This browser does not support ResizeObserver out of the box. See: https://github.com/react-spring/react-use-measure/#resize-observer-polyfills");
     }
-    const [bounds, set6] = (0, import_react19.useState)({
+    const [bounds, set6] = (0, import_react20.useState)({
       left: 0,
       top: 0,
       width: 0,
@@ -5224,7 +5224,7 @@ var require_web = __commonJS((exports2, module2) => {
       x: 0,
       y: 0
     });
-    const state = (0, import_react19.useRef)({
+    const state = (0, import_react20.useRef)({
       element: null,
       scrollContainers: null,
       resizeObserver: null,
@@ -5232,12 +5232,12 @@ var require_web = __commonJS((exports2, module2) => {
     });
     const scrollDebounce = debounce$1 ? typeof debounce$1 === "number" ? debounce$1 : debounce$1.scroll : null;
     const resizeDebounce = debounce$1 ? typeof debounce$1 === "number" ? debounce$1 : debounce$1.resize : null;
-    const mounted = (0, import_react19.useRef)(false);
-    (0, import_react19.useEffect)(() => {
+    const mounted = (0, import_react20.useRef)(false);
+    (0, import_react20.useEffect)(() => {
       mounted.current = true;
       return () => void (mounted.current = false);
     });
-    const [forceRefresh, resizeChange, scrollChange] = (0, import_react19.useMemo)(() => {
+    const [forceRefresh, resizeChange, scrollChange] = (0, import_react20.useMemo)(() => {
       const callback = () => {
         if (!state.current.element)
           return;
@@ -5299,22 +5299,22 @@ var require_web = __commonJS((exports2, module2) => {
     };
     useOnWindowScroll(scrollChange, Boolean(scroll));
     useOnWindowResize(resizeChange);
-    (0, import_react19.useEffect)(() => {
+    (0, import_react20.useEffect)(() => {
       removeListeners();
       addListeners();
     }, [scroll, scrollChange, resizeChange]);
-    (0, import_react19.useEffect)(() => removeListeners, []);
+    (0, import_react20.useEffect)(() => removeListeners, []);
     return [ref, bounds, forceRefresh];
   }
   function useOnWindowResize(onWindowResize) {
-    (0, import_react19.useEffect)(() => {
+    (0, import_react20.useEffect)(() => {
       const cb = onWindowResize;
       window.addEventListener("resize", cb);
       return () => void window.removeEventListener("resize", cb);
     }, [onWindowResize]);
   }
   function useOnWindowScroll(onScroll, enabled) {
-    (0, import_react19.useEffect)(() => {
+    (0, import_react20.useEffect)(() => {
       if (enabled) {
         const cb = onScroll;
         window.addEventListener("scroll", cb, {
@@ -8368,7 +8368,7 @@ var require_chart_xkcd = __commonJS((exports) => {
   });
   var import_chart = __toModule(require_dist());
   var import_chart2 = __toModule(require_build());
-  var import_react19 = __toModule(require("react"));
+  var import_react20 = __toModule(require("react"));
   var PositionType;
   (function(PositionType2) {
     PositionType2[PositionType2["upLeft"] = 1] = "upLeft";
@@ -8390,7 +8390,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       unkcdify,
       fontFamily
     } = props;
-    return /* @__PURE__ */ import_react19.default.createElement(import_chart2.Line, {
+    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.Line, {
       config: {
         title,
         xLabel,
@@ -8479,7 +8479,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       backgroundColor,
       fontFamily
     } = props;
-    return /* @__PURE__ */ import_react19.default.createElement(import_chart2.Bar, {
+    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.Bar, {
       config: {
         title,
         xLabel,
@@ -8549,7 +8549,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       showLegend,
       legendPosition
     } = props;
-    return /* @__PURE__ */ import_react19.default.createElement(StackedBar, {
+    return /* @__PURE__ */ import_react20.default.createElement(StackedBar, {
       config: {
         title,
         xLabel,
@@ -8628,7 +8628,7 @@ var require_chart_xkcd = __commonJS((exports) => {
   };
   function PieChart(props) {
     const {title, innerRadius, data} = props;
-    return /* @__PURE__ */ import_react19.default.createElement(import_chart2.Pie, {
+    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.Pie, {
       config: {
         title,
         data: eval(`(${data})`) || {},
@@ -8704,7 +8704,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       backgroundColor,
       fontFamily
     } = props;
-    return /* @__PURE__ */ import_react19.default.createElement(import_chart2.XY, {
+    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.XY, {
       config: {
         title,
         xLabel,
@@ -8817,7 +8817,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       fontFamily,
       showLabels
     } = props;
-    return /* @__PURE__ */ import_react19.default.createElement(import_chart2.Radar, {
+    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.Radar, {
       config: {
         title,
         data: eval(`(${data})`) || {},
@@ -8892,13 +8892,13 @@ var require_chart_xkcd = __commonJS((exports) => {
     }
   };
   var StackedBar = ({config}) => {
-    const ref = (0, import_react19.useRef)();
-    (0, import_react19.useEffect)(() => {
+    const ref = (0, import_react20.useRef)();
+    (0, import_react20.useEffect)(() => {
       if (ref.current) {
         const myChart = new import_chart.default.StackedBar(ref.current, config);
       }
     });
-    return /* @__PURE__ */ import_react19.default.createElement("svg", {
+    return /* @__PURE__ */ import_react20.default.createElement("svg", {
       ref
     });
   };
@@ -9500,6 +9500,215 @@ var require_AutosizeInput = __commonJS((exports2) => {
   exports2.default = AutosizeInput2;
 });
 
+// src/warpspeed/WarpSpeed.js
+var require_WarpSpeed = __commonJS((exports2, module2) => {
+  (function(root, factory) {
+    if (typeof module2 === "object" && module2.exports) {
+      module2.exports = factory();
+    } else {
+      root.warpspeed = factory();
+    }
+  })(typeof window.self !== "undefined" ? window.self : exports2, function() {
+    (function() {
+      var lastTime = 0;
+      var vendors = ["ms", "moz", "webkit", "o"];
+      for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x] + "RequestAnimationFrame"];
+        window.cancelAnimationFrame = window[vendors[x] + "CancelAnimationFrame"] || window[vendors[x] + "CancelRequestAnimationFrame"];
+      }
+      if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = function(callback, element) {
+          var currTime = new Date().getTime();
+          var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+          var id = window.setTimeout(function() {
+            callback(currTime + timeToCall);
+          }, timeToCall);
+          lastTime = currTime + timeToCall;
+          return id;
+        };
+      }
+      if (!window.cancelAnimationFrame) {
+        window.cancelAnimationFrame = function(id) {
+          clearTimeout(id);
+        };
+      }
+    })();
+    function timeStamp() {
+      if (window.performance.now)
+        return window.performance.now();
+      else
+        return Date.now();
+    }
+    function isVisible(el2) {
+      var r = el2.getBoundingClientRect();
+      return r.top + r.height >= 0 && r.left + r.width >= 0 && r.bottom - r.height <= (window.innerHeight || document.documentElement.clientHeight) && r.right - r.width <= (window.innerWidth || document.documentElement.clientWidth);
+    }
+    function Star(x, y2, z2) {
+      this.x = x;
+      this.y = y2;
+      this.z = z2;
+      this.size = 0.5 + Math.random();
+    }
+    function WarpSpeed2(targetId, config) {
+      console.log(config);
+      this.targetId = targetId;
+      if (WarpSpeed2.RUNNING_INSTANCES === void 0)
+        WarpSpeed2.RUNNING_INSTANCES = {};
+      if (WarpSpeed2.RUNNING_INSTANCES[targetId]) {
+        WarpSpeed2.RUNNING_INSTANCES[targetId].destroy();
+      }
+      config = config || {};
+      if (typeof config === "string")
+        try {
+          config = JSON.parse(config);
+        } catch (e2) {
+          config = {};
+        }
+      this.SPEED = config.speed === void 0 || config.speed < 0 ? 0.7 : config.speed;
+      this.TARGET_SPEED = config.targetSpeed === void 0 || config.targetSpeed < 0 ? this.SPEED : config.targetSpeed;
+      this.SPEED_ADJ_FACTOR = config.speedAdjFactor === void 0 ? 0.03 : config.speedAdjFactor < 0 ? 0 : config.speedAdjFactor > 1 ? 1 : config.speedAdjFactor;
+      this.DENSITY = config.density === void 0 || config.density <= 0 ? 0.7 : config.density;
+      this.USE_CIRCLES = config.shape === void 0 ? true : config.shape === "circle";
+      this.DEPTH_ALPHA = config.depthFade === void 0 ? true : config.depthFade;
+      this.WARP_EFFECT = config.warpEffect === void 0 ? true : config.warpEffect;
+      this.WARP_EFFECT_LENGTH = config.warpEffectLength === void 0 ? 5 : config.warpEffectLength < 0 ? 0 : config.warpEffectLength;
+      this.STAR_SCALE = config.starSize === void 0 || config.starSize <= 0 ? 3 : config.starSize;
+      this.BACKGROUND_COLOR = config.backgroundColor === void 0 ? "hsl(263,45%,7%)" : config.backgroundColor;
+      var canvas = document.getElementById(this.targetId);
+      canvas.width = 1;
+      canvas.height = 1;
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle = this.BACKGROUND_COLOR;
+      ctx.fillRect(0, 0, 1, 1);
+      ctx.fillStyle = config.starColor === void 0 ? "#FFFFFF" : config.starColor;
+      ctx.fillRect(0, 0, 1, 1);
+      var color = ctx.getImageData(0, 0, 1, 1).data;
+      this.STAR_R = color[0];
+      this.STAR_G = color[1];
+      this.STAR_B = color[2];
+      this.prevW = -1;
+      this.prevH = -1;
+      this.stars = [];
+      for (var i = 0; i < this.DENSITY * 1e3; i++) {
+        this.stars.push(new Star((Math.random() - 0.5) * 1e3, (Math.random() - 0.5) * 1e3, 1e3 * Math.random()));
+      }
+      this.lastMoveTS = timeStamp();
+      this.drawRequest = null;
+      this.LAST_RENDER_T = 0;
+      WarpSpeed2.RUNNING_INSTANCES[targetId] = this;
+      this.draw();
+    }
+    WarpSpeed2.prototype = {
+      constructor: WarpSpeed2,
+      draw: function() {
+        var TIME = timeStamp();
+        if (!document.getElementById(this.targetId)) {
+          this.destroy();
+          return;
+        }
+        this.move();
+        var canvas = document.getElementById(this.targetId);
+        if (!this.PAUSED && isVisible(canvas)) {
+          if (this.prevW !== canvas.clientWidth || this.prevH !== canvas.clientHeight) {
+            canvas.width = (canvas.clientWidth < 10 ? 10 : canvas.clientWidth) * (window.devicePixelRatio || 1);
+            canvas.height = (canvas.clientHeight < 10 ? 10 : canvas.clientHeight) * (window.devicePixelRatio || 1);
+          }
+          this.size = (canvas.height < canvas.width ? canvas.height : canvas.width) / (10 / (this.STAR_SCALE <= 0 ? 0 : this.STAR_SCALE));
+          if (this.WARP_EFFECT)
+            this.maxLineWidth = this.size / 30;
+          var ctx = canvas.getContext("2d");
+          ctx.fillStyle = this.BACKGROUND_COLOR;
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          var rgb = "rgb(" + this.STAR_R + "," + this.STAR_G + "," + this.STAR_B + ")", rgba = "rgba(" + this.STAR_R + "," + this.STAR_G + "," + this.STAR_B + ",";
+          for (var i = 0; i < this.stars.length; i++) {
+            var s2 = this.stars[i];
+            var xOnDisplay = s2.x / s2.z, yOnDisplay = s2.y / s2.z;
+            if (!this.WARP_EFFECT && (xOnDisplay < -0.5 || xOnDisplay > 0.5 || yOnDisplay < -0.5 || yOnDisplay > 0.5))
+              continue;
+            var size = s2.size * this.size / s2.z;
+            if (size < 0.3)
+              continue;
+            if (this.DEPTH_ALPHA) {
+              var alpha = (1e3 - s2.z) / 1e3;
+              ctx.fillStyle = rgba + (alpha > 1 ? 1 : alpha) + ")";
+            } else {
+              ctx.fillStyle = rgb;
+            }
+            if (this.WARP_EFFECT) {
+              ctx.beginPath();
+              var x2OnDisplay = s2.x / (s2.z + this.WARP_EFFECT_LENGTH * this.SPEED), y2OnDisplay = s2.y / (s2.z + this.WARP_EFFECT_LENGTH * this.SPEED);
+              if (x2OnDisplay < -0.5 || x2OnDisplay > 0.5 || y2OnDisplay < -0.5 || y2OnDisplay > 0.5)
+                continue;
+              ctx.moveTo(canvas.width * (xOnDisplay + 0.5) - size / 2, canvas.height * (yOnDisplay + 0.5) - size / 2);
+              ctx.lineTo(canvas.width * (x2OnDisplay + 0.5) - size / 2, canvas.height * (y2OnDisplay + 0.5) - size / 2);
+              ctx.lineWidth = size > this.maxLineWidth ? this.maxLineWidth : size;
+              if (this.USE_CIRCLES) {
+                ctx.lineCap = "round";
+              } else {
+                ctx.lineCap = "butt";
+              }
+              ctx.strokeStyle = ctx.fillStyle;
+              ctx.stroke();
+            } else if (this.USE_CIRCLES) {
+              ctx.beginPath();
+              ctx.arc(canvas.width * (xOnDisplay + 0.5) - size / 2, canvas.height * (yOnDisplay + 0.5) - size / 2, size / 2, 0, 2 * Math.PI);
+              ctx.fill();
+            } else {
+              ctx.fillRect(canvas.width * (xOnDisplay + 0.5) - size / 2, canvas.height * (yOnDisplay + 0.5) - size / 2, size, size);
+            }
+          }
+          this.prevW = canvas.clientWidth;
+          this.prevH = canvas.clientHeight;
+        }
+        if (this.drawRequest !== -1)
+          this.drawRequest = requestAnimationFrame(this.draw.bind(this));
+        this.LAST_RENDER_T = timeStamp() - TIME;
+      },
+      move: function() {
+        var t = timeStamp(), speedMulF = (t - this.lastMoveTS) / (1e3 / 60);
+        this.lastMoveTS = t;
+        if (this.PAUSED)
+          return;
+        var speedAdjF = Math.pow(this.SPEED_ADJ_FACTOR < 0 ? 0 : this.SPEED_ADJ_FACTOR > 1 ? 1 : this.SPEED_ADJ_FACTOR, 1 / speedMulF);
+        this.SPEED = this.TARGET_SPEED * speedAdjF + this.SPEED * (1 - speedAdjF);
+        if (this.SPEED < 0)
+          this.SPEED = 0;
+        var speed = this.SPEED * speedMulF;
+        for (var i = 0; i < this.stars.length; i++) {
+          var s2 = this.stars[i];
+          s2.z -= speed;
+          while (s2.z < 1) {
+            s2.z += 1e3;
+            s2.x = (Math.random() - 0.5) * s2.z;
+            s2.y = (Math.random() - 0.5) * s2.z;
+          }
+        }
+      },
+      destroy: function(targetId) {
+        if (targetId) {
+          if (WarpSpeed2.RUNNING_INSTANCES[targetId])
+            WarpSpeed2.RUNNING_INSTANCES[targetId].destroy();
+        } else {
+          try {
+            cancelAnimationFrame(this.drawRequest);
+          } catch (e2) {
+            this.drawRequest = -1;
+          }
+          WarpSpeed2.RUNNING_INSTANCES[this.targetId] = void 0;
+        }
+      },
+      pause: function() {
+        this.PAUSED = true;
+      },
+      resume: function() {
+        this.PAUSED = false;
+      }
+    };
+    WarpSpeed2.destroy = WarpSpeed2.prototype.destroy;
+    return WarpSpeed2;
+  });
+});
+
 // src/index.ts
 __markAsModule(exports);
 __export(exports, {
@@ -9510,6 +9719,7 @@ __export(exports, {
   RadarChartDescription: () => import_chart_xkcd.RadarChartDescription,
   StackedBarChartDescription: () => import_chart_xkcd.StackedBarChartDescription,
   ThreeDescription: () => ThreeDescription,
+  WarpSpeedDescription: () => WarpSpeedDescription,
   XKCDDescription: () => XKCDDescription,
   XYChartDescription: () => import_chart_xkcd.XYChartDescription,
   kit: () => kit
@@ -53691,6 +53901,176 @@ var ClockDescription = {
   }
 };
 
+// src/warpspeed/WarpSpeedComponent.tsx
+var import_react19 = __toModule(require("react"));
+var import_WarpSpeed = __toModule(require_WarpSpeed());
+function WarpSpeedComponent(props) {
+  const {
+    componentObject,
+    speed,
+    speedAdjustmentFactor,
+    density,
+    shape,
+    warpEffect,
+    warpEffectLength,
+    depthFade,
+    starSize,
+    backgroundColor,
+    color,
+    pause,
+    preset
+  } = props;
+  const [warpspeed, setWarpspeed] = (0, import_react19.useState)();
+  const [canvas, setCanvas] = (0, import_react19.useState)();
+  function createWarpSpeed(id) {
+    if (warpspeed) {
+      warpspeed.destroy();
+    }
+    const ws = new import_WarpSpeed.default(id, {
+      speed,
+      speedAdjFactor: speedAdjustmentFactor,
+      density,
+      shape,
+      warpEffect,
+      warpEffectLength,
+      depthFade,
+      starSize,
+      backgroundColor,
+      starColor: color
+    });
+    if (pause) {
+      ws.pause();
+    }
+    setWarpspeed(ws);
+  }
+  const canvasCallback = (0, import_react19.useCallback)((canvas2) => setCanvas(canvas2), []);
+  (0, import_react19.useEffect)(() => {
+    if (canvas) {
+      createWarpSpeed(componentObject.id.toString());
+    }
+    return () => warpspeed == null ? void 0 : warpspeed.destroy();
+  }, [canvas, density]);
+  (0, import_react19.useEffect)(() => {
+    if (warpspeed) {
+      warpspeed.TARGET_SPEED = speed;
+      warpspeed.USE_CIRCLES = shape === "circle";
+      warpspeed.WARP_EFFECT = warpEffect;
+      warpspeed.WARP_EFFECT_LENGTH = warpEffectLength;
+      warpspeed.DEPTH_ALPHA = depthFade;
+      warpspeed.STAR_SCALE = starSize;
+      warpspeed.BACKGROUND_COLOR = backgroundColor;
+      warpspeed.STAR_R = parseInt(color.slice(1, 3), 16);
+      warpspeed.STAR_G = parseInt(color.slice(3, 5), 16);
+      warpspeed.STAR_B = parseInt(color.slice(5, 7), 16);
+    }
+  }, [
+    speed,
+    speedAdjustmentFactor,
+    density,
+    shape,
+    warpEffect,
+    warpEffectLength,
+    depthFade,
+    starSize,
+    backgroundColor,
+    color
+  ]);
+  (0, import_react19.useEffect)(() => {
+    if (!warpspeed) {
+      return;
+    }
+    if (pause) {
+      warpspeed.pause();
+    } else {
+      warpspeed.resume();
+    }
+  }, [pause]);
+  return /* @__PURE__ */ import_react19.default.createElement("canvas", {
+    style: {width: "100%", height: "100%"},
+    id: componentObject.id.toString(),
+    ref: canvasCallback
+  });
+}
+var WarpSpeedDescription = {
+  name: "WarpSpeed",
+  description: "The WarpSpeed Component ...",
+  author: "Playful Software",
+  icon: "...",
+  preview: "...",
+  collection: "React Test Kit",
+  renderer: WarpSpeedComponent,
+  extends: "Play Kit/View",
+  properties: {
+    speed: {
+      type: "number",
+      default: 0.7,
+      editor: {type: "Number", min: 0, max: 50, step: 0.1},
+      description: `The speed at which we're moving through the starfield.`
+    },
+    warpEffect: {
+      type: "boolean",
+      default: true,
+      description: `Draws lines instead of just the stars. Slower.`
+    },
+    warpEffectLength: {
+      type: "number",
+      default: 5,
+      editor: {type: "Number", min: 0, max: 30, step: 0.1},
+      description: `How long the warp strikes are in depth units.`
+    },
+    density: {
+      type: "number",
+      default: 0.7,
+      editor: {type: "Number", min: 0, max: 30, step: 0.01},
+      description: `Star density. Number of stars = density * drawDistance.`
+    },
+    depthFade: {
+      type: "boolean",
+      default: true,
+      description: `Stars that are further from the camera are less opaque. Slower.`
+    },
+    starSize: {
+      type: "number",
+      default: 3,
+      editor: {type: "Number", min: 1, max: 20},
+      description: `Size of stars.`
+    },
+    shape: {
+      type: "string",
+      default: "circle",
+      editor: {type: "Option", options: ["circle", "square"]},
+      description: `Drawing squares instead of circles is faster, but looks less pretty.`
+    },
+    speedAdjustmentFactor: {
+      type: "number",
+      default: 0.03,
+      editor: {type: "Number", min: 0, max: 1, step: 0.01},
+      description: `How fast the speed changes from the current speed to target speed. 0 = no change, 1 = instant change.`
+    },
+    backgroundColor: {
+      type: "string",
+      default: "hsl(263,45%,7%)",
+      editor: "Color",
+      description: `Background color. Alpha not recommended.`
+    },
+    color: {
+      type: "string",
+      title: "Star Color",
+      default: "#ffffff",
+      editor: "Color",
+      description: `Star color. Alpha not recommended.`
+    },
+    pause: {type: "boolean", default: false},
+    credits: {
+      type: "string",
+      default: `WarpSpeed.js by Federico Dossena (https://github.com/adolfintel/warpspeed)`,
+      readonly: true
+    },
+    width: {type: "number", title: "Width", default: 400},
+    height: {type: "number", title: "Height", default: 400}
+  }
+};
+
 // src/index.ts
 var kit = {
   title: "React Test Kit",
@@ -53705,7 +54085,8 @@ var kit = {
     import_chart_xkcd.XYChartDescription,
     import_chart_xkcd.StackedBarChartDescription,
     import_chart_xkcd.RadarChartDescription,
-    ClockDescription
+    ClockDescription,
+    WarpSpeedDescription
   ]
 };
 //# sourceMappingURL=index.js.map
