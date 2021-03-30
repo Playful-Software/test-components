@@ -10,7 +10,7 @@ export const QRCodePrototype = {
         this.initialized = true;
       };
       // TODO: package this with test-components
-      script.src = '/qrcode.min.js';
+      script.src = new URL('qrcode.min.js', import.meta.url).toString();
       document.head.appendChild(script);
     } else {
       this.initialized = true;
