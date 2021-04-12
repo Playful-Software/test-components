@@ -9,6 +9,7 @@ import { TriangularMeshDescription } from './CreativeArtistry/triangularMesh.js'
 import { UnDeuxTroisDescription } from './CreativeArtistry/unDeuxTrois.js';
 import { DweetDescription } from './dweet.js';
 import { QRCodeDescription } from './QRCode/qrcode.js';
+import { ShadertoyDescription } from './shadertoy.js';
 
 // TODO: remove requirement to export these since they're listed in the kit?
 export {
@@ -23,6 +24,7 @@ export {
   UnDeuxTroisDescription,
   CubicDisarrayDescription,
   TriangularMeshDescription,
+  ShadertoyDescription,
 };
 
 // TODO: export const KitDescription?
@@ -42,5 +44,6 @@ export const kit = {
     UnDeuxTroisDescription,
     CubicDisarrayDescription,
     TriangularMeshDescription,
+    ShadertoyDescription,
   ],
 };
