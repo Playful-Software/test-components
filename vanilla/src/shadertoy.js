@@ -1,190 +1,173 @@
+// TODO: HW_PERFORMANCE
+
+/*
+https://www.youtube.com/watch?v=0ifChJ0nJfM
+
+https://www.shadertoy.com/view/Ms2SD1
+https://www.shadertoy.com/view/4tdSWr
+https://www.shadertoy.com/view/ldX3zr
+https://www.shadertoy.com/view/Xsf3zX
+https://www.shadertoy.com/view/llVXRd
+https://www.shadertoy.com/view/lsl3RH
+https://www.shadertoy.com/view/XtlSD7
+https://www.shadertoy.com/view/MdlXz8
+https://www.shadertoy.com/view/4dl3zn
+https://www.shadertoy.com/view/MdSGDm
+https://www.shadertoy.com/view/ldfSW2
+https://www.shadertoy.com/view/Mdf3z7
+https://www.shadertoy.com/view/4ds3zn HW_PERFORMANCE
+https://www.shadertoy.com/view/XsXSWS
+https://www.shadertoy.com/view/lslGWr
+https://www.shadertoy.com/view/4sVczV
+https://www.shadertoy.com/view/Xtf3zn
+https://www.shadertoy.com/view/Xd23Dh
+https://www.shadertoy.com/view/llSyDh
+https://www.shadertoy.com/view/Xs2GDd
+https://www.shadertoy.com/view/lsf3RH
+https://www.shadertoy.com/view/4sfGWX
+https://www.shadertoy.com/view/Mss3WN
+https://www.shadertoy.com/view/Mts3zM
+https://www.shadertoy.com/view/MlKSWm
+https://www.shadertoy.com/view/MdXSzS
+https://www.shadertoy.com/view/4tlSzl
+https://www.shadertoy.com/view/XljGDz
+https://www.shadertoy.com/view/4slSWf
+https://www.shadertoy.com/view/lsXcWn
+https://www.shadertoy.com/view/4dsGzH
+https://www.shadertoy.com/view/WtfGDX
+https://www.shadertoy.com/view/4s2SRt
+https://www.shadertoy.com/view/lsdGzN
+https://www.shadertoy.com/view/ll2SRy
+https://www.shadertoy.com/view/ttXGWH
+https://www.shadertoy.com/view/4ssXRX
+https://www.shadertoy.com/view/4dt3zn
+https://www.shadertoy.com/view/lss3WS
+https://www.shadertoy.com/view/XsfGRn
+https://www.shadertoy.com/view/Xsf3zX
+https://www.shadertoy.com/view/ldf3RN
+https://www.shadertoy.com/view/wdBGWD
+https://www.shadertoy.com/view/ltjGDd
+
+https://www.shadertoy.com/view/MdSXzz
+https://www.shadertoy.com/view/lt2fDz
+https://www.shadertoy.com/view/4lfSzS
+https://www.shadertoy.com/view/Ml2GWy
+https://www.shadertoy.com/view/Xt23z3
+https://www.shadertoy.com/view/wdfGW4
+https://www.shadertoy.com/view/lsSXzD
+https://www.shadertoy.com/view/XttSz2
+https://www.shadertoy.com/view/lsX3W4
+https://www.shadertoy.com/view/WdXGRj
+https://www.shadertoy.com/view/lsKcDD
+https://www.shadertoy.com/view/lssGRM
+https://www.shadertoy.com/view/wsl3WB
+https://www.shadertoy.com/view/WdB3Dw
+https://www.shadertoy.com/view/tlGfzd
+https://www.shadertoy.com/view/lttBzN
+https://www.shadertoy.com/view/ltfSWn HW_PERFORMANCE
+https://www.shadertoy.com/view/wlKXWc
+https://www.shadertoy.com/view/tlV3zy
+https://www.shadertoy.com/view/tdBGWD
+https://www.shadertoy.com/view/4dGyRh
+https://www.shadertoy.com/view/4scBW8
+https://www.shadertoy.com/view/WdGSDd 2020
+https://www.shadertoy.com/view/ldyBWD
+
+// Fail
+https://www.shadertoy.com/view/Xds3zN
+https://www.shadertoy.com/view/Xsd3zf
+https://www.shadertoy.com/view/lljSDy
+https://www.shadertoy.com/view/ttVBzd
+
+*/
+
 const ShadertoyPrototype = {
   _requestId: 0,
 
   mount(container, insertBefore) {
-    const canvas = (this._element = document.createElement('canvas'));
+    this._element = document.createElement('canvas');
     super.mount(container, insertBefore);
+
+    this.refresh();
+  },
+
+  unmount() {
+    if (this._requestId) {
+      cancelAnimationFrame(this._requestId);
+      this._requestId = undefined;
+    }
+  },
+
+  update(changed) {
+    super.update(changed);
+
+    if (this.play) {
+      if (this.start) this.start();
+    } else {
+      if (this.stop) this.stop();
+    }
+
+    const element = this._element;
+
+    // Canvas has a display width "width" and a backing-store width "canvasWidth".
+    // If canvasWidth is not set the display width is used as the backing-store width.
+    if (changed.width || changed.canvasHeight) {
+      const width = this.canvasWidth || this.width;
+      // Be careful to only set the element.width if it has really changed because it clears the canvas.
+      if (element.width !== width) {
+        element.width = width;
+      }
+    }
+
+    // Canvas has a display height "height" and a backing-store height "canvasHeight".
+    // If canvasHeight is not set the display height is used as the backing-store height.
+    if (changed.height || changed.canvasHeight) {
+      const height = this.canvasHeight || this.height;
+      // Be careful to only set the element.height if it has really changed because it clears the canvas.
+      if (element.height !== height) {
+        element.height = height;
+      }
+    }
+
+    if (changed.fragmentShader || changed.vertexShader) {
+      this.refresh();
+    }
+  },
+
+  refresh() {
+    if (this.stop) {
+      this.stop();
+    }
+
+    const canvas = this._element;
 
     // Get A WebGL context
     /** @type {HTMLCanvasElement} */
-    const gl = canvas.getContext('webgl');
+    const gl = canvas.getContext('webgl2');
     if (!gl) {
       return;
     }
 
-    const vs = `
-    // an attribute will receive data from a buffer
-    attribute vec4 a_position;
-
-    // all shaders have a main function
-    void main() {
-
-      // gl_Position is a special variable a vertex shader
-      // is responsible for setting
-      gl_Position = a_position;
-    }
-  `;
-
-    const fs = `
-    precision highp float;
-
-    uniform vec2 iResolution;
-    uniform vec2 iMouse;
-    uniform float iTime;
-
-// Protean clouds by nimitz (twitter: @stormoid)
-// https://www.shadertoy.com/view/3l23Rh
-// License Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
-// Contact the author for other licensing options
-
-/*
-	Technical details:
-
-	The main volume noise is generated from a deformed periodic grid, which can produce
-	a large range of noise-like patterns at very cheap evalutation cost. Allowing for multiple
-	fetches of volume gradient computation for improved lighting.
-
-	To further accelerate marching, since the volume is smooth, more than half the density
-	information isn't used to rendering or shading but only as an underlying volume	distance to
-	determine dynamic step size, by carefully selecting an equation	(polynomial for speed) to
-	step as a function of overall density (not necessarialy rendered) the visual results can be
-	the	same as a naive implementation with ~40% increase in rendering performance.
-
-	Since the dynamic marching step size is even less uniform due to steps not being rendered at all
-	the fog is evaluated as the difference of the fog integral at each rendered step.
-
-*/
-
-mat2 rot(in float a){float c = cos(a), s = sin(a);return mat2(c,s,-s,c);}
-const mat3 m3 = mat3(0.33338, 0.56034, -0.71817, -0.87887, 0.32651, -0.15323, 0.15162, 0.69596, 0.61339)*1.93;
-float mag2(vec2 p){return dot(p,p);}
-float linstep(in float mn, in float mx, in float x){ return clamp((x - mn)/(mx - mn), 0., 1.); }
-float prm1 = 0.;
-vec2 bsMo = vec2(0);
-
-vec2 disp(float t){ return vec2(sin(t*0.22)*1., cos(t*0.175)*1.)*2.; }
-
-vec2 map(vec3 p)
-{
-    vec3 p2 = p;
-    p2.xy -= disp(p.z).xy;
-    p.xy *= rot(sin(p.z+iTime)*(0.1 + prm1*0.05) + iTime*0.09);
-    float cl = mag2(p2.xy);
-    float d = 0.;
-    p *= .61;
-    float z = 1.;
-    float trk = 1.;
-    float dspAmp = 0.1 + prm1*0.2;
-    for(int i = 0; i < 5; i++)
-    {
-		p += sin(p.zxy*0.75*trk + iTime*trk*.8)*dspAmp;
-        d -= abs(dot(cos(p), sin(p.yzx))*z);
-        z *= 0.57;
-        trk *= 1.4;
-        p = p*m3;
-    }
-    d = abs(d + prm1*3.)+ prm1*.3 - 2.5 + bsMo.y;
-    return vec2(d + cl*.2 + 0.25, cl);
-}
-
-vec4 render( in vec3 ro, in vec3 rd, float time )
-{
-	vec4 rez = vec4(0);
-    const float ldst = 8.;
-	vec3 lpos = vec3(disp(time + ldst)*0.5, time + ldst);
-	float t = 1.5;
-	float fogT = 0.;
-	for(int i=0; i<130; i++)
-	{
-		if(rez.a > 0.99)break;
-
-		vec3 pos = ro + t*rd;
-        vec2 mpv = map(pos);
-		float den = clamp(mpv.x-0.3,0.,1.)*1.12;
-		float dn = clamp((mpv.x + 2.),0.,3.);
-
-		vec4 col = vec4(0);
-        if (mpv.x > 0.6)
-        {
-
-            col = vec4(sin(vec3(5.,0.4,0.2) + mpv.y*0.1 +sin(pos.z*0.4)*0.5 + 1.8)*0.5 + 0.5,0.08);
-            col *= den*den*den;
-			col.rgb *= linstep(4.,-2.5, mpv.x)*2.3;
-            float dif =  clamp((den - map(pos+.8).x)/9., 0.001, 1. );
-            dif += clamp((den - map(pos+.35).x)/2.5, 0.001, 1. );
-            col.xyz *= den*(vec3(0.005,.045,.075) + 1.5*vec3(0.033,0.07,0.03)*dif);
-        }
-
-		float fogC = exp(t*0.2 - 2.2);
-		col.rgba += vec4(0.06,0.11,0.11, 0.1)*clamp(fogC-fogT, 0., 1.);
-		fogT = fogC;
-		rez = rez + col*(1. - rez.a);
-		t += clamp(0.5 - dn*dn*.05, 0.09, 0.3);
-	}
-	return clamp(rez, 0.0, 1.0);
-}
-
-float getsat(vec3 c)
-{
-    float mi = min(min(c.x, c.y), c.z);
-    float ma = max(max(c.x, c.y), c.z);
-    return (ma - mi)/(ma+ 1e-7);
-}
-
-//from my "Will it blend" shader (https://www.shadertoy.com/view/lsdGzN)
-vec3 iLerp(in vec3 a, in vec3 b, in float x)
-{
-    vec3 ic = mix(a, b, x) + vec3(1e-6,0.,0.);
-    float sd = abs(getsat(ic) - mix(getsat(a), getsat(b), x));
-    vec3 dir = normalize(vec3(2.*ic.x - ic.y - ic.z, 2.*ic.y - ic.x - ic.z, 2.*ic.z - ic.y - ic.x));
-    float lgt = dot(vec3(1.0), ic);
-    float ff = dot(dir, normalize(ic));
-    ic += 1.5*dir*sd*ff*lgt;
-    return clamp(ic,0.,1.);
-}
-
-void mainImage( out vec4 fragColor, in vec2 fragCoord )
-{
-	vec2 q = fragCoord.xy/iResolution.xy;
-    vec2 p = (gl_FragCoord.xy - 0.5*iResolution.xy)/iResolution.y;
-    bsMo = (iMouse.xy - 0.5*iResolution.xy)/iResolution.y;
-
-    float time = iTime*3.;
-    vec3 ro = vec3(0,0,time);
-
-    ro += vec3(sin(iTime)*0.5,sin(iTime*1.)*0.,0);
-
-    float dspAmp = .85;
-    ro.xy += disp(ro.z)*dspAmp;
-    float tgtDst = 3.5;
-
-    vec3 target = normalize(ro - vec3(disp(time + tgtDst)*dspAmp, time + tgtDst));
-    ro.x -= bsMo.x*2.;
-    vec3 rightdir = normalize(cross(target, vec3(0,1,0)));
-    vec3 updir = normalize(cross(rightdir, target));
-    rightdir = normalize(cross(updir, target));
-	vec3 rd=normalize((p.x*rightdir + p.y*updir)*1. - target);
-    rd.xy *= rot(-disp(time + 3.5).x*0.2 + bsMo.x);
-    prm1 = smoothstep(-0.4, 0.4,sin(iTime*0.3));
-	vec4 scn = render(ro, rd, time);
-
-    vec3 col = scn.rgb;
-    col = iLerp(col.bgr, col.rgb, clamp(1.-prm1,0.05,1.));
-
-    col = pow(col, vec3(.55,0.65,0.6))*vec3(1.,.97,.9);
-
-    col *= pow( 16.0*q.x*q.y*(1.0-q.x)*(1.0-q.y), 0.12)*0.7+0.3; //Vign
-
-	fragColor = vec4( col, 1.0 );
-}
-
-    void main() {
-      mainImage(gl_FragColor, gl_FragCoord.xy);
-    }
-  `;
-
     // setup GLSL program
-    const program = createProgramFromSources(gl, [vs, fs]);
+    const fs = `
+precision highp float;
+
+uniform vec3 iResolution;
+uniform vec4 iMouse;
+uniform float iTime;
+uniform int iFrame;
+
+${this.fragmentShader}
+
+void main() {
+  mainImage(gl_FragColor, gl_FragCoord.xy);
+}
+`;
+
+    const program = createProgramFromSources(gl, [this.vertexShader, fs]);
+    if (!program) {
+      return;
+    }
 
     // look up where the vertex data needs to go.
     const positionAttributeLocation = gl.getAttribLocation(program, 'a_position');
@@ -193,6 +176,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     const resolutionLocation = gl.getUniformLocation(program, 'iResolution');
     const mouseLocation = gl.getUniformLocation(program, 'iMouse');
     const timeLocation = gl.getUniformLocation(program, 'iTime');
+    const frameLocation = gl.getUniformLocation(program, 'iFrame');
 
     // Create a buffer to put three 2d clip space points in
     const positionBuffer = gl.createBuffer();
@@ -222,6 +206,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 
     let then = 0;
     let time = 0;
+    let frame = 0;
     const render = (now) => {
       this._requestId = undefined;
       now *= 0.001; // convert to seconds
@@ -253,9 +238,12 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
         0 // start at the beginning of the buffer
       );
 
-      gl.uniform2f(resolutionLocation, gl.canvas.width, gl.canvas.height);
-      gl.uniform2f(mouseLocation, mouseX, mouseY);
+      gl.uniform3f(resolutionLocation, gl.canvas.width, gl.canvas.height, 1); // TODO: z
+      gl.uniform4f(mouseLocation, mouseX, mouseY, 0, 0); // TODO: click
       gl.uniform1f(timeLocation, time);
+      gl.uniform1i(frameLocation, frame);
+      // TODO: float iTimeDelta
+      // TODO: vec4 iDate
 
       gl.drawArrays(
         gl.TRIANGLES,
@@ -263,6 +251,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
         6 // num vertices to process
       );
 
+      frame++;
       requestFrame();
     };
 
@@ -306,46 +295,170 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 
     requestFrame();
   },
-
-  unmount() {
-    if (this._requestId) {
-      cancelAnimationFrame(this._requestId);
-      this._requestId = undefined;
-    }
-  },
-
-  update(changed) {
-    super.update(changed);
-
-    if (this.play) {
-      this.start();
-    } else {
-      this.stop();
-    }
-
-    const element = this._element;
-
-    // Canvas has a display width "width" and a backing-store width "canvasWidth".
-    // If canvasWidth is not set the display width is used as the backing-store width.
-    if (changed.width || changed.canvasHeight) {
-      const width = this.canvasWidth || this.width;
-      // Be careful to only set the element.width if it has really changed because it clears the canvas.
-      if (element.width !== width) {
-        element.width = width;
-      }
-    }
-
-    // Canvas has a display height "height" and a backing-store height "canvasHeight".
-    // If canvasHeight is not set the display height is used as the backing-store height.
-    if (changed.height || changed.canvasHeight) {
-      const height = this.canvasHeight || this.height;
-      // Be careful to only set the element.height if it has really changed because it clears the canvas.
-      if (element.height !== height) {
-        element.height = height;
-      }
-    }
-  },
 };
+
+const vs = `// an attribute will receive data from a buffer
+attribute vec4 a_position;
+
+// all shaders have a main function
+void main() {
+
+  // gl_Position is a special variable a vertex shader
+  // is responsible for setting
+  gl_Position = a_position;
+}
+`;
+
+const fs = `// Protean clouds by nimitz (twitter: @stormoid)
+// https://www.shadertoy.com/view/3l23Rh
+// License Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+// Contact the author for other licensing options
+
+/*
+Technical details:
+
+The main volume noise is generated from a deformed periodic grid, which can produce
+a large range of noise-like patterns at very cheap evalutation cost. Allowing for multiple
+fetches of volume gradient computation for improved lighting.
+
+To further accelerate marching, since the volume is smooth, more than half the density
+information isn't used to rendering or shading but only as an underlying volume	distance to
+determine dynamic step size, by carefully selecting an equation	(polynomial for speed) to
+step as a function of overall density (not necessarialy rendered) the visual results can be
+the	same as a naive implementation with ~40% increase in rendering performance.
+
+Since the dynamic marching step size is even less uniform due to steps not being rendered at all
+the fog is evaluated as the difference of the fog integral at each rendered step.
+
+*/
+
+mat2 rot(in float a){float c = cos(a), s = sin(a);return mat2(c,s,-s,c);}
+const mat3 m3 = mat3(0.33338, 0.56034, -0.71817, -0.87887, 0.32651, -0.15323, 0.15162, 0.69596, 0.61339)*1.93;
+float mag2(vec2 p){return dot(p,p);}
+float linstep(in float mn, in float mx, in float x){ return clamp((x - mn)/(mx - mn), 0., 1.); }
+float prm1 = 0.;
+vec2 bsMo = vec2(0);
+
+vec2 disp(float t){ return vec2(sin(t*0.22)*1., cos(t*0.175)*1.)*2.; }
+
+vec2 map(vec3 p)
+{
+vec3 p2 = p;
+p2.xy -= disp(p.z).xy;
+p.xy *= rot(sin(p.z+iTime)*(0.1 + prm1*0.05) + iTime*0.09);
+float cl = mag2(p2.xy);
+float d = 0.;
+p *= .61;
+float z = 1.;
+float trk = 1.;
+float dspAmp = 0.1 + prm1*0.2;
+for(int i = 0; i < 5; i++)
+{
+p += sin(p.zxy*0.75*trk + iTime*trk*.8)*dspAmp;
+    d -= abs(dot(cos(p), sin(p.yzx))*z);
+    z *= 0.57;
+    trk *= 1.4;
+    p = p*m3;
+}
+d = abs(d + prm1*3.)+ prm1*.3 - 2.5 + bsMo.y;
+return vec2(d + cl*.2 + 0.25, cl);
+}
+
+vec4 render( in vec3 ro, in vec3 rd, float time )
+{
+vec4 rez = vec4(0);
+const float ldst = 8.;
+vec3 lpos = vec3(disp(time + ldst)*0.5, time + ldst);
+float t = 1.5;
+float fogT = 0.;
+for(int i=0; i<130; i++)
+{
+if(rez.a > 0.99)break;
+
+vec3 pos = ro + t*rd;
+    vec2 mpv = map(pos);
+float den = clamp(mpv.x-0.3,0.,1.)*1.12;
+float dn = clamp((mpv.x + 2.),0.,3.);
+
+vec4 col = vec4(0);
+    if (mpv.x > 0.6)
+    {
+
+        col = vec4(sin(vec3(5.,0.4,0.2) + mpv.y*0.1 +sin(pos.z*0.4)*0.5 + 1.8)*0.5 + 0.5,0.08);
+        col *= den*den*den;
+  col.rgb *= linstep(4.,-2.5, mpv.x)*2.3;
+        float dif =  clamp((den - map(pos+.8).x)/9., 0.001, 1. );
+        dif += clamp((den - map(pos+.35).x)/2.5, 0.001, 1. );
+        col.xyz *= den*(vec3(0.005,.045,.075) + 1.5*vec3(0.033,0.07,0.03)*dif);
+    }
+
+float fogC = exp(t*0.2 - 2.2);
+col.rgba += vec4(0.06,0.11,0.11, 0.1)*clamp(fogC-fogT, 0., 1.);
+fogT = fogC;
+rez = rez + col*(1. - rez.a);
+t += clamp(0.5 - dn*dn*.05, 0.09, 0.3);
+}
+return clamp(rez, 0.0, 1.0);
+}
+
+float getsat(vec3 c)
+{
+float mi = min(min(c.x, c.y), c.z);
+float ma = max(max(c.x, c.y), c.z);
+return (ma - mi)/(ma+ 1e-7);
+}
+
+//from my "Will it blend" shader (https://www.shadertoy.com/view/lsdGzN)
+vec3 iLerp(in vec3 a, in vec3 b, in float x)
+{
+vec3 ic = mix(a, b, x) + vec3(1e-6,0.,0.);
+float sd = abs(getsat(ic) - mix(getsat(a), getsat(b), x));
+vec3 dir = normalize(vec3(2.*ic.x - ic.y - ic.z, 2.*ic.y - ic.x - ic.z, 2.*ic.z - ic.y - ic.x));
+float lgt = dot(vec3(1.0), ic);
+float ff = dot(dir, normalize(ic));
+ic += 1.5*dir*sd*ff*lgt;
+return clamp(ic,0.,1.);
+}
+
+void mainImage( out vec4 fragColor, in vec2 fragCoord )
+{
+vec2 q = fragCoord.xy/iResolution.xy;
+vec2 p = (gl_FragCoord.xy - 0.5*iResolution.xy)/iResolution.y;
+bsMo = (iMouse.xy - 0.5*iResolution.xy)/iResolution.y;
+
+float time = iTime*3.;
+vec3 ro = vec3(0,0,time);
+
+ro += vec3(sin(iTime)*0.5,sin(iTime*1.)*0.,0);
+
+float dspAmp = .85;
+ro.xy += disp(ro.z)*dspAmp;
+float tgtDst = 3.5;
+
+vec3 target = normalize(ro - vec3(disp(time + tgtDst)*dspAmp, time + tgtDst));
+ro.x -= bsMo.x*2.;
+vec3 rightdir = normalize(cross(target, vec3(0,1,0)));
+vec3 updir = normalize(cross(rightdir, target));
+rightdir = normalize(cross(updir, target));
+vec3 rd=normalize((p.x*rightdir + p.y*updir)*1. - target);
+rd.xy *= rot(-disp(time + 3.5).x*0.2 + bsMo.x);
+prm1 = smoothstep(-0.4, 0.4,sin(iTime*0.3));
+vec4 scn = render(ro, rd, time);
+
+vec3 col = scn.rgb;
+col = iLerp(col.bgr, col.rgb, clamp(1.-prm1,0.05,1.));
+
+col = pow(col, vec3(.55,0.65,0.6))*vec3(1.,.97,.9);
+
+col *= pow( 16.0*q.x*q.y*(1.0-q.x)*(1.0-q.y), 0.12)*0.7+0.3; //Vign
+
+fragColor = vec4( col, 1.0 );
+}
+`;
+
+//
+// From https://webglfundamentals.org/
+//
 
 const defaultShaderType = ['VERTEX_SHADER', 'FRAGMENT_SHADER'];
 
@@ -373,7 +486,11 @@ function createProgramFromSources(
 ) {
   const shaders = [];
   for (let ii = 0; ii < shaderSources.length; ++ii) {
-    shaders.push(loadShader(gl, shaderSources[ii], gl[defaultShaderType[ii]], opt_errorCallback));
+    const shader = loadShader(gl, shaderSources[ii], gl[defaultShaderType[ii]], opt_errorCallback);
+    if (!shader) {
+      return;
+    }
+    shaders.push(shader);
   }
   return createProgram(gl, shaders, opt_attribs, opt_locations, opt_errorCallback);
 }
@@ -483,6 +600,23 @@ export const ShadertoyDescription = {
   prototype: ShadertoyPrototype,
   properties: {
     title: { type: 'string', default: '' },
+    fragmentShader: {
+      type: 'string',
+      default: fs,
+      editor: {
+        type: 'MultilineString',
+        fullWidthEditor: true,
+        maxRows: 25,
+      },
+    },
+    vertexShader: {
+      type: 'string',
+      default: vs,
+      editor: {
+        type: 'MultilineString',
+        fullWidthEditor: true,
+      },
+    },
     author: { type: 'string', default: '' },
     link: { type: 'string', default: '' },
     // TODO: allow type-inferred simple form ala pause: false?
