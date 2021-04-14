@@ -72,12 +72,34 @@ https://www.shadertoy.com/view/4dGyRh
 https://www.shadertoy.com/view/4scBW8
 https://www.shadertoy.com/view/WdGSDd 2020
 https://www.shadertoy.com/view/ldyBWD
+https://www.shadertoy.com/view/Xd3BW2
+https://www.shadertoy.com/view/Xd2GW3
+https://www.shadertoy.com/view/MtSBRw
+https://www.shadertoy.com/view/MscBRs
+https://www.shadertoy.com/view/Xdf3z8
+https://www.shadertoy.com/view/XsXBDX
+https://www.shadertoy.com/view/lty3zc
+https://www.shadertoy.com/view/lsXcWn
+https://www.shadertoy.com/view/MdySzc
+https://www.shadertoy.com/view/4sXBRn
+https://www.shadertoy.com/view/4lsfWX
+https://www.shadertoy.com/view/MtXfD2
+https://www.shadertoy.com/view/Xd2XDm
+https://www.shadertoy.com/view/MtGSWc
+https://www.shadertoy.com/view/4tXcRl
 
 // Fail
 https://www.shadertoy.com/view/Xds3zN
 https://www.shadertoy.com/view/Xsd3zf
 https://www.shadertoy.com/view/lljSDy
 https://www.shadertoy.com/view/ttVBzd
+https://www.shadertoy.com/view/4tVBDz
+https://www.shadertoy.com/view/Mt3yW7
+https://www.shadertoy.com/view/llScR1
+https://www.shadertoy.com/view/XlccWH
+https://www.shadertoy.com/view/XdyyDV
+https://www.shadertoy.com/view/lt2fD3
+https://www.shadertoy.com/view/XtGGRt
 
 */
 
@@ -139,11 +161,16 @@ const ShadertoyPrototype = {
       this.stop();
     }
 
-    const canvas = this._element;
-
     // Get A WebGL context
     /** @type {HTMLCanvasElement} */
-    const gl = canvas.getContext('webgl2') || canvas.getContext('webgl');
+    const canvas = this._element;
+
+    // Preserve the drawing buffer at design time so it will be captured in
+    // the project preview thumbnail. Don't do it at run time because there is
+    // a performance penalty.
+    const attrs = { preserveDrawingBuffer: this.project.designMode };
+
+    const gl = canvas.getContext('webgl2', attrs) || canvas.getContext('webgl', attrs);
     if (!gl) {
       return;
     }
