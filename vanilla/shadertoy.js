@@ -143,7 +143,7 @@ const ShadertoyPrototype = {
 
     // Get A WebGL context
     /** @type {HTMLCanvasElement} */
-    const gl = canvas.getContext('webgl2');
+    const gl = canvas.getContext('webgl2') || canvas.getContext('webgl');
     if (!gl) {
       return;
     }
