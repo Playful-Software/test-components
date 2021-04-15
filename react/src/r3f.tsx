@@ -1,13 +1,16 @@
-import type { ComponentDescription } from "@playful/runtime";
-import React, { useRef, useState } from "react";
-import { Canvas, MeshProps, useFrame } from "react-three-fiber";
-import type { Mesh } from "three";
+import type { ComponentDescription, ComponentProperties } from '@playful/runtime';
+import React, { useRef, useState } from 'react';
+import { Canvas, MeshProps, useFrame } from 'react-three-fiber';
+import type { Mesh } from 'three';
 
-type ThreeProperties = {};
+type ThreeProperties = {} & ComponentProperties;
 
 function Three(props: ThreeProperties) {
+  // Preserve drawing buffer at design time so it will become part of the preview thumbnail.
+  const preserveDrawingBuffer = props.componentObject!.project.designMode;
+
   return (
-    <Canvas>
+    <Canvas gl={{ preserveDrawingBuffer }}>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       <Box position={[-2.2, 0, 0]} />
@@ -17,18 +20,18 @@ function Three(props: ThreeProperties) {
 }
 
 export const ThreeDescription: ComponentDescription = {
-  name: "Three",
-  description: "The Three Component ...",
-  author: "Playful Software", // TODO: userId or unique username?
-  icon: "...", // TODO: local file?
-  preview: "...", // TODO: local file?
-  collection: "React Test Kit",
+  name: 'Three',
+  description: 'The Three Component ...',
+  author: 'Playful Software', // TODO: userId or unique username?
+  icon: '...', // TODO: local file?
+  preview: '...', // TODO: local file?
+  collection: 'React Test Kit',
   renderer: Three,
-  extends: "Play Kit/View",
+  extends: 'Play Kit/View',
   properties: {
     // Override default width, height.
-    width: { type: "number", title: "Width", default: 400 },
-    height: { type: "number", title: "Height", default: 200 },
+    width: { type: 'number', title: 'Width', default: 400 },
+    height: { type: 'number', title: 'Height', default: 200 },
   },
 };
 
@@ -55,7 +58,7 @@ const Box: React.FC<MeshProps> = (props) => {
       onPointerOut={(event) => setHover(false)}
     >
       <boxBufferGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />
+      <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
     </mesh>
   );
 };
