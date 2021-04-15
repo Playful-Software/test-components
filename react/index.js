@@ -39035,7 +39035,10 @@ var Canvas = /* @__PURE__ */ import_react2.default.memo(function Canvas2({
 
 // src/r3f.tsx
 function Three(props) {
-  return /* @__PURE__ */ import_react3.default.createElement(Canvas, null, /* @__PURE__ */ import_react3.default.createElement("ambientLight", null), /* @__PURE__ */ import_react3.default.createElement("pointLight", {
+  const preserveDrawingBuffer = props.componentObject.project.designMode;
+  return /* @__PURE__ */ import_react3.default.createElement(Canvas, {
+    gl: {preserveDrawingBuffer}
+  }, /* @__PURE__ */ import_react3.default.createElement("ambientLight", null), /* @__PURE__ */ import_react3.default.createElement("pointLight", {
     position: [10, 10, 10]
   }), /* @__PURE__ */ import_react3.default.createElement(Box, {
     position: [-2.2, 0, 0]
