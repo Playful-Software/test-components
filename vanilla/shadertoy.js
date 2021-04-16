@@ -114,6 +114,8 @@ const ShadertoyPrototype = {
   },
 
   unmount() {
+    super.unmount();
+
     if (this._requestId) {
       cancelAnimationFrame(this._requestId);
       this._requestId = undefined;
