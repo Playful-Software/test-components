@@ -163,6 +163,8 @@ const ShadertoyPrototype = {
       this.stop();
     }
 
+    this.error = undefined;
+
     // Get A WebGL context
     /** @type {HTMLCanvasElement} */
     const canvas = this._element;
@@ -172,28 +174,54 @@ const ShadertoyPrototype = {
     // a performance penalty.
     const attrs = { preserveDrawingBuffer: this.project.designMode };
 
-    const gl = canvas.getContext('webgl2', attrs) || canvas.getContext('webgl', attrs);
+    const isWebGL2Context = 'WebGL2RenderingContext' in window;
+    const gl = canvas.getContext(isWebGL2Context ? 'webgl2' : 'webgl', attrs);
     if (!gl) {
+      this.error = 'This browser does not support WebGL.';
       return;
+    }
+
+    if (!isWebGL2Context) {
+      gl.getExtension('OES_standard_derivatives');
+      gl.getExtension('EXT_shader_texture_lod');
     }
 
     // setup GLSL program
     const fs = `
-precision highp float;
+    precision highp float;
+    ${isWebGL2Context ? 'out vec4 FragColor;\n' : ''}
 
-uniform vec3 iResolution;
-uniform vec4 iMouse;
-uniform float iTime;
-uniform int iFrame;
+    uniform vec3 iResolution;
+    uniform vec4 iMouse;
+    uniform float iTime;
+    uniform int iFrame;
 
-${this.fragmentShader}
+    ${this.fragmentShader}
 
-void main() {
-  mainImage(gl_FragColor, gl_FragCoord.xy);
-}
-`;
+    void main() {
+      vec4 color = vec4(0.0, 0.0, 0.0, 1.0);
+      mainImage(color, gl_FragCoord.xy);
+      ${isWebGL2Context ? 'FragColor' : 'gl_FragColor'} = color;
+    }
+    `;
 
-    const program = createProgramFromSources(gl, [vs, fs]);
+    const vs = `
+    ${isWebGL2Context ? 'in' : 'attribute'} vec4 a_position;
+
+    void main() {
+      gl_Position = a_position;
+    }`;
+
+    const program = createProgramFromSources(
+      gl,
+      [
+        (isWebGL2Context ? '#version 300 es\n' : '') + vs,
+        (isWebGL2Context ? '#version 300 es\n' : '') + fs,
+      ],
+      undefined,
+      undefined,
+      (err) => (this.error = err)
+    );
     if (!program) {
       return;
     }
@@ -326,18 +354,7 @@ void main() {
   },
 };
 
-const vs = `// an attribute will receive data from a buffer
-attribute vec4 a_position;
-
-// all shaders have a main function
-void main() {
-
-  // gl_Position is a special variable a vertex shader
-  // is responsible for setting
-  gl_Position = a_position;
-}`;
-
-const fs = `void mainImage(out vec4 fragColor, in vec2 fragCoord) {
+const defaultFragmentShader = `void mainImage(out vec4 fragColor, in vec2 fragCoord) {
   vec2 uv = fragCoord.xy / iResolution.xy;
   vec3 col = 0.5 + 0.5 * cos(iTime + uv.xyx + vec3(0,2,4));
   fragColor = vec4(col ,1.0);
@@ -442,7 +459,7 @@ function loadShader(gl, shaderSource, shaderType, opt_errorCallback) {
   if (!compiled) {
     // Something went wrong during compilation; get the error
     const lastError = gl.getShaderInfoLog(shader);
-    errFn("*** Error compiling shader '" + shader + "':" + lastError);
+    errFn('Error compiling shader: ' + lastError);
     gl.deleteShader(shader);
     return null;
   }
@@ -489,32 +506,22 @@ export const ShadertoyDescription = {
     description: {
       type: 'string',
       default: 'Sample shader from Shadertoy: https://www.shadertoy.com/',
-      editor: {
-        type: 'MultilineString',
-        fullWidthEditor: true,
-      },
+      editor: 'MultilineString',
     },
     fragmentShader: {
       type: 'string',
-      default: fs,
+      default: defaultFragmentShader,
       editor: {
         type: 'Script',
       },
     },
-    /* TODO: Shadertoy doesn't use.
-    vertexShader: {
-      type: 'string',
-      default: vs,
-      editor: {
-        type: 'Script',
-      },
-    },
-    */
     author: { type: 'string', default: '' },
     link: { type: 'string', default: '' },
     // TODO: allow type-inferred simple form ala pause: false?
     play: { type: 'boolean', default: true },
-    backgroundColor: { type: 'string', default: '#ffffff', editor: 'Color' },
+    backgroundColor: { type: 'string', default: '#000000ff', editor: 'Color' },
+    // TODO: How to present properties like this? (probably most readOnly properties are the same).
+    //error: { type: 'string', editor: 'MultilineString', readOnly: true },
     width: { type: 'number', default: 1024 / 2 },
     height: { type: 'number', default: 576 / 2 },
   },
