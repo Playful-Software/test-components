@@ -1,5 +1,6 @@
 import type { ComponentDescription, ComponentProperties } from '@playful/runtime';
 import React, { useCallback, useEffect, useState } from 'react';
+// @ts-ignore
 import WarpSpeed from './WarpSpeed';
 
 type WarpSpeedProperties = {
