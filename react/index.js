@@ -8535,7 +8535,7 @@ var require_chart_xkcd = __commonJS((exports) => {
   });
   var import_chart = __toModule(require_dist());
   var import_chart2 = __toModule(require_build());
-  var import_react31 = __toModule(require("react"));
+  var import_react29 = __toModule(require("react"));
   var PositionType;
   (function(PositionType2) {
     PositionType2[PositionType2["upLeft"] = 1] = "upLeft";
@@ -8557,7 +8557,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       unkcdify,
       fontFamily
     } = props;
-    return /* @__PURE__ */ import_react31.default.createElement(import_chart2.Line, {
+    return /* @__PURE__ */ import_react29.default.createElement(import_chart2.Line, {
       config: {
         title,
         xLabel,
@@ -8646,7 +8646,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       backgroundColor,
       fontFamily
     } = props;
-    return /* @__PURE__ */ import_react31.default.createElement(import_chart2.Bar, {
+    return /* @__PURE__ */ import_react29.default.createElement(import_chart2.Bar, {
       config: {
         title,
         xLabel,
@@ -8716,7 +8716,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       showLegend,
       legendPosition
     } = props;
-    return /* @__PURE__ */ import_react31.default.createElement(StackedBar, {
+    return /* @__PURE__ */ import_react29.default.createElement(StackedBar, {
       config: {
         title,
         xLabel,
@@ -8795,7 +8795,7 @@ var require_chart_xkcd = __commonJS((exports) => {
   };
   function PieChart(props) {
     const {title, innerRadius, data} = props;
-    return /* @__PURE__ */ import_react31.default.createElement(import_chart2.Pie, {
+    return /* @__PURE__ */ import_react29.default.createElement(import_chart2.Pie, {
       config: {
         title,
         data: eval(`(${data})`) || {},
@@ -8871,7 +8871,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       backgroundColor,
       fontFamily
     } = props;
-    return /* @__PURE__ */ import_react31.default.createElement(import_chart2.XY, {
+    return /* @__PURE__ */ import_react29.default.createElement(import_chart2.XY, {
       config: {
         title,
         xLabel,
@@ -8984,7 +8984,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       fontFamily,
       showLabels
     } = props;
-    return /* @__PURE__ */ import_react31.default.createElement(import_chart2.Radar, {
+    return /* @__PURE__ */ import_react29.default.createElement(import_chart2.Radar, {
       config: {
         title,
         data: eval(`(${data})`) || {},
@@ -9059,13 +9059,13 @@ var require_chart_xkcd = __commonJS((exports) => {
     }
   };
   var StackedBar = ({config}) => {
-    const ref = (0, import_react31.useRef)();
-    (0, import_react31.useEffect)(() => {
+    const ref = (0, import_react29.useRef)();
+    (0, import_react29.useEffect)(() => {
       if (ref.current) {
         const myChart = new import_chart.default.StackedBar(ref.current, config);
       }
     });
-    return /* @__PURE__ */ import_react31.default.createElement("svg", {
+    return /* @__PURE__ */ import_react29.default.createElement("svg", {
       ref
     });
   };
@@ -59818,8 +59818,6 @@ var WarpSpeedDescription = {
 // src/leaflet.tsx
 var import_leaflet5 = __toModule(require_leaflet_src());
 var import_react28 = __toModule(require("react"));
-var import_react29 = __toModule(require("react"));
-var import_react30 = __toModule(require("react"));
 
 // node_modules/@react-leaflet/core/esm/attribution.js
 var import_react20 = __toModule(require("react"));
@@ -60197,17 +60195,86 @@ link.rel = "stylesheet";
 link.href = import_leaflet6.default;
 document.head.appendChild(link);
 import_leaflet5.default.Icon.Default.imagePath = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/";
+var tilesets = {
+  custom: [void 0, void 0, 18],
+  google_satellite: ["&copy; google", "http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}", 18],
+  openstreetmap: [
+    '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    18
+  ],
+  opentopomap: [
+    'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
+    "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+    17
+  ],
+  stamen_watercolor: [
+    'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+    16
+  ],
+  moon: [
+    "&copy; OpenPlanetary",
+    "https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-moon-basemap-v0-1/all/{z}/{x}/{y}.png",
+    10
+  ],
+  mars: [
+    "&copy; OpenPlanetary",
+    "http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/celestia_mars-shaded-16k_global/{z}/{x}/{y}.png",
+    5
+  ],
+  mars_elevation_color: [
+    "&copy; OpenPlanetary",
+    "http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/mola-color/{z}/{x}/{y}.png",
+    6
+  ],
+  game_of_thrones: [
+    "",
+    "https://cartocdn-gusc.global.ssl.fastly.net//ramirocartodb/api/v1/map/named/tpl_756aec63_3adb_48b6_9d14_331c6cbc47cf/all/{z}/{x}/{y}.png",
+    10
+  ]
+};
 function Map2(props) {
-  const {latitude, longitude, zoom, width, height} = props;
-  const mapRef = (0, import_react30.useRef)();
-  (0, import_react29.useEffect)(() => {
+  const {latitude, longitude, zoom, tiles, width, height, componentObject} = props;
+  let {tilesUrl, attribution, maxZoom} = props;
+  const mapRef = (0, import_react28.useRef)();
+  if (tiles !== "custom") {
+    const tileset = tilesets[tiles];
+    attribution = tileset[0];
+    tilesUrl = tileset[1];
+    maxZoom = tileset[2];
+  }
+  (0, import_react28.useEffect)(() => {
     var _a;
     (_a = mapRef.current) == null ? void 0 : _a.setView([latitude, longitude], zoom);
   }, [latitude, longitude, zoom]);
-  (0, import_react29.useEffect)(() => {
+  (0, import_react28.useEffect)(() => {
     var _a;
     (_a = mapRef.current) == null ? void 0 : _a.invalidateSize(true);
   }, [width, height]);
+  (0, import_react28.useEffect)(() => {
+    var _a;
+    (_a = mapRef.current) == null ? void 0 : _a.eachLayer((layer) => {
+      const tileLayer = layer;
+      if (!tileLayer.setUrl) {
+        return;
+      }
+      tileLayer.setUrl(tilesUrl);
+    });
+  }, [tilesUrl]);
+  (0, import_react28.useEffect)(() => {
+    var _a;
+    const [newAttribution, newTilesUrl, newMaxZoom] = tilesets[tiles];
+    componentObject.$maxZoom = newMaxZoom;
+    componentObject.$zoom = Math.min(newMaxZoom, componentObject.zoom);
+    if (newTilesUrl) {
+      componentObject.$tilesUrl = newTilesUrl;
+    }
+    if (newAttribution) {
+      componentObject.$attribution = newAttribution;
+    }
+    (_a = mapRef.current) == null ? void 0 : _a.setMaxZoom(newMaxZoom);
+  }, [tiles]);
   return /* @__PURE__ */ import_react28.default.createElement("div", {
     style: {width, height}
   }, /* @__PURE__ */ import_react28.default.createElement(MapContainer, {
@@ -60215,10 +60282,11 @@ function Map2(props) {
     style: {width: "100%", height: "100%"},
     center: [latitude, longitude],
     zoom,
-    scrollWheelZoom: false
+    scrollWheelZoom: true
   }, /* @__PURE__ */ import_react28.default.createElement(TileLayer, {
-    attribution: '\xA9 <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-    url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    attribution,
+    url: tilesUrl,
+    maxZoom
   }), /* @__PURE__ */ import_react28.default.createElement(Marker, {
     position: [latitude, longitude]
   }, /* @__PURE__ */ import_react28.default.createElement(Popup, null, "A pretty CSS3 popup. ", /* @__PURE__ */ import_react28.default.createElement("br", null), " Easily customizable."))));
@@ -60244,6 +60312,27 @@ var MapDescription = {
       editor: {type: "Number", min: -180, max: 180, step: 1}
     },
     zoom: {type: "number", default: 13, editor: {type: "Number", min: 0, max: 18, step: 1}},
+    tiles: {
+      type: "string",
+      default: "openstreetmap",
+      editor: {
+        type: "Option",
+        options: [
+          {title: "Custom", value: "custom"},
+          {title: "OpenStreetMap", value: "openstreetmap"},
+          {title: "OpenTopoMap", value: "opentopomap"},
+          {title: "Google Satellite", value: "google_satellite"},
+          {title: "Stamen Watercolor", value: "stamen_watercolor"},
+          {title: "Moon", value: "moon"},
+          {title: "Mars", value: "mars"},
+          {title: "Mars Elevation Color", value: "mars_elevation_color"},
+          {title: "Game Of Thrones", value: "game_of_thrones"}
+        ]
+      }
+    },
+    attribution: {type: "string"},
+    tilesUrl: {type: "string"},
+    maxZoom: {type: "number", default: 18},
     width: {type: "number", default: 400},
     height: {type: "number", default: 400}
   }
