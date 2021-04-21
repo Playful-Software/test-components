@@ -11,6 +11,7 @@ import {
 } from './chart.xkcd/chart-xkcd';
 import { ClockDescription } from './clock/clock';
 import { WarpSpeedDescription } from './warpspeed/WarpSpeedComponent';
+import { MapDescription } from './leaflet';
 
 export {
   ThreeDescription,
@@ -23,6 +24,7 @@ export {
   RadarChartDescription,
   ClockDescription,
   WarpSpeedDescription,
+  MapDescription,
 };
 
 export const kit: KitDescription = {
@@ -40,5 +42,6 @@ export const kit: KitDescription = {
     RadarChartDescription,
     ClockDescription,
     WarpSpeedDescription,
+    MapDescription,
   ],
 };
