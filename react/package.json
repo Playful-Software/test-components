@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "node build.js && cp node_modules/leaflet/dist/leaflet.css ${BUILD_DIR:-build}",
-    "serve": "http-server build -p 8081 --cors"
+    "build": "node build.js && cp node_modules/leaflet/dist/leaflet.css ${BUILD_DIR:-build}"
   },
   "dependencies": {
     "@types/react-clock": "^3.0.0",
@@ -30,7 +29,6 @@
     "@types/react-leaflet": "^2.8.1",
     "@types/three": "0.126.0",
     "esbuild": "^0.9.3",
-    "http-server": "0.12.3",
     "typescript": "4.1.2"
   }
 }
