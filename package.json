@@ -5,8 +5,10 @@
   "scripts": {
     "serve": "http-server build -p 8081 --cors"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
-    "http-server": "0.12.3"
+    "http-server": "0.12.3",
+    "chokidar-cli": "^2.1.0"
   }
 }

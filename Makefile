@@ -13,8 +13,11 @@ build:
 		make -C $$dir build BUILD_DIR=../$(BUILD_DIR)/$$dir; \
   done
 
-serve: build
+serve: deps build
 	yarn serve
+
+watch:deps	
+	yarn run chokidar $(SUBDIRS) -c "make build"
 
 clean:
 	@for dir in $(SUBDIRS); do \
