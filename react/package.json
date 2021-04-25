@@ -12,7 +12,6 @@
     "leaflet": "^1.7.1",
     "react-clock": "^3.0.0",
     "react-jss": "^10.6.0",
-    "react-leaflet": "^3.1.0",
     "react-three-fiber": "5.3.19",
     "react-timezone-select": "^0.10.7",
     "spacetime": "^6.14.0",
@@ -26,7 +25,6 @@
     "@types/leaflet": "^1.7.0",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.2",
-    "@types/react-leaflet": "^2.8.1",
     "@types/three": "0.126.0",
     "esbuild": "^0.9.3",
     "typescript": "4.1.2"
