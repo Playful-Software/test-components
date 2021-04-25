@@ -8535,7 +8535,7 @@ var require_chart_xkcd = __commonJS((exports) => {
   });
   var import_chart = __toModule(require_dist());
   var import_chart2 = __toModule(require_build());
-  var import_react29 = __toModule(require("react"));
+  var import_react20 = __toModule(require("react"));
   var PositionType;
   (function(PositionType2) {
     PositionType2[PositionType2["upLeft"] = 1] = "upLeft";
@@ -8557,7 +8557,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       unkcdify,
       fontFamily
     } = props;
-    return /* @__PURE__ */ import_react29.default.createElement(import_chart2.Line, {
+    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.Line, {
       config: {
         title,
         xLabel,
@@ -8646,7 +8646,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       backgroundColor,
       fontFamily
     } = props;
-    return /* @__PURE__ */ import_react29.default.createElement(import_chart2.Bar, {
+    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.Bar, {
       config: {
         title,
         xLabel,
@@ -8716,7 +8716,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       showLegend,
       legendPosition
     } = props;
-    return /* @__PURE__ */ import_react29.default.createElement(StackedBar, {
+    return /* @__PURE__ */ import_react20.default.createElement(StackedBar, {
       config: {
         title,
         xLabel,
@@ -8795,7 +8795,7 @@ var require_chart_xkcd = __commonJS((exports) => {
   };
   function PieChart(props) {
     const {title, innerRadius, data} = props;
-    return /* @__PURE__ */ import_react29.default.createElement(import_chart2.Pie, {
+    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.Pie, {
       config: {
         title,
         data: eval(`(${data})`) || {},
@@ -8871,7 +8871,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       backgroundColor,
       fontFamily
     } = props;
-    return /* @__PURE__ */ import_react29.default.createElement(import_chart2.XY, {
+    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.XY, {
       config: {
         title,
         xLabel,
@@ -8984,7 +8984,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       fontFamily,
       showLabels
     } = props;
-    return /* @__PURE__ */ import_react29.default.createElement(import_chart2.Radar, {
+    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.Radar, {
       config: {
         title,
         data: eval(`(${data})`) || {},
@@ -9059,13 +9059,13 @@ var require_chart_xkcd = __commonJS((exports) => {
     }
   };
   var StackedBar = ({config}) => {
-    const ref = (0, import_react29.useRef)();
-    (0, import_react29.useEffect)(() => {
+    const ref = (0, import_react20.useRef)();
+    (0, import_react20.useEffect)(() => {
       if (ref.current) {
         const myChart = new import_chart.default.StackedBar(ref.current, config);
       }
     });
-    return /* @__PURE__ */ import_react29.default.createElement("svg", {
+    return /* @__PURE__ */ import_react20.default.createElement("svg", {
       ref
     });
   };
@@ -9397,7 +9397,7 @@ var require_AutosizeInput = __commonJS((exports2) => {
   Object.defineProperty(exports2, "__esModule", {
     value: true
   });
-  var _extends4 = Object.assign || function(target) {
+  var _extends3 = Object.assign || function(target) {
     for (var i2 = 1; i2 < arguments.length; i2++) {
       var source = arguments[i2];
       for (var key in source) {
@@ -9620,10 +9620,10 @@ var require_AutosizeInput = __commonJS((exports2) => {
           }
           return currentValue;
         });
-        var wrapperStyle = _extends4({}, this.props.style);
+        var wrapperStyle = _extends3({}, this.props.style);
         if (!wrapperStyle.display)
           wrapperStyle.display = "inline-block";
-        var inputStyle3 = _extends4({
+        var inputStyle3 = _extends3({
           boxSizing: "content-box",
           width: this.state.inputWidth + "px"
         }, this.props.inputStyle);
@@ -9632,7 +9632,7 @@ var require_AutosizeInput = __commonJS((exports2) => {
         inputProps.className = this.props.inputClassName;
         inputProps.id = this.state.inputId;
         inputProps.style = inputStyle3;
-        return _react2.default.createElement("div", {className: this.props.className, style: wrapperStyle}, this.renderStyles(), _react2.default.createElement("input", _extends4({}, inputProps, {ref: this.inputRef})), _react2.default.createElement("div", {ref: this.sizerRef, style: sizerStyle}, sizerValue), this.props.placeholder ? _react2.default.createElement("div", {ref: this.placeHolderSizerRef, style: sizerStyle}, this.props.placeholder) : null);
+        return _react2.default.createElement("div", {className: this.props.className, style: wrapperStyle}, this.renderStyles(), _react2.default.createElement("input", _extends3({}, inputProps, {ref: this.inputRef})), _react2.default.createElement("div", {ref: this.sizerRef, style: sizerStyle}, sizerValue), this.props.placeholder ? _react2.default.createElement("div", {ref: this.placeHolderSizerRef, style: sizerStyle}, this.props.placeholder) : null);
       }
     }]);
     return AutosizeInput3;
@@ -15017,7 +15017,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         return [0, 0];
       }
     });
-    var Popup2 = DivOverlay.extend({
+    var Popup = DivOverlay.extend({
       options: {
         maxWidth: 300,
         minWidth: 50,
@@ -15145,15 +15145,15 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
       }
     });
     var popup = function(options2, source) {
-      return new Popup2(options2, source);
+      return new Popup(options2, source);
     };
     Map3.mergeOptions({
       closePopupOnClick: true
     });
     Map3.include({
       openPopup: function(popup2, latlng, options2) {
-        if (!(popup2 instanceof Popup2)) {
-          popup2 = new Popup2(options2).setContent(popup2);
+        if (!(popup2 instanceof Popup)) {
+          popup2 = new Popup(options2).setContent(popup2);
         }
         if (latlng) {
           popup2.setLatLng(latlng);
@@ -15180,13 +15180,13 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
     });
     Layer.include({
       bindPopup: function(content, options2) {
-        if (content instanceof Popup2) {
+        if (content instanceof Popup) {
           setOptions2(content, options2);
           this._popup = content;
           content._source = this;
         } else {
           if (!this._popup || options2) {
-            this._popup = new Popup2(options2, this);
+            this._popup = new Popup(options2, this);
           }
           this._popup.setContent(content);
         }
@@ -17595,7 +17595,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
     exports3.SVGOverlay = SVGOverlay;
     exports3.svgOverlay = svgOverlay;
     exports3.DivOverlay = DivOverlay;
-    exports3.Popup = Popup2;
+    exports3.Popup = Popup;
     exports3.popup = popup;
     exports3.Tooltip = Tooltip;
     exports3.tooltip = tooltip;
@@ -59816,481 +59816,189 @@ var WarpSpeedDescription = {
 };
 
 // src/leaflet.tsx
-var import_leaflet5 = __toModule(require_leaflet_src());
-var import_react28 = __toModule(require("react"));
-
-// node_modules/@react-leaflet/core/esm/attribution.js
-var import_react20 = __toModule(require("react"));
-function useAttribution(map, attribution) {
-  const attributionRef = (0, import_react20.useRef)(attribution);
-  (0, import_react20.useEffect)(function updateAttribution() {
-    if (attribution !== attributionRef.current && map.attributionControl != null) {
-      if (attributionRef.current != null) {
-        map.attributionControl.removeAttribution(attributionRef.current);
-      }
-      if (attribution != null) {
-        map.attributionControl.addAttribution(attribution);
-      }
-    }
-    attributionRef.current = attribution;
-  }, [map, attribution]);
-}
-
-// node_modules/@react-leaflet/core/esm/component.js
-var import_react22 = __toModule(require("react"));
-var import_react_dom3 = __toModule(require("react-dom"));
-
-// node_modules/@react-leaflet/core/esm/context.js
-var import_react21 = __toModule(require("react"));
-var CONTEXT_VERSION = 1;
-var LeafletContext = /* @__PURE__ */ (0, import_react21.createContext)(null);
-var LeafletProvider = LeafletContext.Provider;
-function useLeafletContext() {
-  const context = (0, import_react21.useContext)(LeafletContext);
-  if (context == null) {
-    throw new Error("No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>");
-  }
-  return context;
-}
-
-// node_modules/@react-leaflet/core/esm/component.js
-function createContainerComponent(useElement) {
-  function ContainerComponent(props, ref) {
-    const {
-      instance,
-      context
-    } = useElement(props).current;
-    (0, import_react22.useImperativeHandle)(ref, () => instance);
-    return props.children == null ? null : /* @__PURE__ */ import_react22.default.createElement(LeafletProvider, {
-      value: context
-    }, props.children);
-  }
-  return /* @__PURE__ */ (0, import_react22.forwardRef)(ContainerComponent);
-}
-function createDivOverlayComponent(useElement) {
-  function OverlayComponent(props, ref) {
-    const [isOpen, setOpen] = (0, import_react22.useState)(false);
-    const {
-      instance
-    } = useElement(props, setOpen).current;
-    (0, import_react22.useImperativeHandle)(ref, () => instance);
-    (0, import_react22.useEffect)(function updateOverlay() {
-      if (isOpen) {
-        instance.update();
-      }
-    }, [instance, isOpen, props.children]);
-    const contentNode = instance._contentNode;
-    return contentNode ? /* @__PURE__ */ (0, import_react_dom3.createPortal)(props.children, contentNode) : null;
-  }
-  return /* @__PURE__ */ (0, import_react22.forwardRef)(OverlayComponent);
-}
-function createLeafComponent(useElement) {
-  function LeafComponent(props, ref) {
-    const {
-      instance
-    } = useElement(props).current;
-    (0, import_react22.useImperativeHandle)(ref, () => instance);
-    return null;
-  }
-  return /* @__PURE__ */ (0, import_react22.forwardRef)(LeafComponent);
-}
-
-// node_modules/@react-leaflet/core/esm/events.js
-var import_react23 = __toModule(require("react"));
-function useEventHandlers(element, eventHandlers) {
-  const eventHandlersRef = (0, import_react23.useRef)();
-  (0, import_react23.useEffect)(function addEventHandlers() {
-    if (eventHandlers != null) {
-      element.instance.on(eventHandlers);
-    }
-    eventHandlersRef.current = eventHandlers;
-    return function removeEventHandlers() {
-      if (eventHandlersRef.current != null) {
-        element.instance.off(eventHandlersRef.current);
-      }
-      eventHandlersRef.current = null;
-    };
-  }, [element, eventHandlers]);
-}
-
-// node_modules/@react-leaflet/core/esm/pane.js
-function withPane(props, context) {
-  var _props$pane;
-  const pane = (_props$pane = props.pane) != null ? _props$pane : context.pane;
-  return pane ? {
-    ...props,
-    pane
-  } : props;
-}
-
-// node_modules/@react-leaflet/core/esm/div-overlay.js
-function createDivOverlayHook(useElement, useLifecycle) {
-  return function useDivOverlay(props, setOpen) {
-    const context = useLeafletContext();
-    const elementRef = useElement(withPane(props, context), context);
-    useAttribution(context.map, props.attribution);
-    useEventHandlers(elementRef.current, props.eventHandlers);
-    useLifecycle(elementRef.current, context, props, setOpen);
-    return elementRef;
-  };
-}
-
-// node_modules/@react-leaflet/core/esm/element.js
-var import_react24 = __toModule(require("react"));
-function createElementHook(createElement6, updateElement) {
-  if (updateElement == null) {
-    return function useImmutableLeafletElement(props, context) {
-      return (0, import_react24.useRef)(createElement6(props, context));
-    };
-  }
-  return function useMutableLeafletElement(props, context) {
-    const elementRef = (0, import_react24.useRef)(createElement6(props, context));
-    const propsRef = (0, import_react24.useRef)(props);
-    const {
-      instance
-    } = elementRef.current;
-    (0, import_react24.useEffect)(function updateElementProps() {
-      if (propsRef.current !== props) {
-        updateElement(instance, props, propsRef.current);
-        propsRef.current = props;
-      }
-    }, [instance, props, context]);
-    return elementRef;
-  };
-}
-
-// node_modules/@react-leaflet/core/esm/layer.js
-var import_react25 = __toModule(require("react"));
-function useLayerLifecycle(element, context) {
-  (0, import_react25.useEffect)(function addLayer() {
-    var _context$layerContain;
-    const container = (_context$layerContain = context.layerContainer) != null ? _context$layerContain : context.map;
-    container.addLayer(element.instance);
-    return function removeLayer() {
-      container.removeLayer(element.instance);
-    };
-  }, [context, element]);
-}
-function createLayerHook(useElement) {
-  return function useLayer(props) {
-    const context = useLeafletContext();
-    const elementRef = useElement(withPane(props, context), context);
-    useAttribution(context.map, props.attribution);
-    useEventHandlers(elementRef.current, props.eventHandlers);
-    useLayerLifecycle(elementRef.current, context);
-    return elementRef;
-  };
-}
-
-// node_modules/@react-leaflet/core/esm/generic.js
-function createLayerComponent(createElement6, updateElement) {
-  const useElement = createElementHook(createElement6, updateElement);
-  const useLayer = createLayerHook(useElement);
-  return createContainerComponent(useLayer);
-}
-function createOverlayComponent(createElement6, useLifecycle) {
-  const useElement = createElementHook(createElement6);
-  const useOverlay = createDivOverlayHook(useElement, useLifecycle);
-  return createDivOverlayComponent(useOverlay);
-}
-function createTileLayerComponent(createElement6, updateElement) {
-  const useElement = createElementHook(createElement6, updateElement);
-  const useLayer = createLayerHook(useElement);
-  return createLeafComponent(useLayer);
-}
-
-// node_modules/@react-leaflet/core/esm/grid-layer.js
-function updateGridLayer(layer, props, prevProps) {
-  const {
-    opacity,
-    zIndex
-  } = props;
-  if (opacity != null && opacity !== prevProps.opacity) {
-    layer.setOpacity(opacity);
-  }
-  if (zIndex != null && zIndex !== prevProps.zIndex) {
-    layer.setZIndex(zIndex);
-  }
-}
-
-// node_modules/react-leaflet/esm/MapContainer.js
 var import_leaflet = __toModule(require_leaflet_src());
-var import_react26 = __toModule(require("react"));
-function _extends3() {
-  _extends3 = Object.assign || function(target) {
-    for (var i2 = 1; i2 < arguments.length; i2++) {
-      var source = arguments[i2];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-    return target;
-  };
-  return _extends3.apply(this, arguments);
-}
-function useMapElement(mapRef, props) {
-  const [map, setMap] = (0, import_react26.useState)(null);
-  (0, import_react26.useEffect)(() => {
-    if (mapRef.current !== null && map === null) {
-      const instance = new import_leaflet.Map(mapRef.current, props);
-      if (props.center != null && props.zoom != null) {
-        instance.setView(props.center, props.zoom);
-      } else if (props.bounds != null) {
-        instance.fitBounds(props.bounds, props.boundsOptions);
-      }
-      if (props.whenReady != null) {
-        instance.whenReady(props.whenReady);
-      }
-      setMap(instance);
-    }
-  }, [mapRef, map, props]);
-  return map;
-}
-function MapContainer({
-  children,
-  className,
-  id,
-  placeholder,
-  style,
-  whenCreated,
-  ...options2
-}) {
-  const mapRef = (0, import_react26.useRef)(null);
-  const map = useMapElement(mapRef, options2);
-  const createdRef = (0, import_react26.useRef)(false);
-  (0, import_react26.useEffect)(() => {
-    if (map != null && createdRef.current === false && whenCreated != null) {
-      createdRef.current = true;
-      whenCreated(map);
-    }
-  }, [map, whenCreated]);
-  const [props] = (0, import_react26.useState)({
-    className,
-    id,
-    style
-  });
-  const context = (0, import_react26.useMemo)(() => map ? {
-    __version: CONTEXT_VERSION,
-    map
-  } : null, [map]);
-  const contents = context ? /* @__PURE__ */ import_react26.default.createElement(LeafletProvider, {
-    value: context
-  }, children) : placeholder != null ? placeholder : null;
-  return /* @__PURE__ */ import_react26.default.createElement("div", _extends3({}, props, {
-    ref: mapRef
-  }), contents);
-}
-
-// node_modules/react-leaflet/esm/Marker.js
-var import_leaflet2 = __toModule(require_leaflet_src());
-var Marker = createLayerComponent(function createMarker({
-  position: position2,
-  ...options2
-}, ctx) {
-  const instance = new import_leaflet2.Marker(position2, options2);
-  return {
-    instance,
-    context: {
-      ...ctx,
-      overlayContainer: instance
-    }
-  };
-}, function updateMarker(marker, props, prevProps) {
-  if (props.position !== prevProps.position) {
-    marker.setLatLng(props.position);
-  }
-  if (props.icon != null && props.icon !== prevProps.icon) {
-    marker.setIcon(props.icon);
-  }
-  if (props.zIndexOffset != null && props.zIndexOffset !== prevProps.zIndexOffset) {
-    marker.setZIndexOffset(props.zIndexOffset);
-  }
-  if (props.opacity != null && props.opacity !== prevProps.opacity) {
-    marker.setOpacity(props.opacity);
-  }
-  if (marker.dragging != null && props.draggable !== prevProps.draggable) {
-    if (props.draggable === true) {
-      marker.dragging.enable();
-    } else {
-      marker.dragging.disable();
-    }
-  }
-});
-
-// node_modules/react-leaflet/esm/Popup.js
-var import_leaflet3 = __toModule(require_leaflet_src());
-var import_react27 = __toModule(require("react"));
-var Popup = createOverlayComponent(function createPopup(props, context) {
-  return {
-    instance: new import_leaflet3.Popup(props, context.overlayContainer),
-    context
-  };
-}, function usePopupLifecycle(element, context, props, setOpen) {
-  const {
-    onClose,
-    onOpen,
-    position: position2
-  } = props;
-  (0, import_react27.useEffect)(function addPopup() {
-    const {
-      instance
-    } = element;
-    function onPopupOpen(event) {
-      if (event.popup === instance) {
-        instance.update();
-        setOpen(true);
-        onOpen == null ? void 0 : onOpen();
-      }
-    }
-    function onPopupClose(event) {
-      if (event.popup === instance) {
-        setOpen(false);
-        onClose == null ? void 0 : onClose();
-      }
-    }
-    context.map.on({
-      popupopen: onPopupOpen,
-      popupclose: onPopupClose
-    });
-    if (context.overlayContainer == null) {
-      if (position2 != null) {
-        instance.setLatLng(position2);
-      }
-      instance.openOn(context.map);
-    } else {
-      context.overlayContainer.bindPopup(instance);
-    }
-    return function removePopup() {
-      context.map.off({
-        popupopen: onPopupOpen,
-        popupclose: onPopupClose
-      });
-      if (context.overlayContainer == null) {
-        context.map.removeLayer(instance);
-      } else {
-        context.overlayContainer.unbindPopup();
-      }
-    };
-  }, [element, context, setOpen, onClose, onOpen, position2]);
-});
-
-// node_modules/react-leaflet/esm/TileLayer.js
-var import_leaflet4 = __toModule(require_leaflet_src());
-var TileLayer = createTileLayerComponent(function createTileLayer({
-  url,
-  ...options2
-}, context) {
-  return {
-    instance: new import_leaflet4.TileLayer(url, withPane(options2, context)),
-    context
-  };
-}, updateGridLayer);
-
-// src/leaflet.tsx
-var import_leaflet6 = __toModule(require("url!./leaflet.css"));
+var import_leaflet2 = __toModule(require("url!./leaflet.css"));
 var link = document.createElement("link");
 link.rel = "stylesheet";
-link.href = import_leaflet6.default;
+link.href = import_leaflet2.default;
 document.head.appendChild(link);
-import_leaflet5.default.Icon.Default.imagePath = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/";
+import_leaflet.default.Icon.Default.imagePath = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/";
 var tilesets = {
   custom: [void 0, void 0, 18],
   google_satellite: ["&copy; google", "http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}", 18],
   openstreetmap: [
     '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-    18
+    18,
+    47.61213,
+    -122.33945,
+    15
   ],
   opentopomap: [
     'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
     "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
-    17
+    17,
+    47.61213,
+    -122.33945,
+    8
   ],
   stamen_watercolor: [
     'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
-    16
+    16,
+    47.61213,
+    -122.33945,
+    14
   ],
   moon: [
     "&copy; OpenPlanetary",
     "https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-moon-basemap-v0-1/all/{z}/{x}/{y}.png",
-    10
+    10,
+    29.7,
+    11.77,
+    5
   ],
   mars: [
     "&copy; OpenPlanetary",
     "http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/celestia_mars-shaded-16k_global/{z}/{x}/{y}.png",
-    5
+    5,
+    13.56,
+    -147.14,
+    4
   ],
   mars_elevation_color: [
     "&copy; OpenPlanetary",
     "http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/mola-color/{z}/{x}/{y}.png",
-    6
+    6,
+    13.56,
+    -147.14,
+    4
   ],
   game_of_thrones: [
     "",
     "https://cartocdn-gusc.global.ssl.fastly.net//ramirocartodb/api/v1/map/named/tpl_756aec63_3adb_48b6_9d14_331c6cbc47cf/all/{z}/{x}/{y}.png",
-    10
+    10,
+    15.19,
+    22.5,
+    5
   ]
 };
-function Map2(props) {
-  const {latitude, longitude, zoom, tiles, width, height, componentObject} = props;
-  let {tilesUrl, attribution, maxZoom} = props;
-  const mapRef = (0, import_react28.useRef)();
-  if (tiles !== "custom") {
-    const tileset = tilesets[tiles];
-    attribution = tileset[0];
-    tilesUrl = tileset[1];
-    maxZoom = tileset[2];
-  }
-  (0, import_react28.useEffect)(() => {
-    var _a;
-    (_a = mapRef.current) == null ? void 0 : _a.setView([latitude, longitude], zoom);
-  }, [latitude, longitude, zoom]);
-  (0, import_react28.useEffect)(() => {
-    var _a;
-    (_a = mapRef.current) == null ? void 0 : _a.invalidateSize(true);
-  }, [width, height]);
-  (0, import_react28.useEffect)(() => {
-    var _a;
-    (_a = mapRef.current) == null ? void 0 : _a.eachLayer((layer) => {
-      const tileLayer = layer;
-      if (!tileLayer.setUrl) {
-        return;
-      }
-      tileLayer.setUrl(tilesUrl);
+var MapPrototype = {
+  latitude: 0,
+  longitude: 0,
+  zoom: 0,
+  tiles: "",
+  tilesUrl: "",
+  attribution: "",
+  maxZoom: 0,
+  marker: false,
+  markerLatitude: 0,
+  markerLongitude: 0,
+  zoomControl: true,
+  attributionLabel: true,
+  $tilesUrl: "",
+  $attribution: "",
+  $maxZoom: 0,
+  $latitude: 0,
+  $longitude: 0,
+  $zoom: 0,
+  project: void 0,
+  _element: void 0,
+  _map: void 0,
+  _tileLayer: void 0,
+  _marker: void 0,
+  mount(container, insertBefore2) {
+    super.mount(container, insertBefore2);
+    this._map = import_leaflet.default.map(this._element, {
+      attributionControl: true,
+      zoomControl: true,
+      center: [this.latitude, this.longitude],
+      zoom: this.zoom
     });
-  }, [tilesUrl]);
-  (0, import_react28.useEffect)(() => {
-    var _a;
-    const [newAttribution, newTilesUrl, newMaxZoom] = tilesets[tiles];
-    componentObject.$maxZoom = newMaxZoom;
-    componentObject.$zoom = Math.min(newMaxZoom, componentObject.zoom);
-    if (newTilesUrl) {
-      componentObject.$tilesUrl = newTilesUrl;
+    if (!this.project.designMode) {
+      this._map.on("move", (event) => {
+        const {lat, lng} = this._map.getCenter();
+        this.latitude = lat;
+        this.longitude = lng;
+      });
+      this._map.on("zoom", (event) => {
+        const zoom = this._map.getZoom();
+        this.zoom = zoom;
+      });
     }
-    if (newAttribution) {
-      componentObject.$attribution = newAttribution;
+    this._tileLayer = import_leaflet.default.tileLayer(this.tilesUrl, {
+      attribution: this.attribution,
+      maxZoom: this.maxZoom
+    }).addTo(this._map);
+  },
+  unmount() {
+    super.unmount();
+    if (this._map) {
+      this._map.remove();
     }
-    (_a = mapRef.current) == null ? void 0 : _a.setMaxZoom(newMaxZoom);
-  }, [tiles]);
-  return /* @__PURE__ */ import_react28.default.createElement("div", {
-    style: {width, height}
-  }, /* @__PURE__ */ import_react28.default.createElement(MapContainer, {
-    whenCreated: (map) => mapRef.current = map,
-    style: {width: "100%", height: "100%"},
-    center: [latitude, longitude],
-    zoom,
-    scrollWheelZoom: true
-  }, /* @__PURE__ */ import_react28.default.createElement(TileLayer, {
-    attribution,
-    url: tilesUrl,
-    maxZoom
-  }), /* @__PURE__ */ import_react28.default.createElement(Marker, {
-    position: [latitude, longitude]
-  }, /* @__PURE__ */ import_react28.default.createElement(Popup, null, "A pretty CSS3 popup. ", /* @__PURE__ */ import_react28.default.createElement("br", null), " Easily customizable."))));
-}
+  },
+  update(changed) {
+    var _a, _b;
+    super.update(changed);
+    if (changed.latitude || changed.longitude || changed.zoom) {
+      this._map.setView([this.latitude, this.longitude], this.zoom, {animate: false});
+    }
+    if (changed.width || changed.height) {
+      this._map.invalidateSize({animate: false});
+    }
+    if (changed.tilesUrl) {
+      this._tileLayer.setUrl(this.tilesUrl);
+    }
+    if (changed.maxZoom) {
+      this._map.setMaxZoom(this.maxZoom);
+    }
+    if (changed.attributionLabel) {
+    }
+    if (changed.zoomControl) {
+      if (this.zoomControl) {
+        this._map.addControl(this._map.zoomControl);
+      } else if (this._map.zoomControl) {
+        this._map.removeControl(this._map.zoomControl);
+      }
+    }
+    if (changed.attributionLabel) {
+      if (this.attributionLabel) {
+        this._map.addControl(this._map.attributionControl);
+      } else if (this._map.attributionControl) {
+        this._map.removeControl(this._map.attributionControl);
+      }
+    }
+    if (changed.marker) {
+      if (this.marker) {
+        if (!this._marker) {
+          this._marker = import_leaflet.default.marker([this.markerLatitude, this.markerLongitude]).addTo(this._map);
+        }
+      } else {
+        (_a = this._marker) == null ? void 0 : _a.remove();
+        this._marker = void 0;
+      }
+    }
+    if ((changed.markerLatitude || changed.markerLongitude) && this._marker) {
+      (_b = this._marker) == null ? void 0 : _b.setLatLng([this.markerLatitude, this.markerLongitude]);
+    }
+    if (changed.tiles && this.project.designMode) {
+      const [attribution, tilesUrl, maxZoom, lat, long, zoom] = tilesets[this.tiles];
+      this.$maxZoom = maxZoom;
+      this.$zoom = Math.min(maxZoom, this.zoom);
+      if (tilesUrl) {
+        this.$tilesUrl = tilesUrl;
+      }
+      if (attribution !== void 0) {
+        this.$attribution = attribution;
+      }
+      if (lat && long && zoom) {
+        this.$latitude = lat;
+        this.$longitude = long;
+        this.$zoom = zoom;
+      }
+    }
+  }
+};
 var MapDescription = {
   name: "Map",
   description: "The Map Component...",
@@ -60298,24 +60006,25 @@ var MapDescription = {
   icon: "...",
   preview: "...",
   collection: "React Test Kit",
-  renderer: Map2,
+  prototype: MapPrototype,
   extends: "Play Kit/View",
   properties: {
     latitude: {
       type: "number",
       default: 47.61213,
-      editor: {type: "Number", min: -90, max: 90, step: 1}
+      editor: {type: "Number", min: -90, max: 90, step: 0.1}
     },
     longitude: {
       type: "number",
       default: -122.33945,
-      editor: {type: "Number", min: -180, max: 180, step: 1}
+      editor: {type: "Number", min: -180, max: 180, step: 0.1}
     },
     zoom: {type: "number", default: 13, editor: {type: "Number", min: 0, max: 18, step: 1}},
     tiles: {
       type: "string",
       default: "openstreetmap",
       editor: {
+        fullWidthEditor: true,
         type: "Option",
         options: [
           {title: "Custom", value: "custom"},
@@ -60330,9 +60039,22 @@ var MapDescription = {
         ]
       }
     },
-    attribution: {type: "string"},
-    tilesUrl: {type: "string"},
+    attribution: {type: "string", editor: {type: "MultilineString", fullWidthEditor: true}},
+    tilesUrl: {type: "string", editor: {type: "MultilineString", fullWidthEditor: true}},
+    marker: {type: "boolean", default: false},
+    markerLatitude: {
+      type: "number",
+      default: 47.61213,
+      editor: {type: "Number", min: -90, max: 90, step: 0.1}
+    },
+    markerLongitude: {
+      type: "number",
+      default: -122.33945,
+      editor: {type: "Number", min: -180, max: 180, step: 0.1}
+    },
     maxZoom: {type: "number", default: 18},
+    zoomControl: {type: "boolean", default: true},
+    attributionLabel: {type: "boolean", default: true},
     width: {type: "number", default: 400},
     height: {type: "number", default: 400}
   }
