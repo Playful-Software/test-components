@@ -8631,7 +8631,9 @@ var require_chart_xkcd = __commonJS((exports) => {
           ]
         }
       },
-      unxkcdify: {type: "boolean", default: false}
+      unxkcdify: {type: "boolean", default: false},
+      width: {type: "number", default: 400},
+      height: {type: "number", default: 267}
     }
   };
   function BarChart(props) {
@@ -8699,7 +8701,9 @@ var require_chart_xkcd = __commonJS((exports) => {
         type: "string",
         editor: "FontFamily"
       },
-      unxkcdify: {type: "boolean", default: false}
+      unxkcdify: {type: "boolean", default: false},
+      width: {type: "number", default: 400},
+      height: {type: "number", default: 267}
     }
   };
   function StackedBarChart(props) {
@@ -8790,7 +8794,9 @@ var require_chart_xkcd = __commonJS((exports) => {
           ]
         }
       },
-      unxkcdify: {type: "boolean", default: false}
+      unxkcdify: {type: "boolean", default: false},
+      width: {type: "number", default: 400},
+      height: {type: "number", default: 267}
     }
   };
   function PieChart(props) {
@@ -8851,7 +8857,9 @@ var require_chart_xkcd = __commonJS((exports) => {
           ]
         }
       },
-      unxkcdify: {type: "boolean", default: false}
+      unxkcdify: {type: "boolean", default: false},
+      width: {type: "number", default: 400},
+      height: {type: "number", default: 267}
     }
   };
   function XYChart(props) {
@@ -8967,7 +8975,9 @@ var require_chart_xkcd = __commonJS((exports) => {
           ]
         }
       },
-      unxkcdify: {type: "boolean", default: false}
+      unxkcdify: {type: "boolean", default: false},
+      width: {type: "number", default: 400},
+      height: {type: "number", default: 267}
     }
   };
   function RadarChart(props) {
@@ -9055,7 +9065,9 @@ var require_chart_xkcd = __commonJS((exports) => {
           ]
         }
       },
-      unxkcdify: {type: "boolean", default: false}
+      unxkcdify: {type: "boolean", default: false},
+      width: {type: "number", default: 400},
+      height: {type: "number", default: 267}
     }
   };
   var StackedBar = ({config}) => {
@@ -47103,7 +47115,7 @@ var Canvas = /* @__PURE__ */ import_react2.default.memo(function Canvas2({
 
 // src/r3f.tsx
 function Three(props) {
-  const preserveDrawingBuffer = props.componentObject.project.designMode;
+  const preserveDrawingBuffer = props.component.project.designMode;
   return /* @__PURE__ */ import_react3.default.createElement(Canvas, {
     gl: {preserveDrawingBuffer}
   }, /* @__PURE__ */ import_react3.default.createElement("ambientLight", null), /* @__PURE__ */ import_react3.default.createElement("pointLight", {
@@ -47153,13 +47165,13 @@ var Box = (props) => {
 // src/xkcd.tsx
 var import_react4 = __toModule(require("react"));
 function XKCD(props) {
-  const {comic, componentObject} = props;
+  const {comic, component} = props;
   const [source, setSource] = (0, import_react4.useState)();
   const [error, setError] = (0, import_react4.useState)();
   (0, import_react4.useEffect)(() => {
     fetch(`/cors?url=https://xkcd.com/${comic}/info.0.json`).then((response) => response.json()).then((json) => {
       setSource(json.img);
-      componentObject.response = json;
+      component.response = json;
     }).catch((err) => {
       setSource(void 0);
       setError(err.toString());
@@ -59650,7 +59662,7 @@ var import_react19 = __toModule(require("react"));
 var import_WarpSpeed = __toModule(require_WarpSpeed());
 function WarpSpeedComponent(props) {
   const {
-    componentObject,
+    component,
     speed,
     speedAdjustmentFactor,
     density,
@@ -59690,7 +59702,7 @@ function WarpSpeedComponent(props) {
   const canvasCallback = (0, import_react19.useCallback)((canvas2) => setCanvas(canvas2), []);
   (0, import_react19.useEffect)(() => {
     if (canvas) {
-      createWarpSpeed(componentObject.id.toString());
+      createWarpSpeed(component.id.toString());
     }
     return () => warpspeed == null ? void 0 : warpspeed.destroy();
   }, [canvas, density]);
@@ -59731,7 +59743,7 @@ function WarpSpeedComponent(props) {
   }, [pause]);
   return /* @__PURE__ */ import_react19.default.createElement("canvas", {
     style: {width: "100%", height: "100%"},
-    id: componentObject.id.toString(),
+    id: component.id.toString(),
     ref: canvasCallback
   });
 }
