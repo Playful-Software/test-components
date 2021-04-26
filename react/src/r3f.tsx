@@ -7,7 +7,7 @@ type ThreeProperties = {} & ComponentProperties;
 
 function Three(props: ThreeProperties) {
   // Preserve drawing buffer at design time so it will become part of the preview thumbnail.
-  const preserveDrawingBuffer = props.componentObject!.project.designMode;
+  const preserveDrawingBuffer = props.component!.project.designMode;
 
   return (
     <Canvas gl={{ preserveDrawingBuffer }}>

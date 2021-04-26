@@ -20,7 +20,7 @@ type WarpSpeedProperties = {
 
 function WarpSpeedComponent(props: WarpSpeedProperties) {
   const {
-    componentObject,
+    component,
     speed,
     speedAdjustmentFactor,
     density,
@@ -64,7 +64,7 @@ function WarpSpeedComponent(props: WarpSpeedProperties) {
 
   useEffect(() => {
     if (canvas) {
-      createWarpSpeed(componentObject!.id.toString());
+      createWarpSpeed(component!.id.toString());
     }
     return () => warpspeed?.destroy();
   }, [canvas, density]);
@@ -82,7 +82,7 @@ function WarpSpeedComponent(props: WarpSpeedProperties) {
       }
       const options = { ...defaults, ...JSON.parse(preset) };
       for (const prop in options) {
-        componentObject![prop] = options[prop];
+        component![prop] = options[prop];
       }
     }
   }, [preset]);
@@ -128,7 +128,7 @@ function WarpSpeedComponent(props: WarpSpeedProperties) {
   return (
     <canvas
       style={{ width: '100%', height: '100%' }}
-      id={componentObject!.id.toString()}
+      id={component!.id.toString()}
       ref={canvasCallback}
     ></canvas>
   );

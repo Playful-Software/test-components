@@ -1,13 +1,10 @@
-import type {
-  ComponentDescription,
-  ComponentProperties,
-} from "@playful/runtime";
-import React, { useEffect, useState } from "react";
+import type { ComponentDescription, ComponentProperties } from '@playful/runtime';
+import React, { useEffect, useState } from 'react';
 
 type XKCDProperties = { comic: number } & ComponentProperties;
 
 function XKCD(props: XKCDProperties) {
-  const { comic, componentObject } = props;
+  const { comic, component } = props;
 
   const [source, setSource] = useState<string>();
   const [error, setError] = useState<string>();
@@ -17,7 +14,7 @@ function XKCD(props: XKCDProperties) {
       .then((response) => response.json())
       .then((json) => {
         setSource(json.img);
-        componentObject!.response = json;
+        component!.response = json;
       })
       .catch((err) => {
         setSource(undefined);
@@ -28,27 +25,27 @@ function XKCD(props: XKCDProperties) {
   // TODO: link to original comic
   // TODO: caption
   return (
-    <div style={{ width: "100%", height: "100%", position: "relative" }}>
+    <div style={{ width: '100%', height: '100%', position: 'relative' }}>
       {source && (
         <img
           src={`/cors?url=${source}`}
           style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            objectFit: "contain",
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            objectFit: 'contain',
           }}
         />
       )}
       {error && (
         <div
           style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            alignContent: "center",
-            alignItems: "center",
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            alignContent: 'center',
+            alignItems: 'center',
           }}
         >
           {error}
@@ -59,17 +56,17 @@ function XKCD(props: XKCDProperties) {
 }
 
 export const XKCDDescription: ComponentDescription = {
-  name: "XKCD",
-  description: "The XKCD Component .... Content copyright",
-  author: "Playful Software", // TODO: userId or unique username?
-  icon: "...", // TODO: local file?
-  preview: "...", // TODO: local file?
-  collection: "React Test Kit",
+  name: 'XKCD',
+  description: 'The XKCD Component .... Content copyright',
+  author: 'Playful Software', // TODO: userId or unique username?
+  icon: '...', // TODO: local file?
+  preview: '...', // TODO: local file?
+  collection: 'React Test Kit',
   renderer: XKCD,
-  extends: "Play Kit/View",
+  extends: 'Play Kit/View',
   properties: {
-    comic: { type: "number", default: 2293 },
-    width: { type: "number", default: 400 },
-    height: { type: "number", default: 400 },
+    comic: { type: 'number', default: 2293 },
+    width: { type: 'number', default: 400 },
+    height: { type: 'number', default: 400 },
   },
 };

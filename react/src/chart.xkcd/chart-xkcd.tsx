@@ -1,7 +1,7 @@
-import type { ComponentDescription } from "@playful/runtime";
-import chartXkcd from "chart.xkcd";
-import { Bar, Line, Pie, Radar, XY } from "chart.xkcd-react";
-import React, { useEffect, useRef } from "react";
+import type { ComponentDescription } from '@playful/runtime';
+import chartXkcd from 'chart.xkcd';
+import { Bar, Line, Pie, Radar, XY } from 'chart.xkcd-react';
+import React, { useEffect, useRef } from 'react';
 
 enum PositionType {
   upLeft = 1,
@@ -63,20 +63,19 @@ function LineChart(props: LineChartProperties) {
   );
 }
 
-// TODO: what defines width, height?
 export const LineChartDescription: ComponentDescription = {
-  name: "LineChart",
-  title: "Line Chart",
-  description: "The Line Chart Component ...",
-  author: "Playful Software", // TODO: userId or unique username?
-  icon: "...", // TODO: local file?
-  preview: "...", // TODO: local file?
-  collection: "chart.XKCD Kit",
+  name: 'LineChart',
+  title: 'Line Chart',
+  description: 'The Line Chart Component ...',
+  author: 'Playful Software', // TODO: userId or unique username?
+  icon: '...', // TODO: local file?
+  preview: '...', // TODO: local file?
+  collection: 'chart.XKCD Kit',
   renderer: LineChart,
-  extends: "Play Kit/View",
+  extends: 'Play Kit/View',
   properties: {
     data: {
-      type: "string",
+      type: 'string',
       default: `{
   labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
   datasets: [
@@ -90,31 +89,31 @@ export const LineChartDescription: ComponentDescription = {
     },
   ],
 }`,
-      editor: { type: "MultilineString", fullWidthEditor: true },
+      editor: { type: 'MultilineString', fullWidthEditor: true },
     },
-    title: { type: "string", default: "Title" },
-    xLabel: { type: "string", default: "X" },
-    yLabel: { type: "string", default: "Y" },
+    title: { type: 'string', default: 'Title' },
+    xLabel: { type: 'string', default: 'X' },
+    yLabel: { type: 'string', default: 'Y' },
     /* TODO:
     dataColors: { type: "array", default: [?, ?, ?] },
     */
     yTickCount: {
-      type: "number",
-      default: "3",
-      editor: { type: "Number", min: 0, max: 10 },
+      type: 'number',
+      default: '3',
+      editor: { type: 'Number', min: 0, max: 10 },
     },
-    strokeColor: { type: "string", default: "black", editor: "Color" },
-    backgroundColor: { type: "string", default: "white", editor: "Color" },
+    strokeColor: { type: 'string', default: 'black', editor: 'Color' },
+    backgroundColor: { type: 'string', default: 'white', editor: 'Color' },
     fontFamily: {
-      type: "string",
-      editor: "FontFamily",
+      type: 'string',
+      editor: 'FontFamily',
     },
-    showLegend: { type: "boolean", default: true },
+    showLegend: { type: 'boolean', default: true },
     legendPosition: {
-      type: "number",
+      type: 'number',
       default: PositionType.upLeft,
       editor: {
-        type: "Option",
+        type: 'Option',
         options: [
           PositionType.upLeft,
           PositionType.upRight,
@@ -124,7 +123,9 @@ export const LineChartDescription: ComponentDescription = {
         // TODO: optionTitles: ["Up Left", "Up Right", "Down Left", "Down Right"],
       },
     },
-    unxkcdify: { type: "boolean", default: false },
+    unxkcdify: { type: 'boolean', default: false },
+    width: { type: 'number', default: 400 },
+    height: { type: 'number', default: 267 },
   },
 };
 
@@ -176,20 +177,19 @@ function BarChart(props: BarChartProperties) {
   );
 }
 
-// TODO: what defines width, height?
 export const BarChartDescription: ComponentDescription = {
-  name: "BarChart",
-  title: "Bar Chart",
-  description: "The Bar Chart Component ...",
-  author: "Playful Software", // TODO: userId or unique username?
-  icon: "...", // TODO: local file?
-  preview: "...", // TODO: local file?
-  collection: "chart.XKCD Kit",
+  name: 'BarChart',
+  title: 'Bar Chart',
+  description: 'The Bar Chart Component ...',
+  author: 'Playful Software', // TODO: userId or unique username?
+  icon: '...', // TODO: local file?
+  preview: '...', // TODO: local file?
+  collection: 'chart.XKCD Kit',
   renderer: BarChart,
-  extends: "Play Kit/View",
+  extends: 'Play Kit/View',
   properties: {
     data: {
-      type: "string",
+      type: 'string',
       default: `{
   labels: ["github stars", "patrons"],
   datasets: [
@@ -198,23 +198,25 @@ export const BarChartDescription: ComponentDescription = {
     },
   ],
 }`,
-      editor: { type: "MultilineString", fullWidthEditor: true },
+      editor: { type: 'MultilineString', fullWidthEditor: true },
     },
-    title: { type: "string", default: "github stars VS patron number" },
-    xLabel: { type: "string", default: "X" },
-    yLabel: { type: "string", default: "Y" },
+    title: { type: 'string', default: 'github stars VS patron number' },
+    xLabel: { type: 'string', default: 'X' },
+    yLabel: { type: 'string', default: 'Y' },
     yTickCount: {
-      type: "number",
-      default: "2",
-      editor: { type: "Number", min: 0, max: 10 },
+      type: 'number',
+      default: '2',
+      editor: { type: 'Number', min: 0, max: 10 },
     },
-    strokeColor: { type: "string", default: "black", editor: "Color" },
-    backgroundColor: { type: "string", default: "white", editor: "Color" },
+    strokeColor: { type: 'string', default: 'black', editor: 'Color' },
+    backgroundColor: { type: 'string', default: 'white', editor: 'Color' },
     fontFamily: {
-      type: "string",
-      editor: "FontFamily",
+      type: 'string',
+      editor: 'FontFamily',
     },
-    unxkcdify: { type: "boolean", default: false },
+    unxkcdify: { type: 'boolean', default: false },
+    width: { type: 'number', default: 400 },
+    height: { type: 'number', default: 267 },
   },
 };
 
@@ -272,20 +274,19 @@ function StackedBarChart(props: StackedBarChartProperties) {
   );
 }
 
-// TODO: what defines width, height?
 export const StackedBarChartDescription: ComponentDescription = {
-  name: "StackedBarChart",
-  title: "Stacked Bar Chart",
-  description: "The Stacked Bar Chart Component ...",
-  author: "Playful Software", // TODO: userId or unique username?
-  icon: "...", // TODO: local file?
-  preview: "...", // TODO: local file?
-  collection: "chart.XKCD Kit",
+  name: 'StackedBarChart',
+  title: 'Stacked Bar Chart',
+  description: 'The Stacked Bar Chart Component ...',
+  author: 'Playful Software', // TODO: userId or unique username?
+  icon: '...', // TODO: local file?
+  preview: '...', // TODO: local file?
+  collection: 'chart.XKCD Kit',
   renderer: StackedBarChart,
-  extends: "Play Kit/View",
+  extends: 'Play Kit/View',
   properties: {
     data: {
-      type: "string",
+      type: 'string',
       default: `{
   labels: ['Jan', 'Feb', 'Mar', 'April', 'May'],
   datasets: [{
@@ -299,28 +300,28 @@ export const StackedBarChartDescription: ComponentDescription = {
     data: [2, 3, 0, 1, 1],
   }],
 }`,
-      editor: { type: "MultilineString", fullWidthEditor: true },
+      editor: { type: 'MultilineString', fullWidthEditor: true },
     },
-    title: { type: "string", default: "Issues and PR Submissions" },
-    xLabel: { type: "string", default: "Month" },
-    yLabel: { type: "string", default: "Count" },
+    title: { type: 'string', default: 'Issues and PR Submissions' },
+    xLabel: { type: 'string', default: 'Month' },
+    yLabel: { type: 'string', default: 'Count' },
     yTickCount: {
-      type: "number",
-      default: "2",
-      editor: { type: "Number", min: 0, max: 10 },
+      type: 'number',
+      default: '2',
+      editor: { type: 'Number', min: 0, max: 10 },
     },
-    strokeColor: { type: "string", default: "black", editor: "Color" },
-    backgroundColor: { type: "string", default: "white", editor: "Color" },
+    strokeColor: { type: 'string', default: 'black', editor: 'Color' },
+    backgroundColor: { type: 'string', default: 'white', editor: 'Color' },
     fontFamily: {
-      type: "string",
-      editor: "FontFamily",
+      type: 'string',
+      editor: 'FontFamily',
     },
-    showLegend: { type: "boolean", default: true },
+    showLegend: { type: 'boolean', default: true },
     legendPosition: {
-      type: "number",
+      type: 'number',
       default: PositionType.upLeft,
       editor: {
-        type: "Option",
+        type: 'Option',
         options: [
           PositionType.upLeft,
           PositionType.upRight,
@@ -330,7 +331,9 @@ export const StackedBarChartDescription: ComponentDescription = {
         // TODO: optionTitles: ["Up Left", "Up Right", "Down Left", "Down Right"],
       },
     },
-    unxkcdify: { type: "boolean", default: false },
+    unxkcdify: { type: 'boolean', default: false },
+    width: { type: 'number', default: 400 },
+    height: { type: 'number', default: 267 },
   },
 };
 
@@ -361,20 +364,19 @@ function PieChart(props: PieChartProperties) {
   );
 }
 
-// TODO: what defines width, height?
 export const PieChartDescription: ComponentDescription = {
-  name: "PieChart",
-  title: "Pie Chart",
-  description: "The Pie Chart Component ...",
-  author: "Playful Software", // TODO: userId or unique username?
-  icon: "...", // TODO: local file?
-  preview: "...", // TODO: local file?
-  collection: "chart.XKCD Kit",
+  name: 'PieChart',
+  title: 'Pie Chart',
+  description: 'The Pie Chart Component ...',
+  author: 'Playful Software', // TODO: userId or unique username?
+  icon: '...', // TODO: local file?
+  preview: '...', // TODO: local file?
+  collection: 'chart.XKCD Kit',
   renderer: PieChart,
-  extends: "Play Kit/View",
+  extends: 'Play Kit/View',
   properties: {
     data: {
-      type: "string",
+      type: 'string',
       default: `{
   labels: ["a", "b", "e", "f", "g"],
   datasets: [
@@ -383,22 +385,22 @@ export const PieChartDescription: ComponentDescription = {
     },
   ],
 }`,
-      editor: { type: "MultilineString", fullWidthEditor: true },
+      editor: { type: 'MultilineString', fullWidthEditor: true },
     },
-    title: { type: "string", default: "What Tim made of" },
-    innerRadius: { type: "number", default: 0.5 },
-    strokeColor: { type: "string", default: "black", editor: "Color" },
-    backgroundColor: { type: "string", default: "white", editor: "Color" },
+    title: { type: 'string', default: 'What Tim made of' },
+    innerRadius: { type: 'number', default: 0.5 },
+    strokeColor: { type: 'string', default: 'black', editor: 'Color' },
+    backgroundColor: { type: 'string', default: 'white', editor: 'Color' },
     fontFamily: {
-      type: "string",
-      editor: "FontFamily",
+      type: 'string',
+      editor: 'FontFamily',
     },
-    showLegend: { type: "boolean", default: true },
+    showLegend: { type: 'boolean', default: true },
     legendPosition: {
-      type: "number",
+      type: 'number',
       default: PositionType.upLeft,
       editor: {
-        type: "Option",
+        type: 'Option',
         options: [
           PositionType.upLeft,
           PositionType.upRight,
@@ -408,7 +410,9 @@ export const PieChartDescription: ComponentDescription = {
         // TODO: optionTitles: ["Up Left", "Up Right", "Down Left", "Down Right"],
       },
     },
-    unxkcdify: { type: "boolean", default: false },
+    unxkcdify: { type: 'boolean', default: false },
+    width: { type: 'number', default: 400 },
+    height: { type: 'number', default: 267 },
   },
 };
 
@@ -478,20 +482,19 @@ function XYChart(props: XYChartProperties) {
   );
 }
 
-// TODO: what defines width, height?
 export const XYChartDescription: ComponentDescription = {
-  name: "XYChart",
-  title: "XY Chart",
-  description: "The XY Chart Component ...",
-  author: "Playful Software", // TODO: userId or unique username?
-  icon: "...", // TODO: local file?
-  preview: "...", // TODO: local file?
-  collection: "chart.XKCD Kit",
+  name: 'XYChart',
+  title: 'XY Chart',
+  description: 'The XY Chart Component ...',
+  author: 'Playful Software', // TODO: userId or unique username?
+  icon: '...', // TODO: local file?
+  preview: '...', // TODO: local file?
+  collection: 'chart.XKCD Kit',
   renderer: XYChart,
-  extends: "Play Kit/View",
+  extends: 'Play Kit/View',
   properties: {
     data: {
-      type: "string",
+      type: 'string',
       default: `{
   datasets: [
     {
@@ -516,35 +519,35 @@ export const XYChartDescription: ComponentDescription = {
     },
   ],
 }`,
-      editor: { type: "MultilineString", fullWidthEditor: true },
+      editor: { type: 'MultilineString', fullWidthEditor: true },
     },
-    title: { type: "string", default: "Pokemon farms" },
-    xLabel: { type: "string", default: "Coordinate" },
-    yLabel: { type: "string", default: "Count" },
-    showLine: { type: "boolean", default: false },
-    dotSize: { type: "number", default: 1 },
+    title: { type: 'string', default: 'Pokemon farms' },
+    xLabel: { type: 'string', default: 'Coordinate' },
+    yLabel: { type: 'string', default: 'Count' },
+    showLine: { type: 'boolean', default: false },
+    dotSize: { type: 'number', default: 1 },
     xTickCount: {
-      type: "number",
-      default: "5",
-      editor: { type: "Number", min: 0, max: 8 },
+      type: 'number',
+      default: '5',
+      editor: { type: 'Number', min: 0, max: 8 },
     },
     yTickCount: {
-      type: "number",
-      default: "5",
-      editor: { type: "Number", min: 0, max: 8 },
+      type: 'number',
+      default: '5',
+      editor: { type: 'Number', min: 0, max: 8 },
     },
-    strokeColor: { type: "string", default: "black", editor: "Color" },
-    backgroundColor: { type: "string", default: "white", editor: "Color" },
+    strokeColor: { type: 'string', default: 'black', editor: 'Color' },
+    backgroundColor: { type: 'string', default: 'white', editor: 'Color' },
     fontFamily: {
-      type: "string",
-      editor: "FontFamily",
+      type: 'string',
+      editor: 'FontFamily',
     },
-    showLegend: { type: "boolean", default: true },
+    showLegend: { type: 'boolean', default: true },
     legendPosition: {
-      type: "number",
+      type: 'number',
       default: PositionType.upRight,
       editor: {
-        type: "Option",
+        type: 'Option',
         options: [
           PositionType.upLeft,
           PositionType.upRight,
@@ -554,7 +557,9 @@ export const XYChartDescription: ComponentDescription = {
         // TODO: optionTitles: ["Up Left", "Up Right", "Down Left", "Down Right"],
       },
     },
-    unxkcdify: { type: "boolean", default: false },
+    unxkcdify: { type: 'boolean', default: false },
+    width: { type: 'number', default: 400 },
+    height: { type: 'number', default: 267 },
   },
 };
 
@@ -613,20 +618,19 @@ function RadarChart(props: RadarChartProperties) {
   );
 }
 
-// TODO: what defines width, height?
 export const RadarChartDescription: ComponentDescription = {
-  name: "RadarChart",
-  title: "Radar Chart",
-  description: "The Radar Chart Component ...",
-  author: "Playful Software", // TODO: userId or unique username?
-  icon: "...", // TODO: local file?
-  preview: "...", // TODO: local file?
-  collection: "chart.XKCD Kit",
+  name: 'RadarChart',
+  title: 'Radar Chart',
+  description: 'The Radar Chart Component ...',
+  author: 'Playful Software', // TODO: userId or unique username?
+  icon: '...', // TODO: local file?
+  preview: '...', // TODO: local file?
+  collection: 'chart.XKCD Kit',
   renderer: RadarChart,
-  extends: "Play Kit/View",
+  extends: 'Play Kit/View',
   properties: {
     data: {
-      type: "string",
+      type: 'string',
       default: `{
   labels: ['c', 'h', 'a', 'r', 't'],
   datasets: [{
@@ -637,31 +641,31 @@ export const RadarChartDescription: ComponentDescription = {
     data: [1, 2, 2, 1, 1],
   }],
 }`,
-      editor: { type: "MultilineString", fullWidthEditor: true },
+      editor: { type: 'MultilineString', fullWidthEditor: true },
     },
-    title: { type: "string", default: "Letters in random words" },
+    title: { type: 'string', default: 'Letters in random words' },
     /* TODO:
     dataColors: { type: "array", default: [?, ?, ?] },
     */
-    dotSize: { type: "number", default: 1 },
+    dotSize: { type: 'number', default: 1 },
     ticksCount: {
-      type: "number",
-      default: "3",
-      editor: { type: "Number", min: 0, max: 10 },
+      type: 'number',
+      default: '3',
+      editor: { type: 'Number', min: 0, max: 10 },
     },
-    strokeColor: { type: "string", default: "black", editor: "Color" },
-    backgroundColor: { type: "string", default: "white", editor: "Color" },
+    strokeColor: { type: 'string', default: 'black', editor: 'Color' },
+    backgroundColor: { type: 'string', default: 'white', editor: 'Color' },
     fontFamily: {
-      type: "string",
-      editor: "FontFamily",
+      type: 'string',
+      editor: 'FontFamily',
     },
-    showLabels: { type: "boolean", default: false },
-    showLegend: { type: "boolean", default: true },
+    showLabels: { type: 'boolean', default: false },
+    showLegend: { type: 'boolean', default: true },
     legendPosition: {
-      type: "number",
+      type: 'number',
       default: PositionType.upRight,
       editor: {
-        type: "Option",
+        type: 'Option',
         options: [
           PositionType.upLeft,
           PositionType.upRight,
@@ -671,7 +675,9 @@ export const RadarChartDescription: ComponentDescription = {
         // TODO: optionTitles: ["Up Left", "Up Right", "Down Left", "Down Right"],
       },
     },
-    unxkcdify: { type: "boolean", default: false },
+    unxkcdify: { type: 'boolean', default: false },
+    width: { type: 'number', default: 400 },
+    height: { type: 'number', default: 267 },
   },
 };
 
