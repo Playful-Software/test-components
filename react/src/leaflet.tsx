@@ -58,7 +58,7 @@ const tilesets: {
   ],
   mars: [
     '&copy; OpenPlanetary',
-    'http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/celestia_mars-shaded-16k_global/{z}/{x}/{y}.png',
+    'http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/celestia_mars-shaded-16k_global/{z}/{x}/{-y}.png',
     5,
     13.56,
     -147.14,
@@ -66,7 +66,7 @@ const tilesets: {
   ],
   mars_elevation_color: [
     '&copy; OpenPlanetary',
-    'http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/mola-color/{z}/{x}/{y}.png',
+    'http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/mola-color/{z}/{x}/{-y}.png',
     6,
     13.56,
     -147.14,
