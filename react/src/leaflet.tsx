@@ -220,8 +220,9 @@ const MapPrototype = {
       this._marker?.setLatLng([this.markerLatitude, this.markerLongitude]);
     }
 
-    // Tiles is a menu of presets that is only active at design time.
-    if (changed.tiles && this.project.designMode) {
+    // Tiles is a menu of presets. As tiles changes in design mode it makes persistent
+    // changes to other properties (tilesUrl, attribution, latitude, longitude, maxZoom, zoom).
+    if (changed.tiles && this.tiles !== 'custom') {
       const [attribution, tilesUrl, maxZoom, lat, long, zoom] = tilesets[this.tiles];
 
       // TODO: Property editors are not listening for changes and only happen to show
