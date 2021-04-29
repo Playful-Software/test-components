@@ -59993,7 +59993,7 @@ var MapPrototype = {
     if ((changed.markerLatitude || changed.markerLongitude) && this._marker) {
       (_b = this._marker) == null ? void 0 : _b.setLatLng([this.markerLatitude, this.markerLongitude]);
     }
-    if (changed.tiles && this.project.designMode) {
+    if (changed.tiles && this.tiles !== "custom") {
       const [attribution, tilesUrl, maxZoom, lat, long, zoom] = tilesets[this.tiles];
       this.$maxZoom = maxZoom;
       this.$zoom = Math.min(maxZoom, this.zoom);
