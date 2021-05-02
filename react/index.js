@@ -59837,9 +59837,9 @@ document.head.appendChild(link);
 import_leaflet.default.Icon.Default.imagePath = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/";
 var tilesets = {
   custom: [void 0, void 0, 18],
-  google_satellite: ["&copy; google", "http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}", 18],
+  google_satellite: ["&copy; google", "https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}", 18],
   openstreetmap: [
-    '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+    '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors',
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     18,
     47.61213,
@@ -59847,7 +59847,7 @@ var tilesets = {
     15
   ],
   opentopomap: [
-    'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
+    'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="https://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
     "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
     17,
     47.61213,
@@ -59855,7 +59855,7 @@ var tilesets = {
     8
   ],
   stamen_watercolor: [
-    'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    'Map tiles by <a href="https://stamen.com">Stamen Design</a>, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
     16,
     47.61213,
@@ -59872,7 +59872,7 @@ var tilesets = {
   ],
   mars: [
     "&copy; OpenPlanetary",
-    "http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/celestia_mars-shaded-16k_global/{z}/{x}/{-y}.png",
+    "https://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/celestia_mars-shaded-16k_global/{z}/{x}/{-y}.png",
     5,
     13.56,
     -147.14,
@@ -59880,7 +59880,7 @@ var tilesets = {
   ],
   mars_elevation_color: [
     "&copy; OpenPlanetary",
-    "http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/mola-color/{z}/{x}/{-y}.png",
+    "https://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/mola-color/{z}/{x}/{-y}.png",
     6,
     13.56,
     -147.14,
