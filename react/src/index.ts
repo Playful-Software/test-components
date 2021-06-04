@@ -12,6 +12,7 @@ import {
 import { ClockDescription } from './clock/clock';
 import { WarpSpeedDescription } from './warpspeed/WarpSpeedComponent';
 import { MapDescription } from './leaflet';
+import { GolDescription } from './gol';
 
 export {
   ThreeDescription,
@@ -25,6 +26,7 @@ export {
   ClockDescription,
   WarpSpeedDescription,
   MapDescription,
+  GolDescription,
 };
 
 export const kit: KitDescription = {
@@ -43,5 +45,6 @@ export const kit: KitDescription = {
     ClockDescription,
     WarpSpeedDescription,
     MapDescription,
+    GolDescription,
   ],
 };
