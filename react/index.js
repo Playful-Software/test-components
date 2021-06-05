@@ -101,7 +101,7 @@ var require_object_assign = __commonJS((exports2, module2) => {
   };
 });
 
-// node_modules/react-reconciler/node_modules/scheduler/cjs/scheduler.production.min.js
+// node_modules/scheduler/cjs/scheduler.production.min.js
 var require_scheduler_production_min = __commonJS((exports2) => {
   /** @license React v0.20.2
    * scheduler.production.min.js
@@ -411,7 +411,7 @@ var require_scheduler_production_min = __commonJS((exports2) => {
   };
 });
 
-// node_modules/react-reconciler/node_modules/scheduler/index.js
+// node_modules/scheduler/index.js
 var require_scheduler = __commonJS((exports2, module2) => {
   "use strict";
   if (true) {
@@ -5047,7 +5047,7 @@ var require_react_reconciler = __commonJS((exports2, module2) => {
   }
 });
 
-// node_modules/scheduler/cjs/scheduler.production.min.js
+// node_modules/react-three-fiber/node_modules/scheduler/cjs/scheduler.production.min.js
 var require_scheduler_production_min2 = __commonJS((exports2) => {
   /** @license React v0.20.1
    * scheduler.production.min.js
@@ -5357,7 +5357,7 @@ var require_scheduler_production_min2 = __commonJS((exports2) => {
   };
 });
 
-// node_modules/scheduler/index.js
+// node_modules/react-three-fiber/node_modules/scheduler/index.js
 var require_scheduler2 = __commonJS((exports2, module2) => {
   "use strict";
   if (true) {
@@ -8535,7 +8535,7 @@ var require_chart_xkcd = __commonJS((exports) => {
   });
   var import_chart = __toModule(require_dist());
   var import_chart2 = __toModule(require_build());
-  var import_react20 = __toModule(require("react"));
+  var import_react22 = __toModule(require("react"));
   var PositionType;
   (function(PositionType2) {
     PositionType2[PositionType2["upLeft"] = 1] = "upLeft";
@@ -8557,7 +8557,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       unkcdify,
       fontFamily
     } = props;
-    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.Line, {
+    return /* @__PURE__ */ import_react22.default.createElement(import_chart2.Line, {
       config: {
         title,
         xLabel,
@@ -8648,7 +8648,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       backgroundColor,
       fontFamily
     } = props;
-    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.Bar, {
+    return /* @__PURE__ */ import_react22.default.createElement(import_chart2.Bar, {
       config: {
         title,
         xLabel,
@@ -8720,7 +8720,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       showLegend,
       legendPosition
     } = props;
-    return /* @__PURE__ */ import_react20.default.createElement(StackedBar, {
+    return /* @__PURE__ */ import_react22.default.createElement(StackedBar, {
       config: {
         title,
         xLabel,
@@ -8801,7 +8801,7 @@ var require_chart_xkcd = __commonJS((exports) => {
   };
   function PieChart(props) {
     const {title, innerRadius, data} = props;
-    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.Pie, {
+    return /* @__PURE__ */ import_react22.default.createElement(import_chart2.Pie, {
       config: {
         title,
         data: eval(`(${data})`) || {},
@@ -8879,7 +8879,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       backgroundColor,
       fontFamily
     } = props;
-    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.XY, {
+    return /* @__PURE__ */ import_react22.default.createElement(import_chart2.XY, {
       config: {
         title,
         xLabel,
@@ -8994,7 +8994,7 @@ var require_chart_xkcd = __commonJS((exports) => {
       fontFamily,
       showLabels
     } = props;
-    return /* @__PURE__ */ import_react20.default.createElement(import_chart2.Radar, {
+    return /* @__PURE__ */ import_react22.default.createElement(import_chart2.Radar, {
       config: {
         title,
         data: eval(`(${data})`) || {},
@@ -9071,13 +9071,13 @@ var require_chart_xkcd = __commonJS((exports) => {
     }
   };
   var StackedBar = ({config}) => {
-    const ref = (0, import_react20.useRef)();
-    (0, import_react20.useEffect)(() => {
+    const ref = (0, import_react22.useRef)();
+    (0, import_react22.useEffect)(() => {
       if (ref.current) {
         const myChart = new import_chart.default.StackedBar(ref.current, config);
       }
     });
-    return /* @__PURE__ */ import_react20.default.createElement("svg", {
+    return /* @__PURE__ */ import_react22.default.createElement("svg", {
       ref
     });
   };
@@ -9339,12 +9339,12 @@ var require_hoist_non_react_statics_cjs = __commonJS((exports2, module2) => {
   var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
   var getPrototypeOf = Object.getPrototypeOf;
   var objectPrototype = Object.prototype;
-  function hoistNonReactStatics2(targetComponent, sourceComponent, blacklist) {
+  function hoistNonReactStatics2(targetComponent, sourceComponent, blacklist2) {
     if (typeof sourceComponent !== "string") {
       if (objectPrototype) {
         var inheritedComponent = getPrototypeOf(sourceComponent);
         if (inheritedComponent && inheritedComponent !== objectPrototype) {
-          hoistNonReactStatics2(targetComponent, inheritedComponent, blacklist);
+          hoistNonReactStatics2(targetComponent, inheritedComponent, blacklist2);
         }
       }
       var keys2 = getOwnPropertyNames(sourceComponent);
@@ -9355,7 +9355,7 @@ var require_hoist_non_react_statics_cjs = __commonJS((exports2, module2) => {
       var sourceStatics = getStatics(sourceComponent);
       for (var i2 = 0; i2 < keys2.length; ++i2) {
         var key = keys2[i2];
-        if (!KNOWN_STATICS[key] && !(blacklist && blacklist[key]) && !(sourceStatics && sourceStatics[key]) && !(targetStatics && targetStatics[key])) {
+        if (!KNOWN_STATICS[key] && !(blacklist2 && blacklist2[key]) && !(sourceStatics && sourceStatics[key]) && !(targetStatics && targetStatics[key])) {
           var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
           try {
             defineProperty(targetComponent, key, descriptor);
@@ -9409,7 +9409,7 @@ var require_AutosizeInput = __commonJS((exports2) => {
   Object.defineProperty(exports2, "__esModule", {
     value: true
   });
-  var _extends3 = Object.assign || function(target) {
+  var _extends4 = Object.assign || function(target) {
     for (var i2 = 1; i2 < arguments.length; i2++) {
       var source = arguments[i2];
       for (var key in source) {
@@ -9632,10 +9632,10 @@ var require_AutosizeInput = __commonJS((exports2) => {
           }
           return currentValue;
         });
-        var wrapperStyle = _extends3({}, this.props.style);
+        var wrapperStyle = _extends4({}, this.props.style);
         if (!wrapperStyle.display)
           wrapperStyle.display = "inline-block";
-        var inputStyle3 = _extends3({
+        var inputStyle3 = _extends4({
           boxSizing: "content-box",
           width: this.state.inputWidth + "px"
         }, this.props.inputStyle);
@@ -9644,7 +9644,7 @@ var require_AutosizeInput = __commonJS((exports2) => {
         inputProps.className = this.props.inputClassName;
         inputProps.id = this.state.inputId;
         inputProps.style = inputStyle3;
-        return _react2.default.createElement("div", {className: this.props.className, style: wrapperStyle}, this.renderStyles(), _react2.default.createElement("input", _extends3({}, inputProps, {ref: this.inputRef})), _react2.default.createElement("div", {ref: this.sizerRef, style: sizerStyle}, sizerValue), this.props.placeholder ? _react2.default.createElement("div", {ref: this.placeHolderSizerRef, style: sizerStyle}, this.props.placeholder) : null);
+        return _react2.default.createElement("div", {className: this.props.className, style: wrapperStyle}, this.renderStyles(), _react2.default.createElement("input", _extends4({}, inputProps, {ref: this.inputRef})), _react2.default.createElement("div", {ref: this.sizerRef, style: sizerStyle}, sizerValue), this.props.placeholder ? _react2.default.createElement("div", {ref: this.placeHolderSizerRef, style: sizerStyle}, this.props.placeholder) : null);
       }
     }]);
     return AutosizeInput3;
@@ -9722,7 +9722,7 @@ var require_WarpSpeed = __commonJS((exports2, module2) => {
       var r2 = el2.getBoundingClientRect();
       return r2.top + r2.height >= 0 && r2.left + r2.width >= 0 && r2.bottom - r2.height <= (window.innerHeight || document.documentElement.clientHeight) && r2.right - r2.width <= (window.innerWidth || document.documentElement.clientWidth);
     }
-    function Star(x2, y2, z2) {
+    function Star2(x2, y2, z2) {
       this.x = x2;
       this.y = y2;
       this.z = z2;
@@ -9769,7 +9769,7 @@ var require_WarpSpeed = __commonJS((exports2, module2) => {
       this.prevH = -1;
       this.stars = [];
       for (var i2 = 0; i2 < this.DENSITY * 1e3; i2++) {
-        this.stars.push(new Star((Math.random() - 0.5) * 1e3, (Math.random() - 0.5) * 1e3, 1e3 * Math.random()));
+        this.stars.push(new Star2((Math.random() - 0.5) * 1e3, (Math.random() - 0.5) * 1e3, 1e3 * Math.random()));
       }
       this.lastMoveTS = timeStamp();
       this.drawRequest = null;
@@ -10034,7 +10034,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         cancelFn.call(window, id);
       }
     }
-    var Util = {
+    var Util2 = {
       extend: extend2,
       create: create7,
       bind,
@@ -10967,10 +10967,10 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         } else if (e2.touches.length > 1) {
           return;
         }
-        var now3 = Date.now(), delta = now3 - (last || now3);
+        var now4 = Date.now(), delta = now4 - (last || now4);
         touch$$1 = e2.touches ? e2.touches[0] : e2;
         doubleTap = delta > 0 && delta <= delay;
-        last = now3;
+        last = now4;
       }
       function onTouchEnd(e2) {
         if (doubleTap && !touch$$1.cancelBubble) {
@@ -11006,7 +11006,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
       obj.removeEventListener("dblclick", dblclick, false);
       return this;
     }
-    var TRANSFORM = testProp(["transform", "webkitTransform", "OTransform", "MozTransform", "msTransform"]);
+    var TRANSFORM2 = testProp(["transform", "webkitTransform", "OTransform", "MozTransform", "msTransform"]);
     var TRANSITION = testProp(["webkitTransition", "transition", "OTransition", "MozTransition", "msTransition"]);
     var TRANSITION_END = TRANSITION === "webkitTransition" || TRANSITION === "OTransition" ? TRANSITION + "End" : "transitionend";
     function get(id) {
@@ -11124,7 +11124,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
     }
     function setTransform(el2, offset, scale2) {
       var pos = offset || new Point(0, 0);
-      el2.style[TRANSFORM] = (ie3d ? "translate(" + pos.x + "px," + pos.y + "px)" : "translate3d(" + pos.x + "px," + pos.y + "px,0)") + (scale2 ? " scale(" + scale2 + ")" : "");
+      el2.style[TRANSFORM2] = (ie3d ? "translate(" + pos.x + "px," + pos.y + "px)" : "translate3d(" + pos.x + "px," + pos.y + "px,0)") + (scale2 ? " scale(" + scale2 + ")" : "");
     }
     function setPosition(el2, point) {
       el2._leaflet_pos = point;
@@ -11208,7 +11208,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
       };
     }
     var DomUtil = {
-      TRANSFORM,
+      TRANSFORM: TRANSFORM2,
       TRANSITION,
       TRANSITION_END,
       get,
@@ -12307,7 +12307,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         var proxy = this._proxy = create$1("div", "leaflet-proxy leaflet-zoom-animated");
         this._panes.mapPane.appendChild(proxy);
         this.on("zoomanim", function(e2) {
-          var prop = TRANSFORM, transform2 = this._proxy.style[prop];
+          var prop = TRANSFORM2, transform2 = this._proxy.style[prop];
           setTransform(this._proxy, this.project(e2.center, e2.zoom), this.getZoomScale(e2.zoom, 1));
           if (transform2 === this._proxy.style[prop] && this._animatingZoom) {
             this._onZoomTransitionEnd();
@@ -13360,7 +13360,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
     CRS.EPSG900913 = EPSG900913;
     CRS.EPSG4326 = EPSG4326;
     CRS.Simple = Simple;
-    var Layer = Evented.extend({
+    var Layer3 = Evented.extend({
       options: {
         pane: "overlayPane",
         attribution: null,
@@ -13499,7 +13499,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         }
       }
     });
-    var LayerGroup = Layer.extend({
+    var LayerGroup = Layer3.extend({
       initialize: function(layers2, options2) {
         setOptions2(this, options2);
         this._layers = {};
@@ -13772,7 +13772,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         this._marker.fire("moveend").fire("dragend", e2);
       }
     });
-    var Marker2 = Layer.extend({
+    var Marker2 = Layer3.extend({
       options: {
         icon: new IconDefault(),
         interactive: true,
@@ -13991,7 +13991,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
     function marker(latlng, options2) {
       return new Marker2(latlng, options2);
     }
-    var Path2 = Layer.extend({
+    var Path3 = Layer3.extend({
       options: {
         stroke: true,
         color: "#3388ff",
@@ -14058,7 +14058,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         return (this.options.stroke ? this.options.weight / 2 : 0) + this._renderer.options.tolerance;
       }
     });
-    var CircleMarker = Path2.extend({
+    var CircleMarker = Path3.extend({
       options: {
         fill: true,
         radius: 10
@@ -14086,7 +14086,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
       },
       setStyle: function(options2) {
         var radius = options2 && options2.radius || this._radius;
-        Path2.prototype.setStyle.call(this, options2);
+        Path3.prototype.setStyle.call(this, options2);
         this.setRadius(radius);
         return this;
       },
@@ -14116,7 +14116,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
     function circleMarker(latlng, options2) {
       return new CircleMarker(latlng, options2);
     }
-    var Circle = CircleMarker.extend({
+    var Circle3 = CircleMarker.extend({
       initialize: function(latlng, options2, legacyOptions) {
         if (typeof options2 === "number") {
           options2 = extend2({}, legacyOptions, {radius: options2});
@@ -14139,7 +14139,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         var half = [this._radius, this._radiusY || this._radius];
         return new LatLngBounds(this._map.layerPointToLatLng(this._point.subtract(half)), this._map.layerPointToLatLng(this._point.add(half)));
       },
-      setStyle: Path2.prototype.setStyle,
+      setStyle: Path3.prototype.setStyle,
       _project: function() {
         var lng = this._latlng.lng, lat = this._latlng.lat, map = this._map, crs = map.options.crs;
         if (crs.distance === Earth.distance) {
@@ -14159,9 +14159,9 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
       }
     });
     function circle(latlng, options2, legacyOptions) {
-      return new Circle(latlng, options2, legacyOptions);
+      return new Circle3(latlng, options2, legacyOptions);
     }
-    var Polyline = Path2.extend({
+    var Polyline = Path3.extend({
       options: {
         smoothFactor: 1,
         noClip: false
@@ -14589,7 +14589,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
       }
     };
     Marker2.include(PointToGeoJSON);
-    Circle.include(PointToGeoJSON);
+    Circle3.include(PointToGeoJSON);
     CircleMarker.include(PointToGeoJSON);
     Polyline.include({
       toGeoJSON: function(precision) {
@@ -14662,7 +14662,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
       return new GeoJSON(geojson, options2);
     }
     var geoJson = geoJSON;
-    var ImageOverlay = Layer.extend({
+    var ImageOverlay = Layer3.extend({
       options: {
         opacity: 1,
         alt: "",
@@ -14879,7 +14879,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
     function svgOverlay(el2, bounds, options2) {
       return new SVGOverlay(el2, bounds, options2);
     }
-    var DivOverlay = Layer.extend({
+    var DivOverlay = Layer3.extend({
       options: {
         offset: [0, 7],
         className: "",
@@ -14972,7 +14972,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         return this;
       },
       _prepareOpen: function(parent, layer, latlng) {
-        if (!(layer instanceof Layer)) {
+        if (!(layer instanceof Layer3)) {
           latlng = layer;
           layer = parent;
         }
@@ -15053,7 +15053,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         map.fire("popupopen", {popup: this});
         if (this._source) {
           this._source.fire("popupopen", {popup: this}, true);
-          if (!(this._source instanceof Path2)) {
+          if (!(this._source instanceof Path3)) {
             this._source.on("preclick", stopPropagation);
           }
         }
@@ -15063,7 +15063,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         map.fire("popupclose", {popup: this});
         if (this._source) {
           this._source.fire("popupclose", {popup: this}, true);
-          if (!(this._source instanceof Path2)) {
+          if (!(this._source instanceof Path3)) {
             this._source.off("preclick", stopPropagation);
           }
         }
@@ -15190,7 +15190,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         return this;
       }
     });
-    Layer.include({
+    Layer3.include({
       bindPopup: function(content, options2) {
         if (content instanceof Popup) {
           setOptions2(content, options2);
@@ -15270,7 +15270,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
           return;
         }
         stop(e2);
-        if (layer instanceof Path2) {
+        if (layer instanceof Path3) {
           this.openPopup(e2.layer || e2.target, e2.latlng);
           return;
         }
@@ -15409,7 +15409,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         return this;
       }
     });
-    Layer.include({
+    Layer3.include({
       bindTooltip: function(content, options2) {
         if (content instanceof Tooltip) {
           setOptions2(content, options2);
@@ -15548,7 +15548,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
       return new DivIcon(options2);
     }
     Icon.Default = IconDefault;
-    var GridLayer = Layer.extend({
+    var GridLayer = Layer3.extend({
       options: {
         tileSize: 256,
         opacity: 1,
@@ -15674,13 +15674,13 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
           return;
         }
         setOpacity(this._container, this.options.opacity);
-        var now3 = +new Date(), nextFrame = false, willPrune = false;
+        var now4 = +new Date(), nextFrame = false, willPrune = false;
         for (var key in this._tiles) {
           var tile = this._tiles[key];
           if (!tile.current || !tile.loaded) {
             continue;
           }
-          var fade = Math.min(1, (now3 - tile.loaded) / 200);
+          var fade = Math.min(1, (now4 - tile.loaded) / 200);
           setOpacity(tile.el, fade);
           if (fade < 1) {
             nextFrame = true;
@@ -16299,7 +16299,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
     }
     TileLayer2.WMS = TileLayerWMS;
     tileLayer.wms = tileLayerWMS;
-    var Renderer2 = Layer.extend({
+    var Renderer2 = Layer3.extend({
       options: {
         padding: 0.1,
         tolerance: 0
@@ -16374,7 +16374,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         this._zoom = this._map.getZoom();
       }
     });
-    var Canvas3 = Renderer2.extend({
+    var Canvas4 = Renderer2.extend({
       getEvents: function() {
         var events = Renderer2.prototype.getEvents.call(this);
         events.viewprereset = this._onViewPreReset;
@@ -16717,7 +16717,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
       }
     });
     function canvas$1(options2) {
-      return canvas ? new Canvas3(options2) : null;
+      return canvas ? new Canvas4(options2) : null;
     }
     var vmlCreate = function() {
       try {
@@ -17567,7 +17567,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
     exports3.Browser = Browser;
     exports3.Evented = Evented;
     exports3.Mixin = Mixin;
-    exports3.Util = Util;
+    exports3.Util = Util2;
     exports3.Class = Class;
     exports3.Handler = Handler;
     exports3.extend = extend2;
@@ -17595,7 +17595,7 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
     exports3.GeoJSON = GeoJSON;
     exports3.geoJSON = geoJSON;
     exports3.geoJson = geoJson;
-    exports3.Layer = Layer;
+    exports3.Layer = Layer3;
     exports3.LayerGroup = LayerGroup;
     exports3.layerGroup = layerGroup;
     exports3.FeatureGroup = FeatureGroup;
@@ -17624,12 +17624,12 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
     exports3.SVG = SVG;
     exports3.svg = svg$1;
     exports3.Renderer = Renderer2;
-    exports3.Canvas = Canvas3;
+    exports3.Canvas = Canvas4;
     exports3.canvas = canvas$1;
-    exports3.Path = Path2;
+    exports3.Path = Path3;
     exports3.CircleMarker = CircleMarker;
     exports3.circleMarker = circleMarker;
-    exports3.Circle = Circle;
+    exports3.Circle = Circle3;
     exports3.circle = circle;
     exports3.Polyline = Polyline;
     exports3.polyline = polyline;
@@ -17648,11 +17648,4638 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
   });
 });
 
+// node_modules/react-konva/node_modules/react-reconciler/cjs/react-reconciler.production.min.js
+var require_react_reconciler_production_min2 = __commonJS((exports2, module2) => {
+  /** @license React v0.26.2
+   * react-reconciler.production.min.js
+   *
+   * Copyright (c) Facebook, Inc. and its affiliates.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
+  module2.exports = function $$$reconciler($$$hostConfig) {
+    var exports3 = {};
+    "use strict";
+    var aa = require_object_assign(), ba = require("react"), m2 = require_scheduler();
+    function q2(a2) {
+      for (var b2 = "https://reactjs.org/docs/error-decoder.html?invariant=" + a2, c2 = 1; c2 < arguments.length; c2++)
+        b2 += "&args[]=" + encodeURIComponent(arguments[c2]);
+      return "Minified React error #" + a2 + "; visit " + b2 + " for the full message or use the non-minified dev environment for full errors and additional helpful warnings.";
+    }
+    var ca = ba.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED, da = 60103, ea = 60106, fa = 60107, ha = 60108, ia = 60114, ja = 60109, ka = 60110, la = 60112, ma = 60113, na = 60120, oa = 60115, pa = 60116, qa = 60121, ra = 60129, sa = 60130, ta = 60131;
+    if (typeof Symbol === "function" && Symbol.for) {
+      var r2 = Symbol.for;
+      da = r2("react.element");
+      ea = r2("react.portal");
+      fa = r2("react.fragment");
+      ha = r2("react.strict_mode");
+      ia = r2("react.profiler");
+      ja = r2("react.provider");
+      ka = r2("react.context");
+      la = r2("react.forward_ref");
+      ma = r2("react.suspense");
+      na = r2("react.suspense_list");
+      oa = r2("react.memo");
+      pa = r2("react.lazy");
+      qa = r2("react.block");
+      r2("react.scope");
+      ra = r2("react.debug_trace_mode");
+      sa = r2("react.offscreen");
+      ta = r2("react.legacy_hidden");
+    }
+    var ua = typeof Symbol === "function" && Symbol.iterator;
+    function va(a2) {
+      if (a2 === null || typeof a2 !== "object")
+        return null;
+      a2 = ua && a2[ua] || a2["@@iterator"];
+      return typeof a2 === "function" ? a2 : null;
+    }
+    function wa(a2) {
+      if (a2 == null)
+        return null;
+      if (typeof a2 === "function")
+        return a2.displayName || a2.name || null;
+      if (typeof a2 === "string")
+        return a2;
+      switch (a2) {
+        case fa:
+          return "Fragment";
+        case ea:
+          return "Portal";
+        case ia:
+          return "Profiler";
+        case ha:
+          return "StrictMode";
+        case ma:
+          return "Suspense";
+        case na:
+          return "SuspenseList";
+      }
+      if (typeof a2 === "object")
+        switch (a2.$$typeof) {
+          case ka:
+            return (a2.displayName || "Context") + ".Consumer";
+          case ja:
+            return (a2._context.displayName || "Context") + ".Provider";
+          case la:
+            var b2 = a2.render;
+            b2 = b2.displayName || b2.name || "";
+            return a2.displayName || (b2 !== "" ? "ForwardRef(" + b2 + ")" : "ForwardRef");
+          case oa:
+            return wa(a2.type);
+          case qa:
+            return wa(a2._render);
+          case pa:
+            b2 = a2._payload;
+            a2 = a2._init;
+            try {
+              return wa(a2(b2));
+            } catch (c2) {
+            }
+        }
+      return null;
+    }
+    function xa(a2) {
+      var b2 = a2, c2 = a2;
+      if (a2.alternate)
+        for (; b2.return; )
+          b2 = b2.return;
+      else {
+        a2 = b2;
+        do
+          b2 = a2, (b2.flags & 1026) !== 0 && (c2 = b2.return), a2 = b2.return;
+        while (a2);
+      }
+      return b2.tag === 3 ? c2 : null;
+    }
+    function ya(a2) {
+      if (xa(a2) !== a2)
+        throw Error(q2(188));
+    }
+    function za(a2) {
+      var b2 = a2.alternate;
+      if (!b2) {
+        b2 = xa(a2);
+        if (b2 === null)
+          throw Error(q2(188));
+        return b2 !== a2 ? null : a2;
+      }
+      for (var c2 = a2, d2 = b2; ; ) {
+        var e2 = c2.return;
+        if (e2 === null)
+          break;
+        var f2 = e2.alternate;
+        if (f2 === null) {
+          d2 = e2.return;
+          if (d2 !== null) {
+            c2 = d2;
+            continue;
+          }
+          break;
+        }
+        if (e2.child === f2.child) {
+          for (f2 = e2.child; f2; ) {
+            if (f2 === c2)
+              return ya(e2), a2;
+            if (f2 === d2)
+              return ya(e2), b2;
+            f2 = f2.sibling;
+          }
+          throw Error(q2(188));
+        }
+        if (c2.return !== d2.return)
+          c2 = e2, d2 = f2;
+        else {
+          for (var g2 = false, h2 = e2.child; h2; ) {
+            if (h2 === c2) {
+              g2 = true;
+              c2 = e2;
+              d2 = f2;
+              break;
+            }
+            if (h2 === d2) {
+              g2 = true;
+              d2 = e2;
+              c2 = f2;
+              break;
+            }
+            h2 = h2.sibling;
+          }
+          if (!g2) {
+            for (h2 = f2.child; h2; ) {
+              if (h2 === c2) {
+                g2 = true;
+                c2 = f2;
+                d2 = e2;
+                break;
+              }
+              if (h2 === d2) {
+                g2 = true;
+                d2 = f2;
+                c2 = e2;
+                break;
+              }
+              h2 = h2.sibling;
+            }
+            if (!g2)
+              throw Error(q2(189));
+          }
+        }
+        if (c2.alternate !== d2)
+          throw Error(q2(190));
+      }
+      if (c2.tag !== 3)
+        throw Error(q2(188));
+      return c2.stateNode.current === c2 ? a2 : b2;
+    }
+    function Aa(a2) {
+      a2 = za(a2);
+      if (!a2)
+        return null;
+      for (var b2 = a2; ; ) {
+        if (b2.tag === 5 || b2.tag === 6)
+          return b2;
+        if (b2.child)
+          b2.child.return = b2, b2 = b2.child;
+        else {
+          if (b2 === a2)
+            break;
+          for (; !b2.sibling; ) {
+            if (!b2.return || b2.return === a2)
+              return null;
+            b2 = b2.return;
+          }
+          b2.sibling.return = b2.return;
+          b2 = b2.sibling;
+        }
+      }
+      return null;
+    }
+    function Ba(a2) {
+      a2 = za(a2);
+      if (!a2)
+        return null;
+      for (var b2 = a2; ; ) {
+        if (b2.tag === 5 || b2.tag === 6)
+          return b2;
+        if (b2.child && b2.tag !== 4)
+          b2.child.return = b2, b2 = b2.child;
+        else {
+          if (b2 === a2)
+            break;
+          for (; !b2.sibling; ) {
+            if (!b2.return || b2.return === a2)
+              return null;
+            b2 = b2.return;
+          }
+          b2.sibling.return = b2.return;
+          b2 = b2.sibling;
+        }
+      }
+      return null;
+    }
+    function Ca(a2, b2) {
+      for (var c2 = a2.alternate; b2 !== null; ) {
+        if (b2 === a2 || b2 === c2)
+          return true;
+        b2 = b2.return;
+      }
+      return false;
+    }
+    var Da = $$$hostConfig.getPublicInstance, Ea = $$$hostConfig.getRootHostContext, Fa = $$$hostConfig.getChildHostContext, Ga = $$$hostConfig.prepareForCommit, Ha = $$$hostConfig.resetAfterCommit, Ia = $$$hostConfig.createInstance, Ja = $$$hostConfig.appendInitialChild, Ka = $$$hostConfig.finalizeInitialChildren, La = $$$hostConfig.prepareUpdate, Ma = $$$hostConfig.shouldSetTextContent, Na = $$$hostConfig.createTextInstance, Pa = $$$hostConfig.scheduleTimeout, Qa = $$$hostConfig.cancelTimeout, Ra = $$$hostConfig.noTimeout, Sa = $$$hostConfig.isPrimaryRenderer, Ta = $$$hostConfig.supportsMutation, Ua = $$$hostConfig.supportsPersistence, Va = $$$hostConfig.supportsHydration, Wa = $$$hostConfig.getInstanceFromNode, Xa = $$$hostConfig.makeOpaqueHydratingObject, Ya = $$$hostConfig.makeClientId, Za = $$$hostConfig.beforeActiveInstanceBlur, $a = $$$hostConfig.afterActiveInstanceBlur, ab = $$$hostConfig.preparePortalMount, bb = $$$hostConfig.supportsTestSelectors, cb = $$$hostConfig.findFiberRoot, db = $$$hostConfig.getBoundingRect, eb = $$$hostConfig.getTextContent, fb = $$$hostConfig.isHiddenSubtree, gb = $$$hostConfig.matchAccessibilityRole, hb = $$$hostConfig.setFocusIfFocusable, ib = $$$hostConfig.setupIntersectionObserver, jb = $$$hostConfig.appendChild, kb = $$$hostConfig.appendChildToContainer, lb = $$$hostConfig.commitTextUpdate, mb = $$$hostConfig.commitMount, nb = $$$hostConfig.commitUpdate, ob = $$$hostConfig.insertBefore, pb = $$$hostConfig.insertInContainerBefore, qb = $$$hostConfig.removeChild, rb = $$$hostConfig.removeChildFromContainer, sb = $$$hostConfig.resetTextContent, tb = $$$hostConfig.hideInstance, ub = $$$hostConfig.hideTextInstance, vb = $$$hostConfig.unhideInstance, wb = $$$hostConfig.unhideTextInstance, xb = $$$hostConfig.clearContainer, yb = $$$hostConfig.cloneInstance, zb = $$$hostConfig.createContainerChildSet, Ab = $$$hostConfig.appendChildToContainerChildSet, Bb = $$$hostConfig.finalizeContainerChildren, Cb = $$$hostConfig.replaceContainerChildren, Db = $$$hostConfig.cloneHiddenInstance, Eb = $$$hostConfig.cloneHiddenTextInstance, Fb = $$$hostConfig.canHydrateInstance, Gb = $$$hostConfig.canHydrateTextInstance, Hb = $$$hostConfig.isSuspenseInstancePending, Ib = $$$hostConfig.isSuspenseInstanceFallback, Jb = $$$hostConfig.getNextHydratableSibling, Kb = $$$hostConfig.getFirstHydratableChild, Lb = $$$hostConfig.hydrateInstance, Mb = $$$hostConfig.hydrateTextInstance, Nb = $$$hostConfig.getNextHydratableInstanceAfterSuspenseInstance, Ob = $$$hostConfig.commitHydratedContainer, Pb = $$$hostConfig.commitHydratedSuspenseInstance, Qb;
+    function Rb(a2) {
+      if (Qb === void 0)
+        try {
+          throw Error();
+        } catch (c2) {
+          var b2 = c2.stack.trim().match(/\n( *(at )?)/);
+          Qb = b2 && b2[1] || "";
+        }
+      return "\n" + Qb + a2;
+    }
+    var Sb = false;
+    function Tb(a2, b2) {
+      if (!a2 || Sb)
+        return "";
+      Sb = true;
+      var c2 = Error.prepareStackTrace;
+      Error.prepareStackTrace = void 0;
+      try {
+        if (b2)
+          if (b2 = function() {
+            throw Error();
+          }, Object.defineProperty(b2.prototype, "props", {set: function() {
+            throw Error();
+          }}), typeof Reflect === "object" && Reflect.construct) {
+            try {
+              Reflect.construct(b2, []);
+            } catch (k2) {
+              var d2 = k2;
+            }
+            Reflect.construct(a2, [], b2);
+          } else {
+            try {
+              b2.call();
+            } catch (k2) {
+              d2 = k2;
+            }
+            a2.call(b2.prototype);
+          }
+        else {
+          try {
+            throw Error();
+          } catch (k2) {
+            d2 = k2;
+          }
+          a2();
+        }
+      } catch (k2) {
+        if (k2 && d2 && typeof k2.stack === "string") {
+          for (var e2 = k2.stack.split("\n"), f2 = d2.stack.split("\n"), g2 = e2.length - 1, h2 = f2.length - 1; 1 <= g2 && 0 <= h2 && e2[g2] !== f2[h2]; )
+            h2--;
+          for (; 1 <= g2 && 0 <= h2; g2--, h2--)
+            if (e2[g2] !== f2[h2]) {
+              if (g2 !== 1 || h2 !== 1) {
+                do
+                  if (g2--, h2--, 0 > h2 || e2[g2] !== f2[h2])
+                    return "\n" + e2[g2].replace(" at new ", " at ");
+                while (1 <= g2 && 0 <= h2);
+              }
+              break;
+            }
+        }
+      } finally {
+        Sb = false, Error.prepareStackTrace = c2;
+      }
+      return (a2 = a2 ? a2.displayName || a2.name : "") ? Rb(a2) : "";
+    }
+    var Ub = [], Vb = -1;
+    function Wb(a2) {
+      return {current: a2};
+    }
+    function z2(a2) {
+      0 > Vb || (a2.current = Ub[Vb], Ub[Vb] = null, Vb--);
+    }
+    function A2(a2, b2) {
+      Vb++;
+      Ub[Vb] = a2.current;
+      a2.current = b2;
+    }
+    var Xb = {}, B2 = Wb(Xb), D2 = Wb(false), Yb = Xb;
+    function Zb(a2, b2) {
+      var c2 = a2.type.contextTypes;
+      if (!c2)
+        return Xb;
+      var d2 = a2.stateNode;
+      if (d2 && d2.__reactInternalMemoizedUnmaskedChildContext === b2)
+        return d2.__reactInternalMemoizedMaskedChildContext;
+      var e2 = {}, f2;
+      for (f2 in c2)
+        e2[f2] = b2[f2];
+      d2 && (a2 = a2.stateNode, a2.__reactInternalMemoizedUnmaskedChildContext = b2, a2.__reactInternalMemoizedMaskedChildContext = e2);
+      return e2;
+    }
+    function E2(a2) {
+      a2 = a2.childContextTypes;
+      return a2 !== null && a2 !== void 0;
+    }
+    function $b() {
+      z2(D2);
+      z2(B2);
+    }
+    function ac(a2, b2, c2) {
+      if (B2.current !== Xb)
+        throw Error(q2(168));
+      A2(B2, b2);
+      A2(D2, c2);
+    }
+    function bc(a2, b2, c2) {
+      var d2 = a2.stateNode;
+      a2 = b2.childContextTypes;
+      if (typeof d2.getChildContext !== "function")
+        return c2;
+      d2 = d2.getChildContext();
+      for (var e2 in d2)
+        if (!(e2 in a2))
+          throw Error(q2(108, wa(b2) || "Unknown", e2));
+      return aa({}, c2, d2);
+    }
+    function cc(a2) {
+      a2 = (a2 = a2.stateNode) && a2.__reactInternalMemoizedMergedChildContext || Xb;
+      Yb = B2.current;
+      A2(B2, a2);
+      A2(D2, D2.current);
+      return true;
+    }
+    function dc(a2, b2, c2) {
+      var d2 = a2.stateNode;
+      if (!d2)
+        throw Error(q2(169));
+      c2 ? (a2 = bc(a2, b2, Yb), d2.__reactInternalMemoizedMergedChildContext = a2, z2(D2), z2(B2), A2(B2, a2)) : z2(D2);
+      A2(D2, c2);
+    }
+    var ec = null, fc = null, gc = m2.unstable_now;
+    gc();
+    var hc = 0, F2 = 8;
+    function ic(a2) {
+      if ((1 & a2) !== 0)
+        return F2 = 15, 1;
+      if ((2 & a2) !== 0)
+        return F2 = 14, 2;
+      if ((4 & a2) !== 0)
+        return F2 = 13, 4;
+      var b2 = 24 & a2;
+      if (b2 !== 0)
+        return F2 = 12, b2;
+      if ((a2 & 32) !== 0)
+        return F2 = 11, 32;
+      b2 = 192 & a2;
+      if (b2 !== 0)
+        return F2 = 10, b2;
+      if ((a2 & 256) !== 0)
+        return F2 = 9, 256;
+      b2 = 3584 & a2;
+      if (b2 !== 0)
+        return F2 = 8, b2;
+      if ((a2 & 4096) !== 0)
+        return F2 = 7, 4096;
+      b2 = 4186112 & a2;
+      if (b2 !== 0)
+        return F2 = 6, b2;
+      b2 = 62914560 & a2;
+      if (b2 !== 0)
+        return F2 = 5, b2;
+      if (a2 & 67108864)
+        return F2 = 4, 67108864;
+      if ((a2 & 134217728) !== 0)
+        return F2 = 3, 134217728;
+      b2 = 805306368 & a2;
+      if (b2 !== 0)
+        return F2 = 2, b2;
+      if ((1073741824 & a2) !== 0)
+        return F2 = 1, 1073741824;
+      F2 = 8;
+      return a2;
+    }
+    function jc(a2) {
+      switch (a2) {
+        case 99:
+          return 15;
+        case 98:
+          return 10;
+        case 97:
+        case 96:
+          return 8;
+        case 95:
+          return 2;
+        default:
+          return 0;
+      }
+    }
+    function kc(a2) {
+      switch (a2) {
+        case 15:
+        case 14:
+          return 99;
+        case 13:
+        case 12:
+        case 11:
+        case 10:
+          return 98;
+        case 9:
+        case 8:
+        case 7:
+        case 6:
+        case 4:
+        case 5:
+          return 97;
+        case 3:
+        case 2:
+        case 1:
+          return 95;
+        case 0:
+          return 90;
+        default:
+          throw Error(q2(358, a2));
+      }
+    }
+    function lc(a2, b2) {
+      var c2 = a2.pendingLanes;
+      if (c2 === 0)
+        return F2 = 0;
+      var d2 = 0, e2 = 0, f2 = a2.expiredLanes, g2 = a2.suspendedLanes, h2 = a2.pingedLanes;
+      if (f2 !== 0)
+        d2 = f2, e2 = F2 = 15;
+      else if (f2 = c2 & 134217727, f2 !== 0) {
+        var k2 = f2 & ~g2;
+        k2 !== 0 ? (d2 = ic(k2), e2 = F2) : (h2 &= f2, h2 !== 0 && (d2 = ic(h2), e2 = F2));
+      } else
+        f2 = c2 & ~g2, f2 !== 0 ? (d2 = ic(f2), e2 = F2) : h2 !== 0 && (d2 = ic(h2), e2 = F2);
+      if (d2 === 0)
+        return 0;
+      d2 = 31 - mc(d2);
+      d2 = c2 & ((0 > d2 ? 0 : 1 << d2) << 1) - 1;
+      if (b2 !== 0 && b2 !== d2 && (b2 & g2) === 0) {
+        ic(b2);
+        if (e2 <= F2)
+          return b2;
+        F2 = e2;
+      }
+      b2 = a2.entangledLanes;
+      if (b2 !== 0)
+        for (a2 = a2.entanglements, b2 &= d2; 0 < b2; )
+          c2 = 31 - mc(b2), e2 = 1 << c2, d2 |= a2[c2], b2 &= ~e2;
+      return d2;
+    }
+    function nc(a2) {
+      a2 = a2.pendingLanes & -1073741825;
+      return a2 !== 0 ? a2 : a2 & 1073741824 ? 1073741824 : 0;
+    }
+    function oc(a2, b2) {
+      switch (a2) {
+        case 15:
+          return 1;
+        case 14:
+          return 2;
+        case 12:
+          return a2 = pc(24 & ~b2), a2 === 0 ? oc(10, b2) : a2;
+        case 10:
+          return a2 = pc(192 & ~b2), a2 === 0 ? oc(8, b2) : a2;
+        case 8:
+          return a2 = pc(3584 & ~b2), a2 === 0 && (a2 = pc(4186112 & ~b2), a2 === 0 && (a2 = 512)), a2;
+        case 2:
+          return b2 = pc(805306368 & ~b2), b2 === 0 && (b2 = 268435456), b2;
+      }
+      throw Error(q2(358, a2));
+    }
+    function pc(a2) {
+      return a2 & -a2;
+    }
+    function qc(a2) {
+      for (var b2 = [], c2 = 0; 31 > c2; c2++)
+        b2.push(a2);
+      return b2;
+    }
+    function rc(a2, b2, c2) {
+      a2.pendingLanes |= b2;
+      var d2 = b2 - 1;
+      a2.suspendedLanes &= d2;
+      a2.pingedLanes &= d2;
+      a2 = a2.eventTimes;
+      b2 = 31 - mc(b2);
+      a2[b2] = c2;
+    }
+    var mc = Math.clz32 ? Math.clz32 : sc, tc = Math.log, uc = Math.LN2;
+    function sc(a2) {
+      return a2 === 0 ? 32 : 31 - (tc(a2) / uc | 0) | 0;
+    }
+    var vc = m2.unstable_runWithPriority, wc = m2.unstable_scheduleCallback, xc = m2.unstable_cancelCallback, yc = m2.unstable_shouldYield, zc = m2.unstable_requestPaint, Ac = m2.unstable_now, Bc = m2.unstable_getCurrentPriorityLevel, Cc = m2.unstable_ImmediatePriority, Dc = m2.unstable_UserBlockingPriority, Ec = m2.unstable_NormalPriority, Fc = m2.unstable_LowPriority, Gc = m2.unstable_IdlePriority, Hc = {}, Ic = zc !== void 0 ? zc : function() {
+    }, Jc = null, Kc = null, Lc = false, Mc = Ac(), G2 = 1e4 > Mc ? Ac : function() {
+      return Ac() - Mc;
+    };
+    function Nc() {
+      switch (Bc()) {
+        case Cc:
+          return 99;
+        case Dc:
+          return 98;
+        case Ec:
+          return 97;
+        case Fc:
+          return 96;
+        case Gc:
+          return 95;
+        default:
+          throw Error(q2(332));
+      }
+    }
+    function Oc(a2) {
+      switch (a2) {
+        case 99:
+          return Cc;
+        case 98:
+          return Dc;
+        case 97:
+          return Ec;
+        case 96:
+          return Fc;
+        case 95:
+          return Gc;
+        default:
+          throw Error(q2(332));
+      }
+    }
+    function Pc(a2, b2) {
+      a2 = Oc(a2);
+      return vc(a2, b2);
+    }
+    function Qc(a2, b2, c2) {
+      a2 = Oc(a2);
+      return wc(a2, b2, c2);
+    }
+    function H2() {
+      if (Kc !== null) {
+        var a2 = Kc;
+        Kc = null;
+        xc(a2);
+      }
+      Rc();
+    }
+    function Rc() {
+      if (!Lc && Jc !== null) {
+        Lc = true;
+        var a2 = 0;
+        try {
+          var b2 = Jc;
+          Pc(99, function() {
+            for (; a2 < b2.length; a2++) {
+              var c2 = b2[a2];
+              do
+                c2 = c2(true);
+              while (c2 !== null);
+            }
+          });
+          Jc = null;
+        } catch (c2) {
+          throw Jc !== null && (Jc = Jc.slice(a2 + 1)), wc(Cc, H2), c2;
+        } finally {
+          Lc = false;
+        }
+      }
+    }
+    var Sc = ca.ReactCurrentBatchConfig;
+    function Tc(a2, b2) {
+      return a2 === b2 && (a2 !== 0 || 1 / a2 === 1 / b2) || a2 !== a2 && b2 !== b2;
+    }
+    var I2 = typeof Object.is === "function" ? Object.is : Tc, Uc = Object.prototype.hasOwnProperty;
+    function Vc(a2, b2) {
+      if (I2(a2, b2))
+        return true;
+      if (typeof a2 !== "object" || a2 === null || typeof b2 !== "object" || b2 === null)
+        return false;
+      var c2 = Object.keys(a2), d2 = Object.keys(b2);
+      if (c2.length !== d2.length)
+        return false;
+      for (d2 = 0; d2 < c2.length; d2++)
+        if (!Uc.call(b2, c2[d2]) || !I2(a2[c2[d2]], b2[c2[d2]]))
+          return false;
+      return true;
+    }
+    function Wc(a2) {
+      switch (a2.tag) {
+        case 5:
+          return Rb(a2.type);
+        case 16:
+          return Rb("Lazy");
+        case 13:
+          return Rb("Suspense");
+        case 19:
+          return Rb("SuspenseList");
+        case 0:
+        case 2:
+        case 15:
+          return a2 = Tb(a2.type, false), a2;
+        case 11:
+          return a2 = Tb(a2.type.render, false), a2;
+        case 22:
+          return a2 = Tb(a2.type._render, false), a2;
+        case 1:
+          return a2 = Tb(a2.type, true), a2;
+        default:
+          return "";
+      }
+    }
+    function Xc(a2, b2) {
+      if (a2 && a2.defaultProps) {
+        b2 = aa({}, b2);
+        a2 = a2.defaultProps;
+        for (var c2 in a2)
+          b2[c2] === void 0 && (b2[c2] = a2[c2]);
+        return b2;
+      }
+      return b2;
+    }
+    var Yc = Wb(null), Zc = null, $c = null, ad = null;
+    function bd() {
+      ad = $c = Zc = null;
+    }
+    function cd(a2, b2) {
+      a2 = a2.type._context;
+      Sa ? (A2(Yc, a2._currentValue), a2._currentValue = b2) : (A2(Yc, a2._currentValue2), a2._currentValue2 = b2);
+    }
+    function dd(a2) {
+      var b2 = Yc.current;
+      z2(Yc);
+      a2 = a2.type._context;
+      Sa ? a2._currentValue = b2 : a2._currentValue2 = b2;
+    }
+    function ed(a2, b2) {
+      for (; a2 !== null; ) {
+        var c2 = a2.alternate;
+        if ((a2.childLanes & b2) === b2)
+          if (c2 === null || (c2.childLanes & b2) === b2)
+            break;
+          else
+            c2.childLanes |= b2;
+        else
+          a2.childLanes |= b2, c2 !== null && (c2.childLanes |= b2);
+        a2 = a2.return;
+      }
+    }
+    function fd(a2, b2) {
+      Zc = a2;
+      ad = $c = null;
+      a2 = a2.dependencies;
+      a2 !== null && a2.firstContext !== null && ((a2.lanes & b2) !== 0 && (gd = true), a2.firstContext = null);
+    }
+    function J2(a2, b2) {
+      if (ad !== a2 && b2 !== false && b2 !== 0) {
+        if (typeof b2 !== "number" || b2 === 1073741823)
+          ad = a2, b2 = 1073741823;
+        b2 = {context: a2, observedBits: b2, next: null};
+        if ($c === null) {
+          if (Zc === null)
+            throw Error(q2(308));
+          $c = b2;
+          Zc.dependencies = {lanes: 0, firstContext: b2, responders: null};
+        } else
+          $c = $c.next = b2;
+      }
+      return Sa ? a2._currentValue : a2._currentValue2;
+    }
+    var hd = false;
+    function id(a2) {
+      a2.updateQueue = {baseState: a2.memoizedState, firstBaseUpdate: null, lastBaseUpdate: null, shared: {pending: null}, effects: null};
+    }
+    function jd(a2, b2) {
+      a2 = a2.updateQueue;
+      b2.updateQueue === a2 && (b2.updateQueue = {baseState: a2.baseState, firstBaseUpdate: a2.firstBaseUpdate, lastBaseUpdate: a2.lastBaseUpdate, shared: a2.shared, effects: a2.effects});
+    }
+    function kd(a2, b2) {
+      return {eventTime: a2, lane: b2, tag: 0, payload: null, callback: null, next: null};
+    }
+    function md(a2, b2) {
+      a2 = a2.updateQueue;
+      if (a2 !== null) {
+        a2 = a2.shared;
+        var c2 = a2.pending;
+        c2 === null ? b2.next = b2 : (b2.next = c2.next, c2.next = b2);
+        a2.pending = b2;
+      }
+    }
+    function nd(a2, b2) {
+      var c2 = a2.updateQueue, d2 = a2.alternate;
+      if (d2 !== null && (d2 = d2.updateQueue, c2 === d2)) {
+        var e2 = null, f2 = null;
+        c2 = c2.firstBaseUpdate;
+        if (c2 !== null) {
+          do {
+            var g2 = {eventTime: c2.eventTime, lane: c2.lane, tag: c2.tag, payload: c2.payload, callback: c2.callback, next: null};
+            f2 === null ? e2 = f2 = g2 : f2 = f2.next = g2;
+            c2 = c2.next;
+          } while (c2 !== null);
+          f2 === null ? e2 = f2 = b2 : f2 = f2.next = b2;
+        } else
+          e2 = f2 = b2;
+        c2 = {baseState: d2.baseState, firstBaseUpdate: e2, lastBaseUpdate: f2, shared: d2.shared, effects: d2.effects};
+        a2.updateQueue = c2;
+        return;
+      }
+      a2 = c2.lastBaseUpdate;
+      a2 === null ? c2.firstBaseUpdate = b2 : a2.next = b2;
+      c2.lastBaseUpdate = b2;
+    }
+    function od(a2, b2, c2, d2) {
+      var e2 = a2.updateQueue;
+      hd = false;
+      var f2 = e2.firstBaseUpdate, g2 = e2.lastBaseUpdate, h2 = e2.shared.pending;
+      if (h2 !== null) {
+        e2.shared.pending = null;
+        var k2 = h2, l2 = k2.next;
+        k2.next = null;
+        g2 === null ? f2 = l2 : g2.next = l2;
+        g2 = k2;
+        var n2 = a2.alternate;
+        if (n2 !== null) {
+          n2 = n2.updateQueue;
+          var t2 = n2.lastBaseUpdate;
+          t2 !== g2 && (t2 === null ? n2.firstBaseUpdate = l2 : t2.next = l2, n2.lastBaseUpdate = k2);
+        }
+      }
+      if (f2 !== null) {
+        t2 = e2.baseState;
+        g2 = 0;
+        n2 = l2 = k2 = null;
+        do {
+          h2 = f2.lane;
+          var p2 = f2.eventTime;
+          if ((d2 & h2) === h2) {
+            n2 !== null && (n2 = n2.next = {
+              eventTime: p2,
+              lane: 0,
+              tag: f2.tag,
+              payload: f2.payload,
+              callback: f2.callback,
+              next: null
+            });
+            a: {
+              var y2 = a2, x2 = f2;
+              h2 = b2;
+              p2 = c2;
+              switch (x2.tag) {
+                case 1:
+                  y2 = x2.payload;
+                  if (typeof y2 === "function") {
+                    t2 = y2.call(p2, t2, h2);
+                    break a;
+                  }
+                  t2 = y2;
+                  break a;
+                case 3:
+                  y2.flags = y2.flags & -4097 | 64;
+                case 0:
+                  y2 = x2.payload;
+                  h2 = typeof y2 === "function" ? y2.call(p2, t2, h2) : y2;
+                  if (h2 === null || h2 === void 0)
+                    break a;
+                  t2 = aa({}, t2, h2);
+                  break a;
+                case 2:
+                  hd = true;
+              }
+            }
+            f2.callback !== null && (a2.flags |= 32, h2 = e2.effects, h2 === null ? e2.effects = [f2] : h2.push(f2));
+          } else
+            p2 = {eventTime: p2, lane: h2, tag: f2.tag, payload: f2.payload, callback: f2.callback, next: null}, n2 === null ? (l2 = n2 = p2, k2 = t2) : n2 = n2.next = p2, g2 |= h2;
+          f2 = f2.next;
+          if (f2 === null)
+            if (h2 = e2.shared.pending, h2 === null)
+              break;
+            else
+              f2 = h2.next, h2.next = null, e2.lastBaseUpdate = h2, e2.shared.pending = null;
+        } while (1);
+        n2 === null && (k2 = t2);
+        e2.baseState = k2;
+        e2.firstBaseUpdate = l2;
+        e2.lastBaseUpdate = n2;
+        pd |= g2;
+        a2.lanes = g2;
+        a2.memoizedState = t2;
+      }
+    }
+    function qd(a2, b2, c2) {
+      a2 = b2.effects;
+      b2.effects = null;
+      if (a2 !== null)
+        for (b2 = 0; b2 < a2.length; b2++) {
+          var d2 = a2[b2], e2 = d2.callback;
+          if (e2 !== null) {
+            d2.callback = null;
+            d2 = c2;
+            if (typeof e2 !== "function")
+              throw Error(q2(191, e2));
+            e2.call(d2);
+          }
+        }
+    }
+    var rd = new ba.Component().refs;
+    function sd(a2, b2, c2, d2) {
+      b2 = a2.memoizedState;
+      c2 = c2(d2, b2);
+      c2 = c2 === null || c2 === void 0 ? b2 : aa({}, b2, c2);
+      a2.memoizedState = c2;
+      a2.lanes === 0 && (a2.updateQueue.baseState = c2);
+    }
+    var vd = {isMounted: function(a2) {
+      return (a2 = a2._reactInternals) ? xa(a2) === a2 : false;
+    }, enqueueSetState: function(a2, b2, c2) {
+      a2 = a2._reactInternals;
+      var d2 = K2(), e2 = td(a2), f2 = kd(d2, e2);
+      f2.payload = b2;
+      c2 !== void 0 && c2 !== null && (f2.callback = c2);
+      md(a2, f2);
+      ud(a2, e2, d2);
+    }, enqueueReplaceState: function(a2, b2, c2) {
+      a2 = a2._reactInternals;
+      var d2 = K2(), e2 = td(a2), f2 = kd(d2, e2);
+      f2.tag = 1;
+      f2.payload = b2;
+      c2 !== void 0 && c2 !== null && (f2.callback = c2);
+      md(a2, f2);
+      ud(a2, e2, d2);
+    }, enqueueForceUpdate: function(a2, b2) {
+      a2 = a2._reactInternals;
+      var c2 = K2(), d2 = td(a2), e2 = kd(c2, d2);
+      e2.tag = 2;
+      b2 !== void 0 && b2 !== null && (e2.callback = b2);
+      md(a2, e2);
+      ud(a2, d2, c2);
+    }};
+    function wd(a2, b2, c2, d2, e2, f2, g2) {
+      a2 = a2.stateNode;
+      return typeof a2.shouldComponentUpdate === "function" ? a2.shouldComponentUpdate(d2, f2, g2) : b2.prototype && b2.prototype.isPureReactComponent ? !Vc(c2, d2) || !Vc(e2, f2) : true;
+    }
+    function xd(a2, b2, c2) {
+      var d2 = false, e2 = Xb;
+      var f2 = b2.contextType;
+      typeof f2 === "object" && f2 !== null ? f2 = J2(f2) : (e2 = E2(b2) ? Yb : B2.current, d2 = b2.contextTypes, f2 = (d2 = d2 !== null && d2 !== void 0) ? Zb(a2, e2) : Xb);
+      b2 = new b2(c2, f2);
+      a2.memoizedState = b2.state !== null && b2.state !== void 0 ? b2.state : null;
+      b2.updater = vd;
+      a2.stateNode = b2;
+      b2._reactInternals = a2;
+      d2 && (a2 = a2.stateNode, a2.__reactInternalMemoizedUnmaskedChildContext = e2, a2.__reactInternalMemoizedMaskedChildContext = f2);
+      return b2;
+    }
+    function yd(a2, b2, c2, d2) {
+      a2 = b2.state;
+      typeof b2.componentWillReceiveProps === "function" && b2.componentWillReceiveProps(c2, d2);
+      typeof b2.UNSAFE_componentWillReceiveProps === "function" && b2.UNSAFE_componentWillReceiveProps(c2, d2);
+      b2.state !== a2 && vd.enqueueReplaceState(b2, b2.state, null);
+    }
+    function zd(a2, b2, c2, d2) {
+      var e2 = a2.stateNode;
+      e2.props = c2;
+      e2.state = a2.memoizedState;
+      e2.refs = rd;
+      id(a2);
+      var f2 = b2.contextType;
+      typeof f2 === "object" && f2 !== null ? e2.context = J2(f2) : (f2 = E2(b2) ? Yb : B2.current, e2.context = Zb(a2, f2));
+      od(a2, c2, e2, d2);
+      e2.state = a2.memoizedState;
+      f2 = b2.getDerivedStateFromProps;
+      typeof f2 === "function" && (sd(a2, b2, f2, c2), e2.state = a2.memoizedState);
+      typeof b2.getDerivedStateFromProps === "function" || typeof e2.getSnapshotBeforeUpdate === "function" || typeof e2.UNSAFE_componentWillMount !== "function" && typeof e2.componentWillMount !== "function" || (b2 = e2.state, typeof e2.componentWillMount === "function" && e2.componentWillMount(), typeof e2.UNSAFE_componentWillMount === "function" && e2.UNSAFE_componentWillMount(), b2 !== e2.state && vd.enqueueReplaceState(e2, e2.state, null), od(a2, c2, e2, d2), e2.state = a2.memoizedState);
+      typeof e2.componentDidMount === "function" && (a2.flags |= 4);
+    }
+    var Ad = Array.isArray;
+    function Bd(a2, b2, c2) {
+      a2 = c2.ref;
+      if (a2 !== null && typeof a2 !== "function" && typeof a2 !== "object") {
+        if (c2._owner) {
+          c2 = c2._owner;
+          if (c2) {
+            if (c2.tag !== 1)
+              throw Error(q2(309));
+            var d2 = c2.stateNode;
+          }
+          if (!d2)
+            throw Error(q2(147, a2));
+          var e2 = "" + a2;
+          if (b2 !== null && b2.ref !== null && typeof b2.ref === "function" && b2.ref._stringRef === e2)
+            return b2.ref;
+          b2 = function(a3) {
+            var b3 = d2.refs;
+            b3 === rd && (b3 = d2.refs = {});
+            a3 === null ? delete b3[e2] : b3[e2] = a3;
+          };
+          b2._stringRef = e2;
+          return b2;
+        }
+        if (typeof a2 !== "string")
+          throw Error(q2(284));
+        if (!c2._owner)
+          throw Error(q2(290, a2));
+      }
+      return a2;
+    }
+    function Cd(a2, b2) {
+      if (a2.type !== "textarea")
+        throw Error(q2(31, Object.prototype.toString.call(b2) === "[object Object]" ? "object with keys {" + Object.keys(b2).join(", ") + "}" : b2));
+    }
+    function Dd(a2) {
+      function b2(b3, c3) {
+        if (a2) {
+          var d3 = b3.lastEffect;
+          d3 !== null ? (d3.nextEffect = c3, b3.lastEffect = c3) : b3.firstEffect = b3.lastEffect = c3;
+          c3.nextEffect = null;
+          c3.flags = 8;
+        }
+      }
+      function c2(c3, d3) {
+        if (!a2)
+          return null;
+        for (; d3 !== null; )
+          b2(c3, d3), d3 = d3.sibling;
+        return null;
+      }
+      function d2(a3, b3) {
+        for (a3 = new Map(); b3 !== null; )
+          b3.key !== null ? a3.set(b3.key, b3) : a3.set(b3.index, b3), b3 = b3.sibling;
+        return a3;
+      }
+      function e2(a3, b3) {
+        a3 = Ed(a3, b3);
+        a3.index = 0;
+        a3.sibling = null;
+        return a3;
+      }
+      function f2(b3, c3, d3) {
+        b3.index = d3;
+        if (!a2)
+          return c3;
+        d3 = b3.alternate;
+        if (d3 !== null)
+          return d3 = d3.index, d3 < c3 ? (b3.flags = 2, c3) : d3;
+        b3.flags = 2;
+        return c3;
+      }
+      function g2(b3) {
+        a2 && b3.alternate === null && (b3.flags = 2);
+        return b3;
+      }
+      function h2(a3, b3, c3, d3) {
+        if (b3 === null || b3.tag !== 6)
+          return b3 = Fd(c3, a3.mode, d3), b3.return = a3, b3;
+        b3 = e2(b3, c3);
+        b3.return = a3;
+        return b3;
+      }
+      function k2(a3, b3, c3, d3) {
+        if (b3 !== null && b3.elementType === c3.type)
+          return d3 = e2(b3, c3.props), d3.ref = Bd(a3, b3, c3), d3.return = a3, d3;
+        d3 = Gd(c3.type, c3.key, c3.props, null, a3.mode, d3);
+        d3.ref = Bd(a3, b3, c3);
+        d3.return = a3;
+        return d3;
+      }
+      function l2(a3, b3, c3, d3) {
+        if (b3 === null || b3.tag !== 4 || b3.stateNode.containerInfo !== c3.containerInfo || b3.stateNode.implementation !== c3.implementation)
+          return b3 = Hd(c3, a3.mode, d3), b3.return = a3, b3;
+        b3 = e2(b3, c3.children || []);
+        b3.return = a3;
+        return b3;
+      }
+      function n2(a3, b3, c3, d3, f3) {
+        if (b3 === null || b3.tag !== 7)
+          return b3 = Id(c3, a3.mode, d3, f3), b3.return = a3, b3;
+        b3 = e2(b3, c3);
+        b3.return = a3;
+        return b3;
+      }
+      function t2(a3, b3, c3) {
+        if (typeof b3 === "string" || typeof b3 === "number")
+          return b3 = Fd("" + b3, a3.mode, c3), b3.return = a3, b3;
+        if (typeof b3 === "object" && b3 !== null) {
+          switch (b3.$$typeof) {
+            case da:
+              return c3 = Gd(b3.type, b3.key, b3.props, null, a3.mode, c3), c3.ref = Bd(a3, null, b3), c3.return = a3, c3;
+            case ea:
+              return b3 = Hd(b3, a3.mode, c3), b3.return = a3, b3;
+          }
+          if (Ad(b3) || va(b3))
+            return b3 = Id(b3, a3.mode, c3, null), b3.return = a3, b3;
+          Cd(a3, b3);
+        }
+        return null;
+      }
+      function p2(a3, b3, c3, d3) {
+        var e3 = b3 !== null ? b3.key : null;
+        if (typeof c3 === "string" || typeof c3 === "number")
+          return e3 !== null ? null : h2(a3, b3, "" + c3, d3);
+        if (typeof c3 === "object" && c3 !== null) {
+          switch (c3.$$typeof) {
+            case da:
+              return c3.key === e3 ? c3.type === fa ? n2(a3, b3, c3.props.children, d3, e3) : k2(a3, b3, c3, d3) : null;
+            case ea:
+              return c3.key === e3 ? l2(a3, b3, c3, d3) : null;
+          }
+          if (Ad(c3) || va(c3))
+            return e3 !== null ? null : n2(a3, b3, c3, d3, null);
+          Cd(a3, c3);
+        }
+        return null;
+      }
+      function y2(a3, b3, c3, d3, e3) {
+        if (typeof d3 === "string" || typeof d3 === "number")
+          return a3 = a3.get(c3) || null, h2(b3, a3, "" + d3, e3);
+        if (typeof d3 === "object" && d3 !== null) {
+          switch (d3.$$typeof) {
+            case da:
+              return a3 = a3.get(d3.key === null ? c3 : d3.key) || null, d3.type === fa ? n2(b3, a3, d3.props.children, e3, d3.key) : k2(b3, a3, d3, e3);
+            case ea:
+              return a3 = a3.get(d3.key === null ? c3 : d3.key) || null, l2(b3, a3, d3, e3);
+          }
+          if (Ad(d3) || va(d3))
+            return a3 = a3.get(c3) || null, n2(b3, a3, d3, e3, null);
+          Cd(b3, d3);
+        }
+        return null;
+      }
+      function x2(e3, g3, h3, k3) {
+        for (var l3 = null, v2 = null, u2 = g3, C2 = g3 = 0, n3 = null; u2 !== null && C2 < h3.length; C2++) {
+          u2.index > C2 ? (n3 = u2, u2 = null) : n3 = u2.sibling;
+          var w3 = p2(e3, u2, h3[C2], k3);
+          if (w3 === null) {
+            u2 === null && (u2 = n3);
+            break;
+          }
+          a2 && u2 && w3.alternate === null && b2(e3, u2);
+          g3 = f2(w3, g3, C2);
+          v2 === null ? l3 = w3 : v2.sibling = w3;
+          v2 = w3;
+          u2 = n3;
+        }
+        if (C2 === h3.length)
+          return c2(e3, u2), l3;
+        if (u2 === null) {
+          for (; C2 < h3.length; C2++)
+            u2 = t2(e3, h3[C2], k3), u2 !== null && (g3 = f2(u2, g3, C2), v2 === null ? l3 = u2 : v2.sibling = u2, v2 = u2);
+          return l3;
+        }
+        for (u2 = d2(e3, u2); C2 < h3.length; C2++)
+          n3 = y2(u2, e3, C2, h3[C2], k3), n3 !== null && (a2 && n3.alternate !== null && u2.delete(n3.key === null ? C2 : n3.key), g3 = f2(n3, g3, C2), v2 === null ? l3 = n3 : v2.sibling = n3, v2 = n3);
+        a2 && u2.forEach(function(a3) {
+          return b2(e3, a3);
+        });
+        return l3;
+      }
+      function Y2(e3, g3, h3, k3) {
+        var l3 = va(h3);
+        if (typeof l3 !== "function")
+          throw Error(q2(150));
+        h3 = l3.call(h3);
+        if (h3 == null)
+          throw Error(q2(151));
+        for (var u2 = l3 = null, v2 = g3, n3 = g3 = 0, C2 = null, w3 = h3.next(); v2 !== null && !w3.done; n3++, w3 = h3.next()) {
+          v2.index > n3 ? (C2 = v2, v2 = null) : C2 = v2.sibling;
+          var x3 = p2(e3, v2, w3.value, k3);
+          if (x3 === null) {
+            v2 === null && (v2 = C2);
+            break;
+          }
+          a2 && v2 && x3.alternate === null && b2(e3, v2);
+          g3 = f2(x3, g3, n3);
+          u2 === null ? l3 = x3 : u2.sibling = x3;
+          u2 = x3;
+          v2 = C2;
+        }
+        if (w3.done)
+          return c2(e3, v2), l3;
+        if (v2 === null) {
+          for (; !w3.done; n3++, w3 = h3.next())
+            w3 = t2(e3, w3.value, k3), w3 !== null && (g3 = f2(w3, g3, n3), u2 === null ? l3 = w3 : u2.sibling = w3, u2 = w3);
+          return l3;
+        }
+        for (v2 = d2(e3, v2); !w3.done; n3++, w3 = h3.next())
+          w3 = y2(v2, e3, n3, w3.value, k3), w3 !== null && (a2 && w3.alternate !== null && v2.delete(w3.key === null ? n3 : w3.key), g3 = f2(w3, g3, n3), u2 === null ? l3 = w3 : u2.sibling = w3, u2 = w3);
+        a2 && v2.forEach(function(a3) {
+          return b2(e3, a3);
+        });
+        return l3;
+      }
+      return function(a3, d3, f3, h3) {
+        var k3 = typeof f3 === "object" && f3 !== null && f3.type === fa && f3.key === null;
+        k3 && (f3 = f3.props.children);
+        var l3 = typeof f3 === "object" && f3 !== null;
+        if (l3)
+          switch (f3.$$typeof) {
+            case da:
+              a: {
+                l3 = f3.key;
+                for (k3 = d3; k3 !== null; ) {
+                  if (k3.key === l3) {
+                    switch (k3.tag) {
+                      case 7:
+                        if (f3.type === fa) {
+                          c2(a3, k3.sibling);
+                          d3 = e2(k3, f3.props.children);
+                          d3.return = a3;
+                          a3 = d3;
+                          break a;
+                        }
+                        break;
+                      default:
+                        if (k3.elementType === f3.type) {
+                          c2(a3, k3.sibling);
+                          d3 = e2(k3, f3.props);
+                          d3.ref = Bd(a3, k3, f3);
+                          d3.return = a3;
+                          a3 = d3;
+                          break a;
+                        }
+                    }
+                    c2(a3, k3);
+                    break;
+                  } else
+                    b2(a3, k3);
+                  k3 = k3.sibling;
+                }
+                f3.type === fa ? (d3 = Id(f3.props.children, a3.mode, h3, f3.key), d3.return = a3, a3 = d3) : (h3 = Gd(f3.type, f3.key, f3.props, null, a3.mode, h3), h3.ref = Bd(a3, d3, f3), h3.return = a3, a3 = h3);
+              }
+              return g2(a3);
+            case ea:
+              a: {
+                for (k3 = f3.key; d3 !== null; ) {
+                  if (d3.key === k3)
+                    if (d3.tag === 4 && d3.stateNode.containerInfo === f3.containerInfo && d3.stateNode.implementation === f3.implementation) {
+                      c2(a3, d3.sibling);
+                      d3 = e2(d3, f3.children || []);
+                      d3.return = a3;
+                      a3 = d3;
+                      break a;
+                    } else {
+                      c2(a3, d3);
+                      break;
+                    }
+                  else
+                    b2(a3, d3);
+                  d3 = d3.sibling;
+                }
+                d3 = Hd(f3, a3.mode, h3);
+                d3.return = a3;
+                a3 = d3;
+              }
+              return g2(a3);
+          }
+        if (typeof f3 === "string" || typeof f3 === "number")
+          return f3 = "" + f3, d3 !== null && d3.tag === 6 ? (c2(a3, d3.sibling), d3 = e2(d3, f3), d3.return = a3, a3 = d3) : (c2(a3, d3), d3 = Fd(f3, a3.mode, h3), d3.return = a3, a3 = d3), g2(a3);
+        if (Ad(f3))
+          return x2(a3, d3, f3, h3);
+        if (va(f3))
+          return Y2(a3, d3, f3, h3);
+        l3 && Cd(a3, f3);
+        if (typeof f3 === "undefined" && !k3)
+          switch (a3.tag) {
+            case 1:
+            case 22:
+            case 0:
+            case 11:
+            case 15:
+              throw Error(q2(152, wa(a3.type) || "Component"));
+          }
+        return c2(a3, d3);
+      };
+    }
+    var Jd = Dd(true), Kd = Dd(false), Ld = {}, L4 = Wb(Ld), Md = Wb(Ld), Nd = Wb(Ld);
+    function Od(a2) {
+      if (a2 === Ld)
+        throw Error(q2(174));
+      return a2;
+    }
+    function Pd(a2, b2) {
+      A2(Nd, b2);
+      A2(Md, a2);
+      A2(L4, Ld);
+      a2 = Ea(b2);
+      z2(L4);
+      A2(L4, a2);
+    }
+    function Qd() {
+      z2(L4);
+      z2(Md);
+      z2(Nd);
+    }
+    function Rd(a2) {
+      var b2 = Od(Nd.current), c2 = Od(L4.current);
+      b2 = Fa(c2, a2.type, b2);
+      c2 !== b2 && (A2(Md, a2), A2(L4, b2));
+    }
+    function Sd(a2) {
+      Md.current === a2 && (z2(L4), z2(Md));
+    }
+    var M2 = Wb(0);
+    function Td(a2) {
+      for (var b2 = a2; b2 !== null; ) {
+        if (b2.tag === 13) {
+          var c2 = b2.memoizedState;
+          if (c2 !== null && (c2 = c2.dehydrated, c2 === null || Hb(c2) || Ib(c2)))
+            return b2;
+        } else if (b2.tag === 19 && b2.memoizedProps.revealOrder !== void 0) {
+          if ((b2.flags & 64) !== 0)
+            return b2;
+        } else if (b2.child !== null) {
+          b2.child.return = b2;
+          b2 = b2.child;
+          continue;
+        }
+        if (b2 === a2)
+          break;
+        for (; b2.sibling === null; ) {
+          if (b2.return === null || b2.return === a2)
+            return null;
+          b2 = b2.return;
+        }
+        b2.sibling.return = b2.return;
+        b2 = b2.sibling;
+      }
+      return null;
+    }
+    var Ud = null, Vd = null, Wd = false;
+    function Xd(a2, b2) {
+      var c2 = Yd(5, null, null, 0);
+      c2.elementType = "DELETED";
+      c2.type = "DELETED";
+      c2.stateNode = b2;
+      c2.return = a2;
+      c2.flags = 8;
+      a2.lastEffect !== null ? (a2.lastEffect.nextEffect = c2, a2.lastEffect = c2) : a2.firstEffect = a2.lastEffect = c2;
+    }
+    function Zd(a2, b2) {
+      switch (a2.tag) {
+        case 5:
+          return b2 = Fb(b2, a2.type, a2.pendingProps), b2 !== null ? (a2.stateNode = b2, true) : false;
+        case 6:
+          return b2 = Gb(b2, a2.pendingProps), b2 !== null ? (a2.stateNode = b2, true) : false;
+        case 13:
+          return false;
+        default:
+          return false;
+      }
+    }
+    function $d(a2) {
+      if (Wd) {
+        var b2 = Vd;
+        if (b2) {
+          var c2 = b2;
+          if (!Zd(a2, b2)) {
+            b2 = Jb(c2);
+            if (!b2 || !Zd(a2, b2)) {
+              a2.flags = a2.flags & -1025 | 2;
+              Wd = false;
+              Ud = a2;
+              return;
+            }
+            Xd(Ud, c2);
+          }
+          Ud = a2;
+          Vd = Kb(b2);
+        } else
+          a2.flags = a2.flags & -1025 | 2, Wd = false, Ud = a2;
+      }
+    }
+    function ae2(a2) {
+      for (a2 = a2.return; a2 !== null && a2.tag !== 5 && a2.tag !== 3 && a2.tag !== 13; )
+        a2 = a2.return;
+      Ud = a2;
+    }
+    function be2(a2) {
+      if (!Va || a2 !== Ud)
+        return false;
+      if (!Wd)
+        return ae2(a2), Wd = true, false;
+      var b2 = a2.type;
+      if (a2.tag !== 5 || b2 !== "head" && b2 !== "body" && !Ma(b2, a2.memoizedProps))
+        for (b2 = Vd; b2; )
+          Xd(a2, b2), b2 = Jb(b2);
+      ae2(a2);
+      if (a2.tag === 13) {
+        if (!Va)
+          throw Error(q2(316));
+        a2 = a2.memoizedState;
+        a2 = a2 !== null ? a2.dehydrated : null;
+        if (!a2)
+          throw Error(q2(317));
+        Vd = Nb(a2);
+      } else
+        Vd = Ud ? Jb(a2.stateNode) : null;
+      return true;
+    }
+    function ce2() {
+      Va && (Vd = Ud = null, Wd = false);
+    }
+    var de2 = [];
+    function ee2() {
+      for (var a2 = 0; a2 < de2.length; a2++) {
+        var b2 = de2[a2];
+        Sa ? b2._workInProgressVersionPrimary = null : b2._workInProgressVersionSecondary = null;
+      }
+      de2.length = 0;
+    }
+    var fe2 = ca.ReactCurrentDispatcher, ge2 = ca.ReactCurrentBatchConfig, he2 = 0, N2 = null, O2 = null, P2 = null, ie2 = false, je2 = false;
+    function Q2() {
+      throw Error(q2(321));
+    }
+    function ke2(a2, b2) {
+      if (b2 === null)
+        return false;
+      for (var c2 = 0; c2 < b2.length && c2 < a2.length; c2++)
+        if (!I2(a2[c2], b2[c2]))
+          return false;
+      return true;
+    }
+    function le2(a2, b2, c2, d2, e2, f2) {
+      he2 = f2;
+      N2 = b2;
+      b2.memoizedState = null;
+      b2.updateQueue = null;
+      b2.lanes = 0;
+      fe2.current = a2 === null || a2.memoizedState === null ? me2 : ne2;
+      a2 = c2(d2, e2);
+      if (je2) {
+        f2 = 0;
+        do {
+          je2 = false;
+          if (!(25 > f2))
+            throw Error(q2(301));
+          f2 += 1;
+          P2 = O2 = null;
+          b2.updateQueue = null;
+          fe2.current = oe2;
+          a2 = c2(d2, e2);
+        } while (je2);
+      }
+      fe2.current = pe2;
+      b2 = O2 !== null && O2.next !== null;
+      he2 = 0;
+      P2 = O2 = N2 = null;
+      ie2 = false;
+      if (b2)
+        throw Error(q2(300));
+      return a2;
+    }
+    function qe2() {
+      var a2 = {memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null};
+      P2 === null ? N2.memoizedState = P2 = a2 : P2 = P2.next = a2;
+      return P2;
+    }
+    function re2() {
+      if (O2 === null) {
+        var a2 = N2.alternate;
+        a2 = a2 !== null ? a2.memoizedState : null;
+      } else
+        a2 = O2.next;
+      var b2 = P2 === null ? N2.memoizedState : P2.next;
+      if (b2 !== null)
+        P2 = b2, O2 = a2;
+      else {
+        if (a2 === null)
+          throw Error(q2(310));
+        O2 = a2;
+        a2 = {memoizedState: O2.memoizedState, baseState: O2.baseState, baseQueue: O2.baseQueue, queue: O2.queue, next: null};
+        P2 === null ? N2.memoizedState = P2 = a2 : P2 = P2.next = a2;
+      }
+      return P2;
+    }
+    function se2(a2, b2) {
+      return typeof b2 === "function" ? b2(a2) : b2;
+    }
+    function te2(a2) {
+      var b2 = re2(), c2 = b2.queue;
+      if (c2 === null)
+        throw Error(q2(311));
+      c2.lastRenderedReducer = a2;
+      var d2 = O2, e2 = d2.baseQueue, f2 = c2.pending;
+      if (f2 !== null) {
+        if (e2 !== null) {
+          var g2 = e2.next;
+          e2.next = f2.next;
+          f2.next = g2;
+        }
+        d2.baseQueue = e2 = f2;
+        c2.pending = null;
+      }
+      if (e2 !== null) {
+        e2 = e2.next;
+        d2 = d2.baseState;
+        var h2 = g2 = f2 = null, k2 = e2;
+        do {
+          var l2 = k2.lane;
+          if ((he2 & l2) === l2)
+            h2 !== null && (h2 = h2.next = {lane: 0, action: k2.action, eagerReducer: k2.eagerReducer, eagerState: k2.eagerState, next: null}), d2 = k2.eagerReducer === a2 ? k2.eagerState : a2(d2, k2.action);
+          else {
+            var n2 = {
+              lane: l2,
+              action: k2.action,
+              eagerReducer: k2.eagerReducer,
+              eagerState: k2.eagerState,
+              next: null
+            };
+            h2 === null ? (g2 = h2 = n2, f2 = d2) : h2 = h2.next = n2;
+            N2.lanes |= l2;
+            pd |= l2;
+          }
+          k2 = k2.next;
+        } while (k2 !== null && k2 !== e2);
+        h2 === null ? f2 = d2 : h2.next = g2;
+        I2(d2, b2.memoizedState) || (gd = true);
+        b2.memoizedState = d2;
+        b2.baseState = f2;
+        b2.baseQueue = h2;
+        c2.lastRenderedState = d2;
+      }
+      return [b2.memoizedState, c2.dispatch];
+    }
+    function ue2(a2) {
+      var b2 = re2(), c2 = b2.queue;
+      if (c2 === null)
+        throw Error(q2(311));
+      c2.lastRenderedReducer = a2;
+      var d2 = c2.dispatch, e2 = c2.pending, f2 = b2.memoizedState;
+      if (e2 !== null) {
+        c2.pending = null;
+        var g2 = e2 = e2.next;
+        do
+          f2 = a2(f2, g2.action), g2 = g2.next;
+        while (g2 !== e2);
+        I2(f2, b2.memoizedState) || (gd = true);
+        b2.memoizedState = f2;
+        b2.baseQueue === null && (b2.baseState = f2);
+        c2.lastRenderedState = f2;
+      }
+      return [f2, d2];
+    }
+    function ve2(a2, b2, c2) {
+      var d2 = b2._getVersion;
+      d2 = d2(b2._source);
+      var e2 = Sa ? b2._workInProgressVersionPrimary : b2._workInProgressVersionSecondary;
+      if (e2 !== null)
+        a2 = e2 === d2;
+      else if (a2 = a2.mutableReadLanes, a2 = (he2 & a2) === a2)
+        Sa ? b2._workInProgressVersionPrimary = d2 : b2._workInProgressVersionSecondary = d2, de2.push(b2);
+      if (a2)
+        return c2(b2._source);
+      de2.push(b2);
+      throw Error(q2(350));
+    }
+    function we2(a2, b2, c2, d2) {
+      var e2 = R2;
+      if (e2 === null)
+        throw Error(q2(349));
+      var f2 = b2._getVersion, g2 = f2(b2._source), h2 = fe2.current, k2 = h2.useState(function() {
+        return ve2(e2, b2, c2);
+      }), l2 = k2[1], n2 = k2[0];
+      k2 = P2;
+      var t2 = a2.memoizedState, p2 = t2.refs, y2 = p2.getSnapshot, x2 = t2.source;
+      t2 = t2.subscribe;
+      var Y2 = N2;
+      a2.memoizedState = {refs: p2, source: b2, subscribe: d2};
+      h2.useEffect(function() {
+        p2.getSnapshot = c2;
+        p2.setSnapshot = l2;
+        var a3 = f2(b2._source);
+        if (!I2(g2, a3)) {
+          a3 = c2(b2._source);
+          I2(n2, a3) || (l2(a3), a3 = td(Y2), e2.mutableReadLanes |= a3 & e2.pendingLanes);
+          a3 = e2.mutableReadLanes;
+          e2.entangledLanes |= a3;
+          for (var d3 = e2.entanglements, h3 = a3; 0 < h3; ) {
+            var k3 = 31 - mc(h3), t3 = 1 << k3;
+            d3[k3] |= a3;
+            h3 &= ~t3;
+          }
+        }
+      }, [c2, b2, d2]);
+      h2.useEffect(function() {
+        return d2(b2._source, function() {
+          var a3 = p2.getSnapshot, c3 = p2.setSnapshot;
+          try {
+            c3(a3(b2._source));
+            var d3 = td(Y2);
+            e2.mutableReadLanes |= d3 & e2.pendingLanes;
+          } catch (Oa) {
+            c3(function() {
+              throw Oa;
+            });
+          }
+        });
+      }, [b2, d2]);
+      I2(y2, c2) && I2(x2, b2) && I2(t2, d2) || (a2 = {pending: null, dispatch: null, lastRenderedReducer: se2, lastRenderedState: n2}, a2.dispatch = l2 = xe2.bind(null, N2, a2), k2.queue = a2, k2.baseQueue = null, n2 = ve2(e2, b2, c2), k2.memoizedState = k2.baseState = n2);
+      return n2;
+    }
+    function ye2(a2, b2, c2) {
+      var d2 = re2();
+      return we2(d2, a2, b2, c2);
+    }
+    function ze2(a2) {
+      var b2 = qe2();
+      typeof a2 === "function" && (a2 = a2());
+      b2.memoizedState = b2.baseState = a2;
+      a2 = b2.queue = {pending: null, dispatch: null, lastRenderedReducer: se2, lastRenderedState: a2};
+      a2 = a2.dispatch = xe2.bind(null, N2, a2);
+      return [b2.memoizedState, a2];
+    }
+    function Ae2(a2, b2, c2, d2) {
+      a2 = {tag: a2, create: b2, destroy: c2, deps: d2, next: null};
+      b2 = N2.updateQueue;
+      b2 === null ? (b2 = {lastEffect: null}, N2.updateQueue = b2, b2.lastEffect = a2.next = a2) : (c2 = b2.lastEffect, c2 === null ? b2.lastEffect = a2.next = a2 : (d2 = c2.next, c2.next = a2, a2.next = d2, b2.lastEffect = a2));
+      return a2;
+    }
+    function Be2(a2) {
+      var b2 = qe2();
+      a2 = {current: a2};
+      return b2.memoizedState = a2;
+    }
+    function Ce2() {
+      return re2().memoizedState;
+    }
+    function De2(a2, b2, c2, d2) {
+      var e2 = qe2();
+      N2.flags |= a2;
+      e2.memoizedState = Ae2(1 | b2, c2, void 0, d2 === void 0 ? null : d2);
+    }
+    function Ee2(a2, b2, c2, d2) {
+      var e2 = re2();
+      d2 = d2 === void 0 ? null : d2;
+      var f2 = void 0;
+      if (O2 !== null) {
+        var g2 = O2.memoizedState;
+        f2 = g2.destroy;
+        if (d2 !== null && ke2(d2, g2.deps)) {
+          Ae2(b2, c2, f2, d2);
+          return;
+        }
+      }
+      N2.flags |= a2;
+      e2.memoizedState = Ae2(1 | b2, c2, f2, d2);
+    }
+    function Fe2(a2, b2) {
+      return De2(516, 4, a2, b2);
+    }
+    function Ge2(a2, b2) {
+      return Ee2(516, 4, a2, b2);
+    }
+    function He2(a2, b2) {
+      return Ee2(4, 2, a2, b2);
+    }
+    function Ie2(a2, b2) {
+      if (typeof b2 === "function")
+        return a2 = a2(), b2(a2), function() {
+          b2(null);
+        };
+      if (b2 !== null && b2 !== void 0)
+        return a2 = a2(), b2.current = a2, function() {
+          b2.current = null;
+        };
+    }
+    function Je2(a2, b2, c2) {
+      c2 = c2 !== null && c2 !== void 0 ? c2.concat([a2]) : null;
+      return Ee2(4, 2, Ie2.bind(null, b2, a2), c2);
+    }
+    function Ke2() {
+    }
+    function Le2(a2, b2) {
+      var c2 = re2();
+      b2 = b2 === void 0 ? null : b2;
+      var d2 = c2.memoizedState;
+      if (d2 !== null && b2 !== null && ke2(b2, d2[1]))
+        return d2[0];
+      c2.memoizedState = [a2, b2];
+      return a2;
+    }
+    function Me2(a2, b2) {
+      var c2 = re2();
+      b2 = b2 === void 0 ? null : b2;
+      var d2 = c2.memoizedState;
+      if (d2 !== null && b2 !== null && ke2(b2, d2[1]))
+        return d2[0];
+      a2 = a2();
+      c2.memoizedState = [a2, b2];
+      return a2;
+    }
+    function Ne2(a2, b2) {
+      var c2 = Nc();
+      Pc(98 > c2 ? 98 : c2, function() {
+        a2(true);
+      });
+      Pc(97 < c2 ? 97 : c2, function() {
+        var c3 = ge2.transition;
+        ge2.transition = 1;
+        try {
+          a2(false), b2();
+        } finally {
+          ge2.transition = c3;
+        }
+      });
+    }
+    function xe2(a2, b2, c2) {
+      var d2 = K2(), e2 = td(a2), f2 = {lane: e2, action: c2, eagerReducer: null, eagerState: null, next: null}, g2 = b2.pending;
+      g2 === null ? f2.next = f2 : (f2.next = g2.next, g2.next = f2);
+      b2.pending = f2;
+      g2 = a2.alternate;
+      if (a2 === N2 || g2 !== null && g2 === N2)
+        je2 = ie2 = true;
+      else {
+        if (a2.lanes === 0 && (g2 === null || g2.lanes === 0) && (g2 = b2.lastRenderedReducer, g2 !== null))
+          try {
+            var h2 = b2.lastRenderedState, k2 = g2(h2, c2);
+            f2.eagerReducer = g2;
+            f2.eagerState = k2;
+            if (I2(k2, h2))
+              return;
+          } catch (l2) {
+          } finally {
+          }
+        ud(a2, e2, d2);
+      }
+    }
+    var pe2 = {readContext: J2, useCallback: Q2, useContext: Q2, useEffect: Q2, useImperativeHandle: Q2, useLayoutEffect: Q2, useMemo: Q2, useReducer: Q2, useRef: Q2, useState: Q2, useDebugValue: Q2, useDeferredValue: Q2, useTransition: Q2, useMutableSource: Q2, useOpaqueIdentifier: Q2, unstable_isNewReconciler: false}, me2 = {readContext: J2, useCallback: function(a2, b2) {
+      qe2().memoizedState = [a2, b2 === void 0 ? null : b2];
+      return a2;
+    }, useContext: J2, useEffect: Fe2, useImperativeHandle: function(a2, b2, c2) {
+      c2 = c2 !== null && c2 !== void 0 ? c2.concat([a2]) : null;
+      return De2(4, 2, Ie2.bind(null, b2, a2), c2);
+    }, useLayoutEffect: function(a2, b2) {
+      return De2(4, 2, a2, b2);
+    }, useMemo: function(a2, b2) {
+      var c2 = qe2();
+      b2 = b2 === void 0 ? null : b2;
+      a2 = a2();
+      c2.memoizedState = [a2, b2];
+      return a2;
+    }, useReducer: function(a2, b2, c2) {
+      var d2 = qe2();
+      b2 = c2 !== void 0 ? c2(b2) : b2;
+      d2.memoizedState = d2.baseState = b2;
+      a2 = d2.queue = {pending: null, dispatch: null, lastRenderedReducer: a2, lastRenderedState: b2};
+      a2 = a2.dispatch = xe2.bind(null, N2, a2);
+      return [d2.memoizedState, a2];
+    }, useRef: Be2, useState: ze2, useDebugValue: Ke2, useDeferredValue: function(a2) {
+      var b2 = ze2(a2), c2 = b2[0], d2 = b2[1];
+      Fe2(function() {
+        var b3 = ge2.transition;
+        ge2.transition = 1;
+        try {
+          d2(a2);
+        } finally {
+          ge2.transition = b3;
+        }
+      }, [a2]);
+      return c2;
+    }, useTransition: function() {
+      var a2 = ze2(false), b2 = a2[0];
+      a2 = Ne2.bind(null, a2[1]);
+      Be2(a2);
+      return [a2, b2];
+    }, useMutableSource: function(a2, b2, c2) {
+      var d2 = qe2();
+      d2.memoizedState = {refs: {getSnapshot: b2, setSnapshot: null}, source: a2, subscribe: c2};
+      return we2(d2, a2, b2, c2);
+    }, useOpaqueIdentifier: function() {
+      if (Wd) {
+        var a2 = false, b2 = Xa(function() {
+          a2 || (a2 = true, c2(Ya()));
+          throw Error(q2(355));
+        }), c2 = ze2(b2)[1];
+        (N2.mode & 2) === 0 && (N2.flags |= 516, Ae2(5, function() {
+          c2(Ya());
+        }, void 0, null));
+        return b2;
+      }
+      b2 = Ya();
+      ze2(b2);
+      return b2;
+    }, unstable_isNewReconciler: false}, ne2 = {
+      readContext: J2,
+      useCallback: Le2,
+      useContext: J2,
+      useEffect: Ge2,
+      useImperativeHandle: Je2,
+      useLayoutEffect: He2,
+      useMemo: Me2,
+      useReducer: te2,
+      useRef: Ce2,
+      useState: function() {
+        return te2(se2);
+      },
+      useDebugValue: Ke2,
+      useDeferredValue: function(a2) {
+        var b2 = te2(se2), c2 = b2[0], d2 = b2[1];
+        Ge2(function() {
+          var b3 = ge2.transition;
+          ge2.transition = 1;
+          try {
+            d2(a2);
+          } finally {
+            ge2.transition = b3;
+          }
+        }, [a2]);
+        return c2;
+      },
+      useTransition: function() {
+        var a2 = te2(se2)[0];
+        return [Ce2().current, a2];
+      },
+      useMutableSource: ye2,
+      useOpaqueIdentifier: function() {
+        return te2(se2)[0];
+      },
+      unstable_isNewReconciler: false
+    }, oe2 = {
+      readContext: J2,
+      useCallback: Le2,
+      useContext: J2,
+      useEffect: Ge2,
+      useImperativeHandle: Je2,
+      useLayoutEffect: He2,
+      useMemo: Me2,
+      useReducer: ue2,
+      useRef: Ce2,
+      useState: function() {
+        return ue2(se2);
+      },
+      useDebugValue: Ke2,
+      useDeferredValue: function(a2) {
+        var b2 = ue2(se2), c2 = b2[0], d2 = b2[1];
+        Ge2(function() {
+          var b3 = ge2.transition;
+          ge2.transition = 1;
+          try {
+            d2(a2);
+          } finally {
+            ge2.transition = b3;
+          }
+        }, [a2]);
+        return c2;
+      },
+      useTransition: function() {
+        var a2 = ue2(se2)[0];
+        return [Ce2().current, a2];
+      },
+      useMutableSource: ye2,
+      useOpaqueIdentifier: function() {
+        return ue2(se2)[0];
+      },
+      unstable_isNewReconciler: false
+    }, Oe2 = ca.ReactCurrentOwner, gd = false;
+    function S2(a2, b2, c2, d2) {
+      b2.child = a2 === null ? Kd(b2, null, c2, d2) : Jd(b2, a2.child, c2, d2);
+    }
+    function Pe2(a2, b2, c2, d2, e2) {
+      c2 = c2.render;
+      var f2 = b2.ref;
+      fd(b2, e2);
+      d2 = le2(a2, b2, c2, d2, f2, e2);
+      if (a2 !== null && !gd)
+        return b2.updateQueue = a2.updateQueue, b2.flags &= -517, a2.lanes &= ~e2, Re2(a2, b2, e2);
+      b2.flags |= 1;
+      S2(a2, b2, d2, e2);
+      return b2.child;
+    }
+    function Se2(a2, b2, c2, d2, e2, f2) {
+      if (a2 === null) {
+        var g2 = c2.type;
+        if (typeof g2 === "function" && !Te2(g2) && g2.defaultProps === void 0 && c2.compare === null && c2.defaultProps === void 0)
+          return b2.tag = 15, b2.type = g2, Ue2(a2, b2, g2, d2, e2, f2);
+        a2 = Gd(c2.type, null, d2, b2, b2.mode, f2);
+        a2.ref = b2.ref;
+        a2.return = b2;
+        return b2.child = a2;
+      }
+      g2 = a2.child;
+      if ((e2 & f2) === 0 && (e2 = g2.memoizedProps, c2 = c2.compare, c2 = c2 !== null ? c2 : Vc, c2(e2, d2) && a2.ref === b2.ref))
+        return Re2(a2, b2, f2);
+      b2.flags |= 1;
+      a2 = Ed(g2, d2);
+      a2.ref = b2.ref;
+      a2.return = b2;
+      return b2.child = a2;
+    }
+    function Ue2(a2, b2, c2, d2, e2, f2) {
+      if (a2 !== null && Vc(a2.memoizedProps, d2) && a2.ref === b2.ref)
+        if (gd = false, (f2 & e2) !== 0)
+          (a2.flags & 16384) !== 0 && (gd = true);
+        else
+          return b2.lanes = a2.lanes, Re2(a2, b2, f2);
+      return Ve2(a2, b2, c2, d2, f2);
+    }
+    function We2(a2, b2, c2) {
+      var d2 = b2.pendingProps, e2 = d2.children, f2 = a2 !== null ? a2.memoizedState : null;
+      if (d2.mode === "hidden" || d2.mode === "unstable-defer-without-hiding")
+        if ((b2.mode & 4) === 0)
+          b2.memoizedState = {baseLanes: 0}, Xe2(b2, c2);
+        else if ((c2 & 1073741824) !== 0)
+          b2.memoizedState = {baseLanes: 0}, Xe2(b2, f2 !== null ? f2.baseLanes : c2);
+        else
+          return a2 = f2 !== null ? f2.baseLanes | c2 : c2, b2.lanes = b2.childLanes = 1073741824, b2.memoizedState = {baseLanes: a2}, Xe2(b2, a2), null;
+      else
+        f2 !== null ? (d2 = f2.baseLanes | c2, b2.memoizedState = null) : d2 = c2, Xe2(b2, d2);
+      S2(a2, b2, e2, c2);
+      return b2.child;
+    }
+    function Ye2(a2, b2) {
+      var c2 = b2.ref;
+      if (a2 === null && c2 !== null || a2 !== null && a2.ref !== c2)
+        b2.flags |= 128;
+    }
+    function Ve2(a2, b2, c2, d2, e2) {
+      var f2 = E2(c2) ? Yb : B2.current;
+      f2 = Zb(b2, f2);
+      fd(b2, e2);
+      c2 = le2(a2, b2, c2, d2, f2, e2);
+      if (a2 !== null && !gd)
+        return b2.updateQueue = a2.updateQueue, b2.flags &= -517, a2.lanes &= ~e2, Re2(a2, b2, e2);
+      b2.flags |= 1;
+      S2(a2, b2, c2, e2);
+      return b2.child;
+    }
+    function Ze2(a2, b2, c2, d2, e2) {
+      if (E2(c2)) {
+        var f2 = true;
+        cc(b2);
+      } else
+        f2 = false;
+      fd(b2, e2);
+      if (b2.stateNode === null)
+        a2 !== null && (a2.alternate = null, b2.alternate = null, b2.flags |= 2), xd(b2, c2, d2), zd(b2, c2, d2, e2), d2 = true;
+      else if (a2 === null) {
+        var g2 = b2.stateNode, h2 = b2.memoizedProps;
+        g2.props = h2;
+        var k2 = g2.context, l2 = c2.contextType;
+        typeof l2 === "object" && l2 !== null ? l2 = J2(l2) : (l2 = E2(c2) ? Yb : B2.current, l2 = Zb(b2, l2));
+        var n2 = c2.getDerivedStateFromProps, t2 = typeof n2 === "function" || typeof g2.getSnapshotBeforeUpdate === "function";
+        t2 || typeof g2.UNSAFE_componentWillReceiveProps !== "function" && typeof g2.componentWillReceiveProps !== "function" || (h2 !== d2 || k2 !== l2) && yd(b2, g2, d2, l2);
+        hd = false;
+        var p2 = b2.memoizedState;
+        g2.state = p2;
+        od(b2, d2, g2, e2);
+        k2 = b2.memoizedState;
+        h2 !== d2 || p2 !== k2 || D2.current || hd ? (typeof n2 === "function" && (sd(b2, c2, n2, d2), k2 = b2.memoizedState), (h2 = hd || wd(b2, c2, h2, d2, p2, k2, l2)) ? (t2 || typeof g2.UNSAFE_componentWillMount !== "function" && typeof g2.componentWillMount !== "function" || (typeof g2.componentWillMount === "function" && g2.componentWillMount(), typeof g2.UNSAFE_componentWillMount === "function" && g2.UNSAFE_componentWillMount()), typeof g2.componentDidMount === "function" && (b2.flags |= 4)) : (typeof g2.componentDidMount === "function" && (b2.flags |= 4), b2.memoizedProps = d2, b2.memoizedState = k2), g2.props = d2, g2.state = k2, g2.context = l2, d2 = h2) : (typeof g2.componentDidMount === "function" && (b2.flags |= 4), d2 = false);
+      } else {
+        g2 = b2.stateNode;
+        jd(a2, b2);
+        h2 = b2.memoizedProps;
+        l2 = b2.type === b2.elementType ? h2 : Xc(b2.type, h2);
+        g2.props = l2;
+        t2 = b2.pendingProps;
+        p2 = g2.context;
+        k2 = c2.contextType;
+        typeof k2 === "object" && k2 !== null ? k2 = J2(k2) : (k2 = E2(c2) ? Yb : B2.current, k2 = Zb(b2, k2));
+        var y2 = c2.getDerivedStateFromProps;
+        (n2 = typeof y2 === "function" || typeof g2.getSnapshotBeforeUpdate === "function") || typeof g2.UNSAFE_componentWillReceiveProps !== "function" && typeof g2.componentWillReceiveProps !== "function" || (h2 !== t2 || p2 !== k2) && yd(b2, g2, d2, k2);
+        hd = false;
+        p2 = b2.memoizedState;
+        g2.state = p2;
+        od(b2, d2, g2, e2);
+        var x2 = b2.memoizedState;
+        h2 !== t2 || p2 !== x2 || D2.current || hd ? (typeof y2 === "function" && (sd(b2, c2, y2, d2), x2 = b2.memoizedState), (l2 = hd || wd(b2, c2, l2, d2, p2, x2, k2)) ? (n2 || typeof g2.UNSAFE_componentWillUpdate !== "function" && typeof g2.componentWillUpdate !== "function" || (typeof g2.componentWillUpdate === "function" && g2.componentWillUpdate(d2, x2, k2), typeof g2.UNSAFE_componentWillUpdate === "function" && g2.UNSAFE_componentWillUpdate(d2, x2, k2)), typeof g2.componentDidUpdate === "function" && (b2.flags |= 4), typeof g2.getSnapshotBeforeUpdate === "function" && (b2.flags |= 256)) : (typeof g2.componentDidUpdate !== "function" || h2 === a2.memoizedProps && p2 === a2.memoizedState || (b2.flags |= 4), typeof g2.getSnapshotBeforeUpdate !== "function" || h2 === a2.memoizedProps && p2 === a2.memoizedState || (b2.flags |= 256), b2.memoizedProps = d2, b2.memoizedState = x2), g2.props = d2, g2.state = x2, g2.context = k2, d2 = l2) : (typeof g2.componentDidUpdate !== "function" || h2 === a2.memoizedProps && p2 === a2.memoizedState || (b2.flags |= 4), typeof g2.getSnapshotBeforeUpdate !== "function" || h2 === a2.memoizedProps && p2 === a2.memoizedState || (b2.flags |= 256), d2 = false);
+      }
+      return $e2(a2, b2, c2, d2, f2, e2);
+    }
+    function $e2(a2, b2, c2, d2, e2, f2) {
+      Ye2(a2, b2);
+      var g2 = (b2.flags & 64) !== 0;
+      if (!d2 && !g2)
+        return e2 && dc(b2, c2, false), Re2(a2, b2, f2);
+      d2 = b2.stateNode;
+      Oe2.current = b2;
+      var h2 = g2 && typeof c2.getDerivedStateFromError !== "function" ? null : d2.render();
+      b2.flags |= 1;
+      a2 !== null && g2 ? (b2.child = Jd(b2, a2.child, null, f2), b2.child = Jd(b2, null, h2, f2)) : S2(a2, b2, h2, f2);
+      b2.memoizedState = d2.state;
+      e2 && dc(b2, c2, true);
+      return b2.child;
+    }
+    function af(a2) {
+      var b2 = a2.stateNode;
+      b2.pendingContext ? ac(a2, b2.pendingContext, b2.pendingContext !== b2.context) : b2.context && ac(a2, b2.context, false);
+      Pd(a2, b2.containerInfo);
+    }
+    var bf = {dehydrated: null, retryLane: 0};
+    function cf(a2, b2, c2) {
+      var d2 = b2.pendingProps, e2 = M2.current, f2 = false, g2;
+      (g2 = (b2.flags & 64) !== 0) || (g2 = a2 !== null && a2.memoizedState === null ? false : (e2 & 2) !== 0);
+      g2 ? (f2 = true, b2.flags &= -65) : a2 !== null && a2.memoizedState === null || d2.fallback === void 0 || d2.unstable_avoidThisFallback === true || (e2 |= 1);
+      A2(M2, e2 & 1);
+      if (a2 === null) {
+        d2.fallback !== void 0 && $d(b2);
+        a2 = d2.children;
+        e2 = d2.fallback;
+        if (f2)
+          return a2 = df(b2, a2, e2, c2), b2.child.memoizedState = {baseLanes: c2}, b2.memoizedState = bf, a2;
+        if (typeof d2.unstable_expectedLoadTime === "number")
+          return a2 = df(b2, a2, e2, c2), b2.child.memoizedState = {baseLanes: c2}, b2.memoizedState = bf, b2.lanes = 33554432, a2;
+        c2 = ef({mode: "visible", children: a2}, b2.mode, c2, null);
+        c2.return = b2;
+        return b2.child = c2;
+      }
+      if (a2.memoizedState !== null) {
+        if (f2)
+          return d2 = ff(a2, b2, d2.children, d2.fallback, c2), f2 = b2.child, e2 = a2.child.memoizedState, f2.memoizedState = e2 === null ? {baseLanes: c2} : {baseLanes: e2.baseLanes | c2}, f2.childLanes = a2.childLanes & ~c2, b2.memoizedState = bf, d2;
+        c2 = gf(a2, b2, d2.children, c2);
+        b2.memoizedState = null;
+        return c2;
+      }
+      if (f2)
+        return d2 = ff(a2, b2, d2.children, d2.fallback, c2), f2 = b2.child, e2 = a2.child.memoizedState, f2.memoizedState = e2 === null ? {baseLanes: c2} : {baseLanes: e2.baseLanes | c2}, f2.childLanes = a2.childLanes & ~c2, b2.memoizedState = bf, d2;
+      c2 = gf(a2, b2, d2.children, c2);
+      b2.memoizedState = null;
+      return c2;
+    }
+    function df(a2, b2, c2, d2) {
+      var e2 = a2.mode, f2 = a2.child;
+      b2 = {mode: "hidden", children: b2};
+      (e2 & 2) === 0 && f2 !== null ? (f2.childLanes = 0, f2.pendingProps = b2) : f2 = ef(b2, e2, 0, null);
+      c2 = Id(c2, e2, d2, null);
+      f2.return = a2;
+      c2.return = a2;
+      f2.sibling = c2;
+      a2.child = f2;
+      return c2;
+    }
+    function gf(a2, b2, c2, d2) {
+      var e2 = a2.child;
+      a2 = e2.sibling;
+      c2 = Ed(e2, {mode: "visible", children: c2});
+      (b2.mode & 2) === 0 && (c2.lanes = d2);
+      c2.return = b2;
+      c2.sibling = null;
+      a2 !== null && (a2.nextEffect = null, a2.flags = 8, b2.firstEffect = b2.lastEffect = a2);
+      return b2.child = c2;
+    }
+    function ff(a2, b2, c2, d2, e2) {
+      var f2 = b2.mode, g2 = a2.child;
+      a2 = g2.sibling;
+      var h2 = {mode: "hidden", children: c2};
+      (f2 & 2) === 0 && b2.child !== g2 ? (c2 = b2.child, c2.childLanes = 0, c2.pendingProps = h2, g2 = c2.lastEffect, g2 !== null ? (b2.firstEffect = c2.firstEffect, b2.lastEffect = g2, g2.nextEffect = null) : b2.firstEffect = b2.lastEffect = null) : c2 = Ed(g2, h2);
+      a2 !== null ? d2 = Ed(a2, d2) : (d2 = Id(d2, f2, e2, null), d2.flags |= 2);
+      d2.return = b2;
+      c2.return = b2;
+      c2.sibling = d2;
+      b2.child = c2;
+      return d2;
+    }
+    function hf(a2, b2) {
+      a2.lanes |= b2;
+      var c2 = a2.alternate;
+      c2 !== null && (c2.lanes |= b2);
+      ed(a2.return, b2);
+    }
+    function jf(a2, b2, c2, d2, e2, f2) {
+      var g2 = a2.memoizedState;
+      g2 === null ? a2.memoizedState = {isBackwards: b2, rendering: null, renderingStartTime: 0, last: d2, tail: c2, tailMode: e2, lastEffect: f2} : (g2.isBackwards = b2, g2.rendering = null, g2.renderingStartTime = 0, g2.last = d2, g2.tail = c2, g2.tailMode = e2, g2.lastEffect = f2);
+    }
+    function kf(a2, b2, c2) {
+      var d2 = b2.pendingProps, e2 = d2.revealOrder, f2 = d2.tail;
+      S2(a2, b2, d2.children, c2);
+      d2 = M2.current;
+      if ((d2 & 2) !== 0)
+        d2 = d2 & 1 | 2, b2.flags |= 64;
+      else {
+        if (a2 !== null && (a2.flags & 64) !== 0)
+          a:
+            for (a2 = b2.child; a2 !== null; ) {
+              if (a2.tag === 13)
+                a2.memoizedState !== null && hf(a2, c2);
+              else if (a2.tag === 19)
+                hf(a2, c2);
+              else if (a2.child !== null) {
+                a2.child.return = a2;
+                a2 = a2.child;
+                continue;
+              }
+              if (a2 === b2)
+                break a;
+              for (; a2.sibling === null; ) {
+                if (a2.return === null || a2.return === b2)
+                  break a;
+                a2 = a2.return;
+              }
+              a2.sibling.return = a2.return;
+              a2 = a2.sibling;
+            }
+        d2 &= 1;
+      }
+      A2(M2, d2);
+      if ((b2.mode & 2) === 0)
+        b2.memoizedState = null;
+      else
+        switch (e2) {
+          case "forwards":
+            c2 = b2.child;
+            for (e2 = null; c2 !== null; )
+              a2 = c2.alternate, a2 !== null && Td(a2) === null && (e2 = c2), c2 = c2.sibling;
+            c2 = e2;
+            c2 === null ? (e2 = b2.child, b2.child = null) : (e2 = c2.sibling, c2.sibling = null);
+            jf(b2, false, e2, c2, f2, b2.lastEffect);
+            break;
+          case "backwards":
+            c2 = null;
+            e2 = b2.child;
+            for (b2.child = null; e2 !== null; ) {
+              a2 = e2.alternate;
+              if (a2 !== null && Td(a2) === null) {
+                b2.child = e2;
+                break;
+              }
+              a2 = e2.sibling;
+              e2.sibling = c2;
+              c2 = e2;
+              e2 = a2;
+            }
+            jf(b2, true, c2, null, f2, b2.lastEffect);
+            break;
+          case "together":
+            jf(b2, false, null, null, void 0, b2.lastEffect);
+            break;
+          default:
+            b2.memoizedState = null;
+        }
+      return b2.child;
+    }
+    function Re2(a2, b2, c2) {
+      a2 !== null && (b2.dependencies = a2.dependencies);
+      pd |= b2.lanes;
+      if ((c2 & b2.childLanes) !== 0) {
+        if (a2 !== null && b2.child !== a2.child)
+          throw Error(q2(153));
+        if (b2.child !== null) {
+          a2 = b2.child;
+          c2 = Ed(a2, a2.pendingProps);
+          b2.child = c2;
+          for (c2.return = b2; a2.sibling !== null; )
+            a2 = a2.sibling, c2 = c2.sibling = Ed(a2, a2.pendingProps), c2.return = b2;
+          c2.sibling = null;
+        }
+        return b2.child;
+      }
+      return null;
+    }
+    function lf(a2) {
+      a2.flags |= 4;
+    }
+    var mf, nf, of, pf;
+    if (Ta)
+      mf = function(a2, b2) {
+        for (var c2 = b2.child; c2 !== null; ) {
+          if (c2.tag === 5 || c2.tag === 6)
+            Ja(a2, c2.stateNode);
+          else if (c2.tag !== 4 && c2.child !== null) {
+            c2.child.return = c2;
+            c2 = c2.child;
+            continue;
+          }
+          if (c2 === b2)
+            break;
+          for (; c2.sibling === null; ) {
+            if (c2.return === null || c2.return === b2)
+              return;
+            c2 = c2.return;
+          }
+          c2.sibling.return = c2.return;
+          c2 = c2.sibling;
+        }
+      }, nf = function() {
+      }, of = function(a2, b2, c2, d2, e2) {
+        a2 = a2.memoizedProps;
+        if (a2 !== d2) {
+          var f2 = b2.stateNode, g2 = Od(L4.current);
+          c2 = La(f2, c2, a2, d2, e2, g2);
+          (b2.updateQueue = c2) && lf(b2);
+        }
+      }, pf = function(a2, b2, c2, d2) {
+        c2 !== d2 && lf(b2);
+      };
+    else if (Ua) {
+      mf = function(a2, b2, c2, d2) {
+        for (var e2 = b2.child; e2 !== null; ) {
+          if (e2.tag === 5) {
+            var f2 = e2.stateNode;
+            c2 && d2 && (f2 = Db(f2, e2.type, e2.memoizedProps, e2));
+            Ja(a2, f2);
+          } else if (e2.tag === 6)
+            f2 = e2.stateNode, c2 && d2 && (f2 = Eb(f2, e2.memoizedProps, e2)), Ja(a2, f2);
+          else if (e2.tag !== 4) {
+            if (e2.tag === 13 && (e2.flags & 4) !== 0 && (f2 = e2.memoizedState !== null)) {
+              var g2 = e2.child;
+              if (g2 !== null && (g2.child !== null && (g2.child.return = g2, mf(a2, g2, true, f2)), f2 = g2.sibling, f2 !== null)) {
+                f2.return = e2;
+                e2 = f2;
+                continue;
+              }
+            }
+            if (e2.child !== null) {
+              e2.child.return = e2;
+              e2 = e2.child;
+              continue;
+            }
+          }
+          if (e2 === b2)
+            break;
+          for (; e2.sibling === null; ) {
+            if (e2.return === null || e2.return === b2)
+              return;
+            e2 = e2.return;
+          }
+          e2.sibling.return = e2.return;
+          e2 = e2.sibling;
+        }
+      };
+      var qf = function(a2, b2, c2, d2) {
+        for (var e2 = b2.child; e2 !== null; ) {
+          if (e2.tag === 5) {
+            var f2 = e2.stateNode;
+            c2 && d2 && (f2 = Db(f2, e2.type, e2.memoizedProps, e2));
+            Ab(a2, f2);
+          } else if (e2.tag === 6)
+            f2 = e2.stateNode, c2 && d2 && (f2 = Eb(f2, e2.memoizedProps, e2)), Ab(a2, f2);
+          else if (e2.tag !== 4) {
+            if (e2.tag === 13 && (e2.flags & 4) !== 0 && (f2 = e2.memoizedState !== null)) {
+              var g2 = e2.child;
+              if (g2 !== null && (g2.child !== null && (g2.child.return = g2, qf(a2, g2, true, f2)), f2 = g2.sibling, f2 !== null)) {
+                f2.return = e2;
+                e2 = f2;
+                continue;
+              }
+            }
+            if (e2.child !== null) {
+              e2.child.return = e2;
+              e2 = e2.child;
+              continue;
+            }
+          }
+          if (e2 === b2)
+            break;
+          for (; e2.sibling === null; ) {
+            if (e2.return === null || e2.return === b2)
+              return;
+            e2 = e2.return;
+          }
+          e2.sibling.return = e2.return;
+          e2 = e2.sibling;
+        }
+      };
+      nf = function(a2) {
+        var b2 = a2.stateNode;
+        if (a2.firstEffect !== null) {
+          var c2 = b2.containerInfo, d2 = zb(c2);
+          qf(d2, a2, false, false);
+          b2.pendingChildren = d2;
+          lf(a2);
+          Bb(c2, d2);
+        }
+      };
+      of = function(a2, b2, c2, d2, e2) {
+        var f2 = a2.stateNode, g2 = a2.memoizedProps;
+        if ((a2 = b2.firstEffect === null) && g2 === d2)
+          b2.stateNode = f2;
+        else {
+          var h2 = b2.stateNode, k2 = Od(L4.current), l2 = null;
+          g2 !== d2 && (l2 = La(h2, c2, g2, d2, e2, k2));
+          a2 && l2 === null ? b2.stateNode = f2 : (f2 = yb(f2, l2, c2, g2, d2, b2, a2, h2), Ka(f2, c2, d2, e2, k2) && lf(b2), b2.stateNode = f2, a2 ? lf(b2) : mf(f2, b2, false, false));
+        }
+      };
+      pf = function(a2, b2, c2, d2) {
+        c2 !== d2 ? (a2 = Od(Nd.current), c2 = Od(L4.current), b2.stateNode = Na(d2, a2, c2, b2), lf(b2)) : b2.stateNode = a2.stateNode;
+      };
+    } else
+      nf = function() {
+      }, of = function() {
+      }, pf = function() {
+      };
+    function rf(a2, b2) {
+      if (!Wd)
+        switch (a2.tailMode) {
+          case "hidden":
+            b2 = a2.tail;
+            for (var c2 = null; b2 !== null; )
+              b2.alternate !== null && (c2 = b2), b2 = b2.sibling;
+            c2 === null ? a2.tail = null : c2.sibling = null;
+            break;
+          case "collapsed":
+            c2 = a2.tail;
+            for (var d2 = null; c2 !== null; )
+              c2.alternate !== null && (d2 = c2), c2 = c2.sibling;
+            d2 === null ? b2 || a2.tail === null ? a2.tail = null : a2.tail.sibling = null : d2.sibling = null;
+        }
+    }
+    function sf(a2, b2, c2) {
+      var d2 = b2.pendingProps;
+      switch (b2.tag) {
+        case 2:
+        case 16:
+        case 15:
+        case 0:
+        case 11:
+        case 7:
+        case 8:
+        case 12:
+        case 9:
+        case 14:
+          return null;
+        case 1:
+          return E2(b2.type) && $b(), null;
+        case 3:
+          Qd();
+          z2(D2);
+          z2(B2);
+          ee2();
+          d2 = b2.stateNode;
+          d2.pendingContext && (d2.context = d2.pendingContext, d2.pendingContext = null);
+          if (a2 === null || a2.child === null)
+            be2(b2) ? lf(b2) : d2.hydrate || (b2.flags |= 256);
+          nf(b2);
+          return null;
+        case 5:
+          Sd(b2);
+          var e2 = Od(Nd.current);
+          c2 = b2.type;
+          if (a2 !== null && b2.stateNode != null)
+            of(a2, b2, c2, d2, e2), a2.ref !== b2.ref && (b2.flags |= 128);
+          else {
+            if (!d2) {
+              if (b2.stateNode === null)
+                throw Error(q2(166));
+              return null;
+            }
+            a2 = Od(L4.current);
+            if (be2(b2)) {
+              if (!Va)
+                throw Error(q2(175));
+              a2 = Lb(b2.stateNode, b2.type, b2.memoizedProps, e2, a2, b2);
+              b2.updateQueue = a2;
+              a2 !== null && lf(b2);
+            } else {
+              var f2 = Ia(c2, d2, e2, a2, b2);
+              mf(f2, b2, false, false);
+              b2.stateNode = f2;
+              Ka(f2, c2, d2, e2, a2) && lf(b2);
+            }
+            b2.ref !== null && (b2.flags |= 128);
+          }
+          return null;
+        case 6:
+          if (a2 && b2.stateNode != null)
+            pf(a2, b2, a2.memoizedProps, d2);
+          else {
+            if (typeof d2 !== "string" && b2.stateNode === null)
+              throw Error(q2(166));
+            a2 = Od(Nd.current);
+            e2 = Od(L4.current);
+            if (be2(b2)) {
+              if (!Va)
+                throw Error(q2(176));
+              Mb(b2.stateNode, b2.memoizedProps, b2) && lf(b2);
+            } else
+              b2.stateNode = Na(d2, a2, e2, b2);
+          }
+          return null;
+        case 13:
+          z2(M2);
+          d2 = b2.memoizedState;
+          if ((b2.flags & 64) !== 0)
+            return b2.lanes = c2, b2;
+          d2 = d2 !== null;
+          e2 = false;
+          a2 === null ? b2.memoizedProps.fallback !== void 0 && be2(b2) : e2 = a2.memoizedState !== null;
+          if (d2 && !e2 && (b2.mode & 2) !== 0)
+            if (a2 === null && b2.memoizedProps.unstable_avoidThisFallback !== true || (M2.current & 1) !== 0)
+              T2 === 0 && (T2 = 3);
+            else {
+              if (T2 === 0 || T2 === 3)
+                T2 = 4;
+              R2 === null || (pd & 134217727) === 0 && (tf & 134217727) === 0 || uf(R2, U2);
+            }
+          Ua && d2 && (b2.flags |= 4);
+          Ta && (d2 || e2) && (b2.flags |= 4);
+          return null;
+        case 4:
+          return Qd(), nf(b2), a2 === null && ab(b2.stateNode.containerInfo), null;
+        case 10:
+          return dd(b2), null;
+        case 17:
+          return E2(b2.type) && $b(), null;
+        case 19:
+          z2(M2);
+          d2 = b2.memoizedState;
+          if (d2 === null)
+            return null;
+          e2 = (b2.flags & 64) !== 0;
+          f2 = d2.rendering;
+          if (f2 === null)
+            if (e2)
+              rf(d2, false);
+            else {
+              if (T2 !== 0 || a2 !== null && (a2.flags & 64) !== 0)
+                for (a2 = b2.child; a2 !== null; ) {
+                  f2 = Td(a2);
+                  if (f2 !== null) {
+                    b2.flags |= 64;
+                    rf(d2, false);
+                    a2 = f2.updateQueue;
+                    a2 !== null && (b2.updateQueue = a2, b2.flags |= 4);
+                    d2.lastEffect === null && (b2.firstEffect = null);
+                    b2.lastEffect = d2.lastEffect;
+                    a2 = c2;
+                    for (d2 = b2.child; d2 !== null; )
+                      e2 = d2, c2 = a2, e2.flags &= 2, e2.nextEffect = null, e2.firstEffect = null, e2.lastEffect = null, f2 = e2.alternate, f2 === null ? (e2.childLanes = 0, e2.lanes = c2, e2.child = null, e2.memoizedProps = null, e2.memoizedState = null, e2.updateQueue = null, e2.dependencies = null, e2.stateNode = null) : (e2.childLanes = f2.childLanes, e2.lanes = f2.lanes, e2.child = f2.child, e2.memoizedProps = f2.memoizedProps, e2.memoizedState = f2.memoizedState, e2.updateQueue = f2.updateQueue, e2.type = f2.type, c2 = f2.dependencies, e2.dependencies = c2 === null ? null : {lanes: c2.lanes, firstContext: c2.firstContext}), d2 = d2.sibling;
+                    A2(M2, M2.current & 1 | 2);
+                    return b2.child;
+                  }
+                  a2 = a2.sibling;
+                }
+              d2.tail !== null && G2() > vf && (b2.flags |= 64, e2 = true, rf(d2, false), b2.lanes = 33554432);
+            }
+          else {
+            if (!e2)
+              if (a2 = Td(f2), a2 !== null) {
+                if (b2.flags |= 64, e2 = true, a2 = a2.updateQueue, a2 !== null && (b2.updateQueue = a2, b2.flags |= 4), rf(d2, true), d2.tail === null && d2.tailMode === "hidden" && !f2.alternate && !Wd)
+                  return b2 = b2.lastEffect = d2.lastEffect, b2 !== null && (b2.nextEffect = null), null;
+              } else
+                2 * G2() - d2.renderingStartTime > vf && c2 !== 1073741824 && (b2.flags |= 64, e2 = true, rf(d2, false), b2.lanes = 33554432);
+            d2.isBackwards ? (f2.sibling = b2.child, b2.child = f2) : (a2 = d2.last, a2 !== null ? a2.sibling = f2 : b2.child = f2, d2.last = f2);
+          }
+          return d2.tail !== null ? (a2 = d2.tail, d2.rendering = a2, d2.tail = a2.sibling, d2.lastEffect = b2.lastEffect, d2.renderingStartTime = G2(), a2.sibling = null, b2 = M2.current, A2(M2, e2 ? b2 & 1 | 2 : b2 & 1), a2) : null;
+        case 23:
+        case 24:
+          return wf(), a2 !== null && a2.memoizedState !== null !== (b2.memoizedState !== null) && d2.mode !== "unstable-defer-without-hiding" && (b2.flags |= 4), null;
+      }
+      throw Error(q2(156, b2.tag));
+    }
+    function xf(a2) {
+      switch (a2.tag) {
+        case 1:
+          E2(a2.type) && $b();
+          var b2 = a2.flags;
+          return b2 & 4096 ? (a2.flags = b2 & -4097 | 64, a2) : null;
+        case 3:
+          Qd();
+          z2(D2);
+          z2(B2);
+          ee2();
+          b2 = a2.flags;
+          if ((b2 & 64) !== 0)
+            throw Error(q2(285));
+          a2.flags = b2 & -4097 | 64;
+          return a2;
+        case 5:
+          return Sd(a2), null;
+        case 13:
+          return z2(M2), b2 = a2.flags, b2 & 4096 ? (a2.flags = b2 & -4097 | 64, a2) : null;
+        case 19:
+          return z2(M2), null;
+        case 4:
+          return Qd(), null;
+        case 10:
+          return dd(a2), null;
+        case 23:
+        case 24:
+          return wf(), null;
+        default:
+          return null;
+      }
+    }
+    function yf(a2, b2) {
+      try {
+        var c2 = "", d2 = b2;
+        do
+          c2 += Wc(d2), d2 = d2.return;
+        while (d2);
+        var e2 = c2;
+      } catch (f2) {
+        e2 = "\nError generating stack: " + f2.message + "\n" + f2.stack;
+      }
+      return {value: a2, source: b2, stack: e2};
+    }
+    function zf(a2, b2) {
+      try {
+        console.error(b2.value);
+      } catch (c2) {
+        setTimeout(function() {
+          throw c2;
+        });
+      }
+    }
+    var Af = typeof WeakMap === "function" ? WeakMap : Map;
+    function Bf(a2, b2, c2) {
+      c2 = kd(-1, c2);
+      c2.tag = 3;
+      c2.payload = {element: null};
+      var d2 = b2.value;
+      c2.callback = function() {
+        Cf || (Cf = true, Df = d2);
+        zf(a2, b2);
+      };
+      return c2;
+    }
+    function Ef(a2, b2, c2) {
+      c2 = kd(-1, c2);
+      c2.tag = 3;
+      var d2 = a2.type.getDerivedStateFromError;
+      if (typeof d2 === "function") {
+        var e2 = b2.value;
+        c2.payload = function() {
+          zf(a2, b2);
+          return d2(e2);
+        };
+      }
+      var f2 = a2.stateNode;
+      f2 !== null && typeof f2.componentDidCatch === "function" && (c2.callback = function() {
+        typeof d2 !== "function" && (Ff === null ? Ff = new Set([this]) : Ff.add(this), zf(a2, b2));
+        var c3 = b2.stack;
+        this.componentDidCatch(b2.value, {componentStack: c3 !== null ? c3 : ""});
+      });
+      return c2;
+    }
+    var Gf = typeof WeakSet === "function" ? WeakSet : Set;
+    function Hf(a2) {
+      var b2 = a2.ref;
+      if (b2 !== null)
+        if (typeof b2 === "function")
+          try {
+            b2(null);
+          } catch (c2) {
+            If(a2, c2);
+          }
+        else
+          b2.current = null;
+    }
+    function Jf(a2, b2) {
+      switch (b2.tag) {
+        case 0:
+        case 11:
+        case 15:
+        case 22:
+          return;
+        case 1:
+          if (b2.flags & 256 && a2 !== null) {
+            var c2 = a2.memoizedProps, d2 = a2.memoizedState;
+            a2 = b2.stateNode;
+            b2 = a2.getSnapshotBeforeUpdate(b2.elementType === b2.type ? c2 : Xc(b2.type, c2), d2);
+            a2.__reactInternalSnapshotBeforeUpdate = b2;
+          }
+          return;
+        case 3:
+          Ta && b2.flags & 256 && xb(b2.stateNode.containerInfo);
+          return;
+        case 5:
+        case 6:
+        case 4:
+        case 17:
+          return;
+      }
+      throw Error(q2(163));
+    }
+    function Kf(a2, b2) {
+      b2 = b2.updateQueue;
+      b2 = b2 !== null ? b2.lastEffect : null;
+      if (b2 !== null) {
+        var c2 = b2 = b2.next;
+        do {
+          if ((c2.tag & a2) === a2) {
+            var d2 = c2.destroy;
+            c2.destroy = void 0;
+            d2 !== void 0 && d2();
+          }
+          c2 = c2.next;
+        } while (c2 !== b2);
+      }
+    }
+    function Lf(a2, b2, c2) {
+      switch (c2.tag) {
+        case 0:
+        case 11:
+        case 15:
+        case 22:
+          b2 = c2.updateQueue;
+          b2 = b2 !== null ? b2.lastEffect : null;
+          if (b2 !== null) {
+            a2 = b2 = b2.next;
+            do {
+              if ((a2.tag & 3) === 3) {
+                var d2 = a2.create;
+                a2.destroy = d2();
+              }
+              a2 = a2.next;
+            } while (a2 !== b2);
+          }
+          b2 = c2.updateQueue;
+          b2 = b2 !== null ? b2.lastEffect : null;
+          if (b2 !== null) {
+            a2 = b2 = b2.next;
+            do {
+              var e2 = a2;
+              d2 = e2.next;
+              e2 = e2.tag;
+              (e2 & 4) !== 0 && (e2 & 1) !== 0 && (Mf(c2, a2), Nf(c2, a2));
+              a2 = d2;
+            } while (a2 !== b2);
+          }
+          return;
+        case 1:
+          a2 = c2.stateNode;
+          c2.flags & 4 && (b2 === null ? a2.componentDidMount() : (d2 = c2.elementType === c2.type ? b2.memoizedProps : Xc(c2.type, b2.memoizedProps), a2.componentDidUpdate(d2, b2.memoizedState, a2.__reactInternalSnapshotBeforeUpdate)));
+          b2 = c2.updateQueue;
+          b2 !== null && qd(c2, b2, a2);
+          return;
+        case 3:
+          b2 = c2.updateQueue;
+          if (b2 !== null) {
+            a2 = null;
+            if (c2.child !== null)
+              switch (c2.child.tag) {
+                case 5:
+                  a2 = Da(c2.child.stateNode);
+                  break;
+                case 1:
+                  a2 = c2.child.stateNode;
+              }
+            qd(c2, b2, a2);
+          }
+          return;
+        case 5:
+          a2 = c2.stateNode;
+          b2 === null && c2.flags & 4 && mb(a2, c2.type, c2.memoizedProps, c2);
+          return;
+        case 6:
+          return;
+        case 4:
+          return;
+        case 12:
+          return;
+        case 13:
+          Va && c2.memoizedState === null && (c2 = c2.alternate, c2 !== null && (c2 = c2.memoizedState, c2 !== null && (c2 = c2.dehydrated, c2 !== null && Pb(c2))));
+          return;
+        case 19:
+        case 17:
+        case 20:
+        case 21:
+        case 23:
+        case 24:
+          return;
+      }
+      throw Error(q2(163));
+    }
+    function Of(a2, b2) {
+      if (Ta)
+        for (var c2 = a2; ; ) {
+          if (c2.tag === 5) {
+            var d2 = c2.stateNode;
+            b2 ? tb(d2) : vb(c2.stateNode, c2.memoizedProps);
+          } else if (c2.tag === 6)
+            d2 = c2.stateNode, b2 ? ub(d2) : wb(d2, c2.memoizedProps);
+          else if ((c2.tag !== 23 && c2.tag !== 24 || c2.memoizedState === null || c2 === a2) && c2.child !== null) {
+            c2.child.return = c2;
+            c2 = c2.child;
+            continue;
+          }
+          if (c2 === a2)
+            break;
+          for (; c2.sibling === null; ) {
+            if (c2.return === null || c2.return === a2)
+              return;
+            c2 = c2.return;
+          }
+          c2.sibling.return = c2.return;
+          c2 = c2.sibling;
+        }
+    }
+    function Pf(a2, b2) {
+      if (fc && typeof fc.onCommitFiberUnmount === "function")
+        try {
+          fc.onCommitFiberUnmount(ec, b2);
+        } catch (f2) {
+        }
+      switch (b2.tag) {
+        case 0:
+        case 11:
+        case 14:
+        case 15:
+        case 22:
+          a2 = b2.updateQueue;
+          if (a2 !== null && (a2 = a2.lastEffect, a2 !== null)) {
+            var c2 = a2 = a2.next;
+            do {
+              var d2 = c2, e2 = d2.destroy;
+              d2 = d2.tag;
+              if (e2 !== void 0)
+                if ((d2 & 4) !== 0)
+                  Mf(b2, c2);
+                else {
+                  d2 = b2;
+                  try {
+                    e2();
+                  } catch (f2) {
+                    If(d2, f2);
+                  }
+                }
+              c2 = c2.next;
+            } while (c2 !== a2);
+          }
+          break;
+        case 1:
+          Hf(b2);
+          a2 = b2.stateNode;
+          if (typeof a2.componentWillUnmount === "function")
+            try {
+              a2.props = b2.memoizedProps, a2.state = b2.memoizedState, a2.componentWillUnmount();
+            } catch (f2) {
+              If(b2, f2);
+            }
+          break;
+        case 5:
+          Hf(b2);
+          break;
+        case 4:
+          Ta ? Qf(a2, b2) : Ua && Ua && (b2 = b2.stateNode.containerInfo, a2 = zb(b2), Cb(b2, a2));
+      }
+    }
+    function Rf(a2, b2) {
+      for (var c2 = b2; ; )
+        if (Pf(a2, c2), c2.child === null || Ta && c2.tag === 4) {
+          if (c2 === b2)
+            break;
+          for (; c2.sibling === null; ) {
+            if (c2.return === null || c2.return === b2)
+              return;
+            c2 = c2.return;
+          }
+          c2.sibling.return = c2.return;
+          c2 = c2.sibling;
+        } else
+          c2.child.return = c2, c2 = c2.child;
+    }
+    function Sf(a2) {
+      a2.alternate = null;
+      a2.child = null;
+      a2.dependencies = null;
+      a2.firstEffect = null;
+      a2.lastEffect = null;
+      a2.memoizedProps = null;
+      a2.memoizedState = null;
+      a2.pendingProps = null;
+      a2.return = null;
+      a2.updateQueue = null;
+    }
+    function Tf(a2) {
+      return a2.tag === 5 || a2.tag === 3 || a2.tag === 4;
+    }
+    function Uf(a2) {
+      if (Ta) {
+        a: {
+          for (var b2 = a2.return; b2 !== null; ) {
+            if (Tf(b2))
+              break a;
+            b2 = b2.return;
+          }
+          throw Error(q2(160));
+        }
+        var c2 = b2;
+        b2 = c2.stateNode;
+        switch (c2.tag) {
+          case 5:
+            var d2 = false;
+            break;
+          case 3:
+            b2 = b2.containerInfo;
+            d2 = true;
+            break;
+          case 4:
+            b2 = b2.containerInfo;
+            d2 = true;
+            break;
+          default:
+            throw Error(q2(161));
+        }
+        c2.flags & 16 && (sb(b2), c2.flags &= -17);
+        a:
+          b:
+            for (c2 = a2; ; ) {
+              for (; c2.sibling === null; ) {
+                if (c2.return === null || Tf(c2.return)) {
+                  c2 = null;
+                  break a;
+                }
+                c2 = c2.return;
+              }
+              c2.sibling.return = c2.return;
+              for (c2 = c2.sibling; c2.tag !== 5 && c2.tag !== 6 && c2.tag !== 18; ) {
+                if (c2.flags & 2)
+                  continue b;
+                if (c2.child === null || c2.tag === 4)
+                  continue b;
+                else
+                  c2.child.return = c2, c2 = c2.child;
+              }
+              if (!(c2.flags & 2)) {
+                c2 = c2.stateNode;
+                break a;
+              }
+            }
+        d2 ? Vf(a2, c2, b2) : Wf(a2, c2, b2);
+      }
+    }
+    function Vf(a2, b2, c2) {
+      var d2 = a2.tag, e2 = d2 === 5 || d2 === 6;
+      if (e2)
+        a2 = e2 ? a2.stateNode : a2.stateNode.instance, b2 ? pb(c2, a2, b2) : kb(c2, a2);
+      else if (d2 !== 4 && (a2 = a2.child, a2 !== null))
+        for (Vf(a2, b2, c2), a2 = a2.sibling; a2 !== null; )
+          Vf(a2, b2, c2), a2 = a2.sibling;
+    }
+    function Wf(a2, b2, c2) {
+      var d2 = a2.tag, e2 = d2 === 5 || d2 === 6;
+      if (e2)
+        a2 = e2 ? a2.stateNode : a2.stateNode.instance, b2 ? ob(c2, a2, b2) : jb(c2, a2);
+      else if (d2 !== 4 && (a2 = a2.child, a2 !== null))
+        for (Wf(a2, b2, c2), a2 = a2.sibling; a2 !== null; )
+          Wf(a2, b2, c2), a2 = a2.sibling;
+    }
+    function Qf(a2, b2) {
+      for (var c2 = b2, d2 = false, e2, f2; ; ) {
+        if (!d2) {
+          d2 = c2.return;
+          a:
+            for (; ; ) {
+              if (d2 === null)
+                throw Error(q2(160));
+              e2 = d2.stateNode;
+              switch (d2.tag) {
+                case 5:
+                  f2 = false;
+                  break a;
+                case 3:
+                  e2 = e2.containerInfo;
+                  f2 = true;
+                  break a;
+                case 4:
+                  e2 = e2.containerInfo;
+                  f2 = true;
+                  break a;
+              }
+              d2 = d2.return;
+            }
+          d2 = true;
+        }
+        if (c2.tag === 5 || c2.tag === 6)
+          Rf(a2, c2), f2 ? rb(e2, c2.stateNode) : qb(e2, c2.stateNode);
+        else if (c2.tag === 4) {
+          if (c2.child !== null) {
+            e2 = c2.stateNode.containerInfo;
+            f2 = true;
+            c2.child.return = c2;
+            c2 = c2.child;
+            continue;
+          }
+        } else if (Pf(a2, c2), c2.child !== null) {
+          c2.child.return = c2;
+          c2 = c2.child;
+          continue;
+        }
+        if (c2 === b2)
+          break;
+        for (; c2.sibling === null; ) {
+          if (c2.return === null || c2.return === b2)
+            return;
+          c2 = c2.return;
+          c2.tag === 4 && (d2 = false);
+        }
+        c2.sibling.return = c2.return;
+        c2 = c2.sibling;
+      }
+    }
+    function Xf(a2, b2) {
+      if (Ta) {
+        switch (b2.tag) {
+          case 0:
+          case 11:
+          case 14:
+          case 15:
+          case 22:
+            Kf(3, b2);
+            return;
+          case 1:
+            return;
+          case 5:
+            var c2 = b2.stateNode;
+            if (c2 != null) {
+              var d2 = b2.memoizedProps;
+              a2 = a2 !== null ? a2.memoizedProps : d2;
+              var e2 = b2.type, f2 = b2.updateQueue;
+              b2.updateQueue = null;
+              f2 !== null && nb(c2, f2, e2, a2, d2, b2);
+            }
+            return;
+          case 6:
+            if (b2.stateNode === null)
+              throw Error(q2(162));
+            c2 = b2.memoizedProps;
+            lb(b2.stateNode, a2 !== null ? a2.memoizedProps : c2, c2);
+            return;
+          case 3:
+            Va && (b2 = b2.stateNode, b2.hydrate && (b2.hydrate = false, Ob(b2.containerInfo)));
+            return;
+          case 12:
+            return;
+          case 13:
+            Yf(b2);
+            Zf(b2);
+            return;
+          case 19:
+            Zf(b2);
+            return;
+          case 17:
+            return;
+          case 23:
+          case 24:
+            Of(b2, b2.memoizedState !== null);
+            return;
+        }
+        throw Error(q2(163));
+      }
+      switch (b2.tag) {
+        case 0:
+        case 11:
+        case 14:
+        case 15:
+        case 22:
+          Kf(3, b2);
+          return;
+        case 12:
+          return;
+        case 13:
+          Yf(b2);
+          Zf(b2);
+          return;
+        case 19:
+          Zf(b2);
+          return;
+        case 3:
+          Va && (c2 = b2.stateNode, c2.hydrate && (c2.hydrate = false, Ob(c2.containerInfo)));
+          break;
+        case 23:
+        case 24:
+          return;
+      }
+      a:
+        if (Ua) {
+          switch (b2.tag) {
+            case 1:
+            case 5:
+            case 6:
+            case 20:
+              break a;
+            case 3:
+            case 4:
+              b2 = b2.stateNode;
+              Cb(b2.containerInfo, b2.pendingChildren);
+              break a;
+          }
+          throw Error(q2(163));
+        }
+    }
+    function Yf(a2) {
+      a2.memoizedState !== null && ($f = G2(), Ta && Of(a2.child, true));
+    }
+    function Zf(a2) {
+      var b2 = a2.updateQueue;
+      if (b2 !== null) {
+        a2.updateQueue = null;
+        var c2 = a2.stateNode;
+        c2 === null && (c2 = a2.stateNode = new Gf());
+        b2.forEach(function(b3) {
+          var d2 = ag.bind(null, a2, b3);
+          c2.has(b3) || (c2.add(b3), b3.then(d2, d2));
+        });
+      }
+    }
+    function bg(a2, b2) {
+      return a2 !== null && (a2 = a2.memoizedState, a2 === null || a2.dehydrated !== null) ? (b2 = b2.memoizedState, b2 !== null && b2.dehydrated === null) : false;
+    }
+    var cg = 0, dg = 1, eg = 2, fg = 3, gg = 4;
+    if (typeof Symbol === "function" && Symbol.for) {
+      var hg = Symbol.for;
+      cg = hg("selector.component");
+      dg = hg("selector.has_pseudo_class");
+      eg = hg("selector.role");
+      fg = hg("selector.test_id");
+      gg = hg("selector.text");
+    }
+    function ig(a2) {
+      var b2 = Wa(a2);
+      if (b2 != null) {
+        if (typeof b2.memoizedProps["data-testname"] !== "string")
+          throw Error(q2(364));
+        return b2;
+      }
+      a2 = cb(a2);
+      if (a2 === null)
+        throw Error(q2(362));
+      return a2.stateNode.current;
+    }
+    function jg(a2, b2) {
+      switch (b2.$$typeof) {
+        case cg:
+          if (a2.type === b2.value)
+            return true;
+          break;
+        case dg:
+          a: {
+            b2 = b2.value;
+            a2 = [a2, 0];
+            for (var c2 = 0; c2 < a2.length; ) {
+              var d2 = a2[c2++], e2 = a2[c2++], f2 = b2[e2];
+              if (d2.tag !== 5 || !fb(d2)) {
+                for (; f2 != null && jg(d2, f2); )
+                  e2++, f2 = b2[e2];
+                if (e2 === b2.length) {
+                  b2 = true;
+                  break a;
+                } else
+                  for (d2 = d2.child; d2 !== null; )
+                    a2.push(d2, e2), d2 = d2.sibling;
+              }
+            }
+            b2 = false;
+          }
+          return b2;
+        case eg:
+          if (a2.tag === 5 && gb(a2.stateNode, b2.value))
+            return true;
+          break;
+        case gg:
+          if (a2.tag === 5 || a2.tag === 6) {
+            if (a2 = eb(a2), a2 !== null && 0 <= a2.indexOf(b2.value))
+              return true;
+          }
+          break;
+        case fg:
+          if (a2.tag === 5 && (a2 = a2.memoizedProps["data-testname"], typeof a2 === "string" && a2.toLowerCase() === b2.value.toLowerCase()))
+            return true;
+          break;
+        default:
+          throw Error(q2(365, b2));
+      }
+      return false;
+    }
+    function kg(a2) {
+      switch (a2.$$typeof) {
+        case cg:
+          return "<" + (wa(a2.value) || "Unknown") + ">";
+        case dg:
+          return ":has(" + (kg(a2) || "") + ")";
+        case eg:
+          return '[role="' + a2.value + '"]';
+        case gg:
+          return '"' + a2.value + '"';
+        case fg:
+          return '[data-testname="' + a2.value + '"]';
+        default:
+          throw Error(q2(365, a2));
+      }
+    }
+    function lg(a2, b2) {
+      var c2 = [];
+      a2 = [a2, 0];
+      for (var d2 = 0; d2 < a2.length; ) {
+        var e2 = a2[d2++], f2 = a2[d2++], g2 = b2[f2];
+        if (e2.tag !== 5 || !fb(e2)) {
+          for (; g2 != null && jg(e2, g2); )
+            f2++, g2 = b2[f2];
+          if (f2 === b2.length)
+            c2.push(e2);
+          else
+            for (e2 = e2.child; e2 !== null; )
+              a2.push(e2, f2), e2 = e2.sibling;
+        }
+      }
+      return c2;
+    }
+    function mg(a2, b2) {
+      if (!bb)
+        throw Error(q2(363));
+      a2 = ig(a2);
+      a2 = lg(a2, b2);
+      b2 = [];
+      a2 = Array.from(a2);
+      for (var c2 = 0; c2 < a2.length; ) {
+        var d2 = a2[c2++];
+        if (d2.tag === 5)
+          fb(d2) || b2.push(d2.stateNode);
+        else
+          for (d2 = d2.child; d2 !== null; )
+            a2.push(d2), d2 = d2.sibling;
+      }
+      return b2;
+    }
+    var ng = null;
+    function og(a2) {
+      if (ng === null)
+        try {
+          var b2 = ("require" + Math.random()).slice(0, 7);
+          ng = (module2 && module2[b2]).call(module2, "timers").setImmediate;
+        } catch (c2) {
+          ng = function(a3) {
+            var b3 = new MessageChannel();
+            b3.port1.onmessage = a3;
+            b3.port2.postMessage(void 0);
+          };
+        }
+      return ng(a2);
+    }
+    var pg = Math.ceil, qg = ca.ReactCurrentDispatcher, rg = ca.ReactCurrentOwner, sg = ca.IsSomeRendererActing, V2 = 0, R2 = null, W2 = null, U2 = 0, tg = 0, ug = Wb(0), T2 = 0, vg = null, wg = 0, pd = 0, tf = 0, xg = 0, yg = null, $f = 0, vf = Infinity;
+    function zg() {
+      vf = G2() + 500;
+    }
+    var X2 = null, Cf = false, Df = null, Ff = null, Ag = false, Bg = null, Cg = 90, Dg = [], Eg = [], Fg = null, Gg = 0, Hg = null, Ig = -1, Jg = 0, Kg = 0, Lg = null, Mg = false;
+    function K2() {
+      return (V2 & 48) !== 0 ? G2() : Ig !== -1 ? Ig : Ig = G2();
+    }
+    function td(a2) {
+      a2 = a2.mode;
+      if ((a2 & 2) === 0)
+        return 1;
+      if ((a2 & 4) === 0)
+        return Nc() === 99 ? 1 : 2;
+      Jg === 0 && (Jg = wg);
+      if (Sc.transition !== 0) {
+        Kg !== 0 && (Kg = yg !== null ? yg.pendingLanes : 0);
+        a2 = Jg;
+        var b2 = 4186112 & ~Kg;
+        b2 &= -b2;
+        b2 === 0 && (a2 = 4186112 & ~a2, b2 = a2 & -a2, b2 === 0 && (b2 = 8192));
+        return b2;
+      }
+      a2 = Nc();
+      (V2 & 4) !== 0 && a2 === 98 ? a2 = oc(12, Jg) : (a2 = jc(a2), a2 = oc(a2, Jg));
+      return a2;
+    }
+    function ud(a2, b2, c2) {
+      if (50 < Gg)
+        throw Gg = 0, Hg = null, Error(q2(185));
+      a2 = Ng(a2, b2);
+      if (a2 === null)
+        return null;
+      rc(a2, b2, c2);
+      a2 === R2 && (tf |= b2, T2 === 4 && uf(a2, U2));
+      var d2 = Nc();
+      b2 === 1 ? (V2 & 8) !== 0 && (V2 & 48) === 0 ? Og(a2) : (Z2(a2, c2), V2 === 0 && (zg(), H2())) : ((V2 & 4) === 0 || d2 !== 98 && d2 !== 99 || (Fg === null ? Fg = new Set([a2]) : Fg.add(a2)), Z2(a2, c2));
+      yg = a2;
+    }
+    function Ng(a2, b2) {
+      a2.lanes |= b2;
+      var c2 = a2.alternate;
+      c2 !== null && (c2.lanes |= b2);
+      c2 = a2;
+      for (a2 = a2.return; a2 !== null; )
+        a2.childLanes |= b2, c2 = a2.alternate, c2 !== null && (c2.childLanes |= b2), c2 = a2, a2 = a2.return;
+      return c2.tag === 3 ? c2.stateNode : null;
+    }
+    function Z2(a2, b2) {
+      for (var c2 = a2.callbackNode, d2 = a2.suspendedLanes, e2 = a2.pingedLanes, f2 = a2.expirationTimes, g2 = a2.pendingLanes; 0 < g2; ) {
+        var h2 = 31 - mc(g2), k2 = 1 << h2, l2 = f2[h2];
+        if (l2 === -1) {
+          if ((k2 & d2) === 0 || (k2 & e2) !== 0) {
+            l2 = b2;
+            ic(k2);
+            var n2 = F2;
+            f2[h2] = 10 <= n2 ? l2 + 250 : 6 <= n2 ? l2 + 5e3 : -1;
+          }
+        } else
+          l2 <= b2 && (a2.expiredLanes |= k2);
+        g2 &= ~k2;
+      }
+      d2 = lc(a2, a2 === R2 ? U2 : 0);
+      b2 = F2;
+      if (d2 === 0)
+        c2 !== null && (c2 !== Hc && xc(c2), a2.callbackNode = null, a2.callbackPriority = 0);
+      else {
+        if (c2 !== null) {
+          if (a2.callbackPriority === b2)
+            return;
+          c2 !== Hc && xc(c2);
+        }
+        b2 === 15 ? (c2 = Og.bind(null, a2), Jc === null ? (Jc = [c2], Kc = wc(Cc, Rc)) : Jc.push(c2), c2 = Hc) : b2 === 14 ? c2 = Qc(99, Og.bind(null, a2)) : (c2 = kc(b2), c2 = Qc(c2, Pg.bind(null, a2)));
+        a2.callbackPriority = b2;
+        a2.callbackNode = c2;
+      }
+    }
+    function Pg(a2) {
+      Ig = -1;
+      Kg = Jg = 0;
+      if ((V2 & 48) !== 0)
+        throw Error(q2(327));
+      var b2 = a2.callbackNode;
+      if (Qg() && a2.callbackNode !== b2)
+        return null;
+      var c2 = lc(a2, a2 === R2 ? U2 : 0);
+      if (c2 === 0)
+        return null;
+      var d2 = c2;
+      var e2 = V2;
+      V2 |= 16;
+      var f2 = Rg();
+      if (R2 !== a2 || U2 !== d2)
+        zg(), Sg(a2, d2);
+      do
+        try {
+          Tg();
+          break;
+        } catch (h2) {
+          Ug(a2, h2);
+        }
+      while (1);
+      bd();
+      qg.current = f2;
+      V2 = e2;
+      W2 !== null ? d2 = 0 : (R2 = null, U2 = 0, d2 = T2);
+      if ((wg & tf) !== 0)
+        Sg(a2, 0);
+      else if (d2 !== 0) {
+        d2 === 2 && (V2 |= 64, a2.hydrate && (a2.hydrate = false, xb(a2.containerInfo)), c2 = nc(a2), c2 !== 0 && (d2 = Vg(a2, c2)));
+        if (d2 === 1)
+          throw b2 = vg, Sg(a2, 0), uf(a2, c2), Z2(a2, G2()), b2;
+        a2.finishedWork = a2.current.alternate;
+        a2.finishedLanes = c2;
+        switch (d2) {
+          case 0:
+          case 1:
+            throw Error(q2(345));
+          case 2:
+            Zg(a2);
+            break;
+          case 3:
+            uf(a2, c2);
+            if ((c2 & 62914560) === c2 && (d2 = $f + 500 - G2(), 10 < d2)) {
+              if (lc(a2, 0) !== 0)
+                break;
+              e2 = a2.suspendedLanes;
+              if ((e2 & c2) !== c2) {
+                K2();
+                a2.pingedLanes |= a2.suspendedLanes & e2;
+                break;
+              }
+              a2.timeoutHandle = Pa(Zg.bind(null, a2), d2);
+              break;
+            }
+            Zg(a2);
+            break;
+          case 4:
+            uf(a2, c2);
+            if ((c2 & 4186112) === c2)
+              break;
+            d2 = a2.eventTimes;
+            for (e2 = -1; 0 < c2; ) {
+              var g2 = 31 - mc(c2);
+              f2 = 1 << g2;
+              g2 = d2[g2];
+              g2 > e2 && (e2 = g2);
+              c2 &= ~f2;
+            }
+            c2 = e2;
+            c2 = G2() - c2;
+            c2 = (120 > c2 ? 120 : 480 > c2 ? 480 : 1080 > c2 ? 1080 : 1920 > c2 ? 1920 : 3e3 > c2 ? 3e3 : 4320 > c2 ? 4320 : 1960 * pg(c2 / 1960)) - c2;
+            if (10 < c2) {
+              a2.timeoutHandle = Pa(Zg.bind(null, a2), c2);
+              break;
+            }
+            Zg(a2);
+            break;
+          case 5:
+            Zg(a2);
+            break;
+          default:
+            throw Error(q2(329));
+        }
+      }
+      Z2(a2, G2());
+      return a2.callbackNode === b2 ? Pg.bind(null, a2) : null;
+    }
+    function uf(a2, b2) {
+      b2 &= ~xg;
+      b2 &= ~tf;
+      a2.suspendedLanes |= b2;
+      a2.pingedLanes &= ~b2;
+      for (a2 = a2.expirationTimes; 0 < b2; ) {
+        var c2 = 31 - mc(b2), d2 = 1 << c2;
+        a2[c2] = -1;
+        b2 &= ~d2;
+      }
+    }
+    function Og(a2) {
+      if ((V2 & 48) !== 0)
+        throw Error(q2(327));
+      Qg();
+      if (a2 === R2 && (a2.expiredLanes & U2) !== 0) {
+        var b2 = U2;
+        var c2 = Vg(a2, b2);
+        (wg & tf) !== 0 && (b2 = lc(a2, b2), c2 = Vg(a2, b2));
+      } else
+        b2 = lc(a2, 0), c2 = Vg(a2, b2);
+      a2.tag !== 0 && c2 === 2 && (V2 |= 64, a2.hydrate && (a2.hydrate = false, xb(a2.containerInfo)), b2 = nc(a2), b2 !== 0 && (c2 = Vg(a2, b2)));
+      if (c2 === 1)
+        throw c2 = vg, Sg(a2, 0), uf(a2, b2), Z2(a2, G2()), c2;
+      a2.finishedWork = a2.current.alternate;
+      a2.finishedLanes = b2;
+      Zg(a2);
+      Z2(a2, G2());
+      return null;
+    }
+    function $g() {
+      if (Fg !== null) {
+        var a2 = Fg;
+        Fg = null;
+        a2.forEach(function(a3) {
+          a3.expiredLanes |= 24 & a3.pendingLanes;
+          Z2(a3, G2());
+        });
+      }
+      H2();
+    }
+    function ah(a2, b2) {
+      var c2 = V2;
+      V2 |= 1;
+      try {
+        return a2(b2);
+      } finally {
+        V2 = c2, V2 === 0 && (zg(), H2());
+      }
+    }
+    function bh(a2, b2) {
+      var c2 = V2;
+      if ((c2 & 48) !== 0)
+        return a2(b2);
+      V2 |= 1;
+      try {
+        if (a2)
+          return Pc(99, a2.bind(null, b2));
+      } finally {
+        V2 = c2, H2();
+      }
+    }
+    function Xe2(a2, b2) {
+      A2(ug, tg);
+      tg |= b2;
+      wg |= b2;
+    }
+    function wf() {
+      tg = ug.current;
+      z2(ug);
+    }
+    function Sg(a2, b2) {
+      a2.finishedWork = null;
+      a2.finishedLanes = 0;
+      var c2 = a2.timeoutHandle;
+      c2 !== Ra && (a2.timeoutHandle = Ra, Qa(c2));
+      if (W2 !== null)
+        for (c2 = W2.return; c2 !== null; ) {
+          var d2 = c2;
+          switch (d2.tag) {
+            case 1:
+              d2 = d2.type.childContextTypes;
+              d2 !== null && d2 !== void 0 && $b();
+              break;
+            case 3:
+              Qd();
+              z2(D2);
+              z2(B2);
+              ee2();
+              break;
+            case 5:
+              Sd(d2);
+              break;
+            case 4:
+              Qd();
+              break;
+            case 13:
+              z2(M2);
+              break;
+            case 19:
+              z2(M2);
+              break;
+            case 10:
+              dd(d2);
+              break;
+            case 23:
+            case 24:
+              wf();
+          }
+          c2 = c2.return;
+        }
+      R2 = a2;
+      W2 = Ed(a2.current, null);
+      U2 = tg = wg = b2;
+      T2 = 0;
+      vg = null;
+      xg = tf = pd = 0;
+    }
+    function Ug(a2, b2) {
+      do {
+        var c2 = W2;
+        try {
+          bd();
+          fe2.current = pe2;
+          if (ie2) {
+            for (var d2 = N2.memoizedState; d2 !== null; ) {
+              var e2 = d2.queue;
+              e2 !== null && (e2.pending = null);
+              d2 = d2.next;
+            }
+            ie2 = false;
+          }
+          he2 = 0;
+          P2 = O2 = N2 = null;
+          je2 = false;
+          rg.current = null;
+          if (c2 === null || c2.return === null) {
+            T2 = 1;
+            vg = b2;
+            W2 = null;
+            break;
+          }
+          a: {
+            var f2 = a2, g2 = c2.return, h2 = c2, k2 = b2;
+            b2 = U2;
+            h2.flags |= 2048;
+            h2.firstEffect = h2.lastEffect = null;
+            if (k2 !== null && typeof k2 === "object" && typeof k2.then === "function") {
+              var l2 = k2;
+              if ((h2.mode & 2) === 0) {
+                var n2 = h2.alternate;
+                n2 ? (h2.updateQueue = n2.updateQueue, h2.memoizedState = n2.memoizedState, h2.lanes = n2.lanes) : (h2.updateQueue = null, h2.memoizedState = null);
+              }
+              var t2 = (M2.current & 1) !== 0, p2 = g2;
+              do {
+                var y2;
+                if (y2 = p2.tag === 13) {
+                  var x2 = p2.memoizedState;
+                  if (x2 !== null)
+                    y2 = x2.dehydrated !== null ? true : false;
+                  else {
+                    var Y2 = p2.memoizedProps;
+                    y2 = Y2.fallback === void 0 ? false : Y2.unstable_avoidThisFallback !== true ? true : t2 ? false : true;
+                  }
+                }
+                if (y2) {
+                  var u2 = p2.updateQueue;
+                  if (u2 === null) {
+                    var v2 = new Set();
+                    v2.add(l2);
+                    p2.updateQueue = v2;
+                  } else
+                    u2.add(l2);
+                  if ((p2.mode & 2) === 0) {
+                    p2.flags |= 64;
+                    h2.flags |= 16384;
+                    h2.flags &= -2981;
+                    if (h2.tag === 1)
+                      if (h2.alternate === null)
+                        h2.tag = 17;
+                      else {
+                        var C2 = kd(-1, 1);
+                        C2.tag = 2;
+                        md(h2, C2);
+                      }
+                    h2.lanes |= 1;
+                    break a;
+                  }
+                  k2 = void 0;
+                  h2 = b2;
+                  var Oa = f2.pingCache;
+                  Oa === null ? (Oa = f2.pingCache = new Af(), k2 = new Set(), Oa.set(l2, k2)) : (k2 = Oa.get(l2), k2 === void 0 && (k2 = new Set(), Oa.set(l2, k2)));
+                  if (!k2.has(h2)) {
+                    k2.add(h2);
+                    var Qe2 = ch.bind(null, f2, l2, h2);
+                    l2.then(Qe2, Qe2);
+                  }
+                  p2.flags |= 4096;
+                  p2.lanes = b2;
+                  break a;
+                }
+                p2 = p2.return;
+              } while (p2 !== null);
+              k2 = Error((wa(h2.type) || "A React component") + " suspended while rendering, but no fallback UI was specified.\n\nAdd a <Suspense fallback=...> component higher in the tree to provide a loading indicator or placeholder to display.");
+            }
+            T2 !== 5 && (T2 = 2);
+            k2 = yf(k2, h2);
+            p2 = g2;
+            do {
+              switch (p2.tag) {
+                case 3:
+                  f2 = k2;
+                  p2.flags |= 4096;
+                  b2 &= -b2;
+                  p2.lanes |= b2;
+                  var Wg = Bf(p2, f2, b2);
+                  nd(p2, Wg);
+                  break a;
+                case 1:
+                  f2 = k2;
+                  var Xg = p2.type, ld = p2.stateNode;
+                  if ((p2.flags & 64) === 0 && (typeof Xg.getDerivedStateFromError === "function" || ld !== null && typeof ld.componentDidCatch === "function" && (Ff === null || !Ff.has(ld)))) {
+                    p2.flags |= 4096;
+                    b2 &= -b2;
+                    p2.lanes |= b2;
+                    var Yg = Ef(p2, f2, b2);
+                    nd(p2, Yg);
+                    break a;
+                  }
+              }
+              p2 = p2.return;
+            } while (p2 !== null);
+          }
+          dh(c2);
+        } catch (w3) {
+          b2 = w3;
+          W2 === c2 && c2 !== null && (W2 = c2 = c2.return);
+          continue;
+        }
+        break;
+      } while (1);
+    }
+    function Rg() {
+      var a2 = qg.current;
+      qg.current = pe2;
+      return a2 === null ? pe2 : a2;
+    }
+    function Vg(a2, b2) {
+      var c2 = V2;
+      V2 |= 16;
+      var d2 = Rg();
+      R2 === a2 && U2 === b2 || Sg(a2, b2);
+      do
+        try {
+          eh();
+          break;
+        } catch (e2) {
+          Ug(a2, e2);
+        }
+      while (1);
+      bd();
+      V2 = c2;
+      qg.current = d2;
+      if (W2 !== null)
+        throw Error(q2(261));
+      R2 = null;
+      U2 = 0;
+      return T2;
+    }
+    function eh() {
+      for (; W2 !== null; )
+        fh(W2);
+    }
+    function Tg() {
+      for (; W2 !== null && !yc(); )
+        fh(W2);
+    }
+    function fh(a2) {
+      var b2 = gh(a2.alternate, a2, tg);
+      a2.memoizedProps = a2.pendingProps;
+      b2 === null ? dh(a2) : W2 = b2;
+      rg.current = null;
+    }
+    function dh(a2) {
+      var b2 = a2;
+      do {
+        var c2 = b2.alternate;
+        a2 = b2.return;
+        if ((b2.flags & 2048) === 0) {
+          c2 = sf(c2, b2, tg);
+          if (c2 !== null) {
+            W2 = c2;
+            return;
+          }
+          c2 = b2;
+          if (c2.tag !== 24 && c2.tag !== 23 || c2.memoizedState === null || (tg & 1073741824) !== 0 || (c2.mode & 4) === 0) {
+            for (var d2 = 0, e2 = c2.child; e2 !== null; )
+              d2 |= e2.lanes | e2.childLanes, e2 = e2.sibling;
+            c2.childLanes = d2;
+          }
+          a2 !== null && (a2.flags & 2048) === 0 && (a2.firstEffect === null && (a2.firstEffect = b2.firstEffect), b2.lastEffect !== null && (a2.lastEffect !== null && (a2.lastEffect.nextEffect = b2.firstEffect), a2.lastEffect = b2.lastEffect), 1 < b2.flags && (a2.lastEffect !== null ? a2.lastEffect.nextEffect = b2 : a2.firstEffect = b2, a2.lastEffect = b2));
+        } else {
+          c2 = xf(b2);
+          if (c2 !== null) {
+            c2.flags &= 2047;
+            W2 = c2;
+            return;
+          }
+          a2 !== null && (a2.firstEffect = a2.lastEffect = null, a2.flags |= 2048);
+        }
+        b2 = b2.sibling;
+        if (b2 !== null) {
+          W2 = b2;
+          return;
+        }
+        W2 = b2 = a2;
+      } while (b2 !== null);
+      T2 === 0 && (T2 = 5);
+    }
+    function Zg(a2) {
+      var b2 = Nc();
+      Pc(99, hh.bind(null, a2, b2));
+      return null;
+    }
+    function hh(a2, b2) {
+      do
+        Qg();
+      while (Bg !== null);
+      if ((V2 & 48) !== 0)
+        throw Error(q2(327));
+      var c2 = a2.finishedWork;
+      if (c2 === null)
+        return null;
+      a2.finishedWork = null;
+      a2.finishedLanes = 0;
+      if (c2 === a2.current)
+        throw Error(q2(177));
+      a2.callbackNode = null;
+      var d2 = c2.lanes | c2.childLanes, e2 = d2, f2 = a2.pendingLanes & ~e2;
+      a2.pendingLanes = e2;
+      a2.suspendedLanes = 0;
+      a2.pingedLanes = 0;
+      a2.expiredLanes &= e2;
+      a2.mutableReadLanes &= e2;
+      a2.entangledLanes &= e2;
+      e2 = a2.entanglements;
+      for (var g2 = a2.eventTimes, h2 = a2.expirationTimes; 0 < f2; ) {
+        var k2 = 31 - mc(f2), l2 = 1 << k2;
+        e2[k2] = 0;
+        g2[k2] = -1;
+        h2[k2] = -1;
+        f2 &= ~l2;
+      }
+      Fg !== null && (d2 & 24) === 0 && Fg.has(a2) && Fg.delete(a2);
+      a2 === R2 && (W2 = R2 = null, U2 = 0);
+      1 < c2.flags ? c2.lastEffect !== null ? (c2.lastEffect.nextEffect = c2, d2 = c2.firstEffect) : d2 = c2 : d2 = c2.firstEffect;
+      if (d2 !== null) {
+        e2 = V2;
+        V2 |= 32;
+        rg.current = null;
+        Lg = Ga(a2.containerInfo);
+        Mg = false;
+        X2 = d2;
+        do
+          try {
+            ih();
+          } catch (v2) {
+            if (X2 === null)
+              throw Error(q2(330));
+            If(X2, v2);
+            X2 = X2.nextEffect;
+          }
+        while (X2 !== null);
+        Lg = null;
+        X2 = d2;
+        do
+          try {
+            for (g2 = a2; X2 !== null; ) {
+              var n2 = X2.flags;
+              n2 & 16 && Ta && sb(X2.stateNode);
+              if (n2 & 128) {
+                var t2 = X2.alternate;
+                if (t2 !== null) {
+                  var p2 = t2.ref;
+                  p2 !== null && (typeof p2 === "function" ? p2(null) : p2.current = null);
+                }
+              }
+              switch (n2 & 1038) {
+                case 2:
+                  Uf(X2);
+                  X2.flags &= -3;
+                  break;
+                case 6:
+                  Uf(X2);
+                  X2.flags &= -3;
+                  Xf(X2.alternate, X2);
+                  break;
+                case 1024:
+                  X2.flags &= -1025;
+                  break;
+                case 1028:
+                  X2.flags &= -1025;
+                  Xf(X2.alternate, X2);
+                  break;
+                case 4:
+                  Xf(X2.alternate, X2);
+                  break;
+                case 8:
+                  h2 = g2;
+                  f2 = X2;
+                  Ta ? Qf(h2, f2) : Rf(h2, f2);
+                  var y2 = f2.alternate;
+                  Sf(f2);
+                  y2 !== null && Sf(y2);
+              }
+              X2 = X2.nextEffect;
+            }
+          } catch (v2) {
+            if (X2 === null)
+              throw Error(q2(330));
+            If(X2, v2);
+            X2 = X2.nextEffect;
+          }
+        while (X2 !== null);
+        Mg && $a();
+        Ha(a2.containerInfo);
+        a2.current = c2;
+        X2 = d2;
+        do
+          try {
+            for (n2 = a2; X2 !== null; ) {
+              var x2 = X2.flags;
+              x2 & 36 && Lf(n2, X2.alternate, X2);
+              if (x2 & 128) {
+                t2 = void 0;
+                var Y2 = X2.ref;
+                if (Y2 !== null) {
+                  var u2 = X2.stateNode;
+                  switch (X2.tag) {
+                    case 5:
+                      t2 = Da(u2);
+                      break;
+                    default:
+                      t2 = u2;
+                  }
+                  typeof Y2 === "function" ? Y2(t2) : Y2.current = t2;
+                }
+              }
+              X2 = X2.nextEffect;
+            }
+          } catch (v2) {
+            if (X2 === null)
+              throw Error(q2(330));
+            If(X2, v2);
+            X2 = X2.nextEffect;
+          }
+        while (X2 !== null);
+        X2 = null;
+        Ic();
+        V2 = e2;
+      } else
+        a2.current = c2;
+      if (Ag)
+        Ag = false, Bg = a2, Cg = b2;
+      else
+        for (X2 = d2; X2 !== null; )
+          b2 = X2.nextEffect, X2.nextEffect = null, X2.flags & 8 && (x2 = X2, x2.sibling = null, x2.stateNode = null), X2 = b2;
+      d2 = a2.pendingLanes;
+      d2 === 0 && (Ff = null);
+      d2 === 1 ? a2 === Hg ? Gg++ : (Gg = 0, Hg = a2) : Gg = 0;
+      c2 = c2.stateNode;
+      if (fc && typeof fc.onCommitFiberRoot === "function")
+        try {
+          fc.onCommitFiberRoot(ec, c2, void 0, (c2.current.flags & 64) === 64);
+        } catch (v2) {
+        }
+      Z2(a2, G2());
+      if (Cf)
+        throw Cf = false, a2 = Df, Df = null, a2;
+      if ((V2 & 8) !== 0)
+        return null;
+      H2();
+      return null;
+    }
+    function ih() {
+      for (; X2 !== null; ) {
+        var a2 = X2.alternate;
+        Mg || Lg === null || ((X2.flags & 8) !== 0 ? Ca(X2, Lg) && (Mg = true, Za()) : X2.tag === 13 && bg(a2, X2) && Ca(X2, Lg) && (Mg = true, Za()));
+        var b2 = X2.flags;
+        (b2 & 256) !== 0 && Jf(a2, X2);
+        (b2 & 512) === 0 || Ag || (Ag = true, Qc(97, function() {
+          Qg();
+          return null;
+        }));
+        X2 = X2.nextEffect;
+      }
+    }
+    function Qg() {
+      if (Cg !== 90) {
+        var a2 = 97 < Cg ? 97 : Cg;
+        Cg = 90;
+        return Pc(a2, jh);
+      }
+      return false;
+    }
+    function Nf(a2, b2) {
+      Dg.push(b2, a2);
+      Ag || (Ag = true, Qc(97, function() {
+        Qg();
+        return null;
+      }));
+    }
+    function Mf(a2, b2) {
+      Eg.push(b2, a2);
+      Ag || (Ag = true, Qc(97, function() {
+        Qg();
+        return null;
+      }));
+    }
+    function jh() {
+      if (Bg === null)
+        return false;
+      var a2 = Bg;
+      Bg = null;
+      if ((V2 & 48) !== 0)
+        throw Error(q2(331));
+      var b2 = V2;
+      V2 |= 32;
+      var c2 = Eg;
+      Eg = [];
+      for (var d2 = 0; d2 < c2.length; d2 += 2) {
+        var e2 = c2[d2], f2 = c2[d2 + 1], g2 = e2.destroy;
+        e2.destroy = void 0;
+        if (typeof g2 === "function")
+          try {
+            g2();
+          } catch (k2) {
+            if (f2 === null)
+              throw Error(q2(330));
+            If(f2, k2);
+          }
+      }
+      c2 = Dg;
+      Dg = [];
+      for (d2 = 0; d2 < c2.length; d2 += 2) {
+        e2 = c2[d2];
+        f2 = c2[d2 + 1];
+        try {
+          var h2 = e2.create;
+          e2.destroy = h2();
+        } catch (k2) {
+          if (f2 === null)
+            throw Error(q2(330));
+          If(f2, k2);
+        }
+      }
+      for (h2 = a2.current.firstEffect; h2 !== null; )
+        a2 = h2.nextEffect, h2.nextEffect = null, h2.flags & 8 && (h2.sibling = null, h2.stateNode = null), h2 = a2;
+      V2 = b2;
+      H2();
+      return true;
+    }
+    function kh(a2, b2, c2) {
+      b2 = yf(c2, b2);
+      b2 = Bf(a2, b2, 1);
+      md(a2, b2);
+      b2 = K2();
+      a2 = Ng(a2, 1);
+      a2 !== null && (rc(a2, 1, b2), Z2(a2, b2));
+    }
+    function If(a2, b2) {
+      if (a2.tag === 3)
+        kh(a2, a2, b2);
+      else
+        for (var c2 = a2.return; c2 !== null; ) {
+          if (c2.tag === 3) {
+            kh(c2, a2, b2);
+            break;
+          } else if (c2.tag === 1) {
+            var d2 = c2.stateNode;
+            if (typeof c2.type.getDerivedStateFromError === "function" || typeof d2.componentDidCatch === "function" && (Ff === null || !Ff.has(d2))) {
+              a2 = yf(b2, a2);
+              var e2 = Ef(c2, a2, 1);
+              md(c2, e2);
+              e2 = K2();
+              c2 = Ng(c2, 1);
+              if (c2 !== null)
+                rc(c2, 1, e2), Z2(c2, e2);
+              else if (typeof d2.componentDidCatch === "function" && (Ff === null || !Ff.has(d2)))
+                try {
+                  d2.componentDidCatch(b2, a2);
+                } catch (f2) {
+                }
+              break;
+            }
+          }
+          c2 = c2.return;
+        }
+    }
+    function ch(a2, b2, c2) {
+      var d2 = a2.pingCache;
+      d2 !== null && d2.delete(b2);
+      b2 = K2();
+      a2.pingedLanes |= a2.suspendedLanes & c2;
+      R2 === a2 && (U2 & c2) === c2 && (T2 === 4 || T2 === 3 && (U2 & 62914560) === U2 && 500 > G2() - $f ? Sg(a2, 0) : xg |= c2);
+      Z2(a2, b2);
+    }
+    function ag(a2, b2) {
+      var c2 = a2.stateNode;
+      c2 !== null && c2.delete(b2);
+      b2 = 0;
+      b2 === 0 && (b2 = a2.mode, (b2 & 2) === 0 ? b2 = 1 : (b2 & 4) === 0 ? b2 = Nc() === 99 ? 1 : 2 : (Jg === 0 && (Jg = wg), b2 = pc(62914560 & ~Jg), b2 === 0 && (b2 = 4194304)));
+      c2 = K2();
+      a2 = Ng(a2, b2);
+      a2 !== null && (rc(a2, b2, c2), Z2(a2, c2));
+    }
+    var gh;
+    gh = function(a2, b2, c2) {
+      var d2 = b2.lanes;
+      if (a2 !== null)
+        if (a2.memoizedProps !== b2.pendingProps || D2.current)
+          gd = true;
+        else if ((c2 & d2) !== 0)
+          gd = (a2.flags & 16384) !== 0 ? true : false;
+        else {
+          gd = false;
+          switch (b2.tag) {
+            case 3:
+              af(b2);
+              ce2();
+              break;
+            case 5:
+              Rd(b2);
+              break;
+            case 1:
+              E2(b2.type) && cc(b2);
+              break;
+            case 4:
+              Pd(b2, b2.stateNode.containerInfo);
+              break;
+            case 10:
+              cd(b2, b2.memoizedProps.value);
+              break;
+            case 13:
+              if (b2.memoizedState !== null) {
+                if ((c2 & b2.child.childLanes) !== 0)
+                  return cf(a2, b2, c2);
+                A2(M2, M2.current & 1);
+                b2 = Re2(a2, b2, c2);
+                return b2 !== null ? b2.sibling : null;
+              }
+              A2(M2, M2.current & 1);
+              break;
+            case 19:
+              d2 = (c2 & b2.childLanes) !== 0;
+              if ((a2.flags & 64) !== 0) {
+                if (d2)
+                  return kf(a2, b2, c2);
+                b2.flags |= 64;
+              }
+              var e2 = b2.memoizedState;
+              e2 !== null && (e2.rendering = null, e2.tail = null, e2.lastEffect = null);
+              A2(M2, M2.current);
+              if (d2)
+                break;
+              else
+                return null;
+            case 23:
+            case 24:
+              return b2.lanes = 0, We2(a2, b2, c2);
+          }
+          return Re2(a2, b2, c2);
+        }
+      else
+        gd = false;
+      b2.lanes = 0;
+      switch (b2.tag) {
+        case 2:
+          d2 = b2.type;
+          a2 !== null && (a2.alternate = null, b2.alternate = null, b2.flags |= 2);
+          a2 = b2.pendingProps;
+          e2 = Zb(b2, B2.current);
+          fd(b2, c2);
+          e2 = le2(null, b2, d2, a2, e2, c2);
+          b2.flags |= 1;
+          if (typeof e2 === "object" && e2 !== null && typeof e2.render === "function" && e2.$$typeof === void 0) {
+            b2.tag = 1;
+            b2.memoizedState = null;
+            b2.updateQueue = null;
+            if (E2(d2)) {
+              var f2 = true;
+              cc(b2);
+            } else
+              f2 = false;
+            b2.memoizedState = e2.state !== null && e2.state !== void 0 ? e2.state : null;
+            id(b2);
+            var g2 = d2.getDerivedStateFromProps;
+            typeof g2 === "function" && sd(b2, d2, g2, a2);
+            e2.updater = vd;
+            b2.stateNode = e2;
+            e2._reactInternals = b2;
+            zd(b2, d2, a2, c2);
+            b2 = $e2(null, b2, d2, true, f2, c2);
+          } else
+            b2.tag = 0, S2(null, b2, e2, c2), b2 = b2.child;
+          return b2;
+        case 16:
+          e2 = b2.elementType;
+          a: {
+            a2 !== null && (a2.alternate = null, b2.alternate = null, b2.flags |= 2);
+            a2 = b2.pendingProps;
+            f2 = e2._init;
+            e2 = f2(e2._payload);
+            b2.type = e2;
+            f2 = b2.tag = lh(e2);
+            a2 = Xc(e2, a2);
+            switch (f2) {
+              case 0:
+                b2 = Ve2(null, b2, e2, a2, c2);
+                break a;
+              case 1:
+                b2 = Ze2(null, b2, e2, a2, c2);
+                break a;
+              case 11:
+                b2 = Pe2(null, b2, e2, a2, c2);
+                break a;
+              case 14:
+                b2 = Se2(null, b2, e2, Xc(e2.type, a2), d2, c2);
+                break a;
+            }
+            throw Error(q2(306, e2, ""));
+          }
+          return b2;
+        case 0:
+          return d2 = b2.type, e2 = b2.pendingProps, e2 = b2.elementType === d2 ? e2 : Xc(d2, e2), Ve2(a2, b2, d2, e2, c2);
+        case 1:
+          return d2 = b2.type, e2 = b2.pendingProps, e2 = b2.elementType === d2 ? e2 : Xc(d2, e2), Ze2(a2, b2, d2, e2, c2);
+        case 3:
+          af(b2);
+          d2 = b2.updateQueue;
+          if (a2 === null || d2 === null)
+            throw Error(q2(282));
+          d2 = b2.pendingProps;
+          e2 = b2.memoizedState;
+          e2 = e2 !== null ? e2.element : null;
+          jd(a2, b2);
+          od(b2, d2, null, c2);
+          d2 = b2.memoizedState.element;
+          if (d2 === e2)
+            ce2(), b2 = Re2(a2, b2, c2);
+          else {
+            e2 = b2.stateNode;
+            if (f2 = e2.hydrate)
+              Va ? (Vd = Kb(b2.stateNode.containerInfo), Ud = b2, f2 = Wd = true) : f2 = false;
+            if (f2) {
+              if (Va && (a2 = e2.mutableSourceEagerHydrationData, a2 != null))
+                for (e2 = 0; e2 < a2.length; e2 += 2)
+                  f2 = a2[e2], g2 = a2[e2 + 1], Sa ? f2._workInProgressVersionPrimary = g2 : f2._workInProgressVersionSecondary = g2, de2.push(f2);
+              c2 = Kd(b2, null, d2, c2);
+              for (b2.child = c2; c2; )
+                c2.flags = c2.flags & -3 | 1024, c2 = c2.sibling;
+            } else
+              S2(a2, b2, d2, c2), ce2();
+            b2 = b2.child;
+          }
+          return b2;
+        case 5:
+          return Rd(b2), a2 === null && $d(b2), d2 = b2.type, e2 = b2.pendingProps, f2 = a2 !== null ? a2.memoizedProps : null, g2 = e2.children, Ma(d2, e2) ? g2 = null : f2 !== null && Ma(d2, f2) && (b2.flags |= 16), Ye2(a2, b2), S2(a2, b2, g2, c2), b2.child;
+        case 6:
+          return a2 === null && $d(b2), null;
+        case 13:
+          return cf(a2, b2, c2);
+        case 4:
+          return Pd(b2, b2.stateNode.containerInfo), d2 = b2.pendingProps, a2 === null ? b2.child = Jd(b2, null, d2, c2) : S2(a2, b2, d2, c2), b2.child;
+        case 11:
+          return d2 = b2.type, e2 = b2.pendingProps, e2 = b2.elementType === d2 ? e2 : Xc(d2, e2), Pe2(a2, b2, d2, e2, c2);
+        case 7:
+          return S2(a2, b2, b2.pendingProps, c2), b2.child;
+        case 8:
+          return S2(a2, b2, b2.pendingProps.children, c2), b2.child;
+        case 12:
+          return S2(a2, b2, b2.pendingProps.children, c2), b2.child;
+        case 10:
+          a: {
+            d2 = b2.type._context;
+            e2 = b2.pendingProps;
+            g2 = b2.memoizedProps;
+            f2 = e2.value;
+            cd(b2, f2);
+            if (g2 !== null) {
+              var h2 = g2.value;
+              f2 = I2(h2, f2) ? 0 : (typeof d2._calculateChangedBits === "function" ? d2._calculateChangedBits(h2, f2) : 1073741823) | 0;
+              if (f2 === 0) {
+                if (g2.children === e2.children && !D2.current) {
+                  b2 = Re2(a2, b2, c2);
+                  break a;
+                }
+              } else
+                for (h2 = b2.child, h2 !== null && (h2.return = b2); h2 !== null; ) {
+                  var k2 = h2.dependencies;
+                  if (k2 !== null) {
+                    g2 = h2.child;
+                    for (var l2 = k2.firstContext; l2 !== null; ) {
+                      if (l2.context === d2 && (l2.observedBits & f2) !== 0) {
+                        h2.tag === 1 && (l2 = kd(-1, c2 & -c2), l2.tag = 2, md(h2, l2));
+                        h2.lanes |= c2;
+                        l2 = h2.alternate;
+                        l2 !== null && (l2.lanes |= c2);
+                        ed(h2.return, c2);
+                        k2.lanes |= c2;
+                        break;
+                      }
+                      l2 = l2.next;
+                    }
+                  } else
+                    g2 = h2.tag === 10 ? h2.type === b2.type ? null : h2.child : h2.child;
+                  if (g2 !== null)
+                    g2.return = h2;
+                  else
+                    for (g2 = h2; g2 !== null; ) {
+                      if (g2 === b2) {
+                        g2 = null;
+                        break;
+                      }
+                      h2 = g2.sibling;
+                      if (h2 !== null) {
+                        h2.return = g2.return;
+                        g2 = h2;
+                        break;
+                      }
+                      g2 = g2.return;
+                    }
+                  h2 = g2;
+                }
+            }
+            S2(a2, b2, e2.children, c2);
+            b2 = b2.child;
+          }
+          return b2;
+        case 9:
+          return e2 = b2.type, f2 = b2.pendingProps, d2 = f2.children, fd(b2, c2), e2 = J2(e2, f2.unstable_observedBits), d2 = d2(e2), b2.flags |= 1, S2(a2, b2, d2, c2), b2.child;
+        case 14:
+          return e2 = b2.type, f2 = Xc(e2, b2.pendingProps), f2 = Xc(e2.type, f2), Se2(a2, b2, e2, f2, d2, c2);
+        case 15:
+          return Ue2(a2, b2, b2.type, b2.pendingProps, d2, c2);
+        case 17:
+          return d2 = b2.type, e2 = b2.pendingProps, e2 = b2.elementType === d2 ? e2 : Xc(d2, e2), a2 !== null && (a2.alternate = null, b2.alternate = null, b2.flags |= 2), b2.tag = 1, E2(d2) ? (a2 = true, cc(b2)) : a2 = false, fd(b2, c2), xd(b2, d2, e2), zd(b2, d2, e2, c2), $e2(null, b2, d2, true, a2, c2);
+        case 19:
+          return kf(a2, b2, c2);
+        case 23:
+          return We2(a2, b2, c2);
+        case 24:
+          return We2(a2, b2, c2);
+      }
+      throw Error(q2(156, b2.tag));
+    };
+    var mh = {current: false}, nh = m2.unstable_flushAllWithoutAsserting, oh = typeof nh === "function";
+    function ph() {
+      if (nh !== void 0)
+        return nh();
+      for (var a2 = false; Qg(); )
+        a2 = true;
+      return a2;
+    }
+    function qh(a2) {
+      try {
+        ph(), og(function() {
+          ph() ? qh(a2) : a2();
+        });
+      } catch (b2) {
+        a2(b2);
+      }
+    }
+    var rh = 0, sh = false;
+    function th(a2, b2, c2, d2) {
+      this.tag = a2;
+      this.key = c2;
+      this.sibling = this.child = this.return = this.stateNode = this.type = this.elementType = null;
+      this.index = 0;
+      this.ref = null;
+      this.pendingProps = b2;
+      this.dependencies = this.memoizedState = this.updateQueue = this.memoizedProps = null;
+      this.mode = d2;
+      this.flags = 0;
+      this.lastEffect = this.firstEffect = this.nextEffect = null;
+      this.childLanes = this.lanes = 0;
+      this.alternate = null;
+    }
+    function Yd(a2, b2, c2, d2) {
+      return new th(a2, b2, c2, d2);
+    }
+    function Te2(a2) {
+      a2 = a2.prototype;
+      return !(!a2 || !a2.isReactComponent);
+    }
+    function lh(a2) {
+      if (typeof a2 === "function")
+        return Te2(a2) ? 1 : 0;
+      if (a2 !== void 0 && a2 !== null) {
+        a2 = a2.$$typeof;
+        if (a2 === la)
+          return 11;
+        if (a2 === oa)
+          return 14;
+      }
+      return 2;
+    }
+    function Ed(a2, b2) {
+      var c2 = a2.alternate;
+      c2 === null ? (c2 = Yd(a2.tag, b2, a2.key, a2.mode), c2.elementType = a2.elementType, c2.type = a2.type, c2.stateNode = a2.stateNode, c2.alternate = a2, a2.alternate = c2) : (c2.pendingProps = b2, c2.type = a2.type, c2.flags = 0, c2.nextEffect = null, c2.firstEffect = null, c2.lastEffect = null);
+      c2.childLanes = a2.childLanes;
+      c2.lanes = a2.lanes;
+      c2.child = a2.child;
+      c2.memoizedProps = a2.memoizedProps;
+      c2.memoizedState = a2.memoizedState;
+      c2.updateQueue = a2.updateQueue;
+      b2 = a2.dependencies;
+      c2.dependencies = b2 === null ? null : {lanes: b2.lanes, firstContext: b2.firstContext};
+      c2.sibling = a2.sibling;
+      c2.index = a2.index;
+      c2.ref = a2.ref;
+      return c2;
+    }
+    function Gd(a2, b2, c2, d2, e2, f2) {
+      var g2 = 2;
+      d2 = a2;
+      if (typeof a2 === "function")
+        Te2(a2) && (g2 = 1);
+      else if (typeof a2 === "string")
+        g2 = 5;
+      else
+        a:
+          switch (a2) {
+            case fa:
+              return Id(c2.children, e2, f2, b2);
+            case ra:
+              g2 = 8;
+              e2 |= 16;
+              break;
+            case ha:
+              g2 = 8;
+              e2 |= 1;
+              break;
+            case ia:
+              return a2 = Yd(12, c2, b2, e2 | 8), a2.elementType = ia, a2.type = ia, a2.lanes = f2, a2;
+            case ma:
+              return a2 = Yd(13, c2, b2, e2), a2.type = ma, a2.elementType = ma, a2.lanes = f2, a2;
+            case na:
+              return a2 = Yd(19, c2, b2, e2), a2.elementType = na, a2.lanes = f2, a2;
+            case sa:
+              return ef(c2, e2, f2, b2);
+            case ta:
+              return a2 = Yd(24, c2, b2, e2), a2.elementType = ta, a2.lanes = f2, a2;
+            default:
+              if (typeof a2 === "object" && a2 !== null)
+                switch (a2.$$typeof) {
+                  case ja:
+                    g2 = 10;
+                    break a;
+                  case ka:
+                    g2 = 9;
+                    break a;
+                  case la:
+                    g2 = 11;
+                    break a;
+                  case oa:
+                    g2 = 14;
+                    break a;
+                  case pa:
+                    g2 = 16;
+                    d2 = null;
+                    break a;
+                  case qa:
+                    g2 = 22;
+                    break a;
+                }
+              throw Error(q2(130, a2 == null ? a2 : typeof a2, ""));
+          }
+      b2 = Yd(g2, c2, b2, e2);
+      b2.elementType = a2;
+      b2.type = d2;
+      b2.lanes = f2;
+      return b2;
+    }
+    function Id(a2, b2, c2, d2) {
+      a2 = Yd(7, a2, d2, b2);
+      a2.lanes = c2;
+      return a2;
+    }
+    function ef(a2, b2, c2, d2) {
+      a2 = Yd(23, a2, d2, b2);
+      a2.elementType = sa;
+      a2.lanes = c2;
+      return a2;
+    }
+    function Fd(a2, b2, c2) {
+      a2 = Yd(6, a2, null, b2);
+      a2.lanes = c2;
+      return a2;
+    }
+    function Hd(a2, b2, c2) {
+      b2 = Yd(4, a2.children !== null ? a2.children : [], a2.key, b2);
+      b2.lanes = c2;
+      b2.stateNode = {containerInfo: a2.containerInfo, pendingChildren: null, implementation: a2.implementation};
+      return b2;
+    }
+    function uh(a2, b2, c2) {
+      this.tag = b2;
+      this.containerInfo = a2;
+      this.finishedWork = this.pingCache = this.current = this.pendingChildren = null;
+      this.timeoutHandle = Ra;
+      this.pendingContext = this.context = null;
+      this.hydrate = c2;
+      this.callbackNode = null;
+      this.callbackPriority = 0;
+      this.eventTimes = qc(0);
+      this.expirationTimes = qc(-1);
+      this.entangledLanes = this.finishedLanes = this.mutableReadLanes = this.expiredLanes = this.pingedLanes = this.suspendedLanes = this.pendingLanes = 0;
+      this.entanglements = qc(0);
+      Va && (this.mutableSourceEagerHydrationData = null);
+    }
+    function vh(a2) {
+      var b2 = a2._reactInternals;
+      if (b2 === void 0) {
+        if (typeof a2.render === "function")
+          throw Error(q2(188));
+        throw Error(q2(268, Object.keys(a2)));
+      }
+      a2 = Aa(b2);
+      return a2 === null ? null : a2.stateNode;
+    }
+    function wh(a2, b2) {
+      a2 = a2.memoizedState;
+      if (a2 !== null && a2.dehydrated !== null) {
+        var c2 = a2.retryLane;
+        a2.retryLane = c2 !== 0 && c2 < b2 ? c2 : b2;
+      }
+    }
+    function xh(a2, b2) {
+      wh(a2, b2);
+      (a2 = a2.alternate) && wh(a2, b2);
+    }
+    function yh(a2) {
+      a2 = Aa(a2);
+      return a2 === null ? null : a2.stateNode;
+    }
+    function zh() {
+      return null;
+    }
+    exports3.IsThisRendererActing = mh;
+    exports3.act = function(a2) {
+      function b2() {
+        rh--;
+        sg.current = c2;
+        mh.current = d2;
+      }
+      sh === false && (sh = true, console.error("act(...) is not supported in production builds of React, and might not behave as expected."));
+      rh++;
+      var c2 = sg.current, d2 = mh.current;
+      sg.current = true;
+      mh.current = true;
+      try {
+        var e2 = ah(a2);
+      } catch (f2) {
+        throw b2(), f2;
+      }
+      if (e2 !== null && typeof e2 === "object" && typeof e2.then === "function")
+        return {then: function(a3, d3) {
+          e2.then(function() {
+            1 < rh || oh === true && c2 === true ? (b2(), a3()) : qh(function(c3) {
+              b2();
+              c3 ? d3(c3) : a3();
+            });
+          }, function(a4) {
+            b2();
+            d3(a4);
+          });
+        }};
+      try {
+        rh !== 1 || oh !== false && c2 !== false || ph(), b2();
+      } catch (f2) {
+        throw b2(), f2;
+      }
+      return {then: function(a3) {
+        a3();
+      }};
+    };
+    exports3.attemptContinuousHydration = function(a2) {
+      if (a2.tag === 13) {
+        var b2 = K2();
+        ud(a2, 67108864, b2);
+        xh(a2, 67108864);
+      }
+    };
+    exports3.attemptHydrationAtCurrentPriority = function(a2) {
+      if (a2.tag === 13) {
+        var b2 = K2(), c2 = td(a2);
+        ud(a2, c2, b2);
+        xh(a2, c2);
+      }
+    };
+    exports3.attemptSynchronousHydration = function(a2) {
+      switch (a2.tag) {
+        case 3:
+          var b2 = a2.stateNode;
+          if (b2.hydrate) {
+            var c2 = ic(b2.pendingLanes);
+            b2.expiredLanes |= c2 & b2.pendingLanes;
+            Z2(b2, G2());
+            (V2 & 48) === 0 && (zg(), H2());
+          }
+          break;
+        case 13:
+          var d2 = K2();
+          bh(function() {
+            return ud(a2, 1, d2);
+          });
+          xh(a2, 4);
+      }
+    };
+    exports3.attemptUserBlockingHydration = function(a2) {
+      if (a2.tag === 13) {
+        var b2 = K2();
+        ud(a2, 4, b2);
+        xh(a2, 4);
+      }
+    };
+    exports3.batchedEventUpdates = function(a2, b2) {
+      var c2 = V2;
+      V2 |= 2;
+      try {
+        return a2(b2);
+      } finally {
+        V2 = c2, V2 === 0 && (zg(), H2());
+      }
+    };
+    exports3.batchedUpdates = ah;
+    exports3.createComponentSelector = function(a2) {
+      return {$$typeof: cg, value: a2};
+    };
+    exports3.createContainer = function(a2, b2, c2) {
+      a2 = new uh(a2, b2, c2);
+      b2 = Yd(3, null, null, b2 === 2 ? 7 : b2 === 1 ? 3 : 0);
+      a2.current = b2;
+      b2.stateNode = a2;
+      id(b2);
+      return a2;
+    };
+    exports3.createHasPsuedoClassSelector = function(a2) {
+      return {$$typeof: dg, value: a2};
+    };
+    exports3.createPortal = function(a2, b2, c2) {
+      var d2 = 3 < arguments.length && arguments[3] !== void 0 ? arguments[3] : null;
+      return {$$typeof: ea, key: d2 == null ? null : "" + d2, children: a2, containerInfo: b2, implementation: c2};
+    };
+    exports3.createRoleSelector = function(a2) {
+      return {$$typeof: eg, value: a2};
+    };
+    exports3.createTestNameSelector = function(a2) {
+      return {$$typeof: fg, value: a2};
+    };
+    exports3.createTextSelector = function(a2) {
+      return {$$typeof: gg, value: a2};
+    };
+    exports3.deferredUpdates = function(a2) {
+      return Pc(97, a2);
+    };
+    exports3.discreteUpdates = function(a2, b2, c2, d2, e2) {
+      var f2 = V2;
+      V2 |= 4;
+      try {
+        return Pc(98, a2.bind(null, b2, c2, d2, e2));
+      } finally {
+        V2 = f2, V2 === 0 && (zg(), H2());
+      }
+    };
+    exports3.findAllNodes = mg;
+    exports3.findBoundingRects = function(a2, b2) {
+      if (!bb)
+        throw Error(q2(363));
+      b2 = mg(a2, b2);
+      a2 = [];
+      for (var c2 = 0; c2 < b2.length; c2++)
+        a2.push(db(b2[c2]));
+      for (b2 = a2.length - 1; 0 < b2; b2--) {
+        c2 = a2[b2];
+        for (var d2 = c2.x, e2 = d2 + c2.width, f2 = c2.y, g2 = f2 + c2.height, h2 = b2 - 1; 0 <= h2; h2--)
+          if (b2 !== h2) {
+            var k2 = a2[h2], l2 = k2.x, n2 = l2 + k2.width, t2 = k2.y, p2 = t2 + k2.height;
+            if (d2 >= l2 && f2 >= t2 && e2 <= n2 && g2 <= p2) {
+              a2.splice(b2, 1);
+              break;
+            } else if (!(d2 !== l2 || c2.width !== k2.width || p2 < f2 || t2 > g2)) {
+              t2 > f2 && (k2.height += t2 - f2, k2.y = f2);
+              p2 < g2 && (k2.height = g2 - t2);
+              a2.splice(b2, 1);
+              break;
+            } else if (!(f2 !== t2 || c2.height !== k2.height || n2 < d2 || l2 > e2)) {
+              l2 > d2 && (k2.width += l2 - d2, k2.x = d2);
+              n2 < e2 && (k2.width = e2 - l2);
+              a2.splice(b2, 1);
+              break;
+            }
+          }
+      }
+      return a2;
+    };
+    exports3.findHostInstance = vh;
+    exports3.findHostInstanceWithNoPortals = function(a2) {
+      a2 = Ba(a2);
+      return a2 === null ? null : a2.tag === 20 ? a2.stateNode.instance : a2.stateNode;
+    };
+    exports3.findHostInstanceWithWarning = function(a2) {
+      return vh(a2);
+    };
+    exports3.flushControlled = function(a2) {
+      var b2 = V2;
+      V2 |= 1;
+      try {
+        Pc(99, a2);
+      } finally {
+        V2 = b2, V2 === 0 && (zg(), H2());
+      }
+    };
+    exports3.flushDiscreteUpdates = function() {
+      (V2 & 49) === 0 && ($g(), Qg());
+    };
+    exports3.flushPassiveEffects = Qg;
+    exports3.flushSync = bh;
+    exports3.focusWithin = function(a2, b2) {
+      if (!bb)
+        throw Error(q2(363));
+      a2 = ig(a2);
+      b2 = lg(a2, b2);
+      b2 = Array.from(b2);
+      for (a2 = 0; a2 < b2.length; ) {
+        var c2 = b2[a2++];
+        if (!fb(c2)) {
+          if (c2.tag === 5 && hb(c2.stateNode))
+            return true;
+          for (c2 = c2.child; c2 !== null; )
+            b2.push(c2), c2 = c2.sibling;
+        }
+      }
+      return false;
+    };
+    exports3.getCurrentUpdateLanePriority = function() {
+      return hc;
+    };
+    exports3.getFindAllNodesFailureDescription = function(a2, b2) {
+      if (!bb)
+        throw Error(q2(363));
+      var c2 = 0, d2 = [];
+      a2 = [ig(a2), 0];
+      for (var e2 = 0; e2 < a2.length; ) {
+        var f2 = a2[e2++], g2 = a2[e2++], h2 = b2[g2];
+        if (f2.tag !== 5 || !fb(f2)) {
+          if (jg(f2, h2) && (d2.push(kg(h2)), g2++, g2 > c2 && (c2 = g2)), g2 < b2.length)
+            for (f2 = f2.child; f2 !== null; )
+              a2.push(f2, g2), f2 = f2.sibling;
+        }
+      }
+      if (c2 < b2.length) {
+        for (a2 = []; c2 < b2.length; c2++)
+          a2.push(kg(b2[c2]));
+        return "findAllNodes was able to match part of the selector:\n  " + (d2.join(" > ") + "\n\nNo matching component was found for:\n  ") + a2.join(" > ");
+      }
+      return null;
+    };
+    exports3.getPublicRootInstance = function(a2) {
+      a2 = a2.current;
+      if (!a2.child)
+        return null;
+      switch (a2.child.tag) {
+        case 5:
+          return Da(a2.child.stateNode);
+        default:
+          return a2.child.stateNode;
+      }
+    };
+    exports3.injectIntoDevTools = function(a2) {
+      a2 = {
+        bundleType: a2.bundleType,
+        version: a2.version,
+        rendererPackageName: a2.rendererPackageName,
+        rendererConfig: a2.rendererConfig,
+        overrideHookState: null,
+        overrideHookStateDeletePath: null,
+        overrideHookStateRenamePath: null,
+        overrideProps: null,
+        overridePropsDeletePath: null,
+        overridePropsRenamePath: null,
+        setSuspenseHandler: null,
+        scheduleUpdate: null,
+        currentDispatcherRef: ca.ReactCurrentDispatcher,
+        findHostInstanceByFiber: yh,
+        findFiberByHostInstance: a2.findFiberByHostInstance || zh,
+        findHostInstancesForRefresh: null,
+        scheduleRefresh: null,
+        scheduleRoot: null,
+        setRefreshHandler: null,
+        getCurrentFiber: null
+      };
+      if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === "undefined")
+        a2 = false;
+      else {
+        var b2 = __REACT_DEVTOOLS_GLOBAL_HOOK__;
+        if (!b2.isDisabled && b2.supportsFiber)
+          try {
+            ec = b2.inject(a2), fc = b2;
+          } catch (c2) {
+          }
+        a2 = true;
+      }
+      return a2;
+    };
+    exports3.observeVisibleRects = function(a2, b2, c2, d2) {
+      if (!bb)
+        throw Error(q2(363));
+      a2 = mg(a2, b2);
+      var e2 = ib(a2, c2, d2).disconnect;
+      return {disconnect: function() {
+        e2();
+      }};
+    };
+    exports3.registerMutableSourceForHydration = function(a2, b2) {
+      var c2 = b2._getVersion;
+      c2 = c2(b2._source);
+      a2.mutableSourceEagerHydrationData == null ? a2.mutableSourceEagerHydrationData = [b2, c2] : a2.mutableSourceEagerHydrationData.push(b2, c2);
+    };
+    exports3.runWithPriority = function(a2, b2) {
+      var c2 = hc;
+      try {
+        return hc = a2, b2();
+      } finally {
+        hc = c2;
+      }
+    };
+    exports3.shouldSuspend = function() {
+      return false;
+    };
+    exports3.unbatchedUpdates = function(a2, b2) {
+      var c2 = V2;
+      V2 &= -2;
+      V2 |= 8;
+      try {
+        return a2(b2);
+      } finally {
+        V2 = c2, V2 === 0 && (zg(), H2());
+      }
+    };
+    exports3.updateContainer = function(a2, b2, c2, d2) {
+      var e2 = b2.current, f2 = K2(), g2 = td(e2);
+      a:
+        if (c2) {
+          c2 = c2._reactInternals;
+          b: {
+            if (xa(c2) !== c2 || c2.tag !== 1)
+              throw Error(q2(170));
+            var h2 = c2;
+            do {
+              switch (h2.tag) {
+                case 3:
+                  h2 = h2.stateNode.context;
+                  break b;
+                case 1:
+                  if (E2(h2.type)) {
+                    h2 = h2.stateNode.__reactInternalMemoizedMergedChildContext;
+                    break b;
+                  }
+              }
+              h2 = h2.return;
+            } while (h2 !== null);
+            throw Error(q2(171));
+          }
+          if (c2.tag === 1) {
+            var k2 = c2.type;
+            if (E2(k2)) {
+              c2 = bc(c2, k2, h2);
+              break a;
+            }
+          }
+          c2 = h2;
+        } else
+          c2 = Xb;
+      b2.context === null ? b2.context = c2 : b2.pendingContext = c2;
+      b2 = kd(f2, g2);
+      b2.payload = {element: a2};
+      d2 = d2 === void 0 ? null : d2;
+      d2 !== null && (b2.callback = d2);
+      md(e2, b2);
+      ud(e2, g2, f2);
+      return g2;
+    };
+    return exports3;
+  };
+});
+
+// node_modules/react-konva/node_modules/react-reconciler/index.js
+var require_react_reconciler2 = __commonJS((exports2, module2) => {
+  "use strict";
+  if (true) {
+    module2.exports = require_react_reconciler_production_min2();
+  } else {
+    module2.exports = null;
+  }
+});
+
 // src/index.ts
 __markAsModule(exports);
 __export(exports, {
   BarChartDescription: () => import_chart_xkcd.BarChartDescription,
   ClockDescription: () => ClockDescription,
+  GolDescription: () => GolDescription,
   LineChartDescription: () => import_chart_xkcd.LineChartDescription,
   MapDescription: () => MapDescription,
   PieChartDescription: () => import_chart_xkcd.PieChartDescription,
@@ -22334,14 +26961,14 @@ Object3D.prototype = Object.assign(Object.create(EventDispatcher.prototype), {
       object.geometry = serialize2(meta.geometries, this.geometry);
       const parameters = this.geometry.parameters;
       if (parameters !== void 0 && parameters.shapes !== void 0) {
-        const shapes = parameters.shapes;
-        if (Array.isArray(shapes)) {
-          for (let i2 = 0, l2 = shapes.length; i2 < l2; i2++) {
-            const shape = shapes[i2];
+        const shapes2 = parameters.shapes;
+        if (Array.isArray(shapes2)) {
+          for (let i2 = 0, l2 = shapes2.length; i2 < l2; i2++) {
+            const shape = shapes2[i2];
             serialize2(meta.shapes, shape);
           }
         } else {
-          serialize2(meta.shapes, shapes);
+          serialize2(meta.shapes, shapes2);
         }
       }
     }
@@ -22382,7 +27009,7 @@ Object3D.prototype = Object.assign(Object.create(EventDispatcher.prototype), {
       const materials = extractFromCache(meta.materials);
       const textures = extractFromCache(meta.textures);
       const images = extractFromCache(meta.images);
-      const shapes = extractFromCache(meta.shapes);
+      const shapes2 = extractFromCache(meta.shapes);
       const skeletons = extractFromCache(meta.skeletons);
       const animations = extractFromCache(meta.animations);
       if (geometries.length > 0)
@@ -22393,8 +27020,8 @@ Object3D.prototype = Object.assign(Object.create(EventDispatcher.prototype), {
         output.textures = textures;
       if (images.length > 0)
         output.images = images;
-      if (shapes.length > 0)
-        output.shapes = shapes;
+      if (shapes2.length > 0)
+        output.shapes = shapes2;
       if (skeletons.length > 0)
         output.skeletons = skeletons;
       if (animations.length > 0)
@@ -31603,7 +36230,7 @@ function WebGLRenderer(parameters) {
   let _currentScissorTest = null;
   let _width = _canvas2.width;
   let _height = _canvas2.height;
-  let _pixelRatio = 1;
+  let _pixelRatio2 = 1;
   let _opaqueSort = null;
   let _transparentSort = null;
   const _viewport = new Vector4(0, 0, _width, _height);
@@ -31616,7 +36243,7 @@ function WebGLRenderer(parameters) {
   const _vector3 = new Vector3();
   const _emptyScene = {background: null, fog: null, environment: null, overrideMaterial: null, isScene: true};
   function getTargetPixelRatio() {
-    return _currentRenderTarget === null ? _pixelRatio : 1;
+    return _currentRenderTarget === null ? _pixelRatio2 : 1;
   }
   let _gl = _context2;
   function getContext(contextNames, contextAttributes) {
@@ -31675,8 +36302,8 @@ function WebGLRenderer(parameters) {
     extensions.init(capabilities);
     utils = new WebGLUtils(_gl, extensions, capabilities);
     state = new WebGLState(_gl, extensions, capabilities);
-    state.scissor(_currentScissor.copy(_scissor).multiplyScalar(_pixelRatio).floor());
-    state.viewport(_currentViewport.copy(_viewport).multiplyScalar(_pixelRatio).floor());
+    state.scissor(_currentScissor.copy(_scissor).multiplyScalar(_pixelRatio2).floor());
+    state.viewport(_currentViewport.copy(_viewport).multiplyScalar(_pixelRatio2).floor());
     info = new WebGLInfo(_gl);
     properties = new WebGLProperties();
     textures = new WebGLTextures(_gl, extensions, state, properties, capabilities, utils, info);
@@ -31724,12 +36351,12 @@ function WebGLRenderer(parameters) {
       extension.restoreContext();
   };
   this.getPixelRatio = function() {
-    return _pixelRatio;
+    return _pixelRatio2;
   };
   this.setPixelRatio = function(value) {
     if (value === void 0)
       return;
-    _pixelRatio = value;
+    _pixelRatio2 = value;
     this.setSize(_width, _height, false);
   };
   this.getSize = function(target) {
@@ -31746,8 +36373,8 @@ function WebGLRenderer(parameters) {
     }
     _width = width;
     _height = height;
-    _canvas2.width = Math.floor(width * _pixelRatio);
-    _canvas2.height = Math.floor(height * _pixelRatio);
+    _canvas2.width = Math.floor(width * _pixelRatio2);
+    _canvas2.height = Math.floor(height * _pixelRatio2);
     if (updateStyle !== false) {
       _canvas2.style.width = width + "px";
       _canvas2.style.height = height + "px";
@@ -31759,12 +36386,12 @@ function WebGLRenderer(parameters) {
       console.warn("WebGLRenderer: .getdrawingBufferSize() now requires a Vector2 as an argument");
       target = new Vector2();
     }
-    return target.set(_width * _pixelRatio, _height * _pixelRatio).floor();
+    return target.set(_width * _pixelRatio2, _height * _pixelRatio2).floor();
   };
   this.setDrawingBufferSize = function(width, height, pixelRatio) {
     _width = width;
     _height = height;
-    _pixelRatio = pixelRatio;
+    _pixelRatio2 = pixelRatio;
     _canvas2.width = Math.floor(width * pixelRatio);
     _canvas2.height = Math.floor(height * pixelRatio);
     this.setViewport(0, 0, width, height);
@@ -31785,7 +36412,7 @@ function WebGLRenderer(parameters) {
     } else {
       _viewport.set(x2, y2, width, height);
     }
-    state.viewport(_currentViewport.copy(_viewport).multiplyScalar(_pixelRatio).floor());
+    state.viewport(_currentViewport.copy(_viewport).multiplyScalar(_pixelRatio2).floor());
   };
   this.getScissor = function(target) {
     return target.copy(_scissor);
@@ -31796,7 +36423,7 @@ function WebGLRenderer(parameters) {
     } else {
       _scissor.set(x2, y2, width, height);
     }
-    state.scissor(_currentScissor.copy(_scissor).multiplyScalar(_pixelRatio).floor());
+    state.scissor(_currentScissor.copy(_scissor).multiplyScalar(_pixelRatio2).floor());
   };
   this.getScissorTest = function() {
     return _scissorTest;
@@ -32406,7 +37033,7 @@ function WebGLRenderer(parameters) {
       if (fog && material.fog) {
         materials.refreshFogUniforms(m_uniforms, fog);
       }
-      materials.refreshMaterialUniforms(m_uniforms, material, _pixelRatio, _height);
+      materials.refreshMaterialUniforms(m_uniforms, material, _pixelRatio2, _height);
       WebGLUniforms.upload(_gl, materialProperties.uniformsList, m_uniforms, textures);
     }
     if (material.isShaderMaterial && material.uniformsNeedUpdate === true) {
@@ -32478,8 +37105,8 @@ function WebGLRenderer(parameters) {
       _currentScissor.copy(renderTarget.scissor);
       _currentScissorTest = renderTarget.scissorTest;
     } else {
-      _currentViewport.copy(_viewport).multiplyScalar(_pixelRatio).floor();
-      _currentScissor.copy(_scissor).multiplyScalar(_pixelRatio).floor();
+      _currentViewport.copy(_viewport).multiplyScalar(_pixelRatio2).floor();
+      _currentScissor.copy(_scissor).multiplyScalar(_pixelRatio2).floor();
       _currentScissorTest = _scissorTest;
     }
     if (_currentFramebuffer !== framebuffer) {
@@ -34905,19 +39532,19 @@ function addContour(vertices, contour) {
   }
 }
 var ExtrudeGeometry = class extends BufferGeometry {
-  constructor(shapes, options2) {
+  constructor(shapes2, options2) {
     super();
     this.type = "ExtrudeGeometry";
     this.parameters = {
-      shapes,
+      shapes: shapes2,
       options: options2
     };
-    shapes = Array.isArray(shapes) ? shapes : [shapes];
+    shapes2 = Array.isArray(shapes2) ? shapes2 : [shapes2];
     const scope = this;
     const verticesArray = [];
     const uvArray = [];
-    for (let i2 = 0, l2 = shapes.length; i2 < l2; i2++) {
-      const shape = shapes[i2];
+    for (let i2 = 0, l2 = shapes2.length; i2 < l2; i2++) {
+      const shape = shapes2[i2];
       addShape(shape);
     }
     this.setAttribute("position", new Float32BufferAttribute(verticesArray, 3));
@@ -35218,9 +39845,9 @@ var ExtrudeGeometry = class extends BufferGeometry {
   }
   toJSON() {
     const data2 = BufferGeometry.prototype.toJSON.call(this);
-    const shapes = this.parameters.shapes;
+    const shapes2 = this.parameters.shapes;
     const options2 = this.parameters.options;
-    return toJSON(shapes, options2, data2);
+    return toJSON(shapes2, options2, data2);
   }
 };
 var WorldUVGenerator = {
@@ -35267,15 +39894,15 @@ var WorldUVGenerator = {
     }
   }
 };
-function toJSON(shapes, options2, data2) {
+function toJSON(shapes2, options2, data2) {
   data2.shapes = [];
-  if (Array.isArray(shapes)) {
-    for (let i2 = 0, l2 = shapes.length; i2 < l2; i2++) {
-      const shape = shapes[i2];
+  if (Array.isArray(shapes2)) {
+    for (let i2 = 0, l2 = shapes2.length; i2 < l2; i2++) {
+      const shape = shapes2[i2];
       data2.shapes.push(shape.uuid);
     }
   } else {
-    data2.shapes.push(shapes.uuid);
+    data2.shapes.push(shapes2.uuid);
   }
   if (options2.extrudePath !== void 0)
     data2.options.extrudePath = options2.extrudePath.toJSON();
@@ -35632,11 +40259,11 @@ var RingGeometry = class extends BufferGeometry {
   }
 };
 var ShapeGeometry = class extends BufferGeometry {
-  constructor(shapes, curveSegments = 12) {
+  constructor(shapes2, curveSegments = 12) {
     super();
     this.type = "ShapeGeometry";
     this.parameters = {
-      shapes,
+      shapes: shapes2,
       curveSegments
     };
     const indices = [];
@@ -35645,11 +40272,11 @@ var ShapeGeometry = class extends BufferGeometry {
     const uvs = [];
     let groupStart = 0;
     let groupCount = 0;
-    if (Array.isArray(shapes) === false) {
-      addShape(shapes);
+    if (Array.isArray(shapes2) === false) {
+      addShape(shapes2);
     } else {
-      for (let i2 = 0; i2 < shapes.length; i2++) {
-        addShape(shapes[i2]);
+      for (let i2 = 0; i2 < shapes2.length; i2++) {
+        addShape(shapes2[i2]);
         this.addGroup(groupStart, groupCount, i2);
         groupStart += groupCount;
         groupCount = 0;
@@ -35696,19 +40323,19 @@ var ShapeGeometry = class extends BufferGeometry {
   }
   toJSON() {
     const data2 = BufferGeometry.prototype.toJSON.call(this);
-    const shapes = this.parameters.shapes;
-    return toJSON$1(shapes, data2);
+    const shapes2 = this.parameters.shapes;
+    return toJSON$1(shapes2, data2);
   }
 };
-function toJSON$1(shapes, data2) {
+function toJSON$1(shapes2, data2) {
   data2.shapes = [];
-  if (Array.isArray(shapes)) {
-    for (let i2 = 0, l2 = shapes.length; i2 < l2; i2++) {
-      const shape = shapes[i2];
+  if (Array.isArray(shapes2)) {
+    for (let i2 = 0, l2 = shapes2.length; i2 < l2; i2++) {
+      const shape = shapes2[i2];
       data2.shapes.push(shape.uuid);
     }
   } else {
-    data2.shapes.push(shapes.uuid);
+    data2.shapes.push(shapes2.uuid);
   }
   return data2;
 }
@@ -35821,7 +40448,7 @@ var TextGeometry = class extends ExtrudeGeometry {
       console.error("THREE.TextGeometry: font parameter is not an instance of THREE.Font.");
       return new BufferGeometry();
     }
-    const shapes = font.generateShapes(text, parameters.size);
+    const shapes2 = font.generateShapes(text, parameters.size);
     parameters.depth = parameters.height !== void 0 ? parameters.height : 50;
     if (parameters.bevelThickness === void 0)
       parameters.bevelThickness = 10;
@@ -35829,7 +40456,7 @@ var TextGeometry = class extends ExtrudeGeometry {
       parameters.bevelSize = 8;
     if (parameters.bevelEnabled === void 0)
       parameters.bevelEnabled = false;
-    super(shapes, parameters);
+    super(shapes2, parameters);
     this.type = "TextGeometry";
   }
 };
@@ -40051,8 +44678,8 @@ var ObjectLoader = class extends Loader {
   }
   parse(json, onLoad) {
     const animations = this.parseAnimations(json.animations);
-    const shapes = this.parseShapes(json.shapes);
-    const geometries = this.parseGeometries(json.geometries, shapes);
+    const shapes2 = this.parseShapes(json.shapes);
+    const geometries = this.parseGeometries(json.geometries, shapes2);
     const images = this.parseImages(json.images, function() {
       if (onLoad !== void 0)
         onLoad(object);
@@ -40076,14 +44703,14 @@ var ObjectLoader = class extends Loader {
     return object;
   }
   parseShapes(json) {
-    const shapes = {};
+    const shapes2 = {};
     if (json !== void 0) {
       for (let i2 = 0, l2 = json.length; i2 < l2; i2++) {
         const shape = new Shape().fromJSON(json[i2]);
-        shapes[shape.uuid] = shape;
+        shapes2[shape.uuid] = shape;
       }
     }
-    return shapes;
+    return shapes2;
   }
   parseSkeletons(json, object) {
     const skeletons = {};
@@ -40100,7 +44727,7 @@ var ObjectLoader = class extends Loader {
     }
     return skeletons;
   }
-  parseGeometries(json, shapes) {
+  parseGeometries(json, shapes2) {
     const geometries = {};
     let geometryShapes;
     if (json !== void 0) {
@@ -40171,7 +44798,7 @@ var ObjectLoader = class extends Loader {
           case "ShapeBufferGeometry":
             geometryShapes = [];
             for (let j2 = 0, jl = data2.shapes.length; j2 < jl; j2++) {
-              const shape = shapes[data2.shapes[j2]];
+              const shape = shapes2[data2.shapes[j2]];
               geometryShapes.push(shape);
             }
             geometry = new Geometries[data2.type](geometryShapes, data2.curveSegments);
@@ -40180,7 +44807,7 @@ var ObjectLoader = class extends Loader {
           case "ExtrudeBufferGeometry":
             geometryShapes = [];
             for (let j2 = 0, jl = data2.shapes.length; j2 < jl; j2++) {
-              const shape = shapes[data2.shapes[j2]];
+              const shape = shapes2[data2.shapes[j2]];
               geometryShapes.push(shape);
             }
             const extrudePath = data2.options.extrudePath;
@@ -40717,14 +45344,14 @@ var ShapePath = class {
   }
   toShapes(isCCW, noHoles) {
     function toShapesNoHoles(inSubpaths) {
-      const shapes2 = [];
+      const shapes3 = [];
       for (let i2 = 0, l2 = inSubpaths.length; i2 < l2; i2++) {
         const tmpPath2 = inSubpaths[i2];
         const tmpShape2 = new Shape();
         tmpShape2.curves = tmpPath2.curves;
-        shapes2.push(tmpShape2);
+        shapes3.push(tmpShape2);
       }
-      return shapes2;
+      return shapes3;
     }
     function isPointInsidePolygon(inPt, inPolygon) {
       const polyLen = inPolygon.length;
@@ -40770,13 +45397,13 @@ var ShapePath = class {
     if (noHoles === true)
       return toShapesNoHoles(subPaths);
     let solid, tmpPath, tmpShape;
-    const shapes = [];
+    const shapes2 = [];
     if (subPaths.length === 1) {
       tmpPath = subPaths[0];
       tmpShape = new Shape();
       tmpShape.curves = tmpPath.curves;
-      shapes.push(tmpShape);
-      return shapes;
+      shapes2.push(tmpShape);
+      return shapes2;
     }
     let holesFirst = !isClockWise(subPaths[0].getPoints());
     holesFirst = isCCW ? !holesFirst : holesFirst;
@@ -40842,13 +45469,13 @@ var ShapePath = class {
     let tmpHoles;
     for (let i2 = 0, il = newShapes.length; i2 < il; i2++) {
       tmpShape = newShapes[i2].s;
-      shapes.push(tmpShape);
+      shapes2.push(tmpShape);
       tmpHoles = newShapeHoles[i2];
       for (let j2 = 0, jl = tmpHoles.length; j2 < jl; j2++) {
         tmpShape.holes.push(tmpHoles[j2].h);
       }
     }
-    return shapes;
+    return shapes2;
   }
 };
 var Font = class {
@@ -40857,12 +45484,12 @@ var Font = class {
     this.data = data2;
   }
   generateShapes(text, size = 100) {
-    const shapes = [];
+    const shapes2 = [];
     const paths = createPaths(text, size, this.data);
     for (let p2 = 0, pl = paths.length; p2 < pl; p2++) {
-      Array.prototype.push.apply(shapes, paths[p2].toShapes());
+      Array.prototype.push.apply(shapes2, paths[p2].toShapes());
     }
-    return shapes;
+    return shapes2;
   }
 };
 function createPaths(text, size, data2) {
@@ -42248,15 +46875,15 @@ var AnimationAction = class {
     return this.warp(this._effectiveTimeScale, 0, duration);
   }
   warp(startTimeScale, endTimeScale, duration) {
-    const mixer = this._mixer, now3 = mixer.time, timeScale = this.timeScale;
+    const mixer = this._mixer, now4 = mixer.time, timeScale = this.timeScale;
     let interpolant = this._timeScaleInterpolant;
     if (interpolant === null) {
       interpolant = mixer._lendControlInterpolant();
       this._timeScaleInterpolant = interpolant;
     }
     const times = interpolant.parameterPositions, values = interpolant.sampleValues;
-    times[0] = now3;
-    times[1] = now3 + duration;
+    times[0] = now4;
+    times[1] = now4 + duration;
     values[0] = startTimeScale / timeScale;
     values[1] = endTimeScale / timeScale;
     return this;
@@ -42459,16 +47086,16 @@ var AnimationAction = class {
     }
   }
   _scheduleFading(duration, weightNow, weightThen) {
-    const mixer = this._mixer, now3 = mixer.time;
+    const mixer = this._mixer, now4 = mixer.time;
     let interpolant = this._weightInterpolant;
     if (interpolant === null) {
       interpolant = mixer._lendControlInterpolant();
       this._weightInterpolant = interpolant;
     }
     const times = interpolant.parameterPositions, values = interpolant.sampleValues;
-    times[0] = now3;
+    times[0] = now4;
     values[0] = weightNow;
-    times[1] = now3 + duration;
+    times[1] = now4 + duration;
     values[1] = weightThen;
     return this;
   }
@@ -46747,7 +51374,7 @@ var useCanvas = (props) => {
         captured: false
       };
       for (const hit of intersections) {
-        const setPointerCapture = (id) => {
+        const setPointerCapture2 = (id) => {
           if (!localState.captured) {
             localState.captured = true;
             state.current.captured = [];
@@ -46778,12 +51405,12 @@ var useCanvas = (props) => {
           },
           target: {
             ...event.target,
-            setPointerCapture,
+            setPointerCapture: setPointerCapture2,
             releasePointerCapture
           },
           currentTarget: {
             ...event.currentTarget,
-            setPointerCapture,
+            setPointerCapture: setPointerCapture2,
             releasePointerCapture
           },
           sourceEvent: event
@@ -46871,7 +51498,7 @@ var useCanvas = (props) => {
       onLostPointerCapture: (e2) => (state.current.captured = void 0, handlePointerCancel(e2))
     };
   }, [handlePointer, intersect, handlePointerCancel, handlePointerMove]);
-  const Canvas3 = (0, import_react2.useCallback)(function Canvas4(props2) {
+  const Canvas4 = (0, import_react2.useCallback)(function Canvas5(props2) {
     const activate = () => setReady(true);
     (0, import_react2.useLayoutEffect)(() => void gl.compile(defaultScene, defaultCam), []);
     (0, import_react2.useEffect)(() => {
@@ -46884,7 +51511,7 @@ var useCanvas = (props) => {
     return props2.children;
   }, []);
   (0, import_react2.useLayoutEffect)(() => {
-    render(/* @__PURE__ */ (0, import_react2.createElement)(Canvas3, null, /* @__PURE__ */ (0, import_react2.createElement)(stateContext.Provider, {
+    render(/* @__PURE__ */ (0, import_react2.createElement)(Canvas4, null, /* @__PURE__ */ (0, import_react2.createElement)(stateContext.Provider, {
       value: sharedState.current
     }, typeof children === "function" ? children(state.current) : children)), defaultScene, state);
   }, [ready, children, sharedState.current]);
@@ -53680,10 +58307,10 @@ function MultiValueRemove(_ref5) {
 }
 var MultiValue = function MultiValue2(props) {
   var children = props.children, className = props.className, components2 = props.components, cx = props.cx, data2 = props.data, getStyles3 = props.getStyles, innerProps = props.innerProps, isDisabled = props.isDisabled, removeProps = props.removeProps, selectProps = props.selectProps;
-  var Container = components2.Container, Label = components2.Label, Remove = components2.Remove;
+  var Container2 = components2.Container, Label2 = components2.Label, Remove = components2.Remove;
   return jsx(ClassNames, null, function(_ref6) {
     var css7 = _ref6.css, emotionCx = _ref6.cx;
-    return jsx(Container, {
+    return jsx(Container2, {
       data: data2,
       innerProps: _objectSpread2({
         className: emotionCx(css7(getStyles3("multiValue", props)), cx({
@@ -53692,7 +58319,7 @@ var MultiValue = function MultiValue2(props) {
         }, className))
       }, innerProps),
       selectProps
-    }, jsx(Label, {
+    }, jsx(Label2, {
       data: data2,
       innerProps: {
         className: emotionCx(css7(getStyles3("multiValueLabel", props)), cx({
@@ -55738,7 +60365,7 @@ var Select = /* @__PURE__ */ function(_Component) {
     key: "renderMenu",
     value: function renderMenu() {
       var _this4 = this;
-      var _this$getComponents7 = this.getComponents(), Group4 = _this$getComponents7.Group, GroupHeading3 = _this$getComponents7.GroupHeading, Menu3 = _this$getComponents7.Menu, MenuList3 = _this$getComponents7.MenuList, MenuPortal2 = _this$getComponents7.MenuPortal, LoadingMessage3 = _this$getComponents7.LoadingMessage, NoOptionsMessage3 = _this$getComponents7.NoOptionsMessage, Option3 = _this$getComponents7.Option;
+      var _this$getComponents7 = this.getComponents(), Group5 = _this$getComponents7.Group, GroupHeading3 = _this$getComponents7.GroupHeading, Menu3 = _this$getComponents7.Menu, MenuList3 = _this$getComponents7.MenuList, MenuPortal2 = _this$getComponents7.MenuPortal, LoadingMessage3 = _this$getComponents7.LoadingMessage, NoOptionsMessage3 = _this$getComponents7.NoOptionsMessage, Option3 = _this$getComponents7.Option;
       var commonProps = this.commonProps;
       var focusedOption = this.state.focusedOption;
       var _this$props12 = this.props, captureMenuScroll = _this$props12.captureMenuScroll, inputValue = _this$props12.inputValue, isLoading = _this$props12.isLoading, loadingMessage2 = _this$props12.loadingMessage, minMenuHeight = _this$props12.minMenuHeight, maxMenuHeight = _this$props12.maxMenuHeight, menuIsOpen = _this$props12.menuIsOpen, menuPlacement = _this$props12.menuPlacement, menuPosition = _this$props12.menuPosition, menuPortalTarget = _this$props12.menuPortalTarget, menuShouldBlockScroll = _this$props12.menuShouldBlockScroll, menuShouldScrollIntoView = _this$props12.menuShouldScrollIntoView, noOptionsMessage2 = _this$props12.noOptionsMessage, onMenuScrollToTop = _this$props12.onMenuScrollToTop, onMenuScrollToBottom = _this$props12.onMenuScrollToBottom;
@@ -55781,7 +60408,7 @@ var Select = /* @__PURE__ */ function(_Component) {
             var data2 = item.data, options2 = item.options, groupIndex = item.index;
             var groupId = "".concat(_this4.getElementId("group"), "-").concat(groupIndex);
             var headingId = "".concat(groupId, "-heading");
-            return /* @__PURE__ */ import_react14.default.createElement(Group4, _extends({}, commonProps, {
+            return /* @__PURE__ */ import_react14.default.createElement(Group5, _extends({}, commonProps, {
               key: groupId,
               data: data2,
               options: options2,
@@ -59919,8 +64546,8 @@ var MapPrototype = {
   _map: void 0,
   _tileLayer: void 0,
   _marker: void 0,
-  mount(container, insertBefore2) {
-    super.mount(container, insertBefore2);
+  mount(container, insertBefore3) {
+    super.mount(container, insertBefore3);
     this._map = import_leaflet.default.map(this._element, {
       attributionControl: true,
       zoomControl: true,
@@ -60072,6 +64699,10456 @@ var MapDescription = {
   }
 };
 
+// src/gol.tsx
+var import_react21 = __toModule(require("react"));
+
+// node_modules/konva/lib/Global.js
+var PI_OVER_180 = Math.PI / 180;
+function detectBrowser() {
+  return typeof window !== "undefined" && ({}.toString.call(window) === "[object Window]" || {}.toString.call(window) === "[object global]");
+}
+var glob = typeof global !== "undefined" ? global : typeof window !== "undefined" ? window : typeof WorkerGlobalScope !== "undefined" ? self : {};
+var Konva = {
+  _global: glob,
+  version: "8.0.2",
+  isBrowser: detectBrowser(),
+  isUnminified: /param/.test(function(param) {
+  }.toString()),
+  dblClickWindow: 400,
+  getAngle(angle) {
+    return Konva.angleDeg ? angle * PI_OVER_180 : angle;
+  },
+  enableTrace: false,
+  pointerEventsEnabled: true,
+  autoDrawEnabled: true,
+  hitOnDragEnabled: false,
+  capturePointerEventsEnabled: false,
+  _mouseListenClick: false,
+  _touchListenClick: false,
+  _pointerListenClick: false,
+  _mouseInDblClickWindow: false,
+  _touchInDblClickWindow: false,
+  _pointerInDblClickWindow: false,
+  pixelRatio: typeof window !== "undefined" && window.devicePixelRatio || 1,
+  dragDistance: 3,
+  angleDeg: true,
+  showWarnings: true,
+  dragButtons: [0, 1],
+  isDragging() {
+    return Konva["DD"].isDragging;
+  },
+  isDragReady() {
+    return !!Konva["DD"].node;
+  },
+  document: glob.document,
+  _injectGlobal(Konva4) {
+    glob.Konva = Konva4;
+  }
+};
+var _registerNode = (NodeClass) => {
+  Konva[NodeClass.prototype.getClassName()] = NodeClass;
+};
+Konva._injectGlobal(Konva);
+
+// node_modules/konva/lib/Util.js
+var Transform = class {
+  constructor(m2 = [1, 0, 0, 1, 0, 0]) {
+    this.dirty = false;
+    this.m = m2 && m2.slice() || [1, 0, 0, 1, 0, 0];
+  }
+  reset() {
+    this.m[0] = 1;
+    this.m[1] = 0;
+    this.m[2] = 0;
+    this.m[3] = 1;
+    this.m[4] = 0;
+    this.m[5] = 0;
+  }
+  copy() {
+    return new Transform(this.m);
+  }
+  copyInto(tr) {
+    tr.m[0] = this.m[0];
+    tr.m[1] = this.m[1];
+    tr.m[2] = this.m[2];
+    tr.m[3] = this.m[3];
+    tr.m[4] = this.m[4];
+    tr.m[5] = this.m[5];
+  }
+  point(point) {
+    var m2 = this.m;
+    return {
+      x: m2[0] * point.x + m2[2] * point.y + m2[4],
+      y: m2[1] * point.x + m2[3] * point.y + m2[5]
+    };
+  }
+  translate(x2, y2) {
+    this.m[4] += this.m[0] * x2 + this.m[2] * y2;
+    this.m[5] += this.m[1] * x2 + this.m[3] * y2;
+    return this;
+  }
+  scale(sx, sy) {
+    this.m[0] *= sx;
+    this.m[1] *= sx;
+    this.m[2] *= sy;
+    this.m[3] *= sy;
+    return this;
+  }
+  rotate(rad) {
+    var c2 = Math.cos(rad);
+    var s2 = Math.sin(rad);
+    var m11 = this.m[0] * c2 + this.m[2] * s2;
+    var m12 = this.m[1] * c2 + this.m[3] * s2;
+    var m21 = this.m[0] * -s2 + this.m[2] * c2;
+    var m22 = this.m[1] * -s2 + this.m[3] * c2;
+    this.m[0] = m11;
+    this.m[1] = m12;
+    this.m[2] = m21;
+    this.m[3] = m22;
+    return this;
+  }
+  getTranslation() {
+    return {
+      x: this.m[4],
+      y: this.m[5]
+    };
+  }
+  skew(sx, sy) {
+    var m11 = this.m[0] + this.m[2] * sy;
+    var m12 = this.m[1] + this.m[3] * sy;
+    var m21 = this.m[2] + this.m[0] * sx;
+    var m22 = this.m[3] + this.m[1] * sx;
+    this.m[0] = m11;
+    this.m[1] = m12;
+    this.m[2] = m21;
+    this.m[3] = m22;
+    return this;
+  }
+  multiply(matrix) {
+    var m11 = this.m[0] * matrix.m[0] + this.m[2] * matrix.m[1];
+    var m12 = this.m[1] * matrix.m[0] + this.m[3] * matrix.m[1];
+    var m21 = this.m[0] * matrix.m[2] + this.m[2] * matrix.m[3];
+    var m22 = this.m[1] * matrix.m[2] + this.m[3] * matrix.m[3];
+    var dx = this.m[0] * matrix.m[4] + this.m[2] * matrix.m[5] + this.m[4];
+    var dy = this.m[1] * matrix.m[4] + this.m[3] * matrix.m[5] + this.m[5];
+    this.m[0] = m11;
+    this.m[1] = m12;
+    this.m[2] = m21;
+    this.m[3] = m22;
+    this.m[4] = dx;
+    this.m[5] = dy;
+    return this;
+  }
+  invert() {
+    var d2 = 1 / (this.m[0] * this.m[3] - this.m[1] * this.m[2]);
+    var m0 = this.m[3] * d2;
+    var m1 = -this.m[1] * d2;
+    var m2 = -this.m[2] * d2;
+    var m3 = this.m[0] * d2;
+    var m4 = d2 * (this.m[2] * this.m[5] - this.m[3] * this.m[4]);
+    var m5 = d2 * (this.m[1] * this.m[4] - this.m[0] * this.m[5]);
+    this.m[0] = m0;
+    this.m[1] = m1;
+    this.m[2] = m2;
+    this.m[3] = m3;
+    this.m[4] = m4;
+    this.m[5] = m5;
+    return this;
+  }
+  getMatrix() {
+    return this.m;
+  }
+  setAbsolutePosition(x2, y2) {
+    var m0 = this.m[0], m1 = this.m[1], m2 = this.m[2], m3 = this.m[3], m4 = this.m[4], m5 = this.m[5], yt2 = (m0 * (y2 - m5) - m1 * (x2 - m4)) / (m0 * m3 - m1 * m2), xt2 = (x2 - m4 - m2 * yt2) / m0;
+    return this.translate(xt2, yt2);
+  }
+  decompose() {
+    var a2 = this.m[0];
+    var b2 = this.m[1];
+    var c2 = this.m[2];
+    var d2 = this.m[3];
+    var e2 = this.m[4];
+    var f2 = this.m[5];
+    var delta = a2 * d2 - b2 * c2;
+    let result = {
+      x: e2,
+      y: f2,
+      rotation: 0,
+      scaleX: 0,
+      scaleY: 0,
+      skewX: 0,
+      skewY: 0
+    };
+    if (a2 != 0 || b2 != 0) {
+      var r2 = Math.sqrt(a2 * a2 + b2 * b2);
+      result.rotation = b2 > 0 ? Math.acos(a2 / r2) : -Math.acos(a2 / r2);
+      result.scaleX = r2;
+      result.scaleY = delta / r2;
+      result.skewX = (a2 * c2 + b2 * d2) / delta;
+      result.skewY = 0;
+    } else if (c2 != 0 || d2 != 0) {
+      var s2 = Math.sqrt(c2 * c2 + d2 * d2);
+      result.rotation = Math.PI / 2 - (d2 > 0 ? Math.acos(-c2 / s2) : -Math.acos(c2 / s2));
+      result.scaleX = delta / s2;
+      result.scaleY = s2;
+      result.skewX = 0;
+      result.skewY = (a2 * c2 + b2 * d2) / delta;
+    } else {
+    }
+    result.rotation = Util._getRotation(result.rotation);
+    return result;
+  }
+};
+var OBJECT_ARRAY = "[object Array]";
+var OBJECT_NUMBER = "[object Number]";
+var OBJECT_STRING = "[object String]";
+var OBJECT_BOOLEAN = "[object Boolean]";
+var PI_OVER_DEG180 = Math.PI / 180;
+var DEG180_OVER_PI = 180 / Math.PI;
+var HASH = "#";
+var EMPTY_STRING = "";
+var ZERO = "0";
+var KONVA_WARNING = "Konva warning: ";
+var KONVA_ERROR = "Konva error: ";
+var RGB_PAREN = "rgb(";
+var COLORS = {
+  aliceblue: [240, 248, 255],
+  antiquewhite: [250, 235, 215],
+  aqua: [0, 255, 255],
+  aquamarine: [127, 255, 212],
+  azure: [240, 255, 255],
+  beige: [245, 245, 220],
+  bisque: [255, 228, 196],
+  black: [0, 0, 0],
+  blanchedalmond: [255, 235, 205],
+  blue: [0, 0, 255],
+  blueviolet: [138, 43, 226],
+  brown: [165, 42, 42],
+  burlywood: [222, 184, 135],
+  cadetblue: [95, 158, 160],
+  chartreuse: [127, 255, 0],
+  chocolate: [210, 105, 30],
+  coral: [255, 127, 80],
+  cornflowerblue: [100, 149, 237],
+  cornsilk: [255, 248, 220],
+  crimson: [220, 20, 60],
+  cyan: [0, 255, 255],
+  darkblue: [0, 0, 139],
+  darkcyan: [0, 139, 139],
+  darkgoldenrod: [184, 132, 11],
+  darkgray: [169, 169, 169],
+  darkgreen: [0, 100, 0],
+  darkgrey: [169, 169, 169],
+  darkkhaki: [189, 183, 107],
+  darkmagenta: [139, 0, 139],
+  darkolivegreen: [85, 107, 47],
+  darkorange: [255, 140, 0],
+  darkorchid: [153, 50, 204],
+  darkred: [139, 0, 0],
+  darksalmon: [233, 150, 122],
+  darkseagreen: [143, 188, 143],
+  darkslateblue: [72, 61, 139],
+  darkslategray: [47, 79, 79],
+  darkslategrey: [47, 79, 79],
+  darkturquoise: [0, 206, 209],
+  darkviolet: [148, 0, 211],
+  deeppink: [255, 20, 147],
+  deepskyblue: [0, 191, 255],
+  dimgray: [105, 105, 105],
+  dimgrey: [105, 105, 105],
+  dodgerblue: [30, 144, 255],
+  firebrick: [178, 34, 34],
+  floralwhite: [255, 255, 240],
+  forestgreen: [34, 139, 34],
+  fuchsia: [255, 0, 255],
+  gainsboro: [220, 220, 220],
+  ghostwhite: [248, 248, 255],
+  gold: [255, 215, 0],
+  goldenrod: [218, 165, 32],
+  gray: [128, 128, 128],
+  green: [0, 128, 0],
+  greenyellow: [173, 255, 47],
+  grey: [128, 128, 128],
+  honeydew: [240, 255, 240],
+  hotpink: [255, 105, 180],
+  indianred: [205, 92, 92],
+  indigo: [75, 0, 130],
+  ivory: [255, 255, 240],
+  khaki: [240, 230, 140],
+  lavender: [230, 230, 250],
+  lavenderblush: [255, 240, 245],
+  lawngreen: [124, 252, 0],
+  lemonchiffon: [255, 250, 205],
+  lightblue: [173, 216, 230],
+  lightcoral: [240, 128, 128],
+  lightcyan: [224, 255, 255],
+  lightgoldenrodyellow: [250, 250, 210],
+  lightgray: [211, 211, 211],
+  lightgreen: [144, 238, 144],
+  lightgrey: [211, 211, 211],
+  lightpink: [255, 182, 193],
+  lightsalmon: [255, 160, 122],
+  lightseagreen: [32, 178, 170],
+  lightskyblue: [135, 206, 250],
+  lightslategray: [119, 136, 153],
+  lightslategrey: [119, 136, 153],
+  lightsteelblue: [176, 196, 222],
+  lightyellow: [255, 255, 224],
+  lime: [0, 255, 0],
+  limegreen: [50, 205, 50],
+  linen: [250, 240, 230],
+  magenta: [255, 0, 255],
+  maroon: [128, 0, 0],
+  mediumaquamarine: [102, 205, 170],
+  mediumblue: [0, 0, 205],
+  mediumorchid: [186, 85, 211],
+  mediumpurple: [147, 112, 219],
+  mediumseagreen: [60, 179, 113],
+  mediumslateblue: [123, 104, 238],
+  mediumspringgreen: [0, 250, 154],
+  mediumturquoise: [72, 209, 204],
+  mediumvioletred: [199, 21, 133],
+  midnightblue: [25, 25, 112],
+  mintcream: [245, 255, 250],
+  mistyrose: [255, 228, 225],
+  moccasin: [255, 228, 181],
+  navajowhite: [255, 222, 173],
+  navy: [0, 0, 128],
+  oldlace: [253, 245, 230],
+  olive: [128, 128, 0],
+  olivedrab: [107, 142, 35],
+  orange: [255, 165, 0],
+  orangered: [255, 69, 0],
+  orchid: [218, 112, 214],
+  palegoldenrod: [238, 232, 170],
+  palegreen: [152, 251, 152],
+  paleturquoise: [175, 238, 238],
+  palevioletred: [219, 112, 147],
+  papayawhip: [255, 239, 213],
+  peachpuff: [255, 218, 185],
+  peru: [205, 133, 63],
+  pink: [255, 192, 203],
+  plum: [221, 160, 203],
+  powderblue: [176, 224, 230],
+  purple: [128, 0, 128],
+  rebeccapurple: [102, 51, 153],
+  red: [255, 0, 0],
+  rosybrown: [188, 143, 143],
+  royalblue: [65, 105, 225],
+  saddlebrown: [139, 69, 19],
+  salmon: [250, 128, 114],
+  sandybrown: [244, 164, 96],
+  seagreen: [46, 139, 87],
+  seashell: [255, 245, 238],
+  sienna: [160, 82, 45],
+  silver: [192, 192, 192],
+  skyblue: [135, 206, 235],
+  slateblue: [106, 90, 205],
+  slategray: [119, 128, 144],
+  slategrey: [119, 128, 144],
+  snow: [255, 255, 250],
+  springgreen: [0, 255, 127],
+  steelblue: [70, 130, 180],
+  tan: [210, 180, 140],
+  teal: [0, 128, 128],
+  thistle: [216, 191, 216],
+  transparent: [255, 255, 255, 0],
+  tomato: [255, 99, 71],
+  turquoise: [64, 224, 208],
+  violet: [238, 130, 238],
+  wheat: [245, 222, 179],
+  white: [255, 255, 255],
+  whitesmoke: [245, 245, 245],
+  yellow: [255, 255, 0],
+  yellowgreen: [154, 205, 5]
+};
+var RGB_REGEX = /rgb\((\d{1,3}),(\d{1,3}),(\d{1,3})\)/;
+var animQueue = [];
+var req = typeof requestAnimationFrame !== "undefined" && requestAnimationFrame || function(f2) {
+  setTimeout(f2, 60);
+};
+var Util = {
+  _isElement(obj) {
+    return !!(obj && obj.nodeType == 1);
+  },
+  _isFunction(obj) {
+    return !!(obj && obj.constructor && obj.call && obj.apply);
+  },
+  _isPlainObject(obj) {
+    return !!obj && obj.constructor === Object;
+  },
+  _isArray(obj) {
+    return Object.prototype.toString.call(obj) === OBJECT_ARRAY;
+  },
+  _isNumber(obj) {
+    return Object.prototype.toString.call(obj) === OBJECT_NUMBER && !isNaN(obj) && isFinite(obj);
+  },
+  _isString(obj) {
+    return Object.prototype.toString.call(obj) === OBJECT_STRING;
+  },
+  _isBoolean(obj) {
+    return Object.prototype.toString.call(obj) === OBJECT_BOOLEAN;
+  },
+  isObject(val) {
+    return val instanceof Object;
+  },
+  isValidSelector(selector) {
+    if (typeof selector !== "string") {
+      return false;
+    }
+    var firstChar = selector[0];
+    return firstChar === "#" || firstChar === "." || firstChar === firstChar.toUpperCase();
+  },
+  _sign(number) {
+    if (number === 0) {
+      return 1;
+    }
+    if (number > 0) {
+      return 1;
+    } else {
+      return -1;
+    }
+  },
+  requestAnimFrame(callback) {
+    animQueue.push(callback);
+    if (animQueue.length === 1) {
+      req(function() {
+        const queue = animQueue;
+        animQueue = [];
+        queue.forEach(function(cb) {
+          cb();
+        });
+      });
+    }
+  },
+  createCanvasElement() {
+    var canvas = document.createElement("canvas");
+    try {
+      canvas.style = canvas.style || {};
+    } catch (e2) {
+    }
+    return canvas;
+  },
+  createImageElement() {
+    return document.createElement("img");
+  },
+  _isInDocument(el2) {
+    while (el2 = el2.parentNode) {
+      if (el2 == document) {
+        return true;
+      }
+    }
+    return false;
+  },
+  _urlToImage(url, callback) {
+    var imageObj = Util.createImageElement();
+    imageObj.onload = function() {
+      callback(imageObj);
+    };
+    imageObj.src = url;
+  },
+  _rgbToHex(r2, g2, b2) {
+    return ((1 << 24) + (r2 << 16) + (g2 << 8) + b2).toString(16).slice(1);
+  },
+  _hexToRgb(hex) {
+    hex = hex.replace(HASH, EMPTY_STRING);
+    var bigint = parseInt(hex, 16);
+    return {
+      r: bigint >> 16 & 255,
+      g: bigint >> 8 & 255,
+      b: bigint & 255
+    };
+  },
+  getRandomColor() {
+    var randColor = (Math.random() * 16777215 << 0).toString(16);
+    while (randColor.length < 6) {
+      randColor = ZERO + randColor;
+    }
+    return HASH + randColor;
+  },
+  getRGB(color) {
+    var rgb;
+    if (color in COLORS) {
+      rgb = COLORS[color];
+      return {
+        r: rgb[0],
+        g: rgb[1],
+        b: rgb[2]
+      };
+    } else if (color[0] === HASH) {
+      return this._hexToRgb(color.substring(1));
+    } else if (color.substr(0, 4) === RGB_PAREN) {
+      rgb = RGB_REGEX.exec(color.replace(/ /g, ""));
+      return {
+        r: parseInt(rgb[1], 10),
+        g: parseInt(rgb[2], 10),
+        b: parseInt(rgb[3], 10)
+      };
+    } else {
+      return {
+        r: 0,
+        g: 0,
+        b: 0
+      };
+    }
+  },
+  colorToRGBA(str) {
+    str = str || "black";
+    return Util._namedColorToRBA(str) || Util._hex3ColorToRGBA(str) || Util._hex6ColorToRGBA(str) || Util._rgbColorToRGBA(str) || Util._rgbaColorToRGBA(str) || Util._hslColorToRGBA(str);
+  },
+  _namedColorToRBA(str) {
+    var c2 = COLORS[str.toLowerCase()];
+    if (!c2) {
+      return null;
+    }
+    return {
+      r: c2[0],
+      g: c2[1],
+      b: c2[2],
+      a: 1
+    };
+  },
+  _rgbColorToRGBA(str) {
+    if (str.indexOf("rgb(") === 0) {
+      str = str.match(/rgb\(([^)]+)\)/)[1];
+      var parts = str.split(/ *, */).map(Number);
+      return {
+        r: parts[0],
+        g: parts[1],
+        b: parts[2],
+        a: 1
+      };
+    }
+  },
+  _rgbaColorToRGBA(str) {
+    if (str.indexOf("rgba(") === 0) {
+      str = str.match(/rgba\(([^)]+)\)/)[1];
+      var parts = str.split(/ *, */).map(Number);
+      return {
+        r: parts[0],
+        g: parts[1],
+        b: parts[2],
+        a: parts[3]
+      };
+    }
+  },
+  _hex6ColorToRGBA(str) {
+    if (str[0] === "#" && str.length === 7) {
+      return {
+        r: parseInt(str.slice(1, 3), 16),
+        g: parseInt(str.slice(3, 5), 16),
+        b: parseInt(str.slice(5, 7), 16),
+        a: 1
+      };
+    }
+  },
+  _hex3ColorToRGBA(str) {
+    if (str[0] === "#" && str.length === 4) {
+      return {
+        r: parseInt(str[1] + str[1], 16),
+        g: parseInt(str[2] + str[2], 16),
+        b: parseInt(str[3] + str[3], 16),
+        a: 1
+      };
+    }
+  },
+  _hslColorToRGBA(str) {
+    if (/hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)/g.test(str)) {
+      const [_2, ...hsl] = /hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)/g.exec(str);
+      const h2 = Number(hsl[0]) / 360;
+      const s2 = Number(hsl[1]) / 100;
+      const l2 = Number(hsl[2]) / 100;
+      let t2;
+      let t3;
+      let val;
+      if (s2 === 0) {
+        val = l2 * 255;
+        return {
+          r: Math.round(val),
+          g: Math.round(val),
+          b: Math.round(val),
+          a: 1
+        };
+      }
+      if (l2 < 0.5) {
+        t2 = l2 * (1 + s2);
+      } else {
+        t2 = l2 + s2 - l2 * s2;
+      }
+      const t1 = 2 * l2 - t2;
+      const rgb = [0, 0, 0];
+      for (let i2 = 0; i2 < 3; i2++) {
+        t3 = h2 + 1 / 3 * -(i2 - 1);
+        if (t3 < 0) {
+          t3++;
+        }
+        if (t3 > 1) {
+          t3--;
+        }
+        if (6 * t3 < 1) {
+          val = t1 + (t2 - t1) * 6 * t3;
+        } else if (2 * t3 < 1) {
+          val = t2;
+        } else if (3 * t3 < 2) {
+          val = t1 + (t2 - t1) * (2 / 3 - t3) * 6;
+        } else {
+          val = t1;
+        }
+        rgb[i2] = val * 255;
+      }
+      return {
+        r: Math.round(rgb[0]),
+        g: Math.round(rgb[1]),
+        b: Math.round(rgb[2]),
+        a: 1
+      };
+    }
+  },
+  haveIntersection(r1, r2) {
+    return !(r2.x > r1.x + r1.width || r2.x + r2.width < r1.x || r2.y > r1.y + r1.height || r2.y + r2.height < r1.y);
+  },
+  cloneObject(obj) {
+    var retObj = {};
+    for (var key in obj) {
+      if (this._isPlainObject(obj[key])) {
+        retObj[key] = this.cloneObject(obj[key]);
+      } else if (this._isArray(obj[key])) {
+        retObj[key] = this.cloneArray(obj[key]);
+      } else {
+        retObj[key] = obj[key];
+      }
+    }
+    return retObj;
+  },
+  cloneArray(arr) {
+    return arr.slice(0);
+  },
+  degToRad(deg) {
+    return deg * PI_OVER_DEG180;
+  },
+  radToDeg(rad) {
+    return rad * DEG180_OVER_PI;
+  },
+  _degToRad(deg) {
+    Util.warn("Util._degToRad is removed. Please use public Util.degToRad instead.");
+    return Util.degToRad(deg);
+  },
+  _radToDeg(rad) {
+    Util.warn("Util._radToDeg is removed. Please use public Util.radToDeg instead.");
+    return Util.radToDeg(rad);
+  },
+  _getRotation(radians) {
+    return Konva.angleDeg ? Util.radToDeg(radians) : radians;
+  },
+  _capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  },
+  throw(str) {
+    throw new Error(KONVA_ERROR + str);
+  },
+  error(str) {
+    console.error(KONVA_ERROR + str);
+  },
+  warn(str) {
+    if (!Konva.showWarnings) {
+      return;
+    }
+    console.warn(KONVA_WARNING + str);
+  },
+  each(obj, func) {
+    for (var key in obj) {
+      func(key, obj[key]);
+    }
+  },
+  _inRange(val, left, right) {
+    return left <= val && val < right;
+  },
+  _getProjectionToSegment(x1, y1, x2, y2, x3, y3) {
+    var x4, y4, dist;
+    var pd2 = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);
+    if (pd2 == 0) {
+      x4 = x1;
+      y4 = y1;
+      dist = (x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2);
+    } else {
+      var u2 = ((x3 - x1) * (x2 - x1) + (y3 - y1) * (y2 - y1)) / pd2;
+      if (u2 < 0) {
+        x4 = x1;
+        y4 = y1;
+        dist = (x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3);
+      } else if (u2 > 1) {
+        x4 = x2;
+        y4 = y2;
+        dist = (x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3);
+      } else {
+        x4 = x1 + u2 * (x2 - x1);
+        y4 = y1 + u2 * (y2 - y1);
+        dist = (x4 - x3) * (x4 - x3) + (y4 - y3) * (y4 - y3);
+      }
+    }
+    return [x4, y4, dist];
+  },
+  _getProjectionToLine(pt2, line2, isClosed) {
+    var pc = Util.cloneObject(pt2);
+    var dist = Number.MAX_VALUE;
+    line2.forEach(function(p1, i2) {
+      if (!isClosed && i2 === line2.length - 1) {
+        return;
+      }
+      var p2 = line2[(i2 + 1) % line2.length];
+      var proj = Util._getProjectionToSegment(p1.x, p1.y, p2.x, p2.y, pt2.x, pt2.y);
+      var px3 = proj[0], py2 = proj[1], pdist = proj[2];
+      if (pdist < dist) {
+        pc.x = px3;
+        pc.y = py2;
+        dist = pdist;
+      }
+    });
+    return pc;
+  },
+  _prepareArrayForTween(startArray, endArray, isClosed) {
+    var n2, start = [], end = [];
+    if (startArray.length > endArray.length) {
+      var temp = endArray;
+      endArray = startArray;
+      startArray = temp;
+    }
+    for (n2 = 0; n2 < startArray.length; n2 += 2) {
+      start.push({
+        x: startArray[n2],
+        y: startArray[n2 + 1]
+      });
+    }
+    for (n2 = 0; n2 < endArray.length; n2 += 2) {
+      end.push({
+        x: endArray[n2],
+        y: endArray[n2 + 1]
+      });
+    }
+    var newStart = [];
+    end.forEach(function(point) {
+      var pr = Util._getProjectionToLine(point, start, isClosed);
+      newStart.push(pr.x);
+      newStart.push(pr.y);
+    });
+    return newStart;
+  },
+  _prepareToStringify(obj) {
+    var desc;
+    obj.visitedByCircularReferenceRemoval = true;
+    for (var key in obj) {
+      if (!(obj.hasOwnProperty(key) && obj[key] && typeof obj[key] == "object")) {
+        continue;
+      }
+      desc = Object.getOwnPropertyDescriptor(obj, key);
+      if (obj[key].visitedByCircularReferenceRemoval || Util._isElement(obj[key])) {
+        if (desc.configurable) {
+          delete obj[key];
+        } else {
+          return null;
+        }
+      } else if (Util._prepareToStringify(obj[key]) === null) {
+        if (desc.configurable) {
+          delete obj[key];
+        } else {
+          return null;
+        }
+      }
+    }
+    delete obj.visitedByCircularReferenceRemoval;
+    return obj;
+  },
+  _assign(target, source) {
+    for (var key in source) {
+      target[key] = source[key];
+    }
+    return target;
+  },
+  _getFirstPointerId(evt) {
+    if (!evt.touches) {
+      return 999;
+    } else {
+      return evt.changedTouches[0].identifier;
+    }
+  }
+};
+
+// node_modules/konva/lib/Validators.js
+function _formatValue(val) {
+  if (Util._isString(val)) {
+    return '"' + val + '"';
+  }
+  if (Object.prototype.toString.call(val) === "[object Number]") {
+    return val;
+  }
+  if (Util._isBoolean(val)) {
+    return val;
+  }
+  return Object.prototype.toString.call(val);
+}
+function RGBComponent(val) {
+  if (val > 255) {
+    return 255;
+  } else if (val < 0) {
+    return 0;
+  }
+  return Math.round(val);
+}
+function getNumberValidator() {
+  if (Konva.isUnminified) {
+    return function(val, attr) {
+      if (!Util._isNumber(val)) {
+        Util.warn(_formatValue(val) + ' is a not valid value for "' + attr + '" attribute. The value should be a number.');
+      }
+      return val;
+    };
+  }
+}
+function getNumberOrArrayOfNumbersValidator(noOfElements) {
+  if (Konva.isUnminified) {
+    return function(val, attr) {
+      let isNumber2 = Util._isNumber(val);
+      let isValidArray = Util._isArray(val) && val.length == noOfElements;
+      if (!isNumber2 && !isValidArray) {
+        Util.warn(_formatValue(val) + ' is a not valid value for "' + attr + '" attribute. The value should be a number or Array<number>(' + noOfElements + ")");
+      }
+      return val;
+    };
+  }
+}
+function getNumberOrAutoValidator() {
+  if (Konva.isUnminified) {
+    return function(val, attr) {
+      var isNumber2 = Util._isNumber(val);
+      var isAuto = val === "auto";
+      if (!(isNumber2 || isAuto)) {
+        Util.warn(_formatValue(val) + ' is a not valid value for "' + attr + '" attribute. The value should be a number or "auto".');
+      }
+      return val;
+    };
+  }
+}
+function getStringValidator() {
+  if (Konva.isUnminified) {
+    return function(val, attr) {
+      if (!Util._isString(val)) {
+        Util.warn(_formatValue(val) + ' is a not valid value for "' + attr + '" attribute. The value should be a string.');
+      }
+      return val;
+    };
+  }
+}
+function getStringOrGradientValidator() {
+  if (Konva.isUnminified) {
+    return function(val, attr) {
+      const isString = Util._isString(val);
+      const isGradient = Object.prototype.toString.call(val) === "[object CanvasGradient]" || val && val.addColorStop;
+      if (!(isString || isGradient)) {
+        Util.warn(_formatValue(val) + ' is a not valid value for "' + attr + '" attribute. The value should be a string or a native gradient.');
+      }
+      return val;
+    };
+  }
+}
+function getNumberArrayValidator() {
+  if (Konva.isUnminified) {
+    return function(val, attr) {
+      if (!Util._isArray(val)) {
+        Util.warn(_formatValue(val) + ' is a not valid value for "' + attr + '" attribute. The value should be a array of numbers.');
+      } else {
+        val.forEach(function(item) {
+          if (!Util._isNumber(item)) {
+            Util.warn('"' + attr + '" attribute has non numeric element ' + item + ". Make sure that all elements are numbers.");
+          }
+        });
+      }
+      return val;
+    };
+  }
+}
+function getBooleanValidator() {
+  if (Konva.isUnminified) {
+    return function(val, attr) {
+      var isBool = val === true || val === false;
+      if (!isBool) {
+        Util.warn(_formatValue(val) + ' is a not valid value for "' + attr + '" attribute. The value should be a boolean.');
+      }
+      return val;
+    };
+  }
+}
+function getComponentValidator(components2) {
+  if (Konva.isUnminified) {
+    return function(val, attr) {
+      if (!Util.isObject(val)) {
+        Util.warn(_formatValue(val) + ' is a not valid value for "' + attr + '" attribute. The value should be an object with properties ' + components2);
+      }
+      return val;
+    };
+  }
+}
+
+// node_modules/konva/lib/Factory.js
+var GET = "get";
+var SET = "set";
+var Factory = {
+  addGetterSetter(constructor, attr, def, validator, after) {
+    Factory.addGetter(constructor, attr, def);
+    Factory.addSetter(constructor, attr, validator, after);
+    Factory.addOverloadedGetterSetter(constructor, attr);
+  },
+  addGetter(constructor, attr, def) {
+    var method = GET + Util._capitalize(attr);
+    constructor.prototype[method] = constructor.prototype[method] || function() {
+      var val = this.attrs[attr];
+      return val === void 0 ? def : val;
+    };
+  },
+  addSetter(constructor, attr, validator, after) {
+    var method = SET + Util._capitalize(attr);
+    if (!constructor.prototype[method]) {
+      Factory.overWriteSetter(constructor, attr, validator, after);
+    }
+  },
+  overWriteSetter(constructor, attr, validator, after) {
+    var method = SET + Util._capitalize(attr);
+    constructor.prototype[method] = function(val) {
+      if (validator && val !== void 0 && val !== null) {
+        val = validator.call(this, val, attr);
+      }
+      this._setAttr(attr, val);
+      if (after) {
+        after.call(this);
+      }
+      return this;
+    };
+  },
+  addComponentsGetterSetter(constructor, attr, components2, validator, after) {
+    var len = components2.length, capitalize = Util._capitalize, getter = GET + capitalize(attr), setter = SET + capitalize(attr), n2, component;
+    constructor.prototype[getter] = function() {
+      var ret = {};
+      for (n2 = 0; n2 < len; n2++) {
+        component = components2[n2];
+        ret[component] = this.getAttr(attr + capitalize(component));
+      }
+      return ret;
+    };
+    var basicValidator = getComponentValidator(components2);
+    constructor.prototype[setter] = function(val) {
+      var oldVal = this.attrs[attr], key;
+      if (validator) {
+        val = validator.call(this, val);
+      }
+      if (basicValidator) {
+        basicValidator.call(this, val, attr);
+      }
+      for (key in val) {
+        if (!val.hasOwnProperty(key)) {
+          continue;
+        }
+        this._setAttr(attr + capitalize(key), val[key]);
+      }
+      this._fireChangeEvent(attr, oldVal, val);
+      if (after) {
+        after.call(this);
+      }
+      return this;
+    };
+    Factory.addOverloadedGetterSetter(constructor, attr);
+  },
+  addOverloadedGetterSetter(constructor, attr) {
+    var capitalizedAttr = Util._capitalize(attr), setter = SET + capitalizedAttr, getter = GET + capitalizedAttr;
+    constructor.prototype[attr] = function() {
+      if (arguments.length) {
+        this[setter](arguments[0]);
+        return this;
+      }
+      return this[getter]();
+    };
+  },
+  addDeprecatedGetterSetter(constructor, attr, def, validator) {
+    Util.error("Adding deprecated " + attr);
+    var method = GET + Util._capitalize(attr);
+    var message = attr + " property is deprecated and will be removed soon. Look at Konva change log for more information.";
+    constructor.prototype[method] = function() {
+      Util.error(message);
+      var val = this.attrs[attr];
+      return val === void 0 ? def : val;
+    };
+    Factory.addSetter(constructor, attr, validator, function() {
+      Util.error(message);
+    });
+    Factory.addOverloadedGetterSetter(constructor, attr);
+  },
+  backCompat(constructor, methods) {
+    Util.each(methods, function(oldMethodName, newMethodName) {
+      var method = constructor.prototype[newMethodName];
+      var oldGetter = GET + Util._capitalize(oldMethodName);
+      var oldSetter = SET + Util._capitalize(oldMethodName);
+      function deprecated() {
+        method.apply(this, arguments);
+        Util.error('"' + oldMethodName + '" method is deprecated and will be removed soon. Use ""' + newMethodName + '" instead.');
+      }
+      constructor.prototype[oldMethodName] = deprecated;
+      constructor.prototype[oldGetter] = deprecated;
+      constructor.prototype[oldSetter] = deprecated;
+    });
+  },
+  afterSetFilter() {
+    this._filterUpToDate = false;
+  }
+};
+
+// node_modules/konva/lib/Context.js
+function simplifyArray(arr) {
+  var retArr = [], len = arr.length, util = Util, n2, val;
+  for (n2 = 0; n2 < len; n2++) {
+    val = arr[n2];
+    if (util._isNumber(val)) {
+      val = Math.round(val * 1e3) / 1e3;
+    } else if (!util._isString(val)) {
+      val = val + "";
+    }
+    retArr.push(val);
+  }
+  return retArr;
+}
+var COMMA = ",";
+var OPEN_PAREN = "(";
+var CLOSE_PAREN = ")";
+var OPEN_PAREN_BRACKET = "([";
+var CLOSE_BRACKET_PAREN = "])";
+var SEMICOLON = ";";
+var DOUBLE_PAREN = "()";
+var EQUALS = "=";
+var CONTEXT_METHODS = [
+  "arc",
+  "arcTo",
+  "beginPath",
+  "bezierCurveTo",
+  "clearRect",
+  "clip",
+  "closePath",
+  "createLinearGradient",
+  "createPattern",
+  "createRadialGradient",
+  "drawImage",
+  "ellipse",
+  "fill",
+  "fillText",
+  "getImageData",
+  "createImageData",
+  "lineTo",
+  "moveTo",
+  "putImageData",
+  "quadraticCurveTo",
+  "rect",
+  "restore",
+  "rotate",
+  "save",
+  "scale",
+  "setLineDash",
+  "setTransform",
+  "stroke",
+  "strokeText",
+  "transform",
+  "translate"
+];
+var CONTEXT_PROPERTIES = [
+  "fillStyle",
+  "strokeStyle",
+  "shadowColor",
+  "shadowBlur",
+  "shadowOffsetX",
+  "shadowOffsetY",
+  "lineCap",
+  "lineDashOffset",
+  "lineJoin",
+  "lineWidth",
+  "miterLimit",
+  "font",
+  "textAlign",
+  "textBaseline",
+  "globalAlpha",
+  "globalCompositeOperation",
+  "imageSmoothingEnabled"
+];
+var traceArrMax = 100;
+var Context = class {
+  constructor(canvas) {
+    this.canvas = canvas;
+    this._context = canvas._canvas.getContext("2d");
+    if (Konva.enableTrace) {
+      this.traceArr = [];
+      this._enableTrace();
+    }
+  }
+  fillShape(shape) {
+    if (shape.fillEnabled()) {
+      this._fill(shape);
+    }
+  }
+  _fill(shape) {
+  }
+  strokeShape(shape) {
+    if (shape.hasStroke()) {
+      this._stroke(shape);
+    }
+  }
+  _stroke(shape) {
+  }
+  fillStrokeShape(shape) {
+    if (shape.attrs.fillAfterStrokeEnabled) {
+      this.strokeShape(shape);
+      this.fillShape(shape);
+    } else {
+      this.fillShape(shape);
+      this.strokeShape(shape);
+    }
+  }
+  getTrace(relaxed, rounded) {
+    var traceArr = this.traceArr, len = traceArr.length, str = "", n2, trace, method, args;
+    for (n2 = 0; n2 < len; n2++) {
+      trace = traceArr[n2];
+      method = trace.method;
+      if (method) {
+        args = trace.args;
+        str += method;
+        if (relaxed) {
+          str += DOUBLE_PAREN;
+        } else {
+          if (Util._isArray(args[0])) {
+            str += OPEN_PAREN_BRACKET + args.join(COMMA) + CLOSE_BRACKET_PAREN;
+          } else {
+            if (rounded) {
+              args = args.map((a2) => typeof a2 === "number" ? Math.floor(a2) : a2);
+            }
+            str += OPEN_PAREN + args.join(COMMA) + CLOSE_PAREN;
+          }
+        }
+      } else {
+        str += trace.property;
+        if (!relaxed) {
+          str += EQUALS + trace.val;
+        }
+      }
+      str += SEMICOLON;
+    }
+    return str;
+  }
+  clearTrace() {
+    this.traceArr = [];
+  }
+  _trace(str) {
+    var traceArr = this.traceArr, len;
+    traceArr.push(str);
+    len = traceArr.length;
+    if (len >= traceArrMax) {
+      traceArr.shift();
+    }
+  }
+  reset() {
+    var pixelRatio = this.getCanvas().getPixelRatio();
+    this.setTransform(1 * pixelRatio, 0, 0, 1 * pixelRatio, 0, 0);
+  }
+  getCanvas() {
+    return this.canvas;
+  }
+  clear(bounds) {
+    var canvas = this.getCanvas();
+    if (bounds) {
+      this.clearRect(bounds.x || 0, bounds.y || 0, bounds.width || 0, bounds.height || 0);
+    } else {
+      this.clearRect(0, 0, canvas.getWidth() / canvas.pixelRatio, canvas.getHeight() / canvas.pixelRatio);
+    }
+  }
+  _applyLineCap(shape) {
+    var lineCap = shape.getLineCap();
+    if (lineCap) {
+      this.setAttr("lineCap", lineCap);
+    }
+  }
+  _applyOpacity(shape) {
+    var absOpacity = shape.getAbsoluteOpacity();
+    if (absOpacity !== 1) {
+      this.setAttr("globalAlpha", absOpacity);
+    }
+  }
+  _applyLineJoin(shape) {
+    var lineJoin = shape.attrs.lineJoin;
+    if (lineJoin) {
+      this.setAttr("lineJoin", lineJoin);
+    }
+  }
+  setAttr(attr, val) {
+    this._context[attr] = val;
+  }
+  arc(a0, a1, a2, a3, a4, a5) {
+    this._context.arc(a0, a1, a2, a3, a4, a5);
+  }
+  arcTo(a0, a1, a2, a3, a4) {
+    this._context.arcTo(a0, a1, a2, a3, a4);
+  }
+  beginPath() {
+    this._context.beginPath();
+  }
+  bezierCurveTo(a0, a1, a2, a3, a4, a5) {
+    this._context.bezierCurveTo(a0, a1, a2, a3, a4, a5);
+  }
+  clearRect(a0, a1, a2, a3) {
+    this._context.clearRect(a0, a1, a2, a3);
+  }
+  clip() {
+    this._context.clip();
+  }
+  closePath() {
+    this._context.closePath();
+  }
+  createImageData(a0, a1) {
+    var a2 = arguments;
+    if (a2.length === 2) {
+      return this._context.createImageData(a0, a1);
+    } else if (a2.length === 1) {
+      return this._context.createImageData(a0);
+    }
+  }
+  createLinearGradient(a0, a1, a2, a3) {
+    return this._context.createLinearGradient(a0, a1, a2, a3);
+  }
+  createPattern(a0, a1) {
+    return this._context.createPattern(a0, a1);
+  }
+  createRadialGradient(a0, a1, a2, a3, a4, a5) {
+    return this._context.createRadialGradient(a0, a1, a2, a3, a4, a5);
+  }
+  drawImage(a0, a1, a2, a3, a4, a5, a6, a7, a8) {
+    var a9 = arguments, _context2 = this._context;
+    if (a9.length === 3) {
+      _context2.drawImage(a0, a1, a2);
+    } else if (a9.length === 5) {
+      _context2.drawImage(a0, a1, a2, a3, a4);
+    } else if (a9.length === 9) {
+      _context2.drawImage(a0, a1, a2, a3, a4, a5, a6, a7, a8);
+    }
+  }
+  ellipse(a0, a1, a2, a3, a4, a5, a6, a7) {
+    this._context.ellipse(a0, a1, a2, a3, a4, a5, a6, a7);
+  }
+  isPointInPath(x2, y2) {
+    return this._context.isPointInPath(x2, y2);
+  }
+  fill(path2d) {
+    if (path2d) {
+      this._context.fill(path2d);
+    } else {
+      this._context.fill();
+    }
+  }
+  fillRect(x2, y2, width, height) {
+    this._context.fillRect(x2, y2, width, height);
+  }
+  strokeRect(x2, y2, width, height) {
+    this._context.strokeRect(x2, y2, width, height);
+  }
+  fillText(text, x2, y2, maxWidth) {
+    if (maxWidth) {
+      this._context.fillText(text, x2, y2, maxWidth);
+    } else {
+      this._context.fillText(text, x2, y2);
+    }
+  }
+  measureText(text) {
+    return this._context.measureText(text);
+  }
+  getImageData(a0, a1, a2, a3) {
+    return this._context.getImageData(a0, a1, a2, a3);
+  }
+  lineTo(a0, a1) {
+    this._context.lineTo(a0, a1);
+  }
+  moveTo(a0, a1) {
+    this._context.moveTo(a0, a1);
+  }
+  rect(a0, a1, a2, a3) {
+    this._context.rect(a0, a1, a2, a3);
+  }
+  putImageData(a0, a1, a2) {
+    this._context.putImageData(a0, a1, a2);
+  }
+  quadraticCurveTo(a0, a1, a2, a3) {
+    this._context.quadraticCurveTo(a0, a1, a2, a3);
+  }
+  restore() {
+    this._context.restore();
+  }
+  rotate(a0) {
+    this._context.rotate(a0);
+  }
+  save() {
+    this._context.save();
+  }
+  scale(a0, a1) {
+    this._context.scale(a0, a1);
+  }
+  setLineDash(a0) {
+    if (this._context.setLineDash) {
+      this._context.setLineDash(a0);
+    } else if ("mozDash" in this._context) {
+      this._context["mozDash"] = a0;
+    } else if ("webkitLineDash" in this._context) {
+      this._context["webkitLineDash"] = a0;
+    }
+  }
+  getLineDash() {
+    return this._context.getLineDash();
+  }
+  setTransform(a0, a1, a2, a3, a4, a5) {
+    this._context.setTransform(a0, a1, a2, a3, a4, a5);
+  }
+  stroke(path2d) {
+    if (path2d) {
+      this._context.stroke(path2d);
+    } else {
+      this._context.stroke();
+    }
+  }
+  strokeText(a0, a1, a2, a3) {
+    this._context.strokeText(a0, a1, a2, a3);
+  }
+  transform(a0, a1, a2, a3, a4, a5) {
+    this._context.transform(a0, a1, a2, a3, a4, a5);
+  }
+  translate(a0, a1) {
+    this._context.translate(a0, a1);
+  }
+  _enableTrace() {
+    var that = this, len = CONTEXT_METHODS.length, origSetter = this.setAttr, n2, args;
+    var func = function(methodName) {
+      var origMethod = that[methodName], ret;
+      that[methodName] = function() {
+        args = simplifyArray(Array.prototype.slice.call(arguments, 0));
+        ret = origMethod.apply(that, arguments);
+        that._trace({
+          method: methodName,
+          args
+        });
+        return ret;
+      };
+    };
+    for (n2 = 0; n2 < len; n2++) {
+      func(CONTEXT_METHODS[n2]);
+    }
+    that.setAttr = function() {
+      origSetter.apply(that, arguments);
+      var prop = arguments[0];
+      var val = arguments[1];
+      if (prop === "shadowOffsetX" || prop === "shadowOffsetY" || prop === "shadowBlur") {
+        val = val / this.canvas.getPixelRatio();
+      }
+      that._trace({
+        property: prop,
+        val
+      });
+    };
+  }
+  _applyGlobalCompositeOperation(node2) {
+    const op = node2.attrs.globalCompositeOperation;
+    var def = !op || op === "source-over";
+    if (!def) {
+      this.setAttr("globalCompositeOperation", op);
+    }
+  }
+};
+CONTEXT_PROPERTIES.forEach(function(prop) {
+  Object.defineProperty(Context.prototype, prop, {
+    get() {
+      return this._context[prop];
+    },
+    set(val) {
+      this._context[prop] = val;
+    }
+  });
+});
+var SceneContext = class extends Context {
+  _fillColor(shape) {
+    var fill = shape.fill();
+    this.setAttr("fillStyle", fill);
+    shape._fillFunc(this);
+  }
+  _fillPattern(shape) {
+    this.setAttr("fillStyle", shape._getFillPattern());
+    shape._fillFunc(this);
+  }
+  _fillLinearGradient(shape) {
+    var grd = shape._getLinearGradient();
+    if (grd) {
+      this.setAttr("fillStyle", grd);
+      shape._fillFunc(this);
+    }
+  }
+  _fillRadialGradient(shape) {
+    var grd = shape._getRadialGradient();
+    if (grd) {
+      this.setAttr("fillStyle", grd);
+      shape._fillFunc(this);
+    }
+  }
+  _fill(shape) {
+    var hasColor = shape.fill(), fillPriority = shape.getFillPriority();
+    if (hasColor && fillPriority === "color") {
+      this._fillColor(shape);
+      return;
+    }
+    var hasPattern = shape.getFillPatternImage();
+    if (hasPattern && fillPriority === "pattern") {
+      this._fillPattern(shape);
+      return;
+    }
+    var hasLinearGradient = shape.getFillLinearGradientColorStops();
+    if (hasLinearGradient && fillPriority === "linear-gradient") {
+      this._fillLinearGradient(shape);
+      return;
+    }
+    var hasRadialGradient = shape.getFillRadialGradientColorStops();
+    if (hasRadialGradient && fillPriority === "radial-gradient") {
+      this._fillRadialGradient(shape);
+      return;
+    }
+    if (hasColor) {
+      this._fillColor(shape);
+    } else if (hasPattern) {
+      this._fillPattern(shape);
+    } else if (hasLinearGradient) {
+      this._fillLinearGradient(shape);
+    } else if (hasRadialGradient) {
+      this._fillRadialGradient(shape);
+    }
+  }
+  _strokeLinearGradient(shape) {
+    var start = shape.getStrokeLinearGradientStartPoint(), end = shape.getStrokeLinearGradientEndPoint(), colorStops = shape.getStrokeLinearGradientColorStops(), grd = this.createLinearGradient(start.x, start.y, end.x, end.y);
+    if (colorStops) {
+      for (var n2 = 0; n2 < colorStops.length; n2 += 2) {
+        grd.addColorStop(colorStops[n2], colorStops[n2 + 1]);
+      }
+      this.setAttr("strokeStyle", grd);
+    }
+  }
+  _stroke(shape) {
+    var dash = shape.dash(), strokeScaleEnabled = shape.getStrokeScaleEnabled();
+    if (shape.hasStroke()) {
+      if (!strokeScaleEnabled) {
+        this.save();
+        var pixelRatio = this.getCanvas().getPixelRatio();
+        this.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+      }
+      this._applyLineCap(shape);
+      if (dash && shape.dashEnabled()) {
+        this.setLineDash(dash);
+        this.setAttr("lineDashOffset", shape.dashOffset());
+      }
+      this.setAttr("lineWidth", shape.strokeWidth());
+      if (!shape.getShadowForStrokeEnabled()) {
+        this.setAttr("shadowColor", "rgba(0,0,0,0)");
+      }
+      var hasLinearGradient = shape.getStrokeLinearGradientColorStops();
+      if (hasLinearGradient) {
+        this._strokeLinearGradient(shape);
+      } else {
+        this.setAttr("strokeStyle", shape.stroke());
+      }
+      shape._strokeFunc(this);
+      if (!strokeScaleEnabled) {
+        this.restore();
+      }
+    }
+  }
+  _applyShadow(shape) {
+    var _a, _b, _c;
+    var color = (_a = shape.getShadowRGBA()) !== null && _a !== void 0 ? _a : "black", blur = (_b = shape.getShadowBlur()) !== null && _b !== void 0 ? _b : 5, offset = (_c = shape.getShadowOffset()) !== null && _c !== void 0 ? _c : {
+      x: 0,
+      y: 0
+    }, scale = shape.getAbsoluteScale(), ratio = this.canvas.getPixelRatio(), scaleX = scale.x * ratio, scaleY = scale.y * ratio;
+    this.setAttr("shadowColor", color);
+    this.setAttr("shadowBlur", blur * Math.min(Math.abs(scaleX), Math.abs(scaleY)));
+    this.setAttr("shadowOffsetX", offset.x * scaleX);
+    this.setAttr("shadowOffsetY", offset.y * scaleY);
+  }
+};
+var HitContext = class extends Context {
+  _fill(shape) {
+    this.save();
+    this.setAttr("fillStyle", shape.colorKey);
+    shape._fillFuncHit(this);
+    this.restore();
+  }
+  strokeShape(shape) {
+    if (shape.hasHitStroke()) {
+      this._stroke(shape);
+    }
+  }
+  _stroke(shape) {
+    if (shape.hasHitStroke()) {
+      var strokeScaleEnabled = shape.getStrokeScaleEnabled();
+      if (!strokeScaleEnabled) {
+        this.save();
+        var pixelRatio = this.getCanvas().getPixelRatio();
+        this.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+      }
+      this._applyLineCap(shape);
+      var hitStrokeWidth = shape.hitStrokeWidth();
+      var strokeWidth = hitStrokeWidth === "auto" ? shape.strokeWidth() : hitStrokeWidth;
+      this.setAttr("lineWidth", strokeWidth);
+      this.setAttr("strokeStyle", shape.colorKey);
+      shape._strokeFuncHit(this);
+      if (!strokeScaleEnabled) {
+        this.restore();
+      }
+    }
+  }
+};
+
+// node_modules/konva/lib/Canvas.js
+var _pixelRatio;
+function getDevicePixelRatio() {
+  if (_pixelRatio) {
+    return _pixelRatio;
+  }
+  var canvas = Util.createCanvasElement();
+  var context = canvas.getContext("2d");
+  _pixelRatio = function() {
+    var devicePixelRatio = Konva._global.devicePixelRatio || 1, backingStoreRatio = context.webkitBackingStorePixelRatio || context.mozBackingStorePixelRatio || context.msBackingStorePixelRatio || context.oBackingStorePixelRatio || context.backingStorePixelRatio || 1;
+    return devicePixelRatio / backingStoreRatio;
+  }();
+  return _pixelRatio;
+}
+var Canvas3 = class {
+  constructor(config) {
+    this.pixelRatio = 1;
+    this.width = 0;
+    this.height = 0;
+    this.isCache = false;
+    var conf = config || {};
+    var pixelRatio = conf.pixelRatio || Konva.pixelRatio || getDevicePixelRatio();
+    this.pixelRatio = pixelRatio;
+    this._canvas = Util.createCanvasElement();
+    this._canvas.style.padding = "0";
+    this._canvas.style.margin = "0";
+    this._canvas.style.border = "0";
+    this._canvas.style.background = "transparent";
+    this._canvas.style.position = "absolute";
+    this._canvas.style.top = "0";
+    this._canvas.style.left = "0";
+  }
+  getContext() {
+    return this.context;
+  }
+  getPixelRatio() {
+    return this.pixelRatio;
+  }
+  setPixelRatio(pixelRatio) {
+    var previousRatio = this.pixelRatio;
+    this.pixelRatio = pixelRatio;
+    this.setSize(this.getWidth() / previousRatio, this.getHeight() / previousRatio);
+  }
+  setWidth(width) {
+    this.width = this._canvas.width = width * this.pixelRatio;
+    this._canvas.style.width = width + "px";
+    var pixelRatio = this.pixelRatio, _context2 = this.getContext()._context;
+    _context2.scale(pixelRatio, pixelRatio);
+  }
+  setHeight(height) {
+    this.height = this._canvas.height = height * this.pixelRatio;
+    this._canvas.style.height = height + "px";
+    var pixelRatio = this.pixelRatio, _context2 = this.getContext()._context;
+    _context2.scale(pixelRatio, pixelRatio);
+  }
+  getWidth() {
+    return this.width;
+  }
+  getHeight() {
+    return this.height;
+  }
+  setSize(width, height) {
+    this.setWidth(width || 0);
+    this.setHeight(height || 0);
+  }
+  toDataURL(mimeType, quality) {
+    try {
+      return this._canvas.toDataURL(mimeType, quality);
+    } catch (e2) {
+      try {
+        return this._canvas.toDataURL();
+      } catch (err) {
+        Util.error("Unable to get data URL. " + err.message + " For more info read https://konvajs.org/docs/posts/Tainted_Canvas.html.");
+        return "";
+      }
+    }
+  }
+};
+Factory.addGetterSetter(Canvas3, "pixelRatio", void 0, getNumberValidator());
+var SceneCanvas = class extends Canvas3 {
+  constructor(config = {width: 0, height: 0}) {
+    super(config);
+    this.context = new SceneContext(this);
+    this.setSize(config.width, config.height);
+  }
+};
+var HitCanvas = class extends Canvas3 {
+  constructor(config = {width: 0, height: 0}) {
+    super(config);
+    this.hitCanvas = true;
+    this.context = new HitContext(this);
+    this.setSize(config.width, config.height);
+  }
+};
+
+// node_modules/konva/lib/DragAndDrop.js
+var DD = {
+  get isDragging() {
+    var flag = false;
+    DD._dragElements.forEach((elem) => {
+      if (elem.dragStatus === "dragging") {
+        flag = true;
+      }
+    });
+    return flag;
+  },
+  justDragged: false,
+  get node() {
+    var node2;
+    DD._dragElements.forEach((elem) => {
+      node2 = elem.node;
+    });
+    return node2;
+  },
+  _dragElements: new Map(),
+  _drag(evt) {
+    const nodesToFireEvents = [];
+    DD._dragElements.forEach((elem, key) => {
+      const {node: node2} = elem;
+      const stage = node2.getStage();
+      stage.setPointersPositions(evt);
+      if (elem.pointerId === void 0) {
+        elem.pointerId = Util._getFirstPointerId(evt);
+      }
+      const pos = stage._changedPointerPositions.find((pos2) => pos2.id === elem.pointerId);
+      if (!pos) {
+        return;
+      }
+      if (elem.dragStatus !== "dragging") {
+        var dragDistance = node2.dragDistance();
+        var distance = Math.max(Math.abs(pos.x - elem.startPointerPos.x), Math.abs(pos.y - elem.startPointerPos.y));
+        if (distance < dragDistance) {
+          return;
+        }
+        node2.startDrag({evt});
+        if (!node2.isDragging()) {
+          return;
+        }
+      }
+      node2._setDragPosition(evt, elem);
+      nodesToFireEvents.push(node2);
+    });
+    nodesToFireEvents.forEach((node2) => {
+      node2.fire("dragmove", {
+        type: "dragmove",
+        target: node2,
+        evt
+      }, true);
+    });
+  },
+  _endDragBefore(evt) {
+    DD._dragElements.forEach((elem) => {
+      const {node: node2} = elem;
+      const stage = node2.getStage();
+      if (evt) {
+        stage.setPointersPositions(evt);
+      }
+      const pos = stage._changedPointerPositions.find((pos2) => pos2.id === elem.pointerId);
+      if (!pos) {
+        return;
+      }
+      if (elem.dragStatus === "dragging" || elem.dragStatus === "stopped") {
+        DD.justDragged = true;
+        Konva._mouseListenClick = false;
+        Konva._touchListenClick = false;
+        Konva._pointerListenClick = false;
+        elem.dragStatus = "stopped";
+      }
+      const drawNode = elem.node.getLayer() || elem.node instanceof Konva["Stage"] && elem.node;
+      if (drawNode) {
+        drawNode.batchDraw();
+      }
+    });
+  },
+  _endDragAfter(evt) {
+    DD._dragElements.forEach((elem, key) => {
+      if (elem.dragStatus === "stopped") {
+        elem.node.fire("dragend", {
+          type: "dragend",
+          target: elem.node,
+          evt
+        }, true);
+      }
+      if (elem.dragStatus !== "dragging") {
+        DD._dragElements.delete(key);
+      }
+    });
+  }
+};
+if (Konva.isBrowser) {
+  window.addEventListener("mouseup", DD._endDragBefore, true);
+  window.addEventListener("touchend", DD._endDragBefore, true);
+  window.addEventListener("mousemove", DD._drag);
+  window.addEventListener("touchmove", DD._drag);
+  window.addEventListener("mouseup", DD._endDragAfter, false);
+  window.addEventListener("touchend", DD._endDragAfter, false);
+}
+
+// node_modules/konva/lib/Node.js
+var ABSOLUTE_OPACITY = "absoluteOpacity";
+var ALL_LISTENERS = "allEventListeners";
+var ABSOLUTE_TRANSFORM = "absoluteTransform";
+var ABSOLUTE_SCALE = "absoluteScale";
+var CANVAS = "canvas";
+var CHANGE = "Change";
+var CHILDREN = "children";
+var KONVA = "konva";
+var LISTENING = "listening";
+var MOUSEENTER = "mouseenter";
+var MOUSELEAVE = "mouseleave";
+var SET2 = "set";
+var SHAPE = "Shape";
+var SPACE = " ";
+var STAGE = "stage";
+var TRANSFORM = "transform";
+var UPPER_STAGE = "Stage";
+var VISIBLE = "visible";
+var TRANSFORM_CHANGE_STR = [
+  "xChange.konva",
+  "yChange.konva",
+  "scaleXChange.konva",
+  "scaleYChange.konva",
+  "skewXChange.konva",
+  "skewYChange.konva",
+  "rotationChange.konva",
+  "offsetXChange.konva",
+  "offsetYChange.konva",
+  "transformsEnabledChange.konva"
+].join(SPACE);
+var idCounter = 1;
+var Node2 = class {
+  constructor(config) {
+    this._id = idCounter++;
+    this.eventListeners = {};
+    this.attrs = {};
+    this.index = 0;
+    this._allEventListeners = null;
+    this.parent = null;
+    this._cache = new Map();
+    this._attachedDepsListeners = new Map();
+    this._lastPos = null;
+    this._batchingTransformChange = false;
+    this._needClearTransformCache = false;
+    this._filterUpToDate = false;
+    this._isUnderCache = false;
+    this._dragEventId = null;
+    this._shouldFireChangeEvents = false;
+    this.setAttrs(config);
+    this._shouldFireChangeEvents = true;
+  }
+  hasChildren() {
+    return false;
+  }
+  _clearCache(attr) {
+    if ((attr === TRANSFORM || attr === ABSOLUTE_TRANSFORM) && this._cache.get(attr)) {
+      this._cache.get(attr).dirty = true;
+    } else if (attr) {
+      this._cache.delete(attr);
+    } else {
+      this._cache.clear();
+    }
+  }
+  _getCache(attr, privateGetter) {
+    var cache3 = this._cache.get(attr);
+    var isTransform = attr === TRANSFORM || attr === ABSOLUTE_TRANSFORM;
+    var invalid = cache3 === void 0 || isTransform && cache3.dirty === true;
+    if (invalid) {
+      cache3 = privateGetter.call(this);
+      this._cache.set(attr, cache3);
+    }
+    return cache3;
+  }
+  _calculate(name2, deps, getter) {
+    if (!this._attachedDepsListeners.get(name2)) {
+      const depsString = deps.map((dep) => dep + "Change.konva").join(SPACE);
+      this.on(depsString, () => {
+        this._clearCache(name2);
+      });
+      this._attachedDepsListeners.set(name2, true);
+    }
+    return this._getCache(name2, getter);
+  }
+  _getCanvasCache() {
+    return this._cache.get(CANVAS);
+  }
+  _clearSelfAndDescendantCache(attr) {
+    this._clearCache(attr);
+    if (attr === ABSOLUTE_TRANSFORM) {
+      this.fire("absoluteTransformChange");
+    }
+  }
+  clearCache() {
+    this._cache.delete(CANVAS);
+    this._clearSelfAndDescendantCache();
+    this._requestDraw();
+    return this;
+  }
+  cache(config) {
+    var conf = config || {};
+    var rect = {};
+    if (conf.x === void 0 || conf.y === void 0 || conf.width === void 0 || conf.height === void 0) {
+      rect = this.getClientRect({
+        skipTransform: true,
+        relativeTo: this.getParent()
+      });
+    }
+    var width = Math.ceil(conf.width || rect.width), height = Math.ceil(conf.height || rect.height), pixelRatio = conf.pixelRatio, x2 = conf.x === void 0 ? rect.x : conf.x, y2 = conf.y === void 0 ? rect.y : conf.y, offset = conf.offset || 0, drawBorder = conf.drawBorder || false, hitCanvasPixelRatio = conf.hitCanvasPixelRatio || 1;
+    if (!width || !height) {
+      Util.error("Can not cache the node. Width or height of the node equals 0. Caching is skipped.");
+      return;
+    }
+    width += offset * 2;
+    height += offset * 2;
+    x2 -= offset;
+    y2 -= offset;
+    var cachedSceneCanvas = new SceneCanvas({
+      pixelRatio,
+      width,
+      height
+    }), cachedFilterCanvas = new SceneCanvas({
+      pixelRatio,
+      width: 0,
+      height: 0
+    }), cachedHitCanvas = new HitCanvas({
+      pixelRatio: hitCanvasPixelRatio,
+      width,
+      height
+    }), sceneContext = cachedSceneCanvas.getContext(), hitContext = cachedHitCanvas.getContext();
+    cachedHitCanvas.isCache = true;
+    cachedSceneCanvas.isCache = true;
+    this._cache.delete(CANVAS);
+    this._filterUpToDate = false;
+    if (conf.imageSmoothingEnabled === false) {
+      cachedSceneCanvas.getContext()._context.imageSmoothingEnabled = false;
+      cachedFilterCanvas.getContext()._context.imageSmoothingEnabled = false;
+    }
+    sceneContext.save();
+    hitContext.save();
+    sceneContext.translate(-x2, -y2);
+    hitContext.translate(-x2, -y2);
+    this._isUnderCache = true;
+    this._clearSelfAndDescendantCache(ABSOLUTE_OPACITY);
+    this._clearSelfAndDescendantCache(ABSOLUTE_SCALE);
+    this.drawScene(cachedSceneCanvas, this);
+    this.drawHit(cachedHitCanvas, this);
+    this._isUnderCache = false;
+    sceneContext.restore();
+    hitContext.restore();
+    if (drawBorder) {
+      sceneContext.save();
+      sceneContext.beginPath();
+      sceneContext.rect(0, 0, width, height);
+      sceneContext.closePath();
+      sceneContext.setAttr("strokeStyle", "red");
+      sceneContext.setAttr("lineWidth", 5);
+      sceneContext.stroke();
+      sceneContext.restore();
+    }
+    this._cache.set(CANVAS, {
+      scene: cachedSceneCanvas,
+      filter: cachedFilterCanvas,
+      hit: cachedHitCanvas,
+      x: x2,
+      y: y2
+    });
+    this._requestDraw();
+    return this;
+  }
+  isCached() {
+    return this._cache.has(CANVAS);
+  }
+  getClientRect(config) {
+    throw new Error('abstract "getClientRect" method call');
+  }
+  _transformedRect(rect, top) {
+    var points = [
+      {x: rect.x, y: rect.y},
+      {x: rect.x + rect.width, y: rect.y},
+      {x: rect.x + rect.width, y: rect.y + rect.height},
+      {x: rect.x, y: rect.y + rect.height}
+    ];
+    var minX, minY, maxX, maxY;
+    var trans = this.getAbsoluteTransform(top);
+    points.forEach(function(point) {
+      var transformed = trans.point(point);
+      if (minX === void 0) {
+        minX = maxX = transformed.x;
+        minY = maxY = transformed.y;
+      }
+      minX = Math.min(minX, transformed.x);
+      minY = Math.min(minY, transformed.y);
+      maxX = Math.max(maxX, transformed.x);
+      maxY = Math.max(maxY, transformed.y);
+    });
+    return {
+      x: minX,
+      y: minY,
+      width: maxX - minX,
+      height: maxY - minY
+    };
+  }
+  _drawCachedSceneCanvas(context) {
+    context.save();
+    context._applyOpacity(this);
+    context._applyGlobalCompositeOperation(this);
+    const canvasCache = this._getCanvasCache();
+    context.translate(canvasCache.x, canvasCache.y);
+    var cacheCanvas = this._getCachedSceneCanvas();
+    var ratio = cacheCanvas.pixelRatio;
+    context.drawImage(cacheCanvas._canvas, 0, 0, cacheCanvas.width / ratio, cacheCanvas.height / ratio);
+    context.restore();
+  }
+  _drawCachedHitCanvas(context) {
+    var canvasCache = this._getCanvasCache(), hitCanvas = canvasCache.hit;
+    context.save();
+    context.translate(canvasCache.x, canvasCache.y);
+    context.drawImage(hitCanvas._canvas, 0, 0, hitCanvas.width / hitCanvas.pixelRatio, hitCanvas.height / hitCanvas.pixelRatio);
+    context.restore();
+  }
+  _getCachedSceneCanvas() {
+    var filters = this.filters(), cachedCanvas = this._getCanvasCache(), sceneCanvas = cachedCanvas.scene, filterCanvas = cachedCanvas.filter, filterContext = filterCanvas.getContext(), len, imageData, n2, filter;
+    if (filters) {
+      if (!this._filterUpToDate) {
+        var ratio = sceneCanvas.pixelRatio;
+        filterCanvas.setSize(sceneCanvas.width / sceneCanvas.pixelRatio, sceneCanvas.height / sceneCanvas.pixelRatio);
+        try {
+          len = filters.length;
+          filterContext.clear();
+          filterContext.drawImage(sceneCanvas._canvas, 0, 0, sceneCanvas.getWidth() / ratio, sceneCanvas.getHeight() / ratio);
+          imageData = filterContext.getImageData(0, 0, filterCanvas.getWidth(), filterCanvas.getHeight());
+          for (n2 = 0; n2 < len; n2++) {
+            filter = filters[n2];
+            if (typeof filter !== "function") {
+              Util.error("Filter should be type of function, but got " + typeof filter + " instead. Please check correct filters");
+              continue;
+            }
+            filter.call(this, imageData);
+            filterContext.putImageData(imageData, 0, 0);
+          }
+        } catch (e2) {
+          Util.error("Unable to apply filter. " + e2.message + " This post my help you https://konvajs.org/docs/posts/Tainted_Canvas.html.");
+        }
+        this._filterUpToDate = true;
+      }
+      return filterCanvas;
+    }
+    return sceneCanvas;
+  }
+  on(evtStr, handler) {
+    this._cache && this._cache.delete(ALL_LISTENERS);
+    if (arguments.length === 3) {
+      return this._delegate.apply(this, arguments);
+    }
+    var events = evtStr.split(SPACE), len = events.length, n2, event, parts, baseEvent, name2;
+    for (n2 = 0; n2 < len; n2++) {
+      event = events[n2];
+      parts = event.split(".");
+      baseEvent = parts[0];
+      name2 = parts[1] || "";
+      if (!this.eventListeners[baseEvent]) {
+        this.eventListeners[baseEvent] = [];
+      }
+      this.eventListeners[baseEvent].push({
+        name: name2,
+        handler
+      });
+    }
+    return this;
+  }
+  off(evtStr, callback) {
+    var events = (evtStr || "").split(SPACE), len = events.length, n2, t2, event, parts, baseEvent, name2;
+    this._cache && this._cache.delete(ALL_LISTENERS);
+    if (!evtStr) {
+      for (t2 in this.eventListeners) {
+        this._off(t2);
+      }
+    }
+    for (n2 = 0; n2 < len; n2++) {
+      event = events[n2];
+      parts = event.split(".");
+      baseEvent = parts[0];
+      name2 = parts[1];
+      if (baseEvent) {
+        if (this.eventListeners[baseEvent]) {
+          this._off(baseEvent, name2, callback);
+        }
+      } else {
+        for (t2 in this.eventListeners) {
+          this._off(t2, name2, callback);
+        }
+      }
+    }
+    return this;
+  }
+  dispatchEvent(evt) {
+    var e2 = {
+      target: this,
+      type: evt.type,
+      evt
+    };
+    this.fire(evt.type, e2);
+    return this;
+  }
+  addEventListener(type, handler) {
+    this.on(type, function(evt) {
+      handler.call(this, evt.evt);
+    });
+    return this;
+  }
+  removeEventListener(type) {
+    this.off(type);
+    return this;
+  }
+  _delegate(event, selector, handler) {
+    var stopNode = this;
+    this.on(event, function(evt) {
+      var targets = evt.target.findAncestors(selector, true, stopNode);
+      for (var i2 = 0; i2 < targets.length; i2++) {
+        evt = Util.cloneObject(evt);
+        evt.currentTarget = targets[i2];
+        handler.call(targets[i2], evt);
+      }
+    });
+  }
+  remove() {
+    if (this.isDragging()) {
+      this.stopDrag();
+    }
+    DD._dragElements.delete(this._id);
+    this._remove();
+    return this;
+  }
+  _clearCaches() {
+    this._clearSelfAndDescendantCache(ABSOLUTE_TRANSFORM);
+    this._clearSelfAndDescendantCache(ABSOLUTE_OPACITY);
+    this._clearSelfAndDescendantCache(ABSOLUTE_SCALE);
+    this._clearSelfAndDescendantCache(STAGE);
+    this._clearSelfAndDescendantCache(VISIBLE);
+    this._clearSelfAndDescendantCache(LISTENING);
+  }
+  _remove() {
+    this._clearCaches();
+    var parent = this.getParent();
+    if (parent && parent.children) {
+      parent.children.splice(this.index, 1);
+      parent._setChildrenIndices();
+      this.parent = null;
+    }
+  }
+  destroy() {
+    this.remove();
+    return this;
+  }
+  getAttr(attr) {
+    var method = "get" + Util._capitalize(attr);
+    if (Util._isFunction(this[method])) {
+      return this[method]();
+    }
+    return this.attrs[attr];
+  }
+  getAncestors() {
+    var parent = this.getParent(), ancestors = [];
+    while (parent) {
+      ancestors.push(parent);
+      parent = parent.getParent();
+    }
+    return ancestors;
+  }
+  getAttrs() {
+    return this.attrs || {};
+  }
+  setAttrs(config) {
+    this._batchTransformChanges(() => {
+      var key, method;
+      if (!config) {
+        return this;
+      }
+      for (key in config) {
+        if (key === CHILDREN) {
+          continue;
+        }
+        method = SET2 + Util._capitalize(key);
+        if (Util._isFunction(this[method])) {
+          this[method](config[key]);
+        } else {
+          this._setAttr(key, config[key]);
+        }
+      }
+    });
+    return this;
+  }
+  isListening() {
+    return this._getCache(LISTENING, this._isListening);
+  }
+  _isListening(relativeTo) {
+    const listening = this.listening();
+    if (!listening) {
+      return false;
+    }
+    const parent = this.getParent();
+    if (parent && parent !== relativeTo && this !== relativeTo) {
+      return parent._isListening(relativeTo);
+    } else {
+      return true;
+    }
+  }
+  isVisible() {
+    return this._getCache(VISIBLE, this._isVisible);
+  }
+  _isVisible(relativeTo) {
+    const visible = this.visible();
+    if (!visible) {
+      return false;
+    }
+    const parent = this.getParent();
+    if (parent && parent !== relativeTo && this !== relativeTo) {
+      return parent._isVisible(relativeTo);
+    } else {
+      return true;
+    }
+  }
+  shouldDrawHit(top, skipDragCheck = false) {
+    if (top) {
+      return this._isVisible(top) && this._isListening(top);
+    }
+    var layer = this.getLayer();
+    var layerUnderDrag = false;
+    DD._dragElements.forEach((elem) => {
+      if (elem.dragStatus !== "dragging") {
+        return;
+      } else if (elem.node.nodeType === "Stage") {
+        layerUnderDrag = true;
+      } else if (elem.node.getLayer() === layer) {
+        layerUnderDrag = true;
+      }
+    });
+    var dragSkip = !skipDragCheck && !Konva.hitOnDragEnabled && layerUnderDrag;
+    return this.isListening() && this.isVisible() && !dragSkip;
+  }
+  show() {
+    this.visible(true);
+    return this;
+  }
+  hide() {
+    this.visible(false);
+    return this;
+  }
+  getZIndex() {
+    return this.index || 0;
+  }
+  getAbsoluteZIndex() {
+    var depth = this.getDepth(), that = this, index4 = 0, nodes, len, n2, child;
+    function addChildren(children) {
+      nodes = [];
+      len = children.length;
+      for (n2 = 0; n2 < len; n2++) {
+        child = children[n2];
+        index4++;
+        if (child.nodeType !== SHAPE) {
+          nodes = nodes.concat(child.getChildren().slice());
+        }
+        if (child._id === that._id) {
+          n2 = len;
+        }
+      }
+      if (nodes.length > 0 && nodes[0].getDepth() <= depth) {
+        addChildren(nodes);
+      }
+    }
+    if (that.nodeType !== UPPER_STAGE) {
+      addChildren(that.getStage().getChildren());
+    }
+    return index4;
+  }
+  getDepth() {
+    var depth = 0, parent = this.parent;
+    while (parent) {
+      depth++;
+      parent = parent.parent;
+    }
+    return depth;
+  }
+  _batchTransformChanges(func) {
+    this._batchingTransformChange = true;
+    func();
+    this._batchingTransformChange = false;
+    if (this._needClearTransformCache) {
+      this._clearCache(TRANSFORM);
+      this._clearSelfAndDescendantCache(ABSOLUTE_TRANSFORM);
+    }
+    this._needClearTransformCache = false;
+  }
+  setPosition(pos) {
+    this._batchTransformChanges(() => {
+      this.x(pos.x);
+      this.y(pos.y);
+    });
+    return this;
+  }
+  getPosition() {
+    return {
+      x: this.x(),
+      y: this.y()
+    };
+  }
+  getRelativePointerPosition() {
+    if (!this.getStage()) {
+      return null;
+    }
+    var pos = this.getStage().getPointerPosition();
+    if (!pos) {
+      return null;
+    }
+    var transform2 = this.getAbsoluteTransform().copy();
+    transform2.invert();
+    return transform2.point(pos);
+  }
+  getAbsolutePosition(top) {
+    let haveCachedParent = false;
+    let parent = this.parent;
+    while (parent) {
+      if (parent.isCached()) {
+        haveCachedParent = true;
+        break;
+      }
+      parent = parent.parent;
+    }
+    if (haveCachedParent && !top) {
+      top = true;
+    }
+    var absoluteMatrix = this.getAbsoluteTransform(top).getMatrix(), absoluteTransform = new Transform(), offset = this.offset();
+    absoluteTransform.m = absoluteMatrix.slice();
+    absoluteTransform.translate(offset.x, offset.y);
+    return absoluteTransform.getTranslation();
+  }
+  setAbsolutePosition(pos) {
+    var origTrans = this._clearTransform();
+    this.attrs.x = origTrans.x;
+    this.attrs.y = origTrans.y;
+    delete origTrans.x;
+    delete origTrans.y;
+    this._clearCache(TRANSFORM);
+    var it2 = this._getAbsoluteTransform().copy();
+    it2.invert();
+    it2.translate(pos.x, pos.y);
+    pos = {
+      x: this.attrs.x + it2.getTranslation().x,
+      y: this.attrs.y + it2.getTranslation().y
+    };
+    this._setTransform(origTrans);
+    this.setPosition({x: pos.x, y: pos.y});
+    this._clearCache(TRANSFORM);
+    this._clearSelfAndDescendantCache(ABSOLUTE_TRANSFORM);
+    return this;
+  }
+  _setTransform(trans) {
+    var key;
+    for (key in trans) {
+      this.attrs[key] = trans[key];
+    }
+  }
+  _clearTransform() {
+    var trans = {
+      x: this.x(),
+      y: this.y(),
+      rotation: this.rotation(),
+      scaleX: this.scaleX(),
+      scaleY: this.scaleY(),
+      offsetX: this.offsetX(),
+      offsetY: this.offsetY(),
+      skewX: this.skewX(),
+      skewY: this.skewY()
+    };
+    this.attrs.x = 0;
+    this.attrs.y = 0;
+    this.attrs.rotation = 0;
+    this.attrs.scaleX = 1;
+    this.attrs.scaleY = 1;
+    this.attrs.offsetX = 0;
+    this.attrs.offsetY = 0;
+    this.attrs.skewX = 0;
+    this.attrs.skewY = 0;
+    return trans;
+  }
+  move(change) {
+    var changeX = change.x, changeY = change.y, x2 = this.x(), y2 = this.y();
+    if (changeX !== void 0) {
+      x2 += changeX;
+    }
+    if (changeY !== void 0) {
+      y2 += changeY;
+    }
+    this.setPosition({x: x2, y: y2});
+    return this;
+  }
+  _eachAncestorReverse(func, top) {
+    var family = [], parent = this.getParent(), len, n2;
+    if (top && top._id === this._id) {
+      return;
+    }
+    family.unshift(this);
+    while (parent && (!top || parent._id !== top._id)) {
+      family.unshift(parent);
+      parent = parent.parent;
+    }
+    len = family.length;
+    for (n2 = 0; n2 < len; n2++) {
+      func(family[n2]);
+    }
+  }
+  rotate(theta) {
+    this.rotation(this.rotation() + theta);
+    return this;
+  }
+  moveToTop() {
+    if (!this.parent) {
+      Util.warn("Node has no parent. moveToTop function is ignored.");
+      return false;
+    }
+    var index4 = this.index;
+    this.parent.children.splice(index4, 1);
+    this.parent.children.push(this);
+    this.parent._setChildrenIndices();
+    return true;
+  }
+  moveUp() {
+    if (!this.parent) {
+      Util.warn("Node has no parent. moveUp function is ignored.");
+      return false;
+    }
+    var index4 = this.index, len = this.parent.getChildren().length;
+    if (index4 < len - 1) {
+      this.parent.children.splice(index4, 1);
+      this.parent.children.splice(index4 + 1, 0, this);
+      this.parent._setChildrenIndices();
+      return true;
+    }
+    return false;
+  }
+  moveDown() {
+    if (!this.parent) {
+      Util.warn("Node has no parent. moveDown function is ignored.");
+      return false;
+    }
+    var index4 = this.index;
+    if (index4 > 0) {
+      this.parent.children.splice(index4, 1);
+      this.parent.children.splice(index4 - 1, 0, this);
+      this.parent._setChildrenIndices();
+      return true;
+    }
+    return false;
+  }
+  moveToBottom() {
+    if (!this.parent) {
+      Util.warn("Node has no parent. moveToBottom function is ignored.");
+      return false;
+    }
+    var index4 = this.index;
+    if (index4 > 0) {
+      this.parent.children.splice(index4, 1);
+      this.parent.children.unshift(this);
+      this.parent._setChildrenIndices();
+      return true;
+    }
+    return false;
+  }
+  setZIndex(zIndex) {
+    if (!this.parent) {
+      Util.warn("Node has no parent. zIndex parameter is ignored.");
+      return this;
+    }
+    if (zIndex < 0 || zIndex >= this.parent.children.length) {
+      Util.warn("Unexpected value " + zIndex + " for zIndex property. zIndex is just index of a node in children of its parent. Expected value is from 0 to " + (this.parent.children.length - 1) + ".");
+    }
+    var index4 = this.index;
+    this.parent.children.splice(index4, 1);
+    this.parent.children.splice(zIndex, 0, this);
+    this.parent._setChildrenIndices();
+    return this;
+  }
+  getAbsoluteOpacity() {
+    return this._getCache(ABSOLUTE_OPACITY, this._getAbsoluteOpacity);
+  }
+  _getAbsoluteOpacity() {
+    var absOpacity = this.opacity();
+    var parent = this.getParent();
+    if (parent && !parent._isUnderCache) {
+      absOpacity *= parent.getAbsoluteOpacity();
+    }
+    return absOpacity;
+  }
+  moveTo(newContainer) {
+    if (this.getParent() !== newContainer) {
+      this._remove();
+      newContainer.add(this);
+    }
+    return this;
+  }
+  toObject() {
+    var obj = {}, attrs = this.getAttrs(), key, val, getter, defaultValue, nonPlainObject;
+    obj.attrs = {};
+    for (key in attrs) {
+      val = attrs[key];
+      nonPlainObject = Util.isObject(val) && !Util._isPlainObject(val) && !Util._isArray(val);
+      if (nonPlainObject) {
+        continue;
+      }
+      getter = typeof this[key] === "function" && this[key];
+      delete attrs[key];
+      defaultValue = getter ? getter.call(this) : null;
+      attrs[key] = val;
+      if (defaultValue !== val) {
+        obj.attrs[key] = val;
+      }
+    }
+    obj.className = this.getClassName();
+    return Util._prepareToStringify(obj);
+  }
+  toJSON() {
+    return JSON.stringify(this.toObject());
+  }
+  getParent() {
+    return this.parent;
+  }
+  findAncestors(selector, includeSelf, stopNode) {
+    var res = [];
+    if (includeSelf && this._isMatch(selector)) {
+      res.push(this);
+    }
+    var ancestor = this.parent;
+    while (ancestor) {
+      if (ancestor === stopNode) {
+        return res;
+      }
+      if (ancestor._isMatch(selector)) {
+        res.push(ancestor);
+      }
+      ancestor = ancestor.parent;
+    }
+    return res;
+  }
+  isAncestorOf(node2) {
+    return false;
+  }
+  findAncestor(selector, includeSelf, stopNode) {
+    return this.findAncestors(selector, includeSelf, stopNode)[0];
+  }
+  _isMatch(selector) {
+    if (!selector) {
+      return false;
+    }
+    if (typeof selector === "function") {
+      return selector(this);
+    }
+    var selectorArr = selector.replace(/ /g, "").split(","), len = selectorArr.length, n2, sel;
+    for (n2 = 0; n2 < len; n2++) {
+      sel = selectorArr[n2];
+      if (!Util.isValidSelector(sel)) {
+        Util.warn('Selector "' + sel + '" is invalid. Allowed selectors examples are "#foo", ".bar" or "Group".');
+        Util.warn('If you have a custom shape with such className, please change it to start with upper letter like "Triangle".');
+        Util.warn("Konva is awesome, right?");
+      }
+      if (sel.charAt(0) === "#") {
+        if (this.id() === sel.slice(1)) {
+          return true;
+        }
+      } else if (sel.charAt(0) === ".") {
+        if (this.hasName(sel.slice(1))) {
+          return true;
+        }
+      } else if (this.className === sel || this.nodeType === sel) {
+        return true;
+      }
+    }
+    return false;
+  }
+  getLayer() {
+    var parent = this.getParent();
+    return parent ? parent.getLayer() : null;
+  }
+  getStage() {
+    return this._getCache(STAGE, this._getStage);
+  }
+  _getStage() {
+    var parent = this.getParent();
+    if (parent) {
+      return parent.getStage();
+    } else {
+      return void 0;
+    }
+  }
+  fire(eventType, evt = {}, bubble) {
+    evt.target = evt.target || this;
+    if (bubble) {
+      this._fireAndBubble(eventType, evt);
+    } else {
+      this._fire(eventType, evt);
+    }
+    return this;
+  }
+  getAbsoluteTransform(top) {
+    if (top) {
+      return this._getAbsoluteTransform(top);
+    } else {
+      return this._getCache(ABSOLUTE_TRANSFORM, this._getAbsoluteTransform);
+    }
+  }
+  _getAbsoluteTransform(top) {
+    var at3;
+    if (top) {
+      at3 = new Transform();
+      this._eachAncestorReverse(function(node2) {
+        var transformsEnabled2 = node2.transformsEnabled();
+        if (transformsEnabled2 === "all") {
+          at3.multiply(node2.getTransform());
+        } else if (transformsEnabled2 === "position") {
+          at3.translate(node2.x() - node2.offsetX(), node2.y() - node2.offsetY());
+        }
+      }, top);
+      return at3;
+    } else {
+      at3 = this._cache.get(ABSOLUTE_TRANSFORM) || new Transform();
+      if (this.parent) {
+        this.parent.getAbsoluteTransform().copyInto(at3);
+      } else {
+        at3.reset();
+      }
+      var transformsEnabled = this.transformsEnabled();
+      if (transformsEnabled === "all") {
+        at3.multiply(this.getTransform());
+      } else if (transformsEnabled === "position") {
+        const x2 = this.attrs.x || 0;
+        const y2 = this.attrs.y || 0;
+        const offsetX = this.attrs.offsetX || 0;
+        const offsetY = this.attrs.offsetY || 0;
+        at3.translate(x2 - offsetX, y2 - offsetY);
+      }
+      at3.dirty = false;
+      return at3;
+    }
+  }
+  getAbsoluteScale(top) {
+    var parent = this;
+    while (parent) {
+      if (parent._isUnderCache) {
+        top = parent;
+      }
+      parent = parent.getParent();
+    }
+    const transform2 = this.getAbsoluteTransform(top);
+    const attrs = transform2.decompose();
+    return {
+      x: attrs.scaleX,
+      y: attrs.scaleY
+    };
+  }
+  getAbsoluteRotation() {
+    return this.getAbsoluteTransform().decompose().rotation;
+  }
+  getTransform() {
+    return this._getCache(TRANSFORM, this._getTransform);
+  }
+  _getTransform() {
+    var _a, _b;
+    var m2 = this._cache.get(TRANSFORM) || new Transform();
+    m2.reset();
+    var x2 = this.x(), y2 = this.y(), rotation = Konva.getAngle(this.rotation()), scaleX = (_a = this.attrs.scaleX) !== null && _a !== void 0 ? _a : 1, scaleY = (_b = this.attrs.scaleY) !== null && _b !== void 0 ? _b : 1, skewX = this.attrs.skewX || 0, skewY = this.attrs.skewY || 0, offsetX = this.attrs.offsetX || 0, offsetY = this.attrs.offsetY || 0;
+    if (x2 !== 0 || y2 !== 0) {
+      m2.translate(x2, y2);
+    }
+    if (rotation !== 0) {
+      m2.rotate(rotation);
+    }
+    if (skewX !== 0 || skewY !== 0) {
+      m2.skew(skewX, skewY);
+    }
+    if (scaleX !== 1 || scaleY !== 1) {
+      m2.scale(scaleX, scaleY);
+    }
+    if (offsetX !== 0 || offsetY !== 0) {
+      m2.translate(-1 * offsetX, -1 * offsetY);
+    }
+    m2.dirty = false;
+    return m2;
+  }
+  clone(obj) {
+    var attrs = Util.cloneObject(this.attrs), key, allListeners, len, n2, listener;
+    for (key in obj) {
+      attrs[key] = obj[key];
+    }
+    var node2 = new this.constructor(attrs);
+    for (key in this.eventListeners) {
+      allListeners = this.eventListeners[key];
+      len = allListeners.length;
+      for (n2 = 0; n2 < len; n2++) {
+        listener = allListeners[n2];
+        if (listener.name.indexOf(KONVA) < 0) {
+          if (!node2.eventListeners[key]) {
+            node2.eventListeners[key] = [];
+          }
+          node2.eventListeners[key].push(listener);
+        }
+      }
+    }
+    return node2;
+  }
+  _toKonvaCanvas(config) {
+    config = config || {};
+    var box = this.getClientRect();
+    var stage = this.getStage(), x2 = config.x !== void 0 ? config.x : box.x, y2 = config.y !== void 0 ? config.y : box.y, pixelRatio = config.pixelRatio || 1, canvas = new SceneCanvas({
+      width: config.width || box.width || (stage ? stage.width() : 0),
+      height: config.height || box.height || (stage ? stage.height() : 0),
+      pixelRatio
+    }), context = canvas.getContext();
+    context.save();
+    if (x2 || y2) {
+      context.translate(-1 * x2, -1 * y2);
+    }
+    this.drawScene(canvas);
+    context.restore();
+    return canvas;
+  }
+  toCanvas(config) {
+    return this._toKonvaCanvas(config)._canvas;
+  }
+  toDataURL(config) {
+    config = config || {};
+    var mimeType = config.mimeType || null, quality = config.quality || null;
+    var url = this._toKonvaCanvas(config).toDataURL(mimeType, quality);
+    if (config.callback) {
+      config.callback(url);
+    }
+    return url;
+  }
+  toImage(config) {
+    if (!config || !config.callback) {
+      throw "callback required for toImage method config argument";
+    }
+    var callback = config.callback;
+    delete config.callback;
+    Util._urlToImage(this.toDataURL(config), function(img) {
+      callback(img);
+    });
+  }
+  setSize(size) {
+    this.width(size.width);
+    this.height(size.height);
+    return this;
+  }
+  getSize() {
+    return {
+      width: this.width(),
+      height: this.height()
+    };
+  }
+  getClassName() {
+    return this.className || this.nodeType;
+  }
+  getType() {
+    return this.nodeType;
+  }
+  getDragDistance() {
+    if (this.attrs.dragDistance !== void 0) {
+      return this.attrs.dragDistance;
+    } else if (this.parent) {
+      return this.parent.getDragDistance();
+    } else {
+      return Konva.dragDistance;
+    }
+  }
+  _off(type, name2, callback) {
+    var evtListeners = this.eventListeners[type], i2, evtName, handler;
+    for (i2 = 0; i2 < evtListeners.length; i2++) {
+      evtName = evtListeners[i2].name;
+      handler = evtListeners[i2].handler;
+      if ((evtName !== "konva" || name2 === "konva") && (!name2 || evtName === name2) && (!callback || callback === handler)) {
+        evtListeners.splice(i2, 1);
+        if (evtListeners.length === 0) {
+          delete this.eventListeners[type];
+          break;
+        }
+        i2--;
+      }
+    }
+  }
+  _fireChangeEvent(attr, oldVal, newVal) {
+    this._fire(attr + CHANGE, {
+      oldVal,
+      newVal
+    });
+  }
+  addName(name2) {
+    if (!this.hasName(name2)) {
+      var oldName = this.name();
+      var newName = oldName ? oldName + " " + name2 : name2;
+      this.name(newName);
+    }
+    return this;
+  }
+  hasName(name2) {
+    if (!name2) {
+      return false;
+    }
+    const fullName = this.name();
+    if (!fullName) {
+      return false;
+    }
+    var names = (fullName || "").split(/\s/g);
+    return names.indexOf(name2) !== -1;
+  }
+  removeName(name2) {
+    var names = (this.name() || "").split(/\s/g);
+    var index4 = names.indexOf(name2);
+    if (index4 !== -1) {
+      names.splice(index4, 1);
+      this.name(names.join(" "));
+    }
+    return this;
+  }
+  setAttr(attr, val) {
+    var func = this[SET2 + Util._capitalize(attr)];
+    if (Util._isFunction(func)) {
+      func.call(this, val);
+    } else {
+      this._setAttr(attr, val);
+    }
+    return this;
+  }
+  _requestDraw() {
+    if (Konva.autoDrawEnabled) {
+      const drawNode = this.getLayer() || this.getStage();
+      drawNode === null || drawNode === void 0 ? void 0 : drawNode.batchDraw();
+    }
+  }
+  _setAttr(key, val) {
+    var oldVal = this.attrs[key];
+    if (oldVal === val && !Util.isObject(val)) {
+      return;
+    }
+    if (val === void 0 || val === null) {
+      delete this.attrs[key];
+    } else {
+      this.attrs[key] = val;
+    }
+    if (this._shouldFireChangeEvents) {
+      this._fireChangeEvent(key, oldVal, val);
+    }
+    this._requestDraw();
+  }
+  _setComponentAttr(key, component, val) {
+    var oldVal;
+    if (val !== void 0) {
+      oldVal = this.attrs[key];
+      if (!oldVal) {
+        this.attrs[key] = this.getAttr(key);
+      }
+      this.attrs[key][component] = val;
+      this._fireChangeEvent(key, oldVal, val);
+    }
+  }
+  _fireAndBubble(eventType, evt, compareShape) {
+    if (evt && this.nodeType === SHAPE) {
+      evt.target = this;
+    }
+    var shouldStop = (eventType === MOUSEENTER || eventType === MOUSELEAVE) && (compareShape && (this === compareShape || this.isAncestorOf && this.isAncestorOf(compareShape)) || this.nodeType === "Stage" && !compareShape);
+    if (!shouldStop) {
+      this._fire(eventType, evt);
+      var stopBubble = (eventType === MOUSEENTER || eventType === MOUSELEAVE) && compareShape && compareShape.isAncestorOf && compareShape.isAncestorOf(this) && !compareShape.isAncestorOf(this.parent);
+      if ((evt && !evt.cancelBubble || !evt) && this.parent && this.parent.isListening() && !stopBubble) {
+        if (compareShape && compareShape.parent) {
+          this._fireAndBubble.call(this.parent, eventType, evt, compareShape);
+        } else {
+          this._fireAndBubble.call(this.parent, eventType, evt);
+        }
+      }
+    }
+  }
+  _getProtoListeners(eventType) {
+    let listeners = this._cache.get(ALL_LISTENERS);
+    if (!listeners) {
+      listeners = {};
+      let obj = Object.getPrototypeOf(this);
+      while (obj) {
+        if (!obj.eventListeners) {
+          obj = Object.getPrototypeOf(obj);
+          continue;
+        }
+        for (var event in obj.eventListeners) {
+          const newEvents = obj.eventListeners[event];
+          const oldEvents = listeners[event] || [];
+          listeners[event] = newEvents.concat(oldEvents);
+        }
+        obj = Object.getPrototypeOf(obj);
+      }
+      this._cache.set(ALL_LISTENERS, listeners);
+    }
+    return listeners[eventType];
+  }
+  _fire(eventType, evt) {
+    evt = evt || {};
+    evt.currentTarget = this;
+    evt.type = eventType;
+    const topListeners = this._getProtoListeners(eventType);
+    if (topListeners) {
+      for (var i2 = 0; i2 < topListeners.length; i2++) {
+        topListeners[i2].handler.call(this, evt);
+      }
+    }
+    const selfListeners = this.eventListeners[eventType];
+    if (selfListeners) {
+      for (var i2 = 0; i2 < selfListeners.length; i2++) {
+        selfListeners[i2].handler.call(this, evt);
+      }
+    }
+  }
+  draw() {
+    this.drawScene();
+    this.drawHit();
+    return this;
+  }
+  _createDragElement(evt) {
+    var pointerId = evt ? evt.pointerId : void 0;
+    var stage = this.getStage();
+    var ap = this.getAbsolutePosition();
+    var pos = stage._getPointerById(pointerId) || stage._changedPointerPositions[0] || ap;
+    DD._dragElements.set(this._id, {
+      node: this,
+      startPointerPos: pos,
+      offset: {
+        x: pos.x - ap.x,
+        y: pos.y - ap.y
+      },
+      dragStatus: "ready",
+      pointerId
+    });
+  }
+  startDrag(evt, bubbleEvent = true) {
+    if (!DD._dragElements.has(this._id)) {
+      this._createDragElement(evt);
+    }
+    const elem = DD._dragElements.get(this._id);
+    elem.dragStatus = "dragging";
+    this.fire("dragstart", {
+      type: "dragstart",
+      target: this,
+      evt: evt && evt.evt
+    }, bubbleEvent);
+  }
+  _setDragPosition(evt, elem) {
+    const pos = this.getStage()._getPointerById(elem.pointerId);
+    if (!pos) {
+      return;
+    }
+    var newNodePos = {
+      x: pos.x - elem.offset.x,
+      y: pos.y - elem.offset.y
+    };
+    var dbf = this.dragBoundFunc();
+    if (dbf !== void 0) {
+      const bounded = dbf.call(this, newNodePos, evt);
+      if (!bounded) {
+        Util.warn("dragBoundFunc did not return any value. That is unexpected behavior. You must return new absolute position from dragBoundFunc.");
+      } else {
+        newNodePos = bounded;
+      }
+    }
+    if (!this._lastPos || this._lastPos.x !== newNodePos.x || this._lastPos.y !== newNodePos.y) {
+      this.setAbsolutePosition(newNodePos);
+      this._requestDraw();
+    }
+    this._lastPos = newNodePos;
+  }
+  stopDrag(evt) {
+    const elem = DD._dragElements.get(this._id);
+    if (elem) {
+      elem.dragStatus = "stopped";
+    }
+    DD._endDragBefore(evt);
+    DD._endDragAfter(evt);
+  }
+  setDraggable(draggable) {
+    this._setAttr("draggable", draggable);
+    this._dragChange();
+  }
+  isDragging() {
+    const elem = DD._dragElements.get(this._id);
+    return elem ? elem.dragStatus === "dragging" : false;
+  }
+  _listenDrag() {
+    this._dragCleanup();
+    this.on("mousedown.konva touchstart.konva", function(evt) {
+      var shouldCheckButton = evt.evt["button"] !== void 0;
+      var canDrag = !shouldCheckButton || Konva.dragButtons.indexOf(evt.evt["button"]) >= 0;
+      if (!canDrag) {
+        return;
+      }
+      if (this.isDragging()) {
+        return;
+      }
+      var hasDraggingChild = false;
+      DD._dragElements.forEach((elem) => {
+        if (this.isAncestorOf(elem.node)) {
+          hasDraggingChild = true;
+        }
+      });
+      if (!hasDraggingChild) {
+        this._createDragElement(evt);
+      }
+    });
+  }
+  _dragChange() {
+    if (this.attrs.draggable) {
+      this._listenDrag();
+    } else {
+      this._dragCleanup();
+      var stage = this.getStage();
+      if (!stage) {
+        return;
+      }
+      const dragElement = DD._dragElements.get(this._id);
+      const isDragging = dragElement && dragElement.dragStatus === "dragging";
+      const isReady = dragElement && dragElement.dragStatus === "ready";
+      if (isDragging) {
+        this.stopDrag();
+      } else if (isReady) {
+        DD._dragElements.delete(this._id);
+      }
+    }
+  }
+  _dragCleanup() {
+    this.off("mousedown.konva");
+    this.off("touchstart.konva");
+  }
+  isClientRectOnScreen(margin = {x: 0, y: 0}) {
+    const stage = this.getStage();
+    if (!stage) {
+      return false;
+    }
+    const screenRect = {
+      x: -margin.x,
+      y: -margin.y,
+      width: stage.width() + margin.x,
+      height: stage.height() + margin.y
+    };
+    return Util.haveIntersection(screenRect, this.getClientRect());
+  }
+  static create(data2, container) {
+    if (Util._isString(data2)) {
+      data2 = JSON.parse(data2);
+    }
+    return this._createNode(data2, container);
+  }
+  static _createNode(obj, container) {
+    var className = Node2.prototype.getClassName.call(obj), children = obj.children, no, len, n2;
+    if (container) {
+      obj.attrs.container = container;
+    }
+    if (!Konva[className]) {
+      Util.warn('Can not find a node with class name "' + className + '". Fallback to "Shape".');
+      className = "Shape";
+    }
+    const Class = Konva[className];
+    no = new Class(obj.attrs);
+    if (children) {
+      len = children.length;
+      for (n2 = 0; n2 < len; n2++) {
+        no.add(Node2._createNode(children[n2]));
+      }
+    }
+    return no;
+  }
+};
+Node2.prototype.nodeType = "Node";
+Node2.prototype._attrsAffectingSize = [];
+Node2.prototype.eventListeners = {};
+Node2.prototype.on.call(Node2.prototype, TRANSFORM_CHANGE_STR, function() {
+  if (this._batchingTransformChange) {
+    this._needClearTransformCache = true;
+    return;
+  }
+  this._clearCache(TRANSFORM);
+  this._clearSelfAndDescendantCache(ABSOLUTE_TRANSFORM);
+});
+Node2.prototype.on.call(Node2.prototype, "visibleChange.konva", function() {
+  this._clearSelfAndDescendantCache(VISIBLE);
+});
+Node2.prototype.on.call(Node2.prototype, "listeningChange.konva", function() {
+  this._clearSelfAndDescendantCache(LISTENING);
+});
+Node2.prototype.on.call(Node2.prototype, "opacityChange.konva", function() {
+  this._clearSelfAndDescendantCache(ABSOLUTE_OPACITY);
+});
+var addGetterSetter = Factory.addGetterSetter;
+addGetterSetter(Node2, "zIndex");
+addGetterSetter(Node2, "absolutePosition");
+addGetterSetter(Node2, "position");
+addGetterSetter(Node2, "x", 0, getNumberValidator());
+addGetterSetter(Node2, "y", 0, getNumberValidator());
+addGetterSetter(Node2, "globalCompositeOperation", "source-over", getStringValidator());
+addGetterSetter(Node2, "opacity", 1, getNumberValidator());
+addGetterSetter(Node2, "name", "", getStringValidator());
+addGetterSetter(Node2, "id", "", getStringValidator());
+addGetterSetter(Node2, "rotation", 0, getNumberValidator());
+Factory.addComponentsGetterSetter(Node2, "scale", ["x", "y"]);
+addGetterSetter(Node2, "scaleX", 1, getNumberValidator());
+addGetterSetter(Node2, "scaleY", 1, getNumberValidator());
+Factory.addComponentsGetterSetter(Node2, "skew", ["x", "y"]);
+addGetterSetter(Node2, "skewX", 0, getNumberValidator());
+addGetterSetter(Node2, "skewY", 0, getNumberValidator());
+Factory.addComponentsGetterSetter(Node2, "offset", ["x", "y"]);
+addGetterSetter(Node2, "offsetX", 0, getNumberValidator());
+addGetterSetter(Node2, "offsetY", 0, getNumberValidator());
+addGetterSetter(Node2, "dragDistance", null, getNumberValidator());
+addGetterSetter(Node2, "width", 0, getNumberValidator());
+addGetterSetter(Node2, "height", 0, getNumberValidator());
+addGetterSetter(Node2, "listening", true, getBooleanValidator());
+addGetterSetter(Node2, "preventDefault", true, getBooleanValidator());
+addGetterSetter(Node2, "filters", null, function(val) {
+  this._filterUpToDate = false;
+  return val;
+});
+addGetterSetter(Node2, "visible", true, getBooleanValidator());
+addGetterSetter(Node2, "transformsEnabled", "all", getStringValidator());
+addGetterSetter(Node2, "size");
+addGetterSetter(Node2, "dragBoundFunc");
+addGetterSetter(Node2, "draggable", false, getBooleanValidator());
+Factory.backCompat(Node2, {
+  rotateDeg: "rotate",
+  setRotationDeg: "setRotation",
+  getRotationDeg: "getRotation"
+});
+
+// node_modules/konva/lib/Container.js
+var Container = class extends Node2 {
+  constructor() {
+    super(...arguments);
+    this.children = [];
+  }
+  getChildren(filterFunc) {
+    if (!filterFunc) {
+      return this.children || [];
+    }
+    const children = this.children || [];
+    var results = [];
+    children.forEach(function(child) {
+      if (filterFunc(child)) {
+        results.push(child);
+      }
+    });
+    return results;
+  }
+  hasChildren() {
+    return this.getChildren().length > 0;
+  }
+  removeChildren() {
+    this.getChildren().forEach((child) => {
+      child.parent = null;
+      child.index = 0;
+      child.remove();
+    });
+    this.children = [];
+    return this;
+  }
+  destroyChildren() {
+    this.getChildren().forEach((child) => {
+      child.parent = null;
+      child.index = 0;
+      child.destroy();
+    });
+    this.children = [];
+    return this;
+  }
+  add(...children) {
+    if (arguments.length > 1) {
+      for (var i2 = 0; i2 < arguments.length; i2++) {
+        this.add(arguments[i2]);
+      }
+      return this;
+    }
+    var child = children[0];
+    if (child.getParent()) {
+      child.moveTo(this);
+      return this;
+    }
+    this._validateAdd(child);
+    child.index = this.getChildren().length;
+    child.parent = this;
+    child._clearCaches();
+    this.getChildren().push(child);
+    this._fire("add", {
+      child
+    });
+    this._requestDraw();
+    return this;
+  }
+  destroy() {
+    if (this.hasChildren()) {
+      this.destroyChildren();
+    }
+    super.destroy();
+    return this;
+  }
+  find(selector) {
+    return this._generalFind(selector, false);
+  }
+  findOne(selector) {
+    var result = this._generalFind(selector, true);
+    return result.length > 0 ? result[0] : void 0;
+  }
+  _generalFind(selector, findOne) {
+    var retArr = [];
+    this._descendants((node2) => {
+      const valid = node2._isMatch(selector);
+      if (valid) {
+        retArr.push(node2);
+      }
+      if (valid && findOne) {
+        return true;
+      }
+      return false;
+    });
+    return retArr;
+  }
+  _descendants(fn) {
+    let shouldStop = false;
+    const children = this.getChildren();
+    for (const child of children) {
+      shouldStop = fn(child);
+      if (shouldStop) {
+        return true;
+      }
+      if (!child.hasChildren()) {
+        continue;
+      }
+      shouldStop = child._descendants(fn);
+      if (shouldStop) {
+        return true;
+      }
+    }
+    return false;
+  }
+  toObject() {
+    var obj = Node2.prototype.toObject.call(this);
+    obj.children = [];
+    this.getChildren().forEach((child) => {
+      obj.children.push(child.toObject());
+    });
+    return obj;
+  }
+  isAncestorOf(node2) {
+    var parent = node2.getParent();
+    while (parent) {
+      if (parent._id === this._id) {
+        return true;
+      }
+      parent = parent.getParent();
+    }
+    return false;
+  }
+  clone(obj) {
+    var node2 = Node2.prototype.clone.call(this, obj);
+    this.getChildren().forEach(function(no) {
+      node2.add(no.clone());
+    });
+    return node2;
+  }
+  getAllIntersections(pos) {
+    var arr = [];
+    this.find("Shape").forEach(function(shape) {
+      if (shape.isVisible() && shape.intersects(pos)) {
+        arr.push(shape);
+      }
+    });
+    return arr;
+  }
+  _clearSelfAndDescendantCache(attr) {
+    var _a;
+    super._clearSelfAndDescendantCache(attr);
+    if (this.isCached()) {
+      return;
+    }
+    (_a = this.children) === null || _a === void 0 ? void 0 : _a.forEach(function(node2) {
+      node2._clearSelfAndDescendantCache(attr);
+    });
+  }
+  _setChildrenIndices() {
+    var _a;
+    (_a = this.children) === null || _a === void 0 ? void 0 : _a.forEach(function(child, n2) {
+      child.index = n2;
+    });
+    this._requestDraw();
+  }
+  drawScene(can, top) {
+    var layer = this.getLayer(), canvas = can || layer && layer.getCanvas(), context = canvas && canvas.getContext(), cachedCanvas = this._getCanvasCache(), cachedSceneCanvas = cachedCanvas && cachedCanvas.scene;
+    var caching = canvas && canvas.isCache;
+    if (!this.isVisible() && !caching) {
+      return this;
+    }
+    if (cachedSceneCanvas) {
+      context.save();
+      var m2 = this.getAbsoluteTransform(top).getMatrix();
+      context.transform(m2[0], m2[1], m2[2], m2[3], m2[4], m2[5]);
+      this._drawCachedSceneCanvas(context);
+      context.restore();
+    } else {
+      this._drawChildren("drawScene", canvas, top);
+    }
+    return this;
+  }
+  drawHit(can, top) {
+    if (!this.shouldDrawHit(top)) {
+      return this;
+    }
+    var layer = this.getLayer(), canvas = can || layer && layer.hitCanvas, context = canvas && canvas.getContext(), cachedCanvas = this._getCanvasCache(), cachedHitCanvas = cachedCanvas && cachedCanvas.hit;
+    if (cachedHitCanvas) {
+      context.save();
+      var m2 = this.getAbsoluteTransform(top).getMatrix();
+      context.transform(m2[0], m2[1], m2[2], m2[3], m2[4], m2[5]);
+      this._drawCachedHitCanvas(context);
+      context.restore();
+    } else {
+      this._drawChildren("drawHit", canvas, top);
+    }
+    return this;
+  }
+  _drawChildren(drawMethod, canvas, top) {
+    var _a;
+    var context = canvas && canvas.getContext(), clipWidth = this.clipWidth(), clipHeight = this.clipHeight(), clipFunc = this.clipFunc(), hasClip = clipWidth && clipHeight || clipFunc;
+    const selfCache = top === this;
+    if (hasClip) {
+      context.save();
+      var transform2 = this.getAbsoluteTransform(top);
+      var m2 = transform2.getMatrix();
+      context.transform(m2[0], m2[1], m2[2], m2[3], m2[4], m2[5]);
+      context.beginPath();
+      if (clipFunc) {
+        clipFunc.call(this, context, this);
+      } else {
+        var clipX = this.clipX();
+        var clipY = this.clipY();
+        context.rect(clipX, clipY, clipWidth, clipHeight);
+      }
+      context.clip();
+      m2 = transform2.copy().invert().getMatrix();
+      context.transform(m2[0], m2[1], m2[2], m2[3], m2[4], m2[5]);
+    }
+    var hasComposition = !selfCache && this.globalCompositeOperation() !== "source-over" && drawMethod === "drawScene";
+    if (hasComposition) {
+      context.save();
+      context._applyGlobalCompositeOperation(this);
+    }
+    (_a = this.children) === null || _a === void 0 ? void 0 : _a.forEach(function(child) {
+      child[drawMethod](canvas, top);
+    });
+    if (hasComposition) {
+      context.restore();
+    }
+    if (hasClip) {
+      context.restore();
+    }
+  }
+  getClientRect(config) {
+    var _a;
+    config = config || {};
+    var skipTransform = config.skipTransform;
+    var relativeTo = config.relativeTo;
+    var minX, minY, maxX, maxY;
+    var selfRect = {
+      x: Infinity,
+      y: Infinity,
+      width: 0,
+      height: 0
+    };
+    var that = this;
+    (_a = this.children) === null || _a === void 0 ? void 0 : _a.forEach(function(child) {
+      if (!child.visible()) {
+        return;
+      }
+      var rect = child.getClientRect({
+        relativeTo: that,
+        skipShadow: config.skipShadow,
+        skipStroke: config.skipStroke
+      });
+      if (rect.width === 0 && rect.height === 0) {
+        return;
+      }
+      if (minX === void 0) {
+        minX = rect.x;
+        minY = rect.y;
+        maxX = rect.x + rect.width;
+        maxY = rect.y + rect.height;
+      } else {
+        minX = Math.min(minX, rect.x);
+        minY = Math.min(minY, rect.y);
+        maxX = Math.max(maxX, rect.x + rect.width);
+        maxY = Math.max(maxY, rect.y + rect.height);
+      }
+    });
+    var shapes2 = this.find("Shape");
+    var hasVisible = false;
+    for (var i2 = 0; i2 < shapes2.length; i2++) {
+      var shape = shapes2[i2];
+      if (shape._isVisible(this)) {
+        hasVisible = true;
+        break;
+      }
+    }
+    if (hasVisible && minX !== void 0) {
+      selfRect = {
+        x: minX,
+        y: minY,
+        width: maxX - minX,
+        height: maxY - minY
+      };
+    } else {
+      selfRect = {
+        x: 0,
+        y: 0,
+        width: 0,
+        height: 0
+      };
+    }
+    if (!skipTransform) {
+      return this._transformedRect(selfRect, relativeTo);
+    }
+    return selfRect;
+  }
+};
+Factory.addComponentsGetterSetter(Container, "clip", [
+  "x",
+  "y",
+  "width",
+  "height"
+]);
+Factory.addGetterSetter(Container, "clipX", void 0, getNumberValidator());
+Factory.addGetterSetter(Container, "clipY", void 0, getNumberValidator());
+Factory.addGetterSetter(Container, "clipWidth", void 0, getNumberValidator());
+Factory.addGetterSetter(Container, "clipHeight", void 0, getNumberValidator());
+Factory.addGetterSetter(Container, "clipFunc");
+
+// node_modules/konva/lib/PointerEvents.js
+var Captures = new Map();
+var SUPPORT_POINTER_EVENTS = Konva._global["PointerEvent"] !== void 0;
+function getCapturedShape(pointerId) {
+  return Captures.get(pointerId);
+}
+function createEvent(evt) {
+  return {
+    evt,
+    pointerId: evt.pointerId
+  };
+}
+function hasPointerCapture(pointerId, shape) {
+  return Captures.get(pointerId) === shape;
+}
+function setPointerCapture(pointerId, shape) {
+  releaseCapture(pointerId);
+  const stage = shape.getStage();
+  if (!stage)
+    return;
+  Captures.set(pointerId, shape);
+  if (SUPPORT_POINTER_EVENTS) {
+    shape._fire("gotpointercapture", createEvent(new PointerEvent("gotpointercapture")));
+  }
+}
+function releaseCapture(pointerId, target) {
+  const shape = Captures.get(pointerId);
+  if (!shape)
+    return;
+  const stage = shape.getStage();
+  if (stage && stage.content) {
+  }
+  Captures.delete(pointerId);
+  if (SUPPORT_POINTER_EVENTS) {
+    shape._fire("lostpointercapture", createEvent(new PointerEvent("lostpointercapture")));
+  }
+}
+
+// node_modules/konva/lib/Stage.js
+var STAGE2 = "Stage";
+var STRING = "string";
+var PX = "px";
+var MOUSEOUT = "mouseout";
+var MOUSELEAVE2 = "mouseleave";
+var MOUSEOVER = "mouseover";
+var MOUSEENTER2 = "mouseenter";
+var MOUSEMOVE = "mousemove";
+var MOUSEDOWN = "mousedown";
+var MOUSEUP = "mouseup";
+var POINTERMOVE = "pointermove";
+var POINTERDOWN = "pointerdown";
+var POINTERUP = "pointerup";
+var POINTERCANCEL = "pointercancel";
+var LOSTPOINTERCAPTURE = "lostpointercapture";
+var POINTEROUT = "pointerout";
+var POINTERLEAVE = "pointerleave";
+var POINTEROVER = "pointerover";
+var POINTERENTER = "pointerenter";
+var CONTEXTMENU = "contextmenu";
+var TOUCHSTART = "touchstart";
+var TOUCHEND = "touchend";
+var TOUCHMOVE = "touchmove";
+var TOUCHCANCEL = "touchcancel";
+var WHEEL = "wheel";
+var MAX_LAYERS_NUMBER = 5;
+var EVENTS = [
+  [MOUSEENTER2, "_pointerenter"],
+  [MOUSEDOWN, "_pointerdown"],
+  [MOUSEMOVE, "_pointermove"],
+  [MOUSEUP, "_pointerup"],
+  [MOUSELEAVE2, "_pointerleave"],
+  [TOUCHSTART, "_pointerdown"],
+  [TOUCHMOVE, "_pointermove"],
+  [TOUCHEND, "_pointerup"],
+  [TOUCHCANCEL, "_pointercancel"],
+  [MOUSEOVER, "_pointerover"],
+  [WHEEL, "_wheel"],
+  [CONTEXTMENU, "_contextmenu"],
+  [POINTERDOWN, "_pointerdown"],
+  [POINTERMOVE, "_pointermove"],
+  [POINTERUP, "_pointerup"],
+  [POINTERCANCEL, "_pointercancel"],
+  [LOSTPOINTERCAPTURE, "_lostpointercapture"]
+];
+var EVENTS_MAP = {
+  mouse: {
+    [POINTEROUT]: MOUSEOUT,
+    [POINTERLEAVE]: MOUSELEAVE2,
+    [POINTEROVER]: MOUSEOVER,
+    [POINTERENTER]: MOUSEENTER2,
+    [POINTERMOVE]: MOUSEMOVE,
+    [POINTERDOWN]: MOUSEDOWN,
+    [POINTERUP]: MOUSEUP,
+    [POINTERCANCEL]: "mousecancel",
+    pointerclick: "click",
+    pointerdblclick: "dblclick"
+  },
+  touch: {
+    [POINTEROUT]: "touchout",
+    [POINTERLEAVE]: "touchleave",
+    [POINTEROVER]: "touchover",
+    [POINTERENTER]: "touchenter",
+    [POINTERMOVE]: TOUCHMOVE,
+    [POINTERDOWN]: TOUCHSTART,
+    [POINTERUP]: TOUCHEND,
+    [POINTERCANCEL]: TOUCHCANCEL,
+    pointerclick: "tap",
+    pointerdblclick: "dbltap"
+  },
+  pointer: {
+    [POINTEROUT]: POINTEROUT,
+    [POINTERLEAVE]: POINTERLEAVE,
+    [POINTEROVER]: POINTEROVER,
+    [POINTERENTER]: POINTERENTER,
+    [POINTERMOVE]: POINTERMOVE,
+    [POINTERDOWN]: POINTERDOWN,
+    [POINTERUP]: POINTERUP,
+    [POINTERCANCEL]: POINTERCANCEL,
+    pointerclick: "pointerclick",
+    pointerdblclick: "pointerdblclick"
+  }
+};
+var getEventType = (type) => {
+  if (type.indexOf("pointer") >= 0) {
+    return "pointer";
+  }
+  if (type.indexOf("touch") >= 0) {
+    return "touch";
+  }
+  return "mouse";
+};
+var getEventsMap = (eventType) => {
+  const type = getEventType(eventType);
+  if (type === "pointer") {
+    return Konva.pointerEventsEnabled && EVENTS_MAP.pointer;
+  }
+  if (type === "touch") {
+    return EVENTS_MAP.touch;
+  }
+  if (type === "mouse") {
+    return EVENTS_MAP.mouse;
+  }
+};
+function checkNoClip(attrs = {}) {
+  if (attrs.clipFunc || attrs.clipWidth || attrs.clipHeight) {
+    Util.warn("Stage does not support clipping. Please use clip for Layers or Groups.");
+  }
+  return attrs;
+}
+var NO_POINTERS_MESSAGE = `Pointer position is missing and not registered by the stage. Looks like it is outside of the stage container. You can set it manually from event: stage.setPointersPositions(event);`;
+var stages = [];
+var Stage = class extends Container {
+  constructor(config) {
+    super(checkNoClip(config));
+    this._pointerPositions = [];
+    this._changedPointerPositions = [];
+    this._buildDOM();
+    this._bindContentEvents();
+    stages.push(this);
+    this.on("widthChange.konva heightChange.konva", this._resizeDOM);
+    this.on("visibleChange.konva", this._checkVisibility);
+    this.on("clipWidthChange.konva clipHeightChange.konva clipFuncChange.konva", () => {
+      checkNoClip(this.attrs);
+    });
+    this._checkVisibility();
+  }
+  _validateAdd(child) {
+    const isLayer = child.getType() === "Layer";
+    const isFastLayer = child.getType() === "FastLayer";
+    const valid = isLayer || isFastLayer;
+    if (!valid) {
+      Util.throw("You may only add layers to the stage.");
+    }
+  }
+  _checkVisibility() {
+    if (!this.content) {
+      return;
+    }
+    const style = this.visible() ? "" : "none";
+    this.content.style.display = style;
+  }
+  setContainer(container) {
+    if (typeof container === STRING) {
+      if (container.charAt(0) === ".") {
+        var className = container.slice(1);
+        container = document.getElementsByClassName(className)[0];
+      } else {
+        var id;
+        if (container.charAt(0) !== "#") {
+          id = container;
+        } else {
+          id = container.slice(1);
+        }
+        container = document.getElementById(id);
+      }
+      if (!container) {
+        throw "Can not find container in document with id " + id;
+      }
+    }
+    this._setAttr("container", container);
+    if (this.content) {
+      if (this.content.parentElement) {
+        this.content.parentElement.removeChild(this.content);
+      }
+      container.appendChild(this.content);
+    }
+    return this;
+  }
+  shouldDrawHit() {
+    return true;
+  }
+  clear() {
+    var layers = this.children, len = layers.length, n2;
+    for (n2 = 0; n2 < len; n2++) {
+      layers[n2].clear();
+    }
+    return this;
+  }
+  clone(obj) {
+    if (!obj) {
+      obj = {};
+    }
+    obj.container = typeof document !== "undefined" && document.createElement("div");
+    return Container.prototype.clone.call(this, obj);
+  }
+  destroy() {
+    super.destroy();
+    var content = this.content;
+    if (content && Util._isInDocument(content)) {
+      this.container().removeChild(content);
+    }
+    var index4 = stages.indexOf(this);
+    if (index4 > -1) {
+      stages.splice(index4, 1);
+    }
+    return this;
+  }
+  getPointerPosition() {
+    const pos = this._pointerPositions[0] || this._changedPointerPositions[0];
+    if (!pos) {
+      Util.warn(NO_POINTERS_MESSAGE);
+      return null;
+    }
+    return {
+      x: pos.x,
+      y: pos.y
+    };
+  }
+  _getPointerById(id) {
+    return this._pointerPositions.find((p2) => p2.id === id);
+  }
+  getPointersPositions() {
+    return this._pointerPositions;
+  }
+  getStage() {
+    return this;
+  }
+  getContent() {
+    return this.content;
+  }
+  _toKonvaCanvas(config) {
+    config = config || {};
+    config.x = config.x || 0;
+    config.y = config.y || 0;
+    config.width = config.width || this.width();
+    config.height = config.height || this.height();
+    var canvas = new SceneCanvas({
+      width: config.width,
+      height: config.height,
+      pixelRatio: config.pixelRatio || 1
+    });
+    var _context2 = canvas.getContext()._context;
+    var layers = this.children;
+    if (config.x || config.y) {
+      _context2.translate(-1 * config.x, -1 * config.y);
+    }
+    layers.forEach(function(layer) {
+      if (!layer.isVisible()) {
+        return;
+      }
+      var layerCanvas = layer._toKonvaCanvas(config);
+      _context2.drawImage(layerCanvas._canvas, config.x, config.y, layerCanvas.getWidth() / layerCanvas.getPixelRatio(), layerCanvas.getHeight() / layerCanvas.getPixelRatio());
+    });
+    return canvas;
+  }
+  getIntersection(pos) {
+    if (!pos) {
+      return null;
+    }
+    var layers = this.children, len = layers.length, end = len - 1, n2;
+    for (n2 = end; n2 >= 0; n2--) {
+      const shape = layers[n2].getIntersection(pos);
+      if (shape) {
+        return shape;
+      }
+    }
+    return null;
+  }
+  _resizeDOM() {
+    var width = this.width();
+    var height = this.height();
+    if (this.content) {
+      this.content.style.width = width + PX;
+      this.content.style.height = height + PX;
+    }
+    this.bufferCanvas.setSize(width, height);
+    this.bufferHitCanvas.setSize(width, height);
+    this.children.forEach((layer) => {
+      layer.setSize({width, height});
+      layer.draw();
+    });
+  }
+  add(layer, ...rest) {
+    if (arguments.length > 1) {
+      for (var i2 = 0; i2 < arguments.length; i2++) {
+        this.add(arguments[i2]);
+      }
+      return this;
+    }
+    super.add(layer);
+    var length2 = this.children.length;
+    if (length2 > MAX_LAYERS_NUMBER) {
+      Util.warn("The stage has " + length2 + " layers. Recommended maximum number of layers is 3-5. Adding more layers into the stage may drop the performance. Rethink your tree structure, you can use Konva.Group.");
+    }
+    layer.setSize({width: this.width(), height: this.height()});
+    layer.draw();
+    if (Konva.isBrowser) {
+      this.content.appendChild(layer.canvas._canvas);
+    }
+    return this;
+  }
+  getParent() {
+    return null;
+  }
+  getLayer() {
+    return null;
+  }
+  hasPointerCapture(pointerId) {
+    return hasPointerCapture(pointerId, this);
+  }
+  setPointerCapture(pointerId) {
+    setPointerCapture(pointerId, this);
+  }
+  releaseCapture(pointerId) {
+    releaseCapture(pointerId, this);
+  }
+  getLayers() {
+    return this.children;
+  }
+  _bindContentEvents() {
+    if (!Konva.isBrowser) {
+      return;
+    }
+    EVENTS.forEach(([event, methodName]) => {
+      this.content.addEventListener(event, (evt) => {
+        this[methodName](evt);
+      });
+    });
+  }
+  _pointerenter(evt) {
+    this.setPointersPositions(evt);
+    const events = getEventsMap(evt.type);
+    this._fire(events.pointerenter, {
+      evt,
+      target: this,
+      currentTarget: this
+    });
+  }
+  _pointerover(evt) {
+    this.setPointersPositions(evt);
+    const events = getEventsMap(evt.type);
+    this._fire(events.pointerover, {
+      evt,
+      target: this,
+      currentTarget: this
+    });
+  }
+  _getTargetShape(evenType) {
+    let shape = this[evenType + "targetShape"];
+    if (shape && !shape.getStage()) {
+      shape = null;
+    }
+    return shape;
+  }
+  _pointerleave(evt) {
+    const events = getEventsMap(evt.type);
+    const eventType = getEventType(evt.type);
+    if (!events) {
+      return;
+    }
+    this.setPointersPositions(evt);
+    var targetShape = this._getTargetShape(eventType);
+    var eventsEnabled = !DD.isDragging || Konva.hitOnDragEnabled;
+    if (targetShape && eventsEnabled) {
+      targetShape._fireAndBubble(events.pointerout, {evt});
+      targetShape._fireAndBubble(events.pointerleave, {evt});
+      this._fire(events.pointerleave, {
+        evt,
+        target: this,
+        currentTarget: this
+      });
+      this[eventType + "targetShape"] = null;
+    } else if (eventsEnabled) {
+      this._fire(events.pointerleave, {
+        evt,
+        target: this,
+        currentTarget: this
+      });
+      this._fire(events.pointerout, {
+        evt,
+        target: this,
+        currentTarget: this
+      });
+    }
+    this.pointerPos = void 0;
+    this._pointerPositions = [];
+  }
+  _pointerdown(evt) {
+    const events = getEventsMap(evt.type);
+    const eventType = getEventType(evt.type);
+    if (!events) {
+      return;
+    }
+    this.setPointersPositions(evt);
+    var triggeredOnShape = false;
+    this._changedPointerPositions.forEach((pos) => {
+      var shape = this.getIntersection(pos);
+      DD.justDragged = false;
+      Konva["_" + eventType + "ListenClick"] = true;
+      const hasShape = shape && shape.isListening();
+      if (!hasShape) {
+        return;
+      }
+      if (Konva.capturePointerEventsEnabled) {
+        shape.setPointerCapture(pos.id);
+      }
+      this[eventType + "ClickStartShape"] = shape;
+      shape._fireAndBubble(events.pointerdown, {
+        evt,
+        pointerId: pos.id
+      });
+      triggeredOnShape = true;
+      const isTouch2 = evt.type.indexOf("touch") >= 0;
+      if (shape.preventDefault() && evt.cancelable && isTouch2) {
+        evt.preventDefault();
+      }
+    });
+    if (!triggeredOnShape) {
+      this._fire(events.pointerdown, {
+        evt,
+        target: this,
+        currentTarget: this,
+        pointerId: this._pointerPositions[0].id
+      });
+    }
+  }
+  _pointermove(evt) {
+    const events = getEventsMap(evt.type);
+    const eventType = getEventType(evt.type);
+    if (!events) {
+      return;
+    }
+    if (DD.isDragging && DD.node.preventDefault() && evt.cancelable) {
+      evt.preventDefault();
+    }
+    this.setPointersPositions(evt);
+    var eventsEnabled = !DD.isDragging || Konva.hitOnDragEnabled;
+    if (!eventsEnabled) {
+      return;
+    }
+    var processedShapesIds = {};
+    let triggeredOnShape = false;
+    var targetShape = this._getTargetShape(eventType);
+    this._changedPointerPositions.forEach((pos) => {
+      const shape = getCapturedShape(pos.id) || this.getIntersection(pos);
+      const pointerId = pos.id;
+      const event = {evt, pointerId};
+      var differentTarget = targetShape !== shape;
+      if (differentTarget && targetShape) {
+        targetShape._fireAndBubble(events.pointerout, event, shape);
+        targetShape._fireAndBubble(events.pointerleave, event, shape);
+      }
+      if (shape) {
+        if (processedShapesIds[shape._id]) {
+          return;
+        }
+        processedShapesIds[shape._id] = true;
+      }
+      if (shape && shape.isListening()) {
+        triggeredOnShape = true;
+        if (differentTarget) {
+          shape._fireAndBubble(events.pointerover, event, targetShape);
+          shape._fireAndBubble(events.pointerenter, event, targetShape);
+          this[eventType + "targetShape"] = shape;
+        }
+        shape._fireAndBubble(events.pointermove, event);
+      } else {
+        if (targetShape) {
+          this._fire(events.pointerover, {
+            evt,
+            target: this,
+            currentTarget: this,
+            pointerId
+          });
+          this[eventType + "targetShape"] = null;
+        }
+      }
+    });
+    if (!triggeredOnShape) {
+      this._fire(events.pointermove, {
+        evt,
+        target: this,
+        currentTarget: this,
+        pointerId: this._changedPointerPositions[0].id
+      });
+    }
+  }
+  _pointerup(evt) {
+    const events = getEventsMap(evt.type);
+    const eventType = getEventType(evt.type);
+    if (!events) {
+      return;
+    }
+    this.setPointersPositions(evt);
+    const clickStartShape = this[eventType + "ClickStartShape"];
+    const clickEndShape = this[eventType + "ClickEndShape"];
+    var processedShapesIds = {};
+    let triggeredOnShape = false;
+    this._changedPointerPositions.forEach((pos) => {
+      const shape = getCapturedShape(pos.id) || this.getIntersection(pos);
+      if (shape) {
+        shape.releaseCapture(pos.id);
+        if (processedShapesIds[shape._id]) {
+          return;
+        }
+        processedShapesIds[shape._id] = true;
+      }
+      const pointerId = pos.id;
+      const event = {evt, pointerId};
+      let fireDblClick = false;
+      if (Konva["_" + eventType + "InDblClickWindow"]) {
+        fireDblClick = true;
+        clearTimeout(this[eventType + "DblTimeout"]);
+      } else if (!DD.justDragged) {
+        Konva["_" + eventType + "InDblClickWindow"] = true;
+        clearTimeout(this[eventType + "DblTimeout"]);
+      }
+      this[eventType + "DblTimeout"] = setTimeout(function() {
+        Konva["_" + eventType + "InDblClickWindow"] = false;
+      }, Konva.dblClickWindow);
+      if (shape && shape.isListening()) {
+        triggeredOnShape = true;
+        this[eventType + "ClickEndShape"] = shape;
+        shape._fireAndBubble(events.pointerup, event);
+        if (Konva["_" + eventType + "ListenClick"] && clickStartShape && clickStartShape === shape) {
+          shape._fireAndBubble(events.pointerclick, event);
+          if (fireDblClick && clickEndShape && clickEndShape === shape) {
+            shape._fireAndBubble(events.pointerdblclick, event);
+          }
+        }
+      } else {
+        this[eventType + "ClickEndShape"] = null;
+        if (Konva["_" + eventType + "ListenClick"]) {
+          this._fire(events.pointerclick, {
+            evt,
+            target: this,
+            currentTarget: this,
+            pointerId
+          });
+        }
+        if (fireDblClick) {
+          this._fire(events.pointerdblclick, {
+            evt,
+            target: this,
+            currentTarget: this,
+            pointerId
+          });
+        }
+      }
+    });
+    if (!triggeredOnShape) {
+      this._fire(events.pointerup, {
+        evt,
+        target: this,
+        currentTarget: this,
+        pointerId: this._changedPointerPositions[0].id
+      });
+    }
+    Konva["_" + eventType + "ListenClick"] = false;
+    if (evt.cancelable) {
+      evt.preventDefault();
+    }
+  }
+  _contextmenu(evt) {
+    this.setPointersPositions(evt);
+    var shape = this.getIntersection(this.getPointerPosition());
+    if (shape && shape.isListening()) {
+      shape._fireAndBubble(CONTEXTMENU, {evt});
+    } else {
+      this._fire(CONTEXTMENU, {
+        evt,
+        target: this,
+        currentTarget: this
+      });
+    }
+  }
+  _wheel(evt) {
+    this.setPointersPositions(evt);
+    var shape = this.getIntersection(this.getPointerPosition());
+    if (shape && shape.isListening()) {
+      shape._fireAndBubble(WHEEL, {evt});
+    } else {
+      this._fire(WHEEL, {
+        evt,
+        target: this,
+        currentTarget: this
+      });
+    }
+  }
+  _pointercancel(evt) {
+    this.setPointersPositions(evt);
+    const shape = getCapturedShape(evt.pointerId) || this.getIntersection(this.getPointerPosition());
+    if (shape) {
+      shape._fireAndBubble(POINTERUP, createEvent(evt));
+    }
+    releaseCapture(evt.pointerId);
+  }
+  _lostpointercapture(evt) {
+    releaseCapture(evt.pointerId);
+  }
+  setPointersPositions(evt) {
+    var contentPosition = this._getContentPosition(), x2 = null, y2 = null;
+    evt = evt ? evt : window.event;
+    if (evt.touches !== void 0) {
+      this._pointerPositions = [];
+      this._changedPointerPositions = [];
+      Array.prototype.forEach.call(evt.touches, (touch) => {
+        this._pointerPositions.push({
+          id: touch.identifier,
+          x: (touch.clientX - contentPosition.left) / contentPosition.scaleX,
+          y: (touch.clientY - contentPosition.top) / contentPosition.scaleY
+        });
+      });
+      Array.prototype.forEach.call(evt.changedTouches || evt.touches, (touch) => {
+        this._changedPointerPositions.push({
+          id: touch.identifier,
+          x: (touch.clientX - contentPosition.left) / contentPosition.scaleX,
+          y: (touch.clientY - contentPosition.top) / contentPosition.scaleY
+        });
+      });
+    } else {
+      x2 = (evt.clientX - contentPosition.left) / contentPosition.scaleX;
+      y2 = (evt.clientY - contentPosition.top) / contentPosition.scaleY;
+      this.pointerPos = {
+        x: x2,
+        y: y2
+      };
+      this._pointerPositions = [{x: x2, y: y2, id: Util._getFirstPointerId(evt)}];
+      this._changedPointerPositions = [
+        {x: x2, y: y2, id: Util._getFirstPointerId(evt)}
+      ];
+    }
+  }
+  _setPointerPosition(evt) {
+    Util.warn('Method _setPointerPosition is deprecated. Use "stage.setPointersPositions(event)" instead.');
+    this.setPointersPositions(evt);
+  }
+  _getContentPosition() {
+    if (!this.content || !this.content.getBoundingClientRect) {
+      return {
+        top: 0,
+        left: 0,
+        scaleX: 1,
+        scaleY: 1
+      };
+    }
+    var rect = this.content.getBoundingClientRect();
+    return {
+      top: rect.top,
+      left: rect.left,
+      scaleX: rect.width / this.content.clientWidth || 1,
+      scaleY: rect.height / this.content.clientHeight || 1
+    };
+  }
+  _buildDOM() {
+    this.bufferCanvas = new SceneCanvas({
+      width: this.width(),
+      height: this.height()
+    });
+    this.bufferHitCanvas = new HitCanvas({
+      pixelRatio: 1,
+      width: this.width(),
+      height: this.height()
+    });
+    if (!Konva.isBrowser) {
+      return;
+    }
+    var container = this.container();
+    if (!container) {
+      throw "Stage has no container. A container is required.";
+    }
+    container.innerHTML = "";
+    this.content = document.createElement("div");
+    this.content.style.position = "relative";
+    this.content.style.userSelect = "none";
+    this.content.className = "konvajs-content";
+    this.content.setAttribute("role", "presentation");
+    container.appendChild(this.content);
+    this._resizeDOM();
+  }
+  cache() {
+    Util.warn("Cache function is not allowed for stage. You may use cache only for layers, groups and shapes.");
+    return this;
+  }
+  clearCache() {
+    return this;
+  }
+  batchDraw() {
+    this.getChildren().forEach(function(layer) {
+      layer.batchDraw();
+    });
+    return this;
+  }
+};
+Stage.prototype.nodeType = STAGE2;
+_registerNode(Stage);
+Factory.addGetterSetter(Stage, "container");
+
+// node_modules/konva/lib/Shape.js
+var HAS_SHADOW = "hasShadow";
+var SHADOW_RGBA = "shadowRGBA";
+var patternImage = "patternImage";
+var linearGradient = "linearGradient";
+var radialGradient = "radialGradient";
+var dummyContext;
+function getDummyContext() {
+  if (dummyContext) {
+    return dummyContext;
+  }
+  dummyContext = Util.createCanvasElement().getContext("2d");
+  return dummyContext;
+}
+var shapes = {};
+function _fillFunc(context) {
+  context.fill();
+}
+function _strokeFunc(context) {
+  context.stroke();
+}
+function _fillFuncHit(context) {
+  context.fill();
+}
+function _strokeFuncHit(context) {
+  context.stroke();
+}
+function _clearHasShadowCache() {
+  this._clearCache(HAS_SHADOW);
+}
+function _clearGetShadowRGBACache() {
+  this._clearCache(SHADOW_RGBA);
+}
+function _clearFillPatternCache() {
+  this._clearCache(patternImage);
+}
+function _clearLinearGradientCache() {
+  this._clearCache(linearGradient);
+}
+function _clearRadialGradientCache() {
+  this._clearCache(radialGradient);
+}
+var Shape2 = class extends Node2 {
+  constructor(config) {
+    super(config);
+    let key;
+    while (true) {
+      key = Util.getRandomColor();
+      if (key && !(key in shapes)) {
+        break;
+      }
+    }
+    this.colorKey = key;
+    shapes[key] = this;
+  }
+  getContext() {
+    Util.warn("shape.getContext() method is deprecated. Please don not use it.");
+    return this.getLayer().getContext();
+  }
+  getCanvas() {
+    Util.warn("shape.getCanvas() method is deprecated. Please don not use it.");
+    return this.getLayer().getCanvas();
+  }
+  getSceneFunc() {
+    return this.attrs.sceneFunc || this["_sceneFunc"];
+  }
+  getHitFunc() {
+    return this.attrs.hitFunc || this["_hitFunc"];
+  }
+  hasShadow() {
+    return this._getCache(HAS_SHADOW, this._hasShadow);
+  }
+  _hasShadow() {
+    return this.shadowEnabled() && this.shadowOpacity() !== 0 && !!(this.shadowColor() || this.shadowBlur() || this.shadowOffsetX() || this.shadowOffsetY());
+  }
+  _getFillPattern() {
+    return this._getCache(patternImage, this.__getFillPattern);
+  }
+  __getFillPattern() {
+    if (this.fillPatternImage()) {
+      var ctx = getDummyContext();
+      const pattern = ctx.createPattern(this.fillPatternImage(), this.fillPatternRepeat() || "repeat");
+      if (pattern && pattern.setTransform) {
+        const tr = new Transform();
+        tr.translate(this.fillPatternX(), this.fillPatternX());
+        tr.rotate(Konva.getAngle(this.fillPatternRotation()));
+        tr.scale(this.fillPatternScaleX(), this.fillPatternScaleY());
+        tr.translate(-1 * this.fillPatternOffsetX(), -1 * this.fillPatternOffsetY());
+        const m2 = tr.getMatrix();
+        pattern.setTransform({
+          a: m2[0],
+          b: m2[1],
+          c: m2[2],
+          d: m2[3],
+          e: m2[4],
+          f: m2[5]
+        });
+      }
+      return pattern;
+    }
+  }
+  _getLinearGradient() {
+    return this._getCache(linearGradient, this.__getLinearGradient);
+  }
+  __getLinearGradient() {
+    var colorStops = this.fillLinearGradientColorStops();
+    if (colorStops) {
+      var ctx = getDummyContext();
+      var start = this.fillLinearGradientStartPoint();
+      var end = this.fillLinearGradientEndPoint();
+      var grd = ctx.createLinearGradient(start.x, start.y, end.x, end.y);
+      for (var n2 = 0; n2 < colorStops.length; n2 += 2) {
+        grd.addColorStop(colorStops[n2], colorStops[n2 + 1]);
+      }
+      return grd;
+    }
+  }
+  _getRadialGradient() {
+    return this._getCache(radialGradient, this.__getRadialGradient);
+  }
+  __getRadialGradient() {
+    var colorStops = this.fillRadialGradientColorStops();
+    if (colorStops) {
+      var ctx = getDummyContext();
+      var start = this.fillRadialGradientStartPoint();
+      var end = this.fillRadialGradientEndPoint();
+      var grd = ctx.createRadialGradient(start.x, start.y, this.fillRadialGradientStartRadius(), end.x, end.y, this.fillRadialGradientEndRadius());
+      for (var n2 = 0; n2 < colorStops.length; n2 += 2) {
+        grd.addColorStop(colorStops[n2], colorStops[n2 + 1]);
+      }
+      return grd;
+    }
+  }
+  getShadowRGBA() {
+    return this._getCache(SHADOW_RGBA, this._getShadowRGBA);
+  }
+  _getShadowRGBA() {
+    if (this.hasShadow()) {
+      var rgba = Util.colorToRGBA(this.shadowColor());
+      return "rgba(" + rgba.r + "," + rgba.g + "," + rgba.b + "," + rgba.a * (this.shadowOpacity() || 1) + ")";
+    }
+  }
+  hasFill() {
+    return this._calculate("hasFill", [
+      "fillEnabled",
+      "fill",
+      "fillPatternImage",
+      "fillLinearGradientColorStops",
+      "fillRadialGradientColorStops"
+    ], () => {
+      return this.fillEnabled() && !!(this.fill() || this.fillPatternImage() || this.fillLinearGradientColorStops() || this.fillRadialGradientColorStops());
+    });
+  }
+  hasStroke() {
+    return this._calculate("hasStroke", [
+      "strokeEnabled",
+      "strokeWidth",
+      "stroke",
+      "strokeLinearGradientColorStops"
+    ], () => {
+      return this.strokeEnabled() && this.strokeWidth() && !!(this.stroke() || this.strokeLinearGradientColorStops());
+    });
+  }
+  hasHitStroke() {
+    const width = this.hitStrokeWidth();
+    if (width === "auto") {
+      return this.hasStroke();
+    }
+    return this.strokeEnabled() && !!width;
+  }
+  intersects(point) {
+    var stage = this.getStage(), bufferHitCanvas = stage.bufferHitCanvas, p2;
+    bufferHitCanvas.getContext().clear();
+    this.drawHit(bufferHitCanvas, null, true);
+    p2 = bufferHitCanvas.context.getImageData(Math.round(point.x), Math.round(point.y), 1, 1).data;
+    return p2[3] > 0;
+  }
+  destroy() {
+    Node2.prototype.destroy.call(this);
+    delete shapes[this.colorKey];
+    delete this.colorKey;
+    return this;
+  }
+  _useBufferCanvas(forceFill) {
+    var _a;
+    if (!this.getStage()) {
+      return false;
+    }
+    const perfectDrawEnabled = (_a = this.attrs.perfectDrawEnabled) !== null && _a !== void 0 ? _a : true;
+    if (!perfectDrawEnabled) {
+      return false;
+    }
+    const hasFill = forceFill || this.hasFill();
+    const hasStroke = this.hasStroke();
+    const isTransparent = this.getAbsoluteOpacity() !== 1;
+    if (hasFill && hasStroke && isTransparent) {
+      return true;
+    }
+    const hasShadow = this.hasShadow();
+    const strokeForShadow = this.shadowForStrokeEnabled();
+    if (hasFill && hasStroke && hasShadow && strokeForShadow) {
+      return true;
+    }
+    return false;
+  }
+  setStrokeHitEnabled(val) {
+    Util.warn("strokeHitEnabled property is deprecated. Please use hitStrokeWidth instead.");
+    if (val) {
+      this.hitStrokeWidth("auto");
+    } else {
+      this.hitStrokeWidth(0);
+    }
+  }
+  getStrokeHitEnabled() {
+    if (this.hitStrokeWidth() === 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+  getSelfRect() {
+    var size = this.size();
+    return {
+      x: this._centroid ? -size.width / 2 : 0,
+      y: this._centroid ? -size.height / 2 : 0,
+      width: size.width,
+      height: size.height
+    };
+  }
+  getClientRect(config = {}) {
+    const skipTransform = config.skipTransform;
+    const relativeTo = config.relativeTo;
+    const fillRect = this.getSelfRect();
+    const applyStroke = !config.skipStroke && this.hasStroke();
+    const strokeWidth = applyStroke && this.strokeWidth() || 0;
+    const fillAndStrokeWidth = fillRect.width + strokeWidth;
+    const fillAndStrokeHeight = fillRect.height + strokeWidth;
+    const applyShadow = !config.skipShadow && this.hasShadow();
+    const shadowOffsetX = applyShadow ? this.shadowOffsetX() : 0;
+    const shadowOffsetY = applyShadow ? this.shadowOffsetY() : 0;
+    const preWidth = fillAndStrokeWidth + Math.abs(shadowOffsetX);
+    const preHeight = fillAndStrokeHeight + Math.abs(shadowOffsetY);
+    const blurRadius = applyShadow && this.shadowBlur() || 0;
+    const width = preWidth + blurRadius * 2;
+    const height = preHeight + blurRadius * 2;
+    let roundingOffset = 0;
+    if (Math.round(strokeWidth / 2) !== strokeWidth / 2) {
+      roundingOffset = 1;
+    }
+    const rect = {
+      width: width + roundingOffset,
+      height: height + roundingOffset,
+      x: -Math.round(strokeWidth / 2 + blurRadius) + Math.min(shadowOffsetX, 0) + fillRect.x,
+      y: -Math.round(strokeWidth / 2 + blurRadius) + Math.min(shadowOffsetY, 0) + fillRect.y
+    };
+    if (!skipTransform) {
+      return this._transformedRect(rect, relativeTo);
+    }
+    return rect;
+  }
+  drawScene(can, top) {
+    var layer = this.getLayer(), canvas = can || layer.getCanvas(), context = canvas.getContext(), cachedCanvas = this._getCanvasCache(), drawFunc = this.getSceneFunc(), hasShadow = this.hasShadow(), stage, bufferCanvas, bufferContext;
+    var skipBuffer = canvas.isCache;
+    var cachingSelf = top === this;
+    if (!this.isVisible() && !cachingSelf) {
+      return this;
+    }
+    if (cachedCanvas) {
+      context.save();
+      var m2 = this.getAbsoluteTransform(top).getMatrix();
+      context.transform(m2[0], m2[1], m2[2], m2[3], m2[4], m2[5]);
+      this._drawCachedSceneCanvas(context);
+      context.restore();
+      return this;
+    }
+    if (!drawFunc) {
+      return this;
+    }
+    context.save();
+    if (this._useBufferCanvas() && !skipBuffer) {
+      stage = this.getStage();
+      bufferCanvas = stage.bufferCanvas;
+      bufferContext = bufferCanvas.getContext();
+      bufferContext.clear();
+      bufferContext.save();
+      bufferContext._applyLineJoin(this);
+      var o2 = this.getAbsoluteTransform(top).getMatrix();
+      bufferContext.transform(o2[0], o2[1], o2[2], o2[3], o2[4], o2[5]);
+      drawFunc.call(this, bufferContext, this);
+      bufferContext.restore();
+      var ratio = bufferCanvas.pixelRatio;
+      if (hasShadow) {
+        context._applyShadow(this);
+      }
+      context._applyOpacity(this);
+      context._applyGlobalCompositeOperation(this);
+      context.drawImage(bufferCanvas._canvas, 0, 0, bufferCanvas.width / ratio, bufferCanvas.height / ratio);
+    } else {
+      context._applyLineJoin(this);
+      if (!cachingSelf) {
+        var o2 = this.getAbsoluteTransform(top).getMatrix();
+        context.transform(o2[0], o2[1], o2[2], o2[3], o2[4], o2[5]);
+        context._applyOpacity(this);
+        context._applyGlobalCompositeOperation(this);
+      }
+      if (hasShadow) {
+        context._applyShadow(this);
+      }
+      drawFunc.call(this, context, this);
+    }
+    context.restore();
+    return this;
+  }
+  drawHit(can, top, skipDragCheck = false) {
+    if (!this.shouldDrawHit(top, skipDragCheck)) {
+      return this;
+    }
+    var layer = this.getLayer(), canvas = can || layer.hitCanvas, context = canvas && canvas.getContext(), drawFunc = this.hitFunc() || this.sceneFunc(), cachedCanvas = this._getCanvasCache(), cachedHitCanvas = cachedCanvas && cachedCanvas.hit;
+    if (!this.colorKey) {
+      Util.warn("Looks like your canvas has a destroyed shape in it. Do not reuse shape after you destroyed it. If you want to reuse shape you should call remove() instead of destroy()");
+    }
+    if (cachedHitCanvas) {
+      context.save();
+      var m2 = this.getAbsoluteTransform(top).getMatrix();
+      context.transform(m2[0], m2[1], m2[2], m2[3], m2[4], m2[5]);
+      this._drawCachedHitCanvas(context);
+      context.restore();
+      return this;
+    }
+    if (!drawFunc) {
+      return this;
+    }
+    context.save();
+    context._applyLineJoin(this);
+    const selfCache = this === top;
+    if (!selfCache) {
+      var o2 = this.getAbsoluteTransform(top).getMatrix();
+      context.transform(o2[0], o2[1], o2[2], o2[3], o2[4], o2[5]);
+    }
+    drawFunc.call(this, context, this);
+    context.restore();
+    return this;
+  }
+  drawHitFromCache(alphaThreshold = 0) {
+    var cachedCanvas = this._getCanvasCache(), sceneCanvas = this._getCachedSceneCanvas(), hitCanvas = cachedCanvas.hit, hitContext = hitCanvas.getContext(), hitWidth = hitCanvas.getWidth(), hitHeight = hitCanvas.getHeight(), hitImageData, hitData, len, rgbColorKey, i2, alpha;
+    hitContext.clear();
+    hitContext.drawImage(sceneCanvas._canvas, 0, 0, hitWidth, hitHeight);
+    try {
+      hitImageData = hitContext.getImageData(0, 0, hitWidth, hitHeight);
+      hitData = hitImageData.data;
+      len = hitData.length;
+      rgbColorKey = Util._hexToRgb(this.colorKey);
+      for (i2 = 0; i2 < len; i2 += 4) {
+        alpha = hitData[i2 + 3];
+        if (alpha > alphaThreshold) {
+          hitData[i2] = rgbColorKey.r;
+          hitData[i2 + 1] = rgbColorKey.g;
+          hitData[i2 + 2] = rgbColorKey.b;
+          hitData[i2 + 3] = 255;
+        } else {
+          hitData[i2 + 3] = 0;
+        }
+      }
+      hitContext.putImageData(hitImageData, 0, 0);
+    } catch (e2) {
+      Util.error("Unable to draw hit graph from cached scene canvas. " + e2.message);
+    }
+    return this;
+  }
+  hasPointerCapture(pointerId) {
+    return hasPointerCapture(pointerId, this);
+  }
+  setPointerCapture(pointerId) {
+    setPointerCapture(pointerId, this);
+  }
+  releaseCapture(pointerId) {
+    releaseCapture(pointerId, this);
+  }
+};
+Shape2.prototype._fillFunc = _fillFunc;
+Shape2.prototype._strokeFunc = _strokeFunc;
+Shape2.prototype._fillFuncHit = _fillFuncHit;
+Shape2.prototype._strokeFuncHit = _strokeFuncHit;
+Shape2.prototype._centroid = false;
+Shape2.prototype.nodeType = "Shape";
+_registerNode(Shape2);
+Shape2.prototype.eventListeners = {};
+Shape2.prototype.on.call(Shape2.prototype, "shadowColorChange.konva shadowBlurChange.konva shadowOffsetChange.konva shadowOpacityChange.konva shadowEnabledChange.konva", _clearHasShadowCache);
+Shape2.prototype.on.call(Shape2.prototype, "shadowColorChange.konva shadowOpacityChange.konva shadowEnabledChange.konva", _clearGetShadowRGBACache);
+Shape2.prototype.on.call(Shape2.prototype, "fillPriorityChange.konva fillPatternImageChange.konva fillPatternRepeatChange.konva fillPatternScaleXChange.konva fillPatternScaleYChange.konva fillPatternOffsetX.konva fillPatternOffsetY.konva fillPatternRotation.konva", _clearFillPatternCache);
+Shape2.prototype.on.call(Shape2.prototype, "fillPriorityChange.konva fillLinearGradientColorStopsChange.konva fillLinearGradientStartPointXChange.konva fillLinearGradientStartPointYChange.konva fillLinearGradientEndPointXChange.konva fillLinearGradientEndPointYChange.konva", _clearLinearGradientCache);
+Shape2.prototype.on.call(Shape2.prototype, "fillPriorityChange.konva fillRadialGradientColorStopsChange.konva fillRadialGradientStartPointXChange.konva fillRadialGradientStartPointYChange.konva fillRadialGradientEndPointXChange.konva fillRadialGradientEndPointYChange.konva fillRadialGradientStartRadiusChange.konva fillRadialGradientEndRadiusChange.konva", _clearRadialGradientCache);
+Factory.addGetterSetter(Shape2, "stroke", void 0, getStringOrGradientValidator());
+Factory.addGetterSetter(Shape2, "strokeWidth", 2, getNumberValidator());
+Factory.addGetterSetter(Shape2, "fillAfterStrokeEnabled", false);
+Factory.addGetterSetter(Shape2, "hitStrokeWidth", "auto", getNumberOrAutoValidator());
+Factory.addGetterSetter(Shape2, "strokeHitEnabled", true, getBooleanValidator());
+Factory.addGetterSetter(Shape2, "perfectDrawEnabled", true, getBooleanValidator());
+Factory.addGetterSetter(Shape2, "shadowForStrokeEnabled", true, getBooleanValidator());
+Factory.addGetterSetter(Shape2, "lineJoin");
+Factory.addGetterSetter(Shape2, "lineCap");
+Factory.addGetterSetter(Shape2, "sceneFunc");
+Factory.addGetterSetter(Shape2, "hitFunc");
+Factory.addGetterSetter(Shape2, "dash");
+Factory.addGetterSetter(Shape2, "dashOffset", 0, getNumberValidator());
+Factory.addGetterSetter(Shape2, "shadowColor", void 0, getStringValidator());
+Factory.addGetterSetter(Shape2, "shadowBlur", 0, getNumberValidator());
+Factory.addGetterSetter(Shape2, "shadowOpacity", 1, getNumberValidator());
+Factory.addComponentsGetterSetter(Shape2, "shadowOffset", ["x", "y"]);
+Factory.addGetterSetter(Shape2, "shadowOffsetX", 0, getNumberValidator());
+Factory.addGetterSetter(Shape2, "shadowOffsetY", 0, getNumberValidator());
+Factory.addGetterSetter(Shape2, "fillPatternImage");
+Factory.addGetterSetter(Shape2, "fill", void 0, getStringOrGradientValidator());
+Factory.addGetterSetter(Shape2, "fillPatternX", 0, getNumberValidator());
+Factory.addGetterSetter(Shape2, "fillPatternY", 0, getNumberValidator());
+Factory.addGetterSetter(Shape2, "fillLinearGradientColorStops");
+Factory.addGetterSetter(Shape2, "strokeLinearGradientColorStops");
+Factory.addGetterSetter(Shape2, "fillRadialGradientStartRadius", 0);
+Factory.addGetterSetter(Shape2, "fillRadialGradientEndRadius", 0);
+Factory.addGetterSetter(Shape2, "fillRadialGradientColorStops");
+Factory.addGetterSetter(Shape2, "fillPatternRepeat", "repeat");
+Factory.addGetterSetter(Shape2, "fillEnabled", true);
+Factory.addGetterSetter(Shape2, "strokeEnabled", true);
+Factory.addGetterSetter(Shape2, "shadowEnabled", true);
+Factory.addGetterSetter(Shape2, "dashEnabled", true);
+Factory.addGetterSetter(Shape2, "strokeScaleEnabled", true);
+Factory.addGetterSetter(Shape2, "fillPriority", "color");
+Factory.addComponentsGetterSetter(Shape2, "fillPatternOffset", ["x", "y"]);
+Factory.addGetterSetter(Shape2, "fillPatternOffsetX", 0, getNumberValidator());
+Factory.addGetterSetter(Shape2, "fillPatternOffsetY", 0, getNumberValidator());
+Factory.addComponentsGetterSetter(Shape2, "fillPatternScale", ["x", "y"]);
+Factory.addGetterSetter(Shape2, "fillPatternScaleX", 1, getNumberValidator());
+Factory.addGetterSetter(Shape2, "fillPatternScaleY", 1, getNumberValidator());
+Factory.addComponentsGetterSetter(Shape2, "fillLinearGradientStartPoint", [
+  "x",
+  "y"
+]);
+Factory.addComponentsGetterSetter(Shape2, "strokeLinearGradientStartPoint", [
+  "x",
+  "y"
+]);
+Factory.addGetterSetter(Shape2, "fillLinearGradientStartPointX", 0);
+Factory.addGetterSetter(Shape2, "strokeLinearGradientStartPointX", 0);
+Factory.addGetterSetter(Shape2, "fillLinearGradientStartPointY", 0);
+Factory.addGetterSetter(Shape2, "strokeLinearGradientStartPointY", 0);
+Factory.addComponentsGetterSetter(Shape2, "fillLinearGradientEndPoint", [
+  "x",
+  "y"
+]);
+Factory.addComponentsGetterSetter(Shape2, "strokeLinearGradientEndPoint", [
+  "x",
+  "y"
+]);
+Factory.addGetterSetter(Shape2, "fillLinearGradientEndPointX", 0);
+Factory.addGetterSetter(Shape2, "strokeLinearGradientEndPointX", 0);
+Factory.addGetterSetter(Shape2, "fillLinearGradientEndPointY", 0);
+Factory.addGetterSetter(Shape2, "strokeLinearGradientEndPointY", 0);
+Factory.addComponentsGetterSetter(Shape2, "fillRadialGradientStartPoint", [
+  "x",
+  "y"
+]);
+Factory.addGetterSetter(Shape2, "fillRadialGradientStartPointX", 0);
+Factory.addGetterSetter(Shape2, "fillRadialGradientStartPointY", 0);
+Factory.addComponentsGetterSetter(Shape2, "fillRadialGradientEndPoint", [
+  "x",
+  "y"
+]);
+Factory.addGetterSetter(Shape2, "fillRadialGradientEndPointX", 0);
+Factory.addGetterSetter(Shape2, "fillRadialGradientEndPointY", 0);
+Factory.addGetterSetter(Shape2, "fillPatternRotation", 0);
+Factory.backCompat(Shape2, {
+  dashArray: "dash",
+  getDashArray: "getDash",
+  setDashArray: "getDash",
+  drawFunc: "sceneFunc",
+  getDrawFunc: "getSceneFunc",
+  setDrawFunc: "setSceneFunc",
+  drawHitFunc: "hitFunc",
+  getDrawHitFunc: "getHitFunc",
+  setDrawHitFunc: "setHitFunc"
+});
+
+// node_modules/konva/lib/Layer.js
+var HASH2 = "#";
+var BEFORE_DRAW = "beforeDraw";
+var DRAW = "draw";
+var INTERSECTION_OFFSETS = [
+  {x: 0, y: 0},
+  {x: -1, y: -1},
+  {x: 1, y: -1},
+  {x: 1, y: 1},
+  {x: -1, y: 1}
+];
+var INTERSECTION_OFFSETS_LEN = INTERSECTION_OFFSETS.length;
+var Layer = class extends Container {
+  constructor(config) {
+    super(config);
+    this.canvas = new SceneCanvas();
+    this.hitCanvas = new HitCanvas({
+      pixelRatio: 1
+    });
+    this._waitingForDraw = false;
+    this.on("visibleChange.konva", this._checkVisibility);
+    this._checkVisibility();
+    this.on("imageSmoothingEnabledChange.konva", this._setSmoothEnabled);
+    this._setSmoothEnabled();
+  }
+  createPNGStream() {
+    const c2 = this.canvas._canvas;
+    return c2.createPNGStream();
+  }
+  getCanvas() {
+    return this.canvas;
+  }
+  getNativeCanvasElement() {
+    return this.canvas._canvas;
+  }
+  getHitCanvas() {
+    return this.hitCanvas;
+  }
+  getContext() {
+    return this.getCanvas().getContext();
+  }
+  clear(bounds) {
+    this.getContext().clear(bounds);
+    this.getHitCanvas().getContext().clear(bounds);
+    return this;
+  }
+  setZIndex(index4) {
+    super.setZIndex(index4);
+    var stage = this.getStage();
+    if (stage && stage.content) {
+      stage.content.removeChild(this.getNativeCanvasElement());
+      if (index4 < stage.children.length - 1) {
+        stage.content.insertBefore(this.getNativeCanvasElement(), stage.children[index4 + 1].getCanvas()._canvas);
+      } else {
+        stage.content.appendChild(this.getNativeCanvasElement());
+      }
+    }
+    return this;
+  }
+  moveToTop() {
+    Node2.prototype.moveToTop.call(this);
+    var stage = this.getStage();
+    if (stage && stage.content) {
+      stage.content.removeChild(this.getNativeCanvasElement());
+      stage.content.appendChild(this.getNativeCanvasElement());
+    }
+    return true;
+  }
+  moveUp() {
+    var moved = Node2.prototype.moveUp.call(this);
+    if (!moved) {
+      return false;
+    }
+    var stage = this.getStage();
+    if (!stage || !stage.content) {
+      return false;
+    }
+    stage.content.removeChild(this.getNativeCanvasElement());
+    if (this.index < stage.children.length - 1) {
+      stage.content.insertBefore(this.getNativeCanvasElement(), stage.children[this.index + 1].getCanvas()._canvas);
+    } else {
+      stage.content.appendChild(this.getNativeCanvasElement());
+    }
+    return true;
+  }
+  moveDown() {
+    if (Node2.prototype.moveDown.call(this)) {
+      var stage = this.getStage();
+      if (stage) {
+        var children = stage.children;
+        if (stage.content) {
+          stage.content.removeChild(this.getNativeCanvasElement());
+          stage.content.insertBefore(this.getNativeCanvasElement(), children[this.index + 1].getCanvas()._canvas);
+        }
+      }
+      return true;
+    }
+    return false;
+  }
+  moveToBottom() {
+    if (Node2.prototype.moveToBottom.call(this)) {
+      var stage = this.getStage();
+      if (stage) {
+        var children = stage.children;
+        if (stage.content) {
+          stage.content.removeChild(this.getNativeCanvasElement());
+          stage.content.insertBefore(this.getNativeCanvasElement(), children[1].getCanvas()._canvas);
+        }
+      }
+      return true;
+    }
+    return false;
+  }
+  getLayer() {
+    return this;
+  }
+  remove() {
+    var _canvas2 = this.getNativeCanvasElement();
+    Node2.prototype.remove.call(this);
+    if (_canvas2 && _canvas2.parentNode && Util._isInDocument(_canvas2)) {
+      _canvas2.parentNode.removeChild(_canvas2);
+    }
+    return this;
+  }
+  getStage() {
+    return this.parent;
+  }
+  setSize({width, height}) {
+    this.canvas.setSize(width, height);
+    this.hitCanvas.setSize(width, height);
+    this._setSmoothEnabled();
+    return this;
+  }
+  _validateAdd(child) {
+    var type = child.getType();
+    if (type !== "Group" && type !== "Shape") {
+      Util.throw("You may only add groups and shapes to a layer.");
+    }
+  }
+  _toKonvaCanvas(config) {
+    config = config || {};
+    config.width = config.width || this.getWidth();
+    config.height = config.height || this.getHeight();
+    config.x = config.x !== void 0 ? config.x : this.x();
+    config.y = config.y !== void 0 ? config.y : this.y();
+    return Node2.prototype._toKonvaCanvas.call(this, config);
+  }
+  _checkVisibility() {
+    const visible = this.visible();
+    if (visible) {
+      this.canvas._canvas.style.display = "block";
+    } else {
+      this.canvas._canvas.style.display = "none";
+    }
+  }
+  _setSmoothEnabled() {
+    this.getContext()._context.imageSmoothingEnabled = this.imageSmoothingEnabled();
+  }
+  getWidth() {
+    if (this.parent) {
+      return this.parent.width();
+    }
+  }
+  setWidth() {
+    Util.warn('Can not change width of layer. Use "stage.width(value)" function instead.');
+  }
+  getHeight() {
+    if (this.parent) {
+      return this.parent.height();
+    }
+  }
+  setHeight() {
+    Util.warn('Can not change height of layer. Use "stage.height(value)" function instead.');
+  }
+  batchDraw() {
+    if (!this._waitingForDraw) {
+      this._waitingForDraw = true;
+      Util.requestAnimFrame(() => {
+        this.draw();
+        this._waitingForDraw = false;
+      });
+    }
+    return this;
+  }
+  getIntersection(pos) {
+    if (!this.isListening() || !this.isVisible()) {
+      return null;
+    }
+    var spiralSearchDistance = 1;
+    var continueSearch = false;
+    while (true) {
+      for (let i2 = 0; i2 < INTERSECTION_OFFSETS_LEN; i2++) {
+        const intersectionOffset = INTERSECTION_OFFSETS[i2];
+        const obj = this._getIntersection({
+          x: pos.x + intersectionOffset.x * spiralSearchDistance,
+          y: pos.y + intersectionOffset.y * spiralSearchDistance
+        });
+        const shape = obj.shape;
+        if (shape) {
+          return shape;
+        }
+        continueSearch = !!obj.antialiased;
+        if (!obj.antialiased) {
+          break;
+        }
+      }
+      if (continueSearch) {
+        spiralSearchDistance += 1;
+      } else {
+        return null;
+      }
+    }
+  }
+  _getIntersection(pos) {
+    const ratio = this.hitCanvas.pixelRatio;
+    const p2 = this.hitCanvas.context.getImageData(Math.round(pos.x * ratio), Math.round(pos.y * ratio), 1, 1).data;
+    const p3 = p2[3];
+    if (p3 === 255) {
+      const colorKey = Util._rgbToHex(p2[0], p2[1], p2[2]);
+      const shape = shapes[HASH2 + colorKey];
+      if (shape) {
+        return {
+          shape
+        };
+      }
+      return {
+        antialiased: true
+      };
+    } else if (p3 > 0) {
+      return {
+        antialiased: true
+      };
+    }
+    return {};
+  }
+  drawScene(can, top) {
+    var layer = this.getLayer(), canvas = can || layer && layer.getCanvas();
+    this._fire(BEFORE_DRAW, {
+      node: this
+    });
+    if (this.clearBeforeDraw()) {
+      canvas.getContext().clear();
+    }
+    Container.prototype.drawScene.call(this, canvas, top);
+    this._fire(DRAW, {
+      node: this
+    });
+    return this;
+  }
+  drawHit(can, top) {
+    var layer = this.getLayer(), canvas = can || layer && layer.hitCanvas;
+    if (layer && layer.clearBeforeDraw()) {
+      layer.getHitCanvas().getContext().clear();
+    }
+    Container.prototype.drawHit.call(this, canvas, top);
+    return this;
+  }
+  enableHitGraph() {
+    this.hitGraphEnabled(true);
+    return this;
+  }
+  disableHitGraph() {
+    this.hitGraphEnabled(false);
+    return this;
+  }
+  setHitGraphEnabled(val) {
+    Util.warn("hitGraphEnabled method is deprecated. Please use layer.listening() instead.");
+    this.listening(val);
+  }
+  getHitGraphEnabled(val) {
+    Util.warn("hitGraphEnabled method is deprecated. Please use layer.listening() instead.");
+    return this.listening();
+  }
+  toggleHitCanvas() {
+    if (!this.parent || !this.parent["content"]) {
+      return;
+    }
+    var parent = this.parent;
+    var added = !!this.hitCanvas._canvas.parentNode;
+    if (added) {
+      parent.content.removeChild(this.hitCanvas._canvas);
+    } else {
+      parent.content.appendChild(this.hitCanvas._canvas);
+    }
+  }
+};
+Layer.prototype.nodeType = "Layer";
+_registerNode(Layer);
+Factory.addGetterSetter(Layer, "imageSmoothingEnabled", true);
+Factory.addGetterSetter(Layer, "clearBeforeDraw", true);
+Factory.addGetterSetter(Layer, "hitGraphEnabled", true, getBooleanValidator());
+
+// node_modules/konva/lib/FastLayer.js
+var FastLayer = class extends Layer {
+  constructor(attrs) {
+    super(attrs);
+    this.listening(false);
+    Util.warn('Konva.Fast layer is deprecated. Please use "new Konva.Layer({ listening: false })" instead.');
+  }
+};
+FastLayer.prototype.nodeType = "FastLayer";
+_registerNode(FastLayer);
+
+// node_modules/konva/lib/Group.js
+var Group4 = class extends Container {
+  _validateAdd(child) {
+    var type = child.getType();
+    if (type !== "Group" && type !== "Shape") {
+      Util.throw("You may only add groups and shapes to groups.");
+    }
+  }
+};
+Group4.prototype.nodeType = "Group";
+_registerNode(Group4);
+
+// node_modules/konva/lib/Animation.js
+var now3 = function() {
+  if (glob.performance && glob.performance.now) {
+    return function() {
+      return glob.performance.now();
+    };
+  }
+  return function() {
+    return new Date().getTime();
+  };
+}();
+var Animation = class {
+  constructor(func, layers) {
+    this.id = Animation.animIdCounter++;
+    this.frame = {
+      time: 0,
+      timeDiff: 0,
+      lastTime: now3(),
+      frameRate: 0
+    };
+    this.func = func;
+    this.setLayers(layers);
+  }
+  setLayers(layers) {
+    var lays = [];
+    if (!layers) {
+      lays = [];
+    } else if (layers.length > 0) {
+      lays = layers;
+    } else {
+      lays = [layers];
+    }
+    this.layers = lays;
+    return this;
+  }
+  getLayers() {
+    return this.layers;
+  }
+  addLayer(layer) {
+    var layers = this.layers, len = layers.length, n2;
+    for (n2 = 0; n2 < len; n2++) {
+      if (layers[n2]._id === layer._id) {
+        return false;
+      }
+    }
+    this.layers.push(layer);
+    return true;
+  }
+  isRunning() {
+    var a2 = Animation, animations = a2.animations, len = animations.length, n2;
+    for (n2 = 0; n2 < len; n2++) {
+      if (animations[n2].id === this.id) {
+        return true;
+      }
+    }
+    return false;
+  }
+  start() {
+    this.stop();
+    this.frame.timeDiff = 0;
+    this.frame.lastTime = now3();
+    Animation._addAnimation(this);
+    return this;
+  }
+  stop() {
+    Animation._removeAnimation(this);
+    return this;
+  }
+  _updateFrameObject(time) {
+    this.frame.timeDiff = time - this.frame.lastTime;
+    this.frame.lastTime = time;
+    this.frame.time += this.frame.timeDiff;
+    this.frame.frameRate = 1e3 / this.frame.timeDiff;
+  }
+  static _addAnimation(anim) {
+    this.animations.push(anim);
+    this._handleAnimation();
+  }
+  static _removeAnimation(anim) {
+    var id = anim.id, animations = this.animations, len = animations.length, n2;
+    for (n2 = 0; n2 < len; n2++) {
+      if (animations[n2].id === id) {
+        this.animations.splice(n2, 1);
+        break;
+      }
+    }
+  }
+  static _runFrames() {
+    var layerHash = {}, animations = this.animations, anim, layers, func, n2, i2, layersLen, layer, key, needRedraw;
+    for (n2 = 0; n2 < animations.length; n2++) {
+      anim = animations[n2];
+      layers = anim.layers;
+      func = anim.func;
+      anim._updateFrameObject(now3());
+      layersLen = layers.length;
+      if (func) {
+        needRedraw = func.call(anim, anim.frame) !== false;
+      } else {
+        needRedraw = true;
+      }
+      if (!needRedraw) {
+        continue;
+      }
+      for (i2 = 0; i2 < layersLen; i2++) {
+        layer = layers[i2];
+        if (layer._id !== void 0) {
+          layerHash[layer._id] = layer;
+        }
+      }
+    }
+    for (key in layerHash) {
+      if (!layerHash.hasOwnProperty(key)) {
+        continue;
+      }
+      layerHash[key].batchDraw();
+    }
+  }
+  static _animationLoop() {
+    var Anim = Animation;
+    if (Anim.animations.length) {
+      Anim._runFrames();
+      Util.requestAnimFrame(Anim._animationLoop);
+    } else {
+      Anim.animRunning = false;
+    }
+  }
+  static _handleAnimation() {
+    if (!this.animRunning) {
+      this.animRunning = true;
+      Util.requestAnimFrame(this._animationLoop);
+    }
+  }
+};
+Animation.animations = [];
+Animation.animIdCounter = 0;
+Animation.animRunning = false;
+
+// node_modules/konva/lib/Tween.js
+var blacklist = {
+  node: 1,
+  duration: 1,
+  easing: 1,
+  onFinish: 1,
+  yoyo: 1
+};
+var PAUSED = 1;
+var PLAYING = 2;
+var REVERSING = 3;
+var idCounter2 = 0;
+var colorAttrs = ["fill", "stroke", "shadowColor"];
+var TweenEngine = class {
+  constructor(prop, propFunc, func, begin, finish, duration, yoyo) {
+    this.prop = prop;
+    this.propFunc = propFunc;
+    this.begin = begin;
+    this._pos = begin;
+    this.duration = duration;
+    this._change = 0;
+    this.prevPos = 0;
+    this.yoyo = yoyo;
+    this._time = 0;
+    this._position = 0;
+    this._startTime = 0;
+    this._finish = 0;
+    this.func = func;
+    this._change = finish - this.begin;
+    this.pause();
+  }
+  fire(str) {
+    var handler = this[str];
+    if (handler) {
+      handler();
+    }
+  }
+  setTime(t2) {
+    if (t2 > this.duration) {
+      if (this.yoyo) {
+        this._time = this.duration;
+        this.reverse();
+      } else {
+        this.finish();
+      }
+    } else if (t2 < 0) {
+      if (this.yoyo) {
+        this._time = 0;
+        this.play();
+      } else {
+        this.reset();
+      }
+    } else {
+      this._time = t2;
+      this.update();
+    }
+  }
+  getTime() {
+    return this._time;
+  }
+  setPosition(p2) {
+    this.prevPos = this._pos;
+    this.propFunc(p2);
+    this._pos = p2;
+  }
+  getPosition(t2) {
+    if (t2 === void 0) {
+      t2 = this._time;
+    }
+    return this.func(t2, this.begin, this._change, this.duration);
+  }
+  play() {
+    this.state = PLAYING;
+    this._startTime = this.getTimer() - this._time;
+    this.onEnterFrame();
+    this.fire("onPlay");
+  }
+  reverse() {
+    this.state = REVERSING;
+    this._time = this.duration - this._time;
+    this._startTime = this.getTimer() - this._time;
+    this.onEnterFrame();
+    this.fire("onReverse");
+  }
+  seek(t2) {
+    this.pause();
+    this._time = t2;
+    this.update();
+    this.fire("onSeek");
+  }
+  reset() {
+    this.pause();
+    this._time = 0;
+    this.update();
+    this.fire("onReset");
+  }
+  finish() {
+    this.pause();
+    this._time = this.duration;
+    this.update();
+    this.fire("onFinish");
+  }
+  update() {
+    this.setPosition(this.getPosition(this._time));
+    this.fire("onUpdate");
+  }
+  onEnterFrame() {
+    var t2 = this.getTimer() - this._startTime;
+    if (this.state === PLAYING) {
+      this.setTime(t2);
+    } else if (this.state === REVERSING) {
+      this.setTime(this.duration - t2);
+    }
+  }
+  pause() {
+    this.state = PAUSED;
+    this.fire("onPause");
+  }
+  getTimer() {
+    return new Date().getTime();
+  }
+};
+var Tween = class {
+  constructor(config) {
+    var that = this, node2 = config.node, nodeId = node2._id, duration, easing = config.easing || Easings.Linear, yoyo = !!config.yoyo, key;
+    if (typeof config.duration === "undefined") {
+      duration = 0.3;
+    } else if (config.duration === 0) {
+      duration = 1e-3;
+    } else {
+      duration = config.duration;
+    }
+    this.node = node2;
+    this._id = idCounter2++;
+    var layers = node2.getLayer() || (node2 instanceof Konva["Stage"] ? node2.getLayers() : null);
+    if (!layers) {
+      Util.error("Tween constructor have `node` that is not in a layer. Please add node into layer first.");
+    }
+    this.anim = new Animation(function() {
+      that.tween.onEnterFrame();
+    }, layers);
+    this.tween = new TweenEngine(key, function(i2) {
+      that._tweenFunc(i2);
+    }, easing, 0, 1, duration * 1e3, yoyo);
+    this._addListeners();
+    if (!Tween.attrs[nodeId]) {
+      Tween.attrs[nodeId] = {};
+    }
+    if (!Tween.attrs[nodeId][this._id]) {
+      Tween.attrs[nodeId][this._id] = {};
+    }
+    if (!Tween.tweens[nodeId]) {
+      Tween.tweens[nodeId] = {};
+    }
+    for (key in config) {
+      if (blacklist[key] === void 0) {
+        this._addAttr(key, config[key]);
+      }
+    }
+    this.reset();
+    this.onFinish = config.onFinish;
+    this.onReset = config.onReset;
+    this.onUpdate = config.onUpdate;
+  }
+  _addAttr(key, end) {
+    var node2 = this.node, nodeId = node2._id, start, diff, tweenId, n2, len, trueEnd, trueStart, endRGBA;
+    tweenId = Tween.tweens[nodeId][key];
+    if (tweenId) {
+      delete Tween.attrs[nodeId][tweenId][key];
+    }
+    start = node2.getAttr(key);
+    if (Util._isArray(end)) {
+      diff = [];
+      len = Math.max(end.length, start.length);
+      if (key === "points" && end.length !== start.length) {
+        if (end.length > start.length) {
+          trueStart = start;
+          start = Util._prepareArrayForTween(start, end, node2.closed());
+        } else {
+          trueEnd = end;
+          end = Util._prepareArrayForTween(end, start, node2.closed());
+        }
+      }
+      if (key.indexOf("fill") === 0) {
+        for (n2 = 0; n2 < len; n2++) {
+          if (n2 % 2 === 0) {
+            diff.push(end[n2] - start[n2]);
+          } else {
+            var startRGBA = Util.colorToRGBA(start[n2]);
+            endRGBA = Util.colorToRGBA(end[n2]);
+            start[n2] = startRGBA;
+            diff.push({
+              r: endRGBA.r - startRGBA.r,
+              g: endRGBA.g - startRGBA.g,
+              b: endRGBA.b - startRGBA.b,
+              a: endRGBA.a - startRGBA.a
+            });
+          }
+        }
+      } else {
+        for (n2 = 0; n2 < len; n2++) {
+          diff.push(end[n2] - start[n2]);
+        }
+      }
+    } else if (colorAttrs.indexOf(key) !== -1) {
+      start = Util.colorToRGBA(start);
+      endRGBA = Util.colorToRGBA(end);
+      diff = {
+        r: endRGBA.r - start.r,
+        g: endRGBA.g - start.g,
+        b: endRGBA.b - start.b,
+        a: endRGBA.a - start.a
+      };
+    } else {
+      diff = end - start;
+    }
+    Tween.attrs[nodeId][this._id][key] = {
+      start,
+      diff,
+      end,
+      trueEnd,
+      trueStart
+    };
+    Tween.tweens[nodeId][key] = this._id;
+  }
+  _tweenFunc(i2) {
+    var node2 = this.node, attrs = Tween.attrs[node2._id][this._id], key, attr, start, diff, newVal, n2, len, end;
+    for (key in attrs) {
+      attr = attrs[key];
+      start = attr.start;
+      diff = attr.diff;
+      end = attr.end;
+      if (Util._isArray(start)) {
+        newVal = [];
+        len = Math.max(start.length, end.length);
+        if (key.indexOf("fill") === 0) {
+          for (n2 = 0; n2 < len; n2++) {
+            if (n2 % 2 === 0) {
+              newVal.push((start[n2] || 0) + diff[n2] * i2);
+            } else {
+              newVal.push("rgba(" + Math.round(start[n2].r + diff[n2].r * i2) + "," + Math.round(start[n2].g + diff[n2].g * i2) + "," + Math.round(start[n2].b + diff[n2].b * i2) + "," + (start[n2].a + diff[n2].a * i2) + ")");
+            }
+          }
+        } else {
+          for (n2 = 0; n2 < len; n2++) {
+            newVal.push((start[n2] || 0) + diff[n2] * i2);
+          }
+        }
+      } else if (colorAttrs.indexOf(key) !== -1) {
+        newVal = "rgba(" + Math.round(start.r + diff.r * i2) + "," + Math.round(start.g + diff.g * i2) + "," + Math.round(start.b + diff.b * i2) + "," + (start.a + diff.a * i2) + ")";
+      } else {
+        newVal = start + diff * i2;
+      }
+      node2.setAttr(key, newVal);
+    }
+  }
+  _addListeners() {
+    this.tween.onPlay = () => {
+      this.anim.start();
+    };
+    this.tween.onReverse = () => {
+      this.anim.start();
+    };
+    this.tween.onPause = () => {
+      this.anim.stop();
+    };
+    this.tween.onFinish = () => {
+      var node2 = this.node;
+      var attrs = Tween.attrs[node2._id][this._id];
+      if (attrs.points && attrs.points.trueEnd) {
+        node2.setAttr("points", attrs.points.trueEnd);
+      }
+      if (this.onFinish) {
+        this.onFinish.call(this);
+      }
+    };
+    this.tween.onReset = () => {
+      var node2 = this.node;
+      var attrs = Tween.attrs[node2._id][this._id];
+      if (attrs.points && attrs.points.trueStart) {
+        node2.points(attrs.points.trueStart);
+      }
+      if (this.onReset) {
+        this.onReset();
+      }
+    };
+    this.tween.onUpdate = () => {
+      if (this.onUpdate) {
+        this.onUpdate.call(this);
+      }
+    };
+  }
+  play() {
+    this.tween.play();
+    return this;
+  }
+  reverse() {
+    this.tween.reverse();
+    return this;
+  }
+  reset() {
+    this.tween.reset();
+    return this;
+  }
+  seek(t2) {
+    this.tween.seek(t2 * 1e3);
+    return this;
+  }
+  pause() {
+    this.tween.pause();
+    return this;
+  }
+  finish() {
+    this.tween.finish();
+    return this;
+  }
+  destroy() {
+    var nodeId = this.node._id, thisId = this._id, attrs = Tween.tweens[nodeId], key;
+    this.pause();
+    for (key in attrs) {
+      delete Tween.tweens[nodeId][key];
+    }
+    delete Tween.attrs[nodeId][thisId];
+  }
+};
+Tween.attrs = {};
+Tween.tweens = {};
+Node2.prototype.to = function(params) {
+  var onFinish = params.onFinish;
+  params.node = this;
+  params.onFinish = function() {
+    this.destroy();
+    if (onFinish) {
+      onFinish();
+    }
+  };
+  var tween = new Tween(params);
+  tween.play();
+};
+var Easings = {
+  BackEaseIn(t2, b2, c2, d2) {
+    var s2 = 1.70158;
+    return c2 * (t2 /= d2) * t2 * ((s2 + 1) * t2 - s2) + b2;
+  },
+  BackEaseOut(t2, b2, c2, d2) {
+    var s2 = 1.70158;
+    return c2 * ((t2 = t2 / d2 - 1) * t2 * ((s2 + 1) * t2 + s2) + 1) + b2;
+  },
+  BackEaseInOut(t2, b2, c2, d2) {
+    var s2 = 1.70158;
+    if ((t2 /= d2 / 2) < 1) {
+      return c2 / 2 * (t2 * t2 * (((s2 *= 1.525) + 1) * t2 - s2)) + b2;
+    }
+    return c2 / 2 * ((t2 -= 2) * t2 * (((s2 *= 1.525) + 1) * t2 + s2) + 2) + b2;
+  },
+  ElasticEaseIn(t2, b2, c2, d2, a2, p2) {
+    var s2 = 0;
+    if (t2 === 0) {
+      return b2;
+    }
+    if ((t2 /= d2) === 1) {
+      return b2 + c2;
+    }
+    if (!p2) {
+      p2 = d2 * 0.3;
+    }
+    if (!a2 || a2 < Math.abs(c2)) {
+      a2 = c2;
+      s2 = p2 / 4;
+    } else {
+      s2 = p2 / (2 * Math.PI) * Math.asin(c2 / a2);
+    }
+    return -(a2 * Math.pow(2, 10 * (t2 -= 1)) * Math.sin((t2 * d2 - s2) * (2 * Math.PI) / p2)) + b2;
+  },
+  ElasticEaseOut(t2, b2, c2, d2, a2, p2) {
+    var s2 = 0;
+    if (t2 === 0) {
+      return b2;
+    }
+    if ((t2 /= d2) === 1) {
+      return b2 + c2;
+    }
+    if (!p2) {
+      p2 = d2 * 0.3;
+    }
+    if (!a2 || a2 < Math.abs(c2)) {
+      a2 = c2;
+      s2 = p2 / 4;
+    } else {
+      s2 = p2 / (2 * Math.PI) * Math.asin(c2 / a2);
+    }
+    return a2 * Math.pow(2, -10 * t2) * Math.sin((t2 * d2 - s2) * (2 * Math.PI) / p2) + c2 + b2;
+  },
+  ElasticEaseInOut(t2, b2, c2, d2, a2, p2) {
+    var s2 = 0;
+    if (t2 === 0) {
+      return b2;
+    }
+    if ((t2 /= d2 / 2) === 2) {
+      return b2 + c2;
+    }
+    if (!p2) {
+      p2 = d2 * (0.3 * 1.5);
+    }
+    if (!a2 || a2 < Math.abs(c2)) {
+      a2 = c2;
+      s2 = p2 / 4;
+    } else {
+      s2 = p2 / (2 * Math.PI) * Math.asin(c2 / a2);
+    }
+    if (t2 < 1) {
+      return -0.5 * (a2 * Math.pow(2, 10 * (t2 -= 1)) * Math.sin((t2 * d2 - s2) * (2 * Math.PI) / p2)) + b2;
+    }
+    return a2 * Math.pow(2, -10 * (t2 -= 1)) * Math.sin((t2 * d2 - s2) * (2 * Math.PI) / p2) * 0.5 + c2 + b2;
+  },
+  BounceEaseOut(t2, b2, c2, d2) {
+    if ((t2 /= d2) < 1 / 2.75) {
+      return c2 * (7.5625 * t2 * t2) + b2;
+    } else if (t2 < 2 / 2.75) {
+      return c2 * (7.5625 * (t2 -= 1.5 / 2.75) * t2 + 0.75) + b2;
+    } else if (t2 < 2.5 / 2.75) {
+      return c2 * (7.5625 * (t2 -= 2.25 / 2.75) * t2 + 0.9375) + b2;
+    } else {
+      return c2 * (7.5625 * (t2 -= 2.625 / 2.75) * t2 + 0.984375) + b2;
+    }
+  },
+  BounceEaseIn(t2, b2, c2, d2) {
+    return c2 - Easings.BounceEaseOut(d2 - t2, 0, c2, d2) + b2;
+  },
+  BounceEaseInOut(t2, b2, c2, d2) {
+    if (t2 < d2 / 2) {
+      return Easings.BounceEaseIn(t2 * 2, 0, c2, d2) * 0.5 + b2;
+    } else {
+      return Easings.BounceEaseOut(t2 * 2 - d2, 0, c2, d2) * 0.5 + c2 * 0.5 + b2;
+    }
+  },
+  EaseIn(t2, b2, c2, d2) {
+    return c2 * (t2 /= d2) * t2 + b2;
+  },
+  EaseOut(t2, b2, c2, d2) {
+    return -c2 * (t2 /= d2) * (t2 - 2) + b2;
+  },
+  EaseInOut(t2, b2, c2, d2) {
+    if ((t2 /= d2 / 2) < 1) {
+      return c2 / 2 * t2 * t2 + b2;
+    }
+    return -c2 / 2 * (--t2 * (t2 - 2) - 1) + b2;
+  },
+  StrongEaseIn(t2, b2, c2, d2) {
+    return c2 * (t2 /= d2) * t2 * t2 * t2 * t2 + b2;
+  },
+  StrongEaseOut(t2, b2, c2, d2) {
+    return c2 * ((t2 = t2 / d2 - 1) * t2 * t2 * t2 * t2 + 1) + b2;
+  },
+  StrongEaseInOut(t2, b2, c2, d2) {
+    if ((t2 /= d2 / 2) < 1) {
+      return c2 / 2 * t2 * t2 * t2 * t2 * t2 + b2;
+    }
+    return c2 / 2 * ((t2 -= 2) * t2 * t2 * t2 * t2 + 2) + b2;
+  },
+  Linear(t2, b2, c2, d2) {
+    return c2 * t2 / d2 + b2;
+  }
+};
+
+// node_modules/konva/lib/_CoreInternals.js
+var Konva2 = Util._assign(Konva, {
+  Util,
+  Transform,
+  Node: Node2,
+  Container,
+  Stage,
+  stages,
+  Layer,
+  FastLayer,
+  Group: Group4,
+  DD,
+  Shape: Shape2,
+  shapes,
+  Animation,
+  Tween,
+  Easings,
+  Context,
+  Canvas: Canvas3
+});
+
+// node_modules/konva/lib/shapes/Arc.js
+var Arc = class extends Shape2 {
+  _sceneFunc(context) {
+    var angle = Konva.getAngle(this.angle()), clockwise = this.clockwise();
+    context.beginPath();
+    context.arc(0, 0, this.outerRadius(), 0, angle, clockwise);
+    context.arc(0, 0, this.innerRadius(), angle, 0, !clockwise);
+    context.closePath();
+    context.fillStrokeShape(this);
+  }
+  getWidth() {
+    return this.outerRadius() * 2;
+  }
+  getHeight() {
+    return this.outerRadius() * 2;
+  }
+  setWidth(width) {
+    this.outerRadius(width / 2);
+  }
+  setHeight(height) {
+    this.outerRadius(height / 2);
+  }
+};
+Arc.prototype._centroid = true;
+Arc.prototype.className = "Arc";
+Arc.prototype._attrsAffectingSize = ["innerRadius", "outerRadius"];
+_registerNode(Arc);
+Factory.addGetterSetter(Arc, "innerRadius", 0, getNumberValidator());
+Factory.addGetterSetter(Arc, "outerRadius", 0, getNumberValidator());
+Factory.addGetterSetter(Arc, "angle", 0, getNumberValidator());
+Factory.addGetterSetter(Arc, "clockwise", false, getBooleanValidator());
+
+// node_modules/konva/lib/shapes/Line.js
+function getControlPoints(x0, y0, x1, y1, x2, y2, t2) {
+  var d01 = Math.sqrt(Math.pow(x1 - x0, 2) + Math.pow(y1 - y0, 2)), d12 = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)), fa = t2 * d01 / (d01 + d12), fb = t2 * d12 / (d01 + d12), p1x = x1 - fa * (x2 - x0), p1y = y1 - fa * (y2 - y0), p2x = x1 + fb * (x2 - x0), p2y = y1 + fb * (y2 - y0);
+  return [p1x, p1y, p2x, p2y];
+}
+function expandPoints(p2, tension) {
+  var len = p2.length, allPoints = [], n2, cp;
+  for (n2 = 2; n2 < len - 2; n2 += 2) {
+    cp = getControlPoints(p2[n2 - 2], p2[n2 - 1], p2[n2], p2[n2 + 1], p2[n2 + 2], p2[n2 + 3], tension);
+    if (isNaN(cp[0])) {
+      continue;
+    }
+    allPoints.push(cp[0]);
+    allPoints.push(cp[1]);
+    allPoints.push(p2[n2]);
+    allPoints.push(p2[n2 + 1]);
+    allPoints.push(cp[2]);
+    allPoints.push(cp[3]);
+  }
+  return allPoints;
+}
+var Line2 = class extends Shape2 {
+  constructor(config) {
+    super(config);
+    this.on("pointsChange.konva tensionChange.konva closedChange.konva bezierChange.konva", function() {
+      this._clearCache("tensionPoints");
+    });
+  }
+  _sceneFunc(context) {
+    var points = this.points(), length2 = points.length, tension = this.tension(), closed = this.closed(), bezier = this.bezier(), tp, len, n2;
+    if (!length2) {
+      return;
+    }
+    context.beginPath();
+    context.moveTo(points[0], points[1]);
+    if (tension !== 0 && length2 > 4) {
+      tp = this.getTensionPoints();
+      len = tp.length;
+      n2 = closed ? 0 : 4;
+      if (!closed) {
+        context.quadraticCurveTo(tp[0], tp[1], tp[2], tp[3]);
+      }
+      while (n2 < len - 2) {
+        context.bezierCurveTo(tp[n2++], tp[n2++], tp[n2++], tp[n2++], tp[n2++], tp[n2++]);
+      }
+      if (!closed) {
+        context.quadraticCurveTo(tp[len - 2], tp[len - 1], points[length2 - 2], points[length2 - 1]);
+      }
+    } else if (bezier) {
+      n2 = 2;
+      while (n2 < length2) {
+        context.bezierCurveTo(points[n2++], points[n2++], points[n2++], points[n2++], points[n2++], points[n2++]);
+      }
+    } else {
+      for (n2 = 2; n2 < length2; n2 += 2) {
+        context.lineTo(points[n2], points[n2 + 1]);
+      }
+    }
+    if (closed) {
+      context.closePath();
+      context.fillStrokeShape(this);
+    } else {
+      context.strokeShape(this);
+    }
+  }
+  getTensionPoints() {
+    return this._getCache("tensionPoints", this._getTensionPoints);
+  }
+  _getTensionPoints() {
+    if (this.closed()) {
+      return this._getTensionPointsClosed();
+    } else {
+      return expandPoints(this.points(), this.tension());
+    }
+  }
+  _getTensionPointsClosed() {
+    var p2 = this.points(), len = p2.length, tension = this.tension(), firstControlPoints = getControlPoints(p2[len - 2], p2[len - 1], p2[0], p2[1], p2[2], p2[3], tension), lastControlPoints = getControlPoints(p2[len - 4], p2[len - 3], p2[len - 2], p2[len - 1], p2[0], p2[1], tension), middle = expandPoints(p2, tension), tp = [firstControlPoints[2], firstControlPoints[3]].concat(middle).concat([
+      lastControlPoints[0],
+      lastControlPoints[1],
+      p2[len - 2],
+      p2[len - 1],
+      lastControlPoints[2],
+      lastControlPoints[3],
+      firstControlPoints[0],
+      firstControlPoints[1],
+      p2[0],
+      p2[1]
+    ]);
+    return tp;
+  }
+  getWidth() {
+    return this.getSelfRect().width;
+  }
+  getHeight() {
+    return this.getSelfRect().height;
+  }
+  getSelfRect() {
+    var points = this.points();
+    if (points.length < 4) {
+      return {
+        x: points[0] || 0,
+        y: points[1] || 0,
+        width: 0,
+        height: 0
+      };
+    }
+    if (this.tension() !== 0) {
+      points = [
+        points[0],
+        points[1],
+        ...this._getTensionPoints(),
+        points[points.length - 2],
+        points[points.length - 1]
+      ];
+    } else {
+      points = this.points();
+    }
+    var minX = points[0];
+    var maxX = points[0];
+    var minY = points[1];
+    var maxY = points[1];
+    var x2, y2;
+    for (var i2 = 0; i2 < points.length / 2; i2++) {
+      x2 = points[i2 * 2];
+      y2 = points[i2 * 2 + 1];
+      minX = Math.min(minX, x2);
+      maxX = Math.max(maxX, x2);
+      minY = Math.min(minY, y2);
+      maxY = Math.max(maxY, y2);
+    }
+    return {
+      x: minX,
+      y: minY,
+      width: maxX - minX,
+      height: maxY - minY
+    };
+  }
+};
+Line2.prototype.className = "Line";
+Line2.prototype._attrsAffectingSize = ["points", "bezier", "tension"];
+_registerNode(Line2);
+Factory.addGetterSetter(Line2, "closed", false);
+Factory.addGetterSetter(Line2, "bezier", false);
+Factory.addGetterSetter(Line2, "tension", 0, getNumberValidator());
+Factory.addGetterSetter(Line2, "points", [], getNumberArrayValidator());
+
+// node_modules/konva/lib/shapes/Path.js
+var Path2 = class extends Shape2 {
+  constructor(config) {
+    super(config);
+    this.dataArray = [];
+    this.pathLength = 0;
+    this.dataArray = Path2.parsePathData(this.data());
+    this.pathLength = 0;
+    for (var i2 = 0; i2 < this.dataArray.length; ++i2) {
+      this.pathLength += this.dataArray[i2].pathLength;
+    }
+    this.on("dataChange.konva", function() {
+      this.dataArray = Path2.parsePathData(this.data());
+      this.pathLength = 0;
+      for (var i3 = 0; i3 < this.dataArray.length; ++i3) {
+        this.pathLength += this.dataArray[i3].pathLength;
+      }
+    });
+  }
+  _sceneFunc(context) {
+    var ca = this.dataArray;
+    context.beginPath();
+    var isClosed = false;
+    for (var n2 = 0; n2 < ca.length; n2++) {
+      var c2 = ca[n2].command;
+      var p2 = ca[n2].points;
+      switch (c2) {
+        case "L":
+          context.lineTo(p2[0], p2[1]);
+          break;
+        case "M":
+          context.moveTo(p2[0], p2[1]);
+          break;
+        case "C":
+          context.bezierCurveTo(p2[0], p2[1], p2[2], p2[3], p2[4], p2[5]);
+          break;
+        case "Q":
+          context.quadraticCurveTo(p2[0], p2[1], p2[2], p2[3]);
+          break;
+        case "A":
+          var cx = p2[0], cy = p2[1], rx = p2[2], ry = p2[3], theta = p2[4], dTheta = p2[5], psi = p2[6], fs = p2[7];
+          var r2 = rx > ry ? rx : ry;
+          var scaleX = rx > ry ? 1 : rx / ry;
+          var scaleY = rx > ry ? ry / rx : 1;
+          context.translate(cx, cy);
+          context.rotate(psi);
+          context.scale(scaleX, scaleY);
+          context.arc(0, 0, r2, theta, theta + dTheta, 1 - fs);
+          context.scale(1 / scaleX, 1 / scaleY);
+          context.rotate(-psi);
+          context.translate(-cx, -cy);
+          break;
+        case "z":
+          isClosed = true;
+          context.closePath();
+          break;
+      }
+    }
+    if (!isClosed && !this.hasFill()) {
+      context.strokeShape(this);
+    } else {
+      context.fillStrokeShape(this);
+    }
+  }
+  getSelfRect() {
+    var points = [];
+    this.dataArray.forEach(function(data2) {
+      if (data2.command === "A") {
+        var start = data2.points[4];
+        var dTheta = data2.points[5];
+        var end = data2.points[4] + dTheta;
+        var inc = Math.PI / 180;
+        if (Math.abs(start - end) < inc) {
+          inc = Math.abs(start - end);
+        }
+        if (dTheta < 0) {
+          for (let t2 = start - inc; t2 > end; t2 -= inc) {
+            const point = Path2.getPointOnEllipticalArc(data2.points[0], data2.points[1], data2.points[2], data2.points[3], t2, 0);
+            points.push(point.x, point.y);
+          }
+        } else {
+          for (let t2 = start + inc; t2 < end; t2 += inc) {
+            const point = Path2.getPointOnEllipticalArc(data2.points[0], data2.points[1], data2.points[2], data2.points[3], t2, 0);
+            points.push(point.x, point.y);
+          }
+        }
+      } else if (data2.command === "C") {
+        for (let t2 = 0; t2 <= 1; t2 += 0.01) {
+          const point = Path2.getPointOnCubicBezier(t2, data2.start.x, data2.start.y, data2.points[0], data2.points[1], data2.points[2], data2.points[3], data2.points[4], data2.points[5]);
+          points.push(point.x, point.y);
+        }
+      } else {
+        points = points.concat(data2.points);
+      }
+    });
+    var minX = points[0];
+    var maxX = points[0];
+    var minY = points[1];
+    var maxY = points[1];
+    var x2, y2;
+    for (var i2 = 0; i2 < points.length / 2; i2++) {
+      x2 = points[i2 * 2];
+      y2 = points[i2 * 2 + 1];
+      if (!isNaN(x2)) {
+        minX = Math.min(minX, x2);
+        maxX = Math.max(maxX, x2);
+      }
+      if (!isNaN(y2)) {
+        minY = Math.min(minY, y2);
+        maxY = Math.max(maxY, y2);
+      }
+    }
+    return {
+      x: Math.round(minX),
+      y: Math.round(minY),
+      width: Math.round(maxX - minX),
+      height: Math.round(maxY - minY)
+    };
+  }
+  getLength() {
+    return this.pathLength;
+  }
+  getPointAtLength(length2) {
+    var point, i2 = 0, ii = this.dataArray.length;
+    if (!ii) {
+      return null;
+    }
+    while (i2 < ii && length2 > this.dataArray[i2].pathLength) {
+      length2 -= this.dataArray[i2].pathLength;
+      ++i2;
+    }
+    if (i2 === ii) {
+      point = this.dataArray[i2 - 1].points.slice(-2);
+      return {
+        x: point[0],
+        y: point[1]
+      };
+    }
+    if (length2 < 0.01) {
+      point = this.dataArray[i2].points.slice(0, 2);
+      return {
+        x: point[0],
+        y: point[1]
+      };
+    }
+    var cp = this.dataArray[i2];
+    var p2 = cp.points;
+    switch (cp.command) {
+      case "L":
+        return Path2.getPointOnLine(length2, cp.start.x, cp.start.y, p2[0], p2[1]);
+      case "C":
+        return Path2.getPointOnCubicBezier(length2 / cp.pathLength, cp.start.x, cp.start.y, p2[0], p2[1], p2[2], p2[3], p2[4], p2[5]);
+      case "Q":
+        return Path2.getPointOnQuadraticBezier(length2 / cp.pathLength, cp.start.x, cp.start.y, p2[0], p2[1], p2[2], p2[3]);
+      case "A":
+        var cx = p2[0], cy = p2[1], rx = p2[2], ry = p2[3], theta = p2[4], dTheta = p2[5], psi = p2[6];
+        theta += dTheta * length2 / cp.pathLength;
+        return Path2.getPointOnEllipticalArc(cx, cy, rx, ry, theta, psi);
+    }
+    return null;
+  }
+  static getLineLength(x1, y1, x2, y2) {
+    return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+  }
+  static getPointOnLine(dist, P1x, P1y, P2x, P2y, fromX, fromY) {
+    if (fromX === void 0) {
+      fromX = P1x;
+    }
+    if (fromY === void 0) {
+      fromY = P1y;
+    }
+    var m2 = (P2y - P1y) / (P2x - P1x + 1e-8);
+    var run = Math.sqrt(dist * dist / (1 + m2 * m2));
+    if (P2x < P1x) {
+      run *= -1;
+    }
+    var rise = m2 * run;
+    var pt2;
+    if (P2x === P1x) {
+      pt2 = {
+        x: fromX,
+        y: fromY + rise
+      };
+    } else if ((fromY - P1y) / (fromX - P1x + 1e-8) === m2) {
+      pt2 = {
+        x: fromX + run,
+        y: fromY + rise
+      };
+    } else {
+      var ix, iy;
+      var len = this.getLineLength(P1x, P1y, P2x, P2y);
+      var u2 = (fromX - P1x) * (P2x - P1x) + (fromY - P1y) * (P2y - P1y);
+      u2 = u2 / (len * len);
+      ix = P1x + u2 * (P2x - P1x);
+      iy = P1y + u2 * (P2y - P1y);
+      var pRise = this.getLineLength(fromX, fromY, ix, iy);
+      var pRun = Math.sqrt(dist * dist - pRise * pRise);
+      run = Math.sqrt(pRun * pRun / (1 + m2 * m2));
+      if (P2x < P1x) {
+        run *= -1;
+      }
+      rise = m2 * run;
+      pt2 = {
+        x: ix + run,
+        y: iy + rise
+      };
+    }
+    return pt2;
+  }
+  static getPointOnCubicBezier(pct, P1x, P1y, P2x, P2y, P3x, P3y, P4x, P4y) {
+    function CB1(t2) {
+      return t2 * t2 * t2;
+    }
+    function CB2(t2) {
+      return 3 * t2 * t2 * (1 - t2);
+    }
+    function CB3(t2) {
+      return 3 * t2 * (1 - t2) * (1 - t2);
+    }
+    function CB4(t2) {
+      return (1 - t2) * (1 - t2) * (1 - t2);
+    }
+    var x2 = P4x * CB1(pct) + P3x * CB2(pct) + P2x * CB3(pct) + P1x * CB4(pct);
+    var y2 = P4y * CB1(pct) + P3y * CB2(pct) + P2y * CB3(pct) + P1y * CB4(pct);
+    return {
+      x: x2,
+      y: y2
+    };
+  }
+  static getPointOnQuadraticBezier(pct, P1x, P1y, P2x, P2y, P3x, P3y) {
+    function QB1(t2) {
+      return t2 * t2;
+    }
+    function QB2(t2) {
+      return 2 * t2 * (1 - t2);
+    }
+    function QB3(t2) {
+      return (1 - t2) * (1 - t2);
+    }
+    var x2 = P3x * QB1(pct) + P2x * QB2(pct) + P1x * QB3(pct);
+    var y2 = P3y * QB1(pct) + P2y * QB2(pct) + P1y * QB3(pct);
+    return {
+      x: x2,
+      y: y2
+    };
+  }
+  static getPointOnEllipticalArc(cx, cy, rx, ry, theta, psi) {
+    var cosPsi = Math.cos(psi), sinPsi = Math.sin(psi);
+    var pt2 = {
+      x: rx * Math.cos(theta),
+      y: ry * Math.sin(theta)
+    };
+    return {
+      x: cx + (pt2.x * cosPsi - pt2.y * sinPsi),
+      y: cy + (pt2.x * sinPsi + pt2.y * cosPsi)
+    };
+  }
+  static parsePathData(data2) {
+    if (!data2) {
+      return [];
+    }
+    var cs = data2;
+    var cc = [
+      "m",
+      "M",
+      "l",
+      "L",
+      "v",
+      "V",
+      "h",
+      "H",
+      "z",
+      "Z",
+      "c",
+      "C",
+      "q",
+      "Q",
+      "t",
+      "T",
+      "s",
+      "S",
+      "a",
+      "A"
+    ];
+    cs = cs.replace(new RegExp(" ", "g"), ",");
+    for (var n2 = 0; n2 < cc.length; n2++) {
+      cs = cs.replace(new RegExp(cc[n2], "g"), "|" + cc[n2]);
+    }
+    var arr = cs.split("|");
+    var ca = [];
+    var coords = [];
+    var cpx = 0;
+    var cpy = 0;
+    var re2 = /([-+]?((\d+\.\d+)|((\d+)|(\.\d+)))(?:e[-+]?\d+)?)/gi;
+    var match2;
+    for (n2 = 1; n2 < arr.length; n2++) {
+      var str = arr[n2];
+      var c2 = str.charAt(0);
+      str = str.slice(1);
+      coords.length = 0;
+      while (match2 = re2.exec(str)) {
+        coords.push(match2[0]);
+      }
+      var p2 = [];
+      for (var j2 = 0, jlen = coords.length; j2 < jlen; j2++) {
+        if (coords[j2] === "00") {
+          p2.push(0, 0);
+          continue;
+        }
+        var parsed = parseFloat(coords[j2]);
+        if (!isNaN(parsed)) {
+          p2.push(parsed);
+        } else {
+          p2.push(0);
+        }
+      }
+      while (p2.length > 0) {
+        if (isNaN(p2[0])) {
+          break;
+        }
+        var cmd = null;
+        var points = [];
+        var startX = cpx, startY = cpy;
+        var prevCmd, ctlPtx, ctlPty;
+        var rx, ry, psi, fa, fs, x1, y1;
+        switch (c2) {
+          case "l":
+            cpx += p2.shift();
+            cpy += p2.shift();
+            cmd = "L";
+            points.push(cpx, cpy);
+            break;
+          case "L":
+            cpx = p2.shift();
+            cpy = p2.shift();
+            points.push(cpx, cpy);
+            break;
+          case "m":
+            var dx = p2.shift();
+            var dy = p2.shift();
+            cpx += dx;
+            cpy += dy;
+            cmd = "M";
+            if (ca.length > 2 && ca[ca.length - 1].command === "z") {
+              for (var idx = ca.length - 2; idx >= 0; idx--) {
+                if (ca[idx].command === "M") {
+                  cpx = ca[idx].points[0] + dx;
+                  cpy = ca[idx].points[1] + dy;
+                  break;
+                }
+              }
+            }
+            points.push(cpx, cpy);
+            c2 = "l";
+            break;
+          case "M":
+            cpx = p2.shift();
+            cpy = p2.shift();
+            cmd = "M";
+            points.push(cpx, cpy);
+            c2 = "L";
+            break;
+          case "h":
+            cpx += p2.shift();
+            cmd = "L";
+            points.push(cpx, cpy);
+            break;
+          case "H":
+            cpx = p2.shift();
+            cmd = "L";
+            points.push(cpx, cpy);
+            break;
+          case "v":
+            cpy += p2.shift();
+            cmd = "L";
+            points.push(cpx, cpy);
+            break;
+          case "V":
+            cpy = p2.shift();
+            cmd = "L";
+            points.push(cpx, cpy);
+            break;
+          case "C":
+            points.push(p2.shift(), p2.shift(), p2.shift(), p2.shift());
+            cpx = p2.shift();
+            cpy = p2.shift();
+            points.push(cpx, cpy);
+            break;
+          case "c":
+            points.push(cpx + p2.shift(), cpy + p2.shift(), cpx + p2.shift(), cpy + p2.shift());
+            cpx += p2.shift();
+            cpy += p2.shift();
+            cmd = "C";
+            points.push(cpx, cpy);
+            break;
+          case "S":
+            ctlPtx = cpx;
+            ctlPty = cpy;
+            prevCmd = ca[ca.length - 1];
+            if (prevCmd.command === "C") {
+              ctlPtx = cpx + (cpx - prevCmd.points[2]);
+              ctlPty = cpy + (cpy - prevCmd.points[3]);
+            }
+            points.push(ctlPtx, ctlPty, p2.shift(), p2.shift());
+            cpx = p2.shift();
+            cpy = p2.shift();
+            cmd = "C";
+            points.push(cpx, cpy);
+            break;
+          case "s":
+            ctlPtx = cpx;
+            ctlPty = cpy;
+            prevCmd = ca[ca.length - 1];
+            if (prevCmd.command === "C") {
+              ctlPtx = cpx + (cpx - prevCmd.points[2]);
+              ctlPty = cpy + (cpy - prevCmd.points[3]);
+            }
+            points.push(ctlPtx, ctlPty, cpx + p2.shift(), cpy + p2.shift());
+            cpx += p2.shift();
+            cpy += p2.shift();
+            cmd = "C";
+            points.push(cpx, cpy);
+            break;
+          case "Q":
+            points.push(p2.shift(), p2.shift());
+            cpx = p2.shift();
+            cpy = p2.shift();
+            points.push(cpx, cpy);
+            break;
+          case "q":
+            points.push(cpx + p2.shift(), cpy + p2.shift());
+            cpx += p2.shift();
+            cpy += p2.shift();
+            cmd = "Q";
+            points.push(cpx, cpy);
+            break;
+          case "T":
+            ctlPtx = cpx;
+            ctlPty = cpy;
+            prevCmd = ca[ca.length - 1];
+            if (prevCmd.command === "Q") {
+              ctlPtx = cpx + (cpx - prevCmd.points[0]);
+              ctlPty = cpy + (cpy - prevCmd.points[1]);
+            }
+            cpx = p2.shift();
+            cpy = p2.shift();
+            cmd = "Q";
+            points.push(ctlPtx, ctlPty, cpx, cpy);
+            break;
+          case "t":
+            ctlPtx = cpx;
+            ctlPty = cpy;
+            prevCmd = ca[ca.length - 1];
+            if (prevCmd.command === "Q") {
+              ctlPtx = cpx + (cpx - prevCmd.points[0]);
+              ctlPty = cpy + (cpy - prevCmd.points[1]);
+            }
+            cpx += p2.shift();
+            cpy += p2.shift();
+            cmd = "Q";
+            points.push(ctlPtx, ctlPty, cpx, cpy);
+            break;
+          case "A":
+            rx = p2.shift();
+            ry = p2.shift();
+            psi = p2.shift();
+            fa = p2.shift();
+            fs = p2.shift();
+            x1 = cpx;
+            y1 = cpy;
+            cpx = p2.shift();
+            cpy = p2.shift();
+            cmd = "A";
+            points = this.convertEndpointToCenterParameterization(x1, y1, cpx, cpy, fa, fs, rx, ry, psi);
+            break;
+          case "a":
+            rx = p2.shift();
+            ry = p2.shift();
+            psi = p2.shift();
+            fa = p2.shift();
+            fs = p2.shift();
+            x1 = cpx;
+            y1 = cpy;
+            cpx += p2.shift();
+            cpy += p2.shift();
+            cmd = "A";
+            points = this.convertEndpointToCenterParameterization(x1, y1, cpx, cpy, fa, fs, rx, ry, psi);
+            break;
+        }
+        ca.push({
+          command: cmd || c2,
+          points,
+          start: {
+            x: startX,
+            y: startY
+          },
+          pathLength: this.calcLength(startX, startY, cmd || c2, points)
+        });
+      }
+      if (c2 === "z" || c2 === "Z") {
+        ca.push({
+          command: "z",
+          points: [],
+          start: void 0,
+          pathLength: 0
+        });
+      }
+    }
+    return ca;
+  }
+  static calcLength(x2, y2, cmd, points) {
+    var len, p1, p2, t2;
+    var path = Path2;
+    switch (cmd) {
+      case "L":
+        return path.getLineLength(x2, y2, points[0], points[1]);
+      case "C":
+        len = 0;
+        p1 = path.getPointOnCubicBezier(0, x2, y2, points[0], points[1], points[2], points[3], points[4], points[5]);
+        for (t2 = 0.01; t2 <= 1; t2 += 0.01) {
+          p2 = path.getPointOnCubicBezier(t2, x2, y2, points[0], points[1], points[2], points[3], points[4], points[5]);
+          len += path.getLineLength(p1.x, p1.y, p2.x, p2.y);
+          p1 = p2;
+        }
+        return len;
+      case "Q":
+        len = 0;
+        p1 = path.getPointOnQuadraticBezier(0, x2, y2, points[0], points[1], points[2], points[3]);
+        for (t2 = 0.01; t2 <= 1; t2 += 0.01) {
+          p2 = path.getPointOnQuadraticBezier(t2, x2, y2, points[0], points[1], points[2], points[3]);
+          len += path.getLineLength(p1.x, p1.y, p2.x, p2.y);
+          p1 = p2;
+        }
+        return len;
+      case "A":
+        len = 0;
+        var start = points[4];
+        var dTheta = points[5];
+        var end = points[4] + dTheta;
+        var inc = Math.PI / 180;
+        if (Math.abs(start - end) < inc) {
+          inc = Math.abs(start - end);
+        }
+        p1 = path.getPointOnEllipticalArc(points[0], points[1], points[2], points[3], start, 0);
+        if (dTheta < 0) {
+          for (t2 = start - inc; t2 > end; t2 -= inc) {
+            p2 = path.getPointOnEllipticalArc(points[0], points[1], points[2], points[3], t2, 0);
+            len += path.getLineLength(p1.x, p1.y, p2.x, p2.y);
+            p1 = p2;
+          }
+        } else {
+          for (t2 = start + inc; t2 < end; t2 += inc) {
+            p2 = path.getPointOnEllipticalArc(points[0], points[1], points[2], points[3], t2, 0);
+            len += path.getLineLength(p1.x, p1.y, p2.x, p2.y);
+            p1 = p2;
+          }
+        }
+        p2 = path.getPointOnEllipticalArc(points[0], points[1], points[2], points[3], end, 0);
+        len += path.getLineLength(p1.x, p1.y, p2.x, p2.y);
+        return len;
+    }
+    return 0;
+  }
+  static convertEndpointToCenterParameterization(x1, y1, x2, y2, fa, fs, rx, ry, psiDeg) {
+    var psi = psiDeg * (Math.PI / 180);
+    var xp = Math.cos(psi) * (x1 - x2) / 2 + Math.sin(psi) * (y1 - y2) / 2;
+    var yp = -1 * Math.sin(psi) * (x1 - x2) / 2 + Math.cos(psi) * (y1 - y2) / 2;
+    var lambda = xp * xp / (rx * rx) + yp * yp / (ry * ry);
+    if (lambda > 1) {
+      rx *= Math.sqrt(lambda);
+      ry *= Math.sqrt(lambda);
+    }
+    var f2 = Math.sqrt((rx * rx * (ry * ry) - rx * rx * (yp * yp) - ry * ry * (xp * xp)) / (rx * rx * (yp * yp) + ry * ry * (xp * xp)));
+    if (fa === fs) {
+      f2 *= -1;
+    }
+    if (isNaN(f2)) {
+      f2 = 0;
+    }
+    var cxp = f2 * rx * yp / ry;
+    var cyp = f2 * -ry * xp / rx;
+    var cx = (x1 + x2) / 2 + Math.cos(psi) * cxp - Math.sin(psi) * cyp;
+    var cy = (y1 + y2) / 2 + Math.sin(psi) * cxp + Math.cos(psi) * cyp;
+    var vMag = function(v3) {
+      return Math.sqrt(v3[0] * v3[0] + v3[1] * v3[1]);
+    };
+    var vRatio = function(u3, v3) {
+      return (u3[0] * v3[0] + u3[1] * v3[1]) / (vMag(u3) * vMag(v3));
+    };
+    var vAngle = function(u3, v3) {
+      return (u3[0] * v3[1] < u3[1] * v3[0] ? -1 : 1) * Math.acos(vRatio(u3, v3));
+    };
+    var theta = vAngle([1, 0], [(xp - cxp) / rx, (yp - cyp) / ry]);
+    var u2 = [(xp - cxp) / rx, (yp - cyp) / ry];
+    var v2 = [(-1 * xp - cxp) / rx, (-1 * yp - cyp) / ry];
+    var dTheta = vAngle(u2, v2);
+    if (vRatio(u2, v2) <= -1) {
+      dTheta = Math.PI;
+    }
+    if (vRatio(u2, v2) >= 1) {
+      dTheta = 0;
+    }
+    if (fs === 0 && dTheta > 0) {
+      dTheta = dTheta - 2 * Math.PI;
+    }
+    if (fs === 1 && dTheta < 0) {
+      dTheta = dTheta + 2 * Math.PI;
+    }
+    return [cx, cy, rx, ry, theta, dTheta, psi, fs];
+  }
+};
+Path2.prototype.className = "Path";
+Path2.prototype._attrsAffectingSize = ["data"];
+_registerNode(Path2);
+Factory.addGetterSetter(Path2, "data");
+
+// node_modules/konva/lib/shapes/Arrow.js
+var Arrow = class extends Line2 {
+  _sceneFunc(ctx) {
+    super._sceneFunc(ctx);
+    var PI2 = Math.PI * 2;
+    var points = this.points();
+    var tp = points;
+    var fromTension = this.tension() !== 0 && points.length > 4;
+    if (fromTension) {
+      tp = this.getTensionPoints();
+    }
+    var length2 = this.pointerLength();
+    var n2 = points.length;
+    var dx, dy;
+    if (fromTension) {
+      const lp = [
+        tp[tp.length - 4],
+        tp[tp.length - 3],
+        tp[tp.length - 2],
+        tp[tp.length - 1],
+        points[n2 - 2],
+        points[n2 - 1]
+      ];
+      const lastLength = Path2.calcLength(tp[tp.length - 4], tp[tp.length - 3], "C", lp);
+      const previous = Path2.getPointOnQuadraticBezier(Math.min(1, 1 - length2 / lastLength), lp[0], lp[1], lp[2], lp[3], lp[4], lp[5]);
+      dx = points[n2 - 2] - previous.x;
+      dy = points[n2 - 1] - previous.y;
+    } else {
+      dx = points[n2 - 2] - points[n2 - 4];
+      dy = points[n2 - 1] - points[n2 - 3];
+    }
+    var radians = (Math.atan2(dy, dx) + PI2) % PI2;
+    var width = this.pointerWidth();
+    if (this.pointerAtEnding()) {
+      ctx.save();
+      ctx.beginPath();
+      ctx.translate(points[n2 - 2], points[n2 - 1]);
+      ctx.rotate(radians);
+      ctx.moveTo(0, 0);
+      ctx.lineTo(-length2, width / 2);
+      ctx.lineTo(-length2, -width / 2);
+      ctx.closePath();
+      ctx.restore();
+    }
+    if (this.pointerAtBeginning()) {
+      ctx.save();
+      ctx.translate(points[0], points[1]);
+      if (fromTension) {
+        dx = (tp[0] + tp[2]) / 2 - points[0];
+        dy = (tp[1] + tp[3]) / 2 - points[1];
+      } else {
+        dx = points[2] - points[0];
+        dy = points[3] - points[1];
+      }
+      ctx.rotate((Math.atan2(-dy, -dx) + PI2) % PI2);
+      ctx.moveTo(0, 0);
+      ctx.lineTo(-length2, width / 2);
+      ctx.lineTo(-length2, -width / 2);
+      ctx.closePath();
+      ctx.restore();
+    }
+    var isDashEnabled = this.dashEnabled();
+    if (isDashEnabled) {
+      this.attrs.dashEnabled = false;
+      ctx.setLineDash([]);
+    }
+    ctx.fillStrokeShape(this);
+    if (isDashEnabled) {
+      this.attrs.dashEnabled = true;
+    }
+  }
+  getSelfRect() {
+    const lineRect = super.getSelfRect();
+    const offset = this.pointerWidth() / 2;
+    return {
+      x: lineRect.x - offset,
+      y: lineRect.y - offset,
+      width: lineRect.width + offset * 2,
+      height: lineRect.height + offset * 2
+    };
+  }
+};
+Arrow.prototype.className = "Arrow";
+_registerNode(Arrow);
+Factory.addGetterSetter(Arrow, "pointerLength", 10, getNumberValidator());
+Factory.addGetterSetter(Arrow, "pointerWidth", 10, getNumberValidator());
+Factory.addGetterSetter(Arrow, "pointerAtBeginning", false);
+Factory.addGetterSetter(Arrow, "pointerAtEnding", true);
+
+// node_modules/konva/lib/shapes/Circle.js
+var Circle = class extends Shape2 {
+  _sceneFunc(context) {
+    context.beginPath();
+    context.arc(0, 0, this.attrs.radius || 0, 0, Math.PI * 2, false);
+    context.closePath();
+    context.fillStrokeShape(this);
+  }
+  getWidth() {
+    return this.radius() * 2;
+  }
+  getHeight() {
+    return this.radius() * 2;
+  }
+  setWidth(width) {
+    if (this.radius() !== width / 2) {
+      this.radius(width / 2);
+    }
+  }
+  setHeight(height) {
+    if (this.radius() !== height / 2) {
+      this.radius(height / 2);
+    }
+  }
+};
+Circle.prototype._centroid = true;
+Circle.prototype.className = "Circle";
+Circle.prototype._attrsAffectingSize = ["radius"];
+_registerNode(Circle);
+Factory.addGetterSetter(Circle, "radius", 0, getNumberValidator());
+
+// node_modules/konva/lib/shapes/Ellipse.js
+var Ellipse = class extends Shape2 {
+  _sceneFunc(context) {
+    var rx = this.radiusX(), ry = this.radiusY();
+    context.beginPath();
+    context.save();
+    if (rx !== ry) {
+      context.scale(1, ry / rx);
+    }
+    context.arc(0, 0, rx, 0, Math.PI * 2, false);
+    context.restore();
+    context.closePath();
+    context.fillStrokeShape(this);
+  }
+  getWidth() {
+    return this.radiusX() * 2;
+  }
+  getHeight() {
+    return this.radiusY() * 2;
+  }
+  setWidth(width) {
+    this.radiusX(width / 2);
+  }
+  setHeight(height) {
+    this.radiusY(height / 2);
+  }
+};
+Ellipse.prototype.className = "Ellipse";
+Ellipse.prototype._centroid = true;
+Ellipse.prototype._attrsAffectingSize = ["radiusX", "radiusY"];
+_registerNode(Ellipse);
+Factory.addComponentsGetterSetter(Ellipse, "radius", ["x", "y"]);
+Factory.addGetterSetter(Ellipse, "radiusX", 0, getNumberValidator());
+Factory.addGetterSetter(Ellipse, "radiusY", 0, getNumberValidator());
+
+// node_modules/konva/lib/shapes/Image.js
+var Image = class extends Shape2 {
+  constructor(attrs) {
+    super(attrs);
+    this.on("imageChange.konva", () => {
+      this._setImageLoad();
+    });
+    this._setImageLoad();
+  }
+  _setImageLoad() {
+    const image = this.image();
+    if (image && image["addEventListener"]) {
+      image["addEventListener"]("load", () => {
+        this._requestDraw();
+      });
+    }
+  }
+  _useBufferCanvas() {
+    return super._useBufferCanvas(true);
+  }
+  _sceneFunc(context) {
+    const width = this.getWidth();
+    const height = this.getHeight();
+    const image = this.attrs.image;
+    let params;
+    if (image) {
+      const cropWidth = this.attrs.cropWidth;
+      const cropHeight = this.attrs.cropHeight;
+      if (cropWidth && cropHeight) {
+        params = [
+          image,
+          this.cropX(),
+          this.cropY(),
+          cropWidth,
+          cropHeight,
+          0,
+          0,
+          width,
+          height
+        ];
+      } else {
+        params = [image, 0, 0, width, height];
+      }
+    }
+    if (this.hasFill() || this.hasStroke()) {
+      context.beginPath();
+      context.rect(0, 0, width, height);
+      context.closePath();
+      context.fillStrokeShape(this);
+    }
+    if (image) {
+      context.drawImage.apply(context, params);
+    }
+  }
+  _hitFunc(context) {
+    var width = this.width(), height = this.height();
+    context.beginPath();
+    context.rect(0, 0, width, height);
+    context.closePath();
+    context.fillStrokeShape(this);
+  }
+  getWidth() {
+    var _a, _b;
+    return (_a = this.attrs.width) !== null && _a !== void 0 ? _a : (_b = this.image()) === null || _b === void 0 ? void 0 : _b.width;
+  }
+  getHeight() {
+    var _a, _b;
+    return (_a = this.attrs.height) !== null && _a !== void 0 ? _a : (_b = this.image()) === null || _b === void 0 ? void 0 : _b.height;
+  }
+  static fromURL(url, callback) {
+    var img = Util.createImageElement();
+    img.onload = function() {
+      var image = new Image({
+        image: img
+      });
+      callback(image);
+    };
+    img.crossOrigin = "Anonymous";
+    img.src = url;
+  }
+};
+Image.prototype.className = "Image";
+_registerNode(Image);
+Factory.addGetterSetter(Image, "image");
+Factory.addComponentsGetterSetter(Image, "crop", ["x", "y", "width", "height"]);
+Factory.addGetterSetter(Image, "cropX", 0, getNumberValidator());
+Factory.addGetterSetter(Image, "cropY", 0, getNumberValidator());
+Factory.addGetterSetter(Image, "cropWidth", 0, getNumberValidator());
+Factory.addGetterSetter(Image, "cropHeight", 0, getNumberValidator());
+
+// node_modules/konva/lib/shapes/Label.js
+var ATTR_CHANGE_LIST = [
+  "fontFamily",
+  "fontSize",
+  "fontStyle",
+  "padding",
+  "lineHeight",
+  "text",
+  "width",
+  "height"
+];
+var CHANGE_KONVA = "Change.konva";
+var NONE = "none";
+var UP = "up";
+var RIGHT = "right";
+var DOWN = "down";
+var LEFT = "left";
+var attrChangeListLen = ATTR_CHANGE_LIST.length;
+var Label = class extends Group4 {
+  constructor(config) {
+    super(config);
+    this.on("add.konva", function(evt) {
+      this._addListeners(evt.child);
+      this._sync();
+    });
+  }
+  getText() {
+    return this.find("Text")[0];
+  }
+  getTag() {
+    return this.find("Tag")[0];
+  }
+  _addListeners(text) {
+    var that = this, n2;
+    var func = function() {
+      that._sync();
+    };
+    for (n2 = 0; n2 < attrChangeListLen; n2++) {
+      text.on(ATTR_CHANGE_LIST[n2] + CHANGE_KONVA, func);
+    }
+  }
+  getWidth() {
+    return this.getText().width();
+  }
+  getHeight() {
+    return this.getText().height();
+  }
+  _sync() {
+    var text = this.getText(), tag = this.getTag(), width, height, pointerDirection, pointerWidth, x2, y2, pointerHeight;
+    if (text && tag) {
+      width = text.width();
+      height = text.height();
+      pointerDirection = tag.pointerDirection();
+      pointerWidth = tag.pointerWidth();
+      pointerHeight = tag.pointerHeight();
+      x2 = 0;
+      y2 = 0;
+      switch (pointerDirection) {
+        case UP:
+          x2 = width / 2;
+          y2 = -1 * pointerHeight;
+          break;
+        case RIGHT:
+          x2 = width + pointerWidth;
+          y2 = height / 2;
+          break;
+        case DOWN:
+          x2 = width / 2;
+          y2 = height + pointerHeight;
+          break;
+        case LEFT:
+          x2 = -1 * pointerWidth;
+          y2 = height / 2;
+          break;
+      }
+      tag.setAttrs({
+        x: -1 * x2,
+        y: -1 * y2,
+        width,
+        height
+      });
+      text.setAttrs({
+        x: -1 * x2,
+        y: -1 * y2
+      });
+    }
+  }
+};
+Label.prototype.className = "Label";
+_registerNode(Label);
+var Tag = class extends Shape2 {
+  _sceneFunc(context) {
+    var width = this.width(), height = this.height(), pointerDirection = this.pointerDirection(), pointerWidth = this.pointerWidth(), pointerHeight = this.pointerHeight(), cornerRadius = this.cornerRadius();
+    let topLeft = 0;
+    let topRight = 0;
+    let bottomLeft = 0;
+    let bottomRight = 0;
+    if (typeof cornerRadius === "number") {
+      topLeft = topRight = bottomLeft = bottomRight = Math.min(cornerRadius, width / 2, height / 2);
+    } else {
+      topLeft = Math.min(cornerRadius[0] || 0, width / 2, height / 2);
+      topRight = Math.min(cornerRadius[1] || 0, width / 2, height / 2);
+      bottomRight = Math.min(cornerRadius[2] || 0, width / 2, height / 2);
+      bottomLeft = Math.min(cornerRadius[3] || 0, width / 2, height / 2);
+    }
+    context.beginPath();
+    context.moveTo(topLeft, 0);
+    if (pointerDirection === UP) {
+      context.lineTo((width - pointerWidth) / 2, 0);
+      context.lineTo(width / 2, -1 * pointerHeight);
+      context.lineTo((width + pointerWidth) / 2, 0);
+    }
+    context.lineTo(width - topRight, 0);
+    context.arc(width - topRight, topRight, topRight, Math.PI * 3 / 2, 0, false);
+    if (pointerDirection === RIGHT) {
+      context.lineTo(width, (height - pointerHeight) / 2);
+      context.lineTo(width + pointerWidth, height / 2);
+      context.lineTo(width, (height + pointerHeight) / 2);
+    }
+    context.lineTo(width, height - bottomRight);
+    context.arc(width - bottomRight, height - bottomRight, bottomRight, 0, Math.PI / 2, false);
+    if (pointerDirection === DOWN) {
+      context.lineTo((width + pointerWidth) / 2, height);
+      context.lineTo(width / 2, height + pointerHeight);
+      context.lineTo((width - pointerWidth) / 2, height);
+    }
+    context.lineTo(bottomLeft, height);
+    context.arc(bottomLeft, height - bottomLeft, bottomLeft, Math.PI / 2, Math.PI, false);
+    if (pointerDirection === LEFT) {
+      context.lineTo(0, (height + pointerHeight) / 2);
+      context.lineTo(-1 * pointerWidth, height / 2);
+      context.lineTo(0, (height - pointerHeight) / 2);
+    }
+    context.lineTo(0, topLeft);
+    context.arc(topLeft, topLeft, topLeft, Math.PI, Math.PI * 3 / 2, false);
+    context.closePath();
+    context.fillStrokeShape(this);
+  }
+  getSelfRect() {
+    var x2 = 0, y2 = 0, pointerWidth = this.pointerWidth(), pointerHeight = this.pointerHeight(), direction = this.pointerDirection(), width = this.width(), height = this.height();
+    if (direction === UP) {
+      y2 -= pointerHeight;
+      height += pointerHeight;
+    } else if (direction === DOWN) {
+      height += pointerHeight;
+    } else if (direction === LEFT) {
+      x2 -= pointerWidth * 1.5;
+      width += pointerWidth;
+    } else if (direction === RIGHT) {
+      width += pointerWidth * 1.5;
+    }
+    return {
+      x: x2,
+      y: y2,
+      width,
+      height
+    };
+  }
+};
+Tag.prototype.className = "Tag";
+_registerNode(Tag);
+Factory.addGetterSetter(Tag, "pointerDirection", NONE);
+Factory.addGetterSetter(Tag, "pointerWidth", 0, getNumberValidator());
+Factory.addGetterSetter(Tag, "pointerHeight", 0, getNumberValidator());
+Factory.addGetterSetter(Tag, "cornerRadius", 0, getNumberOrArrayOfNumbersValidator(4));
+
+// node_modules/konva/lib/shapes/Rect.js
+var Rect = class extends Shape2 {
+  _sceneFunc(context) {
+    var cornerRadius = this.cornerRadius(), width = this.width(), height = this.height();
+    context.beginPath();
+    if (!cornerRadius) {
+      context.rect(0, 0, width, height);
+    } else {
+      let topLeft = 0;
+      let topRight = 0;
+      let bottomLeft = 0;
+      let bottomRight = 0;
+      if (typeof cornerRadius === "number") {
+        topLeft = topRight = bottomLeft = bottomRight = Math.min(cornerRadius, width / 2, height / 2);
+      } else {
+        topLeft = Math.min(cornerRadius[0] || 0, width / 2, height / 2);
+        topRight = Math.min(cornerRadius[1] || 0, width / 2, height / 2);
+        bottomRight = Math.min(cornerRadius[2] || 0, width / 2, height / 2);
+        bottomLeft = Math.min(cornerRadius[3] || 0, width / 2, height / 2);
+      }
+      context.moveTo(topLeft, 0);
+      context.lineTo(width - topRight, 0);
+      context.arc(width - topRight, topRight, topRight, Math.PI * 3 / 2, 0, false);
+      context.lineTo(width, height - bottomRight);
+      context.arc(width - bottomRight, height - bottomRight, bottomRight, 0, Math.PI / 2, false);
+      context.lineTo(bottomLeft, height);
+      context.arc(bottomLeft, height - bottomLeft, bottomLeft, Math.PI / 2, Math.PI, false);
+      context.lineTo(0, topLeft);
+      context.arc(topLeft, topLeft, topLeft, Math.PI, Math.PI * 3 / 2, false);
+    }
+    context.closePath();
+    context.fillStrokeShape(this);
+  }
+};
+Rect.prototype.className = "Rect";
+_registerNode(Rect);
+Factory.addGetterSetter(Rect, "cornerRadius", 0, getNumberOrArrayOfNumbersValidator(4));
+
+// node_modules/konva/lib/shapes/RegularPolygon.js
+var RegularPolygon = class extends Shape2 {
+  _sceneFunc(context) {
+    const points = this._getPoints();
+    context.beginPath();
+    context.moveTo(points[0].x, points[0].y);
+    for (var n2 = 1; n2 < points.length; n2++) {
+      context.lineTo(points[n2].x, points[n2].y);
+    }
+    context.closePath();
+    context.fillStrokeShape(this);
+  }
+  _getPoints() {
+    const sides = this.attrs.sides;
+    const radius = this.attrs.radius || 0;
+    const points = [];
+    for (var n2 = 0; n2 < sides; n2++) {
+      points.push({
+        x: radius * Math.sin(n2 * 2 * Math.PI / sides),
+        y: -1 * radius * Math.cos(n2 * 2 * Math.PI / sides)
+      });
+    }
+    return points;
+  }
+  getSelfRect() {
+    const points = this._getPoints();
+    var minX = points[0].x;
+    var maxX = points[0].y;
+    var minY = points[0].x;
+    var maxY = points[0].y;
+    points.forEach((point) => {
+      minX = Math.min(minX, point.x);
+      maxX = Math.max(maxX, point.x);
+      minY = Math.min(minY, point.y);
+      maxY = Math.max(maxY, point.y);
+    });
+    return {
+      x: minX,
+      y: minY,
+      width: maxX - minX,
+      height: maxY - minY
+    };
+  }
+  getWidth() {
+    return this.radius() * 2;
+  }
+  getHeight() {
+    return this.radius() * 2;
+  }
+  setWidth(width) {
+    this.radius(width / 2);
+  }
+  setHeight(height) {
+    this.radius(height / 2);
+  }
+};
+RegularPolygon.prototype.className = "RegularPolygon";
+RegularPolygon.prototype._centroid = true;
+RegularPolygon.prototype._attrsAffectingSize = ["radius"];
+_registerNode(RegularPolygon);
+Factory.addGetterSetter(RegularPolygon, "radius", 0, getNumberValidator());
+Factory.addGetterSetter(RegularPolygon, "sides", 0, getNumberValidator());
+
+// node_modules/konva/lib/shapes/Ring.js
+var PIx2 = Math.PI * 2;
+var Ring = class extends Shape2 {
+  _sceneFunc(context) {
+    context.beginPath();
+    context.arc(0, 0, this.innerRadius(), 0, PIx2, false);
+    context.moveTo(this.outerRadius(), 0);
+    context.arc(0, 0, this.outerRadius(), PIx2, 0, true);
+    context.closePath();
+    context.fillStrokeShape(this);
+  }
+  getWidth() {
+    return this.outerRadius() * 2;
+  }
+  getHeight() {
+    return this.outerRadius() * 2;
+  }
+  setWidth(width) {
+    this.outerRadius(width / 2);
+  }
+  setHeight(height) {
+    this.outerRadius(height / 2);
+  }
+};
+Ring.prototype.className = "Ring";
+Ring.prototype._centroid = true;
+Ring.prototype._attrsAffectingSize = ["innerRadius", "outerRadius"];
+_registerNode(Ring);
+Factory.addGetterSetter(Ring, "innerRadius", 0, getNumberValidator());
+Factory.addGetterSetter(Ring, "outerRadius", 0, getNumberValidator());
+
+// node_modules/konva/lib/shapes/Sprite.js
+var Sprite2 = class extends Shape2 {
+  constructor(config) {
+    super(config);
+    this._updated = true;
+    this.anim = new Animation(() => {
+      var updated = this._updated;
+      this._updated = false;
+      return updated;
+    });
+    this.on("animationChange.konva", function() {
+      this.frameIndex(0);
+    });
+    this.on("frameIndexChange.konva", function() {
+      this._updated = true;
+    });
+    this.on("frameRateChange.konva", function() {
+      if (!this.anim.isRunning()) {
+        return;
+      }
+      clearInterval(this.interval);
+      this._setInterval();
+    });
+  }
+  _sceneFunc(context) {
+    var anim = this.animation(), index4 = this.frameIndex(), ix4 = index4 * 4, set = this.animations()[anim], offsets = this.frameOffsets(), x2 = set[ix4 + 0], y2 = set[ix4 + 1], width = set[ix4 + 2], height = set[ix4 + 3], image = this.image();
+    if (this.hasFill() || this.hasStroke()) {
+      context.beginPath();
+      context.rect(0, 0, width, height);
+      context.closePath();
+      context.fillStrokeShape(this);
+    }
+    if (image) {
+      if (offsets) {
+        var offset = offsets[anim], ix2 = index4 * 2;
+        context.drawImage(image, x2, y2, width, height, offset[ix2 + 0], offset[ix2 + 1], width, height);
+      } else {
+        context.drawImage(image, x2, y2, width, height, 0, 0, width, height);
+      }
+    }
+  }
+  _hitFunc(context) {
+    var anim = this.animation(), index4 = this.frameIndex(), ix4 = index4 * 4, set = this.animations()[anim], offsets = this.frameOffsets(), width = set[ix4 + 2], height = set[ix4 + 3];
+    context.beginPath();
+    if (offsets) {
+      var offset = offsets[anim];
+      var ix2 = index4 * 2;
+      context.rect(offset[ix2 + 0], offset[ix2 + 1], width, height);
+    } else {
+      context.rect(0, 0, width, height);
+    }
+    context.closePath();
+    context.fillShape(this);
+  }
+  _useBufferCanvas() {
+    return super._useBufferCanvas(true);
+  }
+  _setInterval() {
+    var that = this;
+    this.interval = setInterval(function() {
+      that._updateIndex();
+    }, 1e3 / this.frameRate());
+  }
+  start() {
+    if (this.isRunning()) {
+      return;
+    }
+    var layer = this.getLayer();
+    this.anim.setLayers(layer);
+    this._setInterval();
+    this.anim.start();
+  }
+  stop() {
+    this.anim.stop();
+    clearInterval(this.interval);
+  }
+  isRunning() {
+    return this.anim.isRunning();
+  }
+  _updateIndex() {
+    var index4 = this.frameIndex(), animation = this.animation(), animations = this.animations(), anim = animations[animation], len = anim.length / 4;
+    if (index4 < len - 1) {
+      this.frameIndex(index4 + 1);
+    } else {
+      this.frameIndex(0);
+    }
+  }
+};
+Sprite2.prototype.className = "Sprite";
+_registerNode(Sprite2);
+Factory.addGetterSetter(Sprite2, "animation");
+Factory.addGetterSetter(Sprite2, "animations");
+Factory.addGetterSetter(Sprite2, "frameOffsets");
+Factory.addGetterSetter(Sprite2, "image");
+Factory.addGetterSetter(Sprite2, "frameIndex", 0, getNumberValidator());
+Factory.addGetterSetter(Sprite2, "frameRate", 17, getNumberValidator());
+Factory.backCompat(Sprite2, {
+  index: "frameIndex",
+  getIndex: "getFrameIndex",
+  setIndex: "setFrameIndex"
+});
+
+// node_modules/konva/lib/shapes/Star.js
+var Star = class extends Shape2 {
+  _sceneFunc(context) {
+    var innerRadius = this.innerRadius(), outerRadius = this.outerRadius(), numPoints = this.numPoints();
+    context.beginPath();
+    context.moveTo(0, 0 - outerRadius);
+    for (var n2 = 1; n2 < numPoints * 2; n2++) {
+      var radius = n2 % 2 === 0 ? outerRadius : innerRadius;
+      var x2 = radius * Math.sin(n2 * Math.PI / numPoints);
+      var y2 = -1 * radius * Math.cos(n2 * Math.PI / numPoints);
+      context.lineTo(x2, y2);
+    }
+    context.closePath();
+    context.fillStrokeShape(this);
+  }
+  getWidth() {
+    return this.outerRadius() * 2;
+  }
+  getHeight() {
+    return this.outerRadius() * 2;
+  }
+  setWidth(width) {
+    this.outerRadius(width / 2);
+  }
+  setHeight(height) {
+    this.outerRadius(height / 2);
+  }
+};
+Star.prototype.className = "Star";
+Star.prototype._centroid = true;
+Star.prototype._attrsAffectingSize = ["innerRadius", "outerRadius"];
+_registerNode(Star);
+Factory.addGetterSetter(Star, "numPoints", 5, getNumberValidator());
+Factory.addGetterSetter(Star, "innerRadius", 0, getNumberValidator());
+Factory.addGetterSetter(Star, "outerRadius", 0, getNumberValidator());
+
+// node_modules/konva/lib/shapes/Text.js
+function stringToArray(string) {
+  return Array.from(string);
+}
+var AUTO = "auto";
+var CENTER = "center";
+var JUSTIFY = "justify";
+var CHANGE_KONVA2 = "Change.konva";
+var CONTEXT_2D = "2d";
+var DASH = "-";
+var LEFT2 = "left";
+var TEXT = "text";
+var TEXT_UPPER = "Text";
+var TOP = "top";
+var BOTTOM = "bottom";
+var MIDDLE = "middle";
+var NORMAL = "normal";
+var PX_SPACE = "px ";
+var SPACE2 = " ";
+var RIGHT2 = "right";
+var WORD = "word";
+var CHAR = "char";
+var NONE2 = "none";
+var ELLIPSIS = "\u2026";
+var ATTR_CHANGE_LIST2 = [
+  "fontFamily",
+  "fontSize",
+  "fontStyle",
+  "fontVariant",
+  "padding",
+  "align",
+  "verticalAlign",
+  "lineHeight",
+  "text",
+  "width",
+  "height",
+  "wrap",
+  "ellipsis",
+  "letterSpacing"
+];
+var attrChangeListLen2 = ATTR_CHANGE_LIST2.length;
+function normalizeFontFamily(fontFamily) {
+  return fontFamily.split(",").map((family) => {
+    family = family.trim();
+    const hasSpace = family.indexOf(" ") >= 0;
+    const hasQuotes = family.indexOf('"') >= 0 || family.indexOf("'") >= 0;
+    if (hasSpace && !hasQuotes) {
+      family = `"${family}"`;
+    }
+    return family;
+  }).join(", ");
+}
+var dummyContext2;
+function getDummyContext2() {
+  if (dummyContext2) {
+    return dummyContext2;
+  }
+  dummyContext2 = Util.createCanvasElement().getContext(CONTEXT_2D);
+  return dummyContext2;
+}
+function _fillFunc2(context) {
+  context.fillText(this._partialText, this._partialTextX, this._partialTextY);
+}
+function _strokeFunc2(context) {
+  context.strokeText(this._partialText, this._partialTextX, this._partialTextY);
+}
+function checkDefaultFill(config) {
+  config = config || {};
+  if (!config.fillLinearGradientColorStops && !config.fillRadialGradientColorStops && !config.fillPatternImage) {
+    config.fill = config.fill || "black";
+  }
+  return config;
+}
+var Text = class extends Shape2 {
+  constructor(config) {
+    super(checkDefaultFill(config));
+    this._partialTextX = 0;
+    this._partialTextY = 0;
+    for (var n2 = 0; n2 < attrChangeListLen2; n2++) {
+      this.on(ATTR_CHANGE_LIST2[n2] + CHANGE_KONVA2, this._setTextData);
+    }
+    this._setTextData();
+  }
+  _sceneFunc(context) {
+    var textArr = this.textArr, textArrLen = textArr.length;
+    if (!this.text()) {
+      return;
+    }
+    var padding = this.padding(), fontSize = this.fontSize(), lineHeightPx = this.lineHeight() * fontSize, verticalAlign = this.verticalAlign(), alignY = 0, align = this.align(), totalWidth = this.getWidth(), letterSpacing = this.letterSpacing(), fill = this.fill(), textDecoration = this.textDecoration(), shouldUnderline = textDecoration.indexOf("underline") !== -1, shouldLineThrough = textDecoration.indexOf("line-through") !== -1, n2;
+    var translateY = 0;
+    var translateY = lineHeightPx / 2;
+    var lineTranslateX = 0;
+    var lineTranslateY = 0;
+    context.setAttr("font", this._getContextFont());
+    context.setAttr("textBaseline", MIDDLE);
+    context.setAttr("textAlign", LEFT2);
+    if (verticalAlign === MIDDLE) {
+      alignY = (this.getHeight() - textArrLen * lineHeightPx - padding * 2) / 2;
+    } else if (verticalAlign === BOTTOM) {
+      alignY = this.getHeight() - textArrLen * lineHeightPx - padding * 2;
+    }
+    context.translate(padding, alignY + padding);
+    for (n2 = 0; n2 < textArrLen; n2++) {
+      var lineTranslateX = 0;
+      var lineTranslateY = 0;
+      var obj = textArr[n2], text = obj.text, width = obj.width, lastLine = n2 !== textArrLen - 1, spacesNumber, oneWord, lineWidth;
+      context.save();
+      if (align === RIGHT2) {
+        lineTranslateX += totalWidth - width - padding * 2;
+      } else if (align === CENTER) {
+        lineTranslateX += (totalWidth - width - padding * 2) / 2;
+      }
+      if (shouldUnderline) {
+        context.save();
+        context.beginPath();
+        context.moveTo(lineTranslateX, translateY + lineTranslateY + Math.round(fontSize / 2));
+        spacesNumber = text.split(" ").length - 1;
+        oneWord = spacesNumber === 0;
+        lineWidth = align === JUSTIFY && lastLine && !oneWord ? totalWidth - padding * 2 : width;
+        context.lineTo(lineTranslateX + Math.round(lineWidth), translateY + lineTranslateY + Math.round(fontSize / 2));
+        context.lineWidth = fontSize / 15;
+        context.strokeStyle = fill;
+        context.stroke();
+        context.restore();
+      }
+      if (shouldLineThrough) {
+        context.save();
+        context.beginPath();
+        context.moveTo(lineTranslateX, translateY + lineTranslateY);
+        spacesNumber = text.split(" ").length - 1;
+        oneWord = spacesNumber === 0;
+        lineWidth = align === JUSTIFY && lastLine && !oneWord ? totalWidth - padding * 2 : width;
+        context.lineTo(lineTranslateX + Math.round(lineWidth), translateY + lineTranslateY);
+        context.lineWidth = fontSize / 15;
+        context.strokeStyle = fill;
+        context.stroke();
+        context.restore();
+      }
+      if (letterSpacing !== 0 || align === JUSTIFY) {
+        spacesNumber = text.split(" ").length - 1;
+        var array = stringToArray(text);
+        for (var li = 0; li < array.length; li++) {
+          var letter = array[li];
+          if (letter === " " && n2 !== textArrLen - 1 && align === JUSTIFY) {
+            lineTranslateX += (totalWidth - padding * 2 - width) / spacesNumber;
+          }
+          this._partialTextX = lineTranslateX;
+          this._partialTextY = translateY + lineTranslateY;
+          this._partialText = letter;
+          context.fillStrokeShape(this);
+          lineTranslateX += this.measureSize(letter).width + letterSpacing;
+        }
+      } else {
+        this._partialTextX = lineTranslateX;
+        this._partialTextY = translateY + lineTranslateY;
+        this._partialText = text;
+        context.fillStrokeShape(this);
+      }
+      context.restore();
+      if (textArrLen > 1) {
+        translateY += lineHeightPx;
+      }
+    }
+  }
+  _hitFunc(context) {
+    var width = this.getWidth(), height = this.getHeight();
+    context.beginPath();
+    context.rect(0, 0, width, height);
+    context.closePath();
+    context.fillStrokeShape(this);
+  }
+  setText(text) {
+    var str = Util._isString(text) ? text : text === null || text === void 0 ? "" : text + "";
+    this._setAttr(TEXT, str);
+    return this;
+  }
+  getWidth() {
+    var isAuto = this.attrs.width === AUTO || this.attrs.width === void 0;
+    return isAuto ? this.getTextWidth() + this.padding() * 2 : this.attrs.width;
+  }
+  getHeight() {
+    var isAuto = this.attrs.height === AUTO || this.attrs.height === void 0;
+    return isAuto ? this.fontSize() * this.textArr.length * this.lineHeight() + this.padding() * 2 : this.attrs.height;
+  }
+  getTextWidth() {
+    return this.textWidth;
+  }
+  getTextHeight() {
+    Util.warn("text.getTextHeight() method is deprecated. Use text.height() - for full height and text.fontSize() - for one line height.");
+    return this.textHeight;
+  }
+  measureSize(text) {
+    var _context2 = getDummyContext2(), fontSize = this.fontSize(), metrics;
+    _context2.save();
+    _context2.font = this._getContextFont();
+    metrics = _context2.measureText(text);
+    _context2.restore();
+    return {
+      width: metrics.width,
+      height: fontSize
+    };
+  }
+  _getContextFont() {
+    return this.fontStyle() + SPACE2 + this.fontVariant() + SPACE2 + (this.fontSize() + PX_SPACE) + normalizeFontFamily(this.fontFamily());
+  }
+  _addTextLine(line2) {
+    if (this.align() === JUSTIFY) {
+      line2 = line2.trim();
+    }
+    var width = this._getTextWidth(line2);
+    return this.textArr.push({text: line2, width});
+  }
+  _getTextWidth(text) {
+    var letterSpacing = this.letterSpacing();
+    var length2 = text.length;
+    return getDummyContext2().measureText(text).width + (length2 ? letterSpacing * (length2 - 1) : 0);
+  }
+  _setTextData() {
+    var lines = this.text().split("\n"), fontSize = +this.fontSize(), textWidth = 0, lineHeightPx = this.lineHeight() * fontSize, width = this.attrs.width, height = this.attrs.height, fixedWidth = width !== AUTO && width !== void 0, fixedHeight = height !== AUTO && height !== void 0, padding = this.padding(), maxWidth = width - padding * 2, maxHeightPx = height - padding * 2, currentHeightPx = 0, wrap = this.wrap(), shouldWrap = wrap !== NONE2, wrapAtWord = wrap !== CHAR && shouldWrap, shouldAddEllipsis = this.ellipsis();
+    this.textArr = [];
+    getDummyContext2().font = this._getContextFont();
+    var additionalWidth = shouldAddEllipsis ? this._getTextWidth(ELLIPSIS) : 0;
+    for (var i2 = 0, max = lines.length; i2 < max; ++i2) {
+      var line2 = lines[i2];
+      var lineWidth = this._getTextWidth(line2);
+      if (fixedWidth && lineWidth > maxWidth) {
+        while (line2.length > 0) {
+          var low = 0, high = line2.length, match2 = "", matchWidth = 0;
+          while (low < high) {
+            var mid = low + high >>> 1, substr2 = line2.slice(0, mid + 1), substrWidth = this._getTextWidth(substr2) + additionalWidth;
+            if (substrWidth <= maxWidth) {
+              low = mid + 1;
+              match2 = substr2;
+              matchWidth = substrWidth;
+            } else {
+              high = mid;
+            }
+          }
+          if (match2) {
+            if (wrapAtWord) {
+              var wrapIndex;
+              var nextChar = line2[match2.length];
+              var nextIsSpaceOrDash = nextChar === SPACE2 || nextChar === DASH;
+              if (nextIsSpaceOrDash && matchWidth <= maxWidth) {
+                wrapIndex = match2.length;
+              } else {
+                wrapIndex = Math.max(match2.lastIndexOf(SPACE2), match2.lastIndexOf(DASH)) + 1;
+              }
+              if (wrapIndex > 0) {
+                low = wrapIndex;
+                match2 = match2.slice(0, low);
+                matchWidth = this._getTextWidth(match2);
+              }
+            }
+            match2 = match2.trimRight();
+            this._addTextLine(match2);
+            textWidth = Math.max(textWidth, matchWidth);
+            currentHeightPx += lineHeightPx;
+            if (!shouldWrap || fixedHeight && currentHeightPx + lineHeightPx > maxHeightPx) {
+              var lastLine = this.textArr[this.textArr.length - 1];
+              if (lastLine) {
+                if (shouldAddEllipsis) {
+                  var haveSpace = this._getTextWidth(lastLine.text + ELLIPSIS) < maxWidth;
+                  if (!haveSpace) {
+                    lastLine.text = lastLine.text.slice(0, lastLine.text.length - 3);
+                  }
+                  this.textArr.splice(this.textArr.length - 1, 1);
+                  this._addTextLine(lastLine.text + ELLIPSIS);
+                }
+              }
+              break;
+            }
+            line2 = line2.slice(low);
+            line2 = line2.trimLeft();
+            if (line2.length > 0) {
+              lineWidth = this._getTextWidth(line2);
+              if (lineWidth <= maxWidth) {
+                this._addTextLine(line2);
+                currentHeightPx += lineHeightPx;
+                textWidth = Math.max(textWidth, lineWidth);
+                break;
+              }
+            }
+          } else {
+            break;
+          }
+        }
+      } else {
+        this._addTextLine(line2);
+        currentHeightPx += lineHeightPx;
+        textWidth = Math.max(textWidth, lineWidth);
+      }
+      if (fixedHeight && currentHeightPx + lineHeightPx > maxHeightPx) {
+        break;
+      }
+    }
+    this.textHeight = fontSize;
+    this.textWidth = textWidth;
+  }
+  getStrokeScaleEnabled() {
+    return true;
+  }
+};
+Text.prototype._fillFunc = _fillFunc2;
+Text.prototype._strokeFunc = _strokeFunc2;
+Text.prototype.className = TEXT_UPPER;
+Text.prototype._attrsAffectingSize = [
+  "text",
+  "fontSize",
+  "padding",
+  "wrap",
+  "lineHeight",
+  "letterSpacing"
+];
+_registerNode(Text);
+Factory.overWriteSetter(Text, "width", getNumberOrAutoValidator());
+Factory.overWriteSetter(Text, "height", getNumberOrAutoValidator());
+Factory.addGetterSetter(Text, "fontFamily", "Arial");
+Factory.addGetterSetter(Text, "fontSize", 12, getNumberValidator());
+Factory.addGetterSetter(Text, "fontStyle", NORMAL);
+Factory.addGetterSetter(Text, "fontVariant", NORMAL);
+Factory.addGetterSetter(Text, "padding", 0, getNumberValidator());
+Factory.addGetterSetter(Text, "align", LEFT2);
+Factory.addGetterSetter(Text, "verticalAlign", TOP);
+Factory.addGetterSetter(Text, "lineHeight", 1, getNumberValidator());
+Factory.addGetterSetter(Text, "wrap", WORD);
+Factory.addGetterSetter(Text, "ellipsis", false, getBooleanValidator());
+Factory.addGetterSetter(Text, "letterSpacing", 0, getNumberValidator());
+Factory.addGetterSetter(Text, "text", "", getStringValidator());
+Factory.addGetterSetter(Text, "textDecoration", "");
+
+// node_modules/konva/lib/shapes/TextPath.js
+var EMPTY_STRING2 = "";
+var NORMAL2 = "normal";
+function _fillFunc3(context) {
+  context.fillText(this.partialText, 0, 0);
+}
+function _strokeFunc3(context) {
+  context.strokeText(this.partialText, 0, 0);
+}
+var TextPath = class extends Shape2 {
+  constructor(config) {
+    super(config);
+    this.dummyCanvas = Util.createCanvasElement();
+    this.dataArray = [];
+    this.dataArray = Path2.parsePathData(this.attrs.data);
+    this.on("dataChange.konva", function() {
+      this.dataArray = Path2.parsePathData(this.attrs.data);
+      this._setTextData();
+    });
+    this.on("textChange.konva alignChange.konva letterSpacingChange.konva kerningFuncChange.konva fontSizeChange.konva", this._setTextData);
+    this._setTextData();
+  }
+  _sceneFunc(context) {
+    context.setAttr("font", this._getContextFont());
+    context.setAttr("textBaseline", this.textBaseline());
+    context.setAttr("textAlign", "left");
+    context.save();
+    var textDecoration = this.textDecoration();
+    var fill = this.fill();
+    var fontSize = this.fontSize();
+    var glyphInfo = this.glyphInfo;
+    if (textDecoration === "underline") {
+      context.beginPath();
+    }
+    for (var i2 = 0; i2 < glyphInfo.length; i2++) {
+      context.save();
+      var p0 = glyphInfo[i2].p0;
+      context.translate(p0.x, p0.y);
+      context.rotate(glyphInfo[i2].rotation);
+      this.partialText = glyphInfo[i2].text;
+      context.fillStrokeShape(this);
+      if (textDecoration === "underline") {
+        if (i2 === 0) {
+          context.moveTo(0, fontSize / 2 + 1);
+        }
+        context.lineTo(fontSize, fontSize / 2 + 1);
+      }
+      context.restore();
+    }
+    if (textDecoration === "underline") {
+      context.strokeStyle = fill;
+      context.lineWidth = fontSize / 20;
+      context.stroke();
+    }
+    context.restore();
+  }
+  _hitFunc(context) {
+    context.beginPath();
+    var glyphInfo = this.glyphInfo;
+    if (glyphInfo.length >= 1) {
+      var p0 = glyphInfo[0].p0;
+      context.moveTo(p0.x, p0.y);
+    }
+    for (var i2 = 0; i2 < glyphInfo.length; i2++) {
+      var p1 = glyphInfo[i2].p1;
+      context.lineTo(p1.x, p1.y);
+    }
+    context.setAttr("lineWidth", this.fontSize());
+    context.setAttr("strokeStyle", this.colorKey);
+    context.stroke();
+  }
+  getTextWidth() {
+    return this.textWidth;
+  }
+  getTextHeight() {
+    Util.warn("text.getTextHeight() method is deprecated. Use text.height() - for full height and text.fontSize() - for one line height.");
+    return this.textHeight;
+  }
+  setText(text) {
+    return Text.prototype.setText.call(this, text);
+  }
+  _getContextFont() {
+    return Text.prototype._getContextFont.call(this);
+  }
+  _getTextSize(text) {
+    var dummyCanvas = this.dummyCanvas;
+    var _context2 = dummyCanvas.getContext("2d");
+    _context2.save();
+    _context2.font = this._getContextFont();
+    var metrics = _context2.measureText(text);
+    _context2.restore();
+    return {
+      width: metrics.width,
+      height: parseInt(this.attrs.fontSize, 10)
+    };
+  }
+  _setTextData() {
+    var that = this;
+    var size = this._getTextSize(this.attrs.text);
+    var letterSpacing = this.letterSpacing();
+    var align = this.align();
+    var kerningFunc = this.kerningFunc();
+    this.textWidth = size.width;
+    this.textHeight = size.height;
+    var textFullWidth = Math.max(this.textWidth + ((this.attrs.text || "").length - 1) * letterSpacing, 0);
+    this.glyphInfo = [];
+    var fullPathWidth = 0;
+    for (var l2 = 0; l2 < that.dataArray.length; l2++) {
+      if (that.dataArray[l2].pathLength > 0) {
+        fullPathWidth += that.dataArray[l2].pathLength;
+      }
+    }
+    var offset = 0;
+    if (align === "center") {
+      offset = Math.max(0, fullPathWidth / 2 - textFullWidth / 2);
+    }
+    if (align === "right") {
+      offset = Math.max(0, fullPathWidth - textFullWidth);
+    }
+    var charArr = stringToArray(this.text());
+    var spacesNumber = this.text().split(" ").length - 1;
+    var p0, p1, pathCmd;
+    var pIndex = -1;
+    var currentT = 0;
+    var getNextPathSegment = function() {
+      currentT = 0;
+      var pathData = that.dataArray;
+      for (var j2 = pIndex + 1; j2 < pathData.length; j2++) {
+        if (pathData[j2].pathLength > 0) {
+          pIndex = j2;
+          return pathData[j2];
+        } else if (pathData[j2].command === "M") {
+          p0 = {
+            x: pathData[j2].points[0],
+            y: pathData[j2].points[1]
+          };
+        }
+      }
+      return {};
+    };
+    var findSegmentToFitCharacter = function(c2) {
+      var glyphWidth2 = that._getTextSize(c2).width + letterSpacing;
+      if (c2 === " " && align === "justify") {
+        glyphWidth2 += (fullPathWidth - textFullWidth) / spacesNumber;
+      }
+      var currLen = 0;
+      var attempts = 0;
+      p1 = void 0;
+      while (Math.abs(glyphWidth2 - currLen) / glyphWidth2 > 0.01 && attempts < 20) {
+        attempts++;
+        var cumulativePathLength = currLen;
+        while (pathCmd === void 0) {
+          pathCmd = getNextPathSegment();
+          if (pathCmd && cumulativePathLength + pathCmd.pathLength < glyphWidth2) {
+            cumulativePathLength += pathCmd.pathLength;
+            pathCmd = void 0;
+          }
+        }
+        if (pathCmd === {} || p0 === void 0) {
+          return void 0;
+        }
+        var needNewSegment = false;
+        switch (pathCmd.command) {
+          case "L":
+            if (Path2.getLineLength(p0.x, p0.y, pathCmd.points[0], pathCmd.points[1]) > glyphWidth2) {
+              p1 = Path2.getPointOnLine(glyphWidth2, p0.x, p0.y, pathCmd.points[0], pathCmd.points[1], p0.x, p0.y);
+            } else {
+              pathCmd = void 0;
+            }
+            break;
+          case "A":
+            var start = pathCmd.points[4];
+            var dTheta = pathCmd.points[5];
+            var end = pathCmd.points[4] + dTheta;
+            if (currentT === 0) {
+              currentT = start + 1e-8;
+            } else if (glyphWidth2 > currLen) {
+              currentT += Math.PI / 180 * dTheta / Math.abs(dTheta);
+            } else {
+              currentT -= Math.PI / 360 * dTheta / Math.abs(dTheta);
+            }
+            if (dTheta < 0 && currentT < end || dTheta >= 0 && currentT > end) {
+              currentT = end;
+              needNewSegment = true;
+            }
+            p1 = Path2.getPointOnEllipticalArc(pathCmd.points[0], pathCmd.points[1], pathCmd.points[2], pathCmd.points[3], currentT, pathCmd.points[6]);
+            break;
+          case "C":
+            if (currentT === 0) {
+              if (glyphWidth2 > pathCmd.pathLength) {
+                currentT = 1e-8;
+              } else {
+                currentT = glyphWidth2 / pathCmd.pathLength;
+              }
+            } else if (glyphWidth2 > currLen) {
+              currentT += (glyphWidth2 - currLen) / pathCmd.pathLength / 2;
+            } else {
+              currentT = Math.max(currentT - (currLen - glyphWidth2) / pathCmd.pathLength / 2, 0);
+            }
+            if (currentT > 1) {
+              currentT = 1;
+              needNewSegment = true;
+            }
+            p1 = Path2.getPointOnCubicBezier(currentT, pathCmd.start.x, pathCmd.start.y, pathCmd.points[0], pathCmd.points[1], pathCmd.points[2], pathCmd.points[3], pathCmd.points[4], pathCmd.points[5]);
+            break;
+          case "Q":
+            if (currentT === 0) {
+              currentT = glyphWidth2 / pathCmd.pathLength;
+            } else if (glyphWidth2 > currLen) {
+              currentT += (glyphWidth2 - currLen) / pathCmd.pathLength;
+            } else {
+              currentT -= (currLen - glyphWidth2) / pathCmd.pathLength;
+            }
+            if (currentT > 1) {
+              currentT = 1;
+              needNewSegment = true;
+            }
+            p1 = Path2.getPointOnQuadraticBezier(currentT, pathCmd.start.x, pathCmd.start.y, pathCmd.points[0], pathCmd.points[1], pathCmd.points[2], pathCmd.points[3]);
+            break;
+        }
+        if (p1 !== void 0) {
+          currLen = Path2.getLineLength(p0.x, p0.y, p1.x, p1.y);
+        }
+        if (needNewSegment) {
+          needNewSegment = false;
+          pathCmd = void 0;
+        }
+      }
+    };
+    var testChar = "C";
+    var glyphWidth = that._getTextSize(testChar).width + letterSpacing;
+    var lettersInOffset = offset / glyphWidth - 1;
+    for (var k2 = 0; k2 < lettersInOffset; k2++) {
+      findSegmentToFitCharacter(testChar);
+      if (p0 === void 0 || p1 === void 0) {
+        break;
+      }
+      p0 = p1;
+    }
+    for (var i2 = 0; i2 < charArr.length; i2++) {
+      findSegmentToFitCharacter(charArr[i2]);
+      if (p0 === void 0 || p1 === void 0) {
+        break;
+      }
+      var width = Path2.getLineLength(p0.x, p0.y, p1.x, p1.y);
+      var kern = 0;
+      if (kerningFunc) {
+        try {
+          kern = kerningFunc(charArr[i2 - 1], charArr[i2]) * this.fontSize();
+        } catch (e2) {
+          kern = 0;
+        }
+      }
+      p0.x += kern;
+      p1.x += kern;
+      this.textWidth += kern;
+      var midpoint = Path2.getPointOnLine(kern + width / 2, p0.x, p0.y, p1.x, p1.y);
+      var rotation = Math.atan2(p1.y - p0.y, p1.x - p0.x);
+      this.glyphInfo.push({
+        transposeX: midpoint.x,
+        transposeY: midpoint.y,
+        text: charArr[i2],
+        rotation,
+        p0,
+        p1
+      });
+      p0 = p1;
+    }
+  }
+  getSelfRect() {
+    if (!this.glyphInfo.length) {
+      return {
+        x: 0,
+        y: 0,
+        width: 0,
+        height: 0
+      };
+    }
+    var points = [];
+    this.glyphInfo.forEach(function(info) {
+      points.push(info.p0.x);
+      points.push(info.p0.y);
+      points.push(info.p1.x);
+      points.push(info.p1.y);
+    });
+    var minX = points[0] || 0;
+    var maxX = points[0] || 0;
+    var minY = points[1] || 0;
+    var maxY = points[1] || 0;
+    var x2, y2;
+    for (var i2 = 0; i2 < points.length / 2; i2++) {
+      x2 = points[i2 * 2];
+      y2 = points[i2 * 2 + 1];
+      minX = Math.min(minX, x2);
+      maxX = Math.max(maxX, x2);
+      minY = Math.min(minY, y2);
+      maxY = Math.max(maxY, y2);
+    }
+    var fontSize = this.fontSize();
+    return {
+      x: minX - fontSize / 2,
+      y: minY - fontSize / 2,
+      width: maxX - minX + fontSize,
+      height: maxY - minY + fontSize
+    };
+  }
+};
+TextPath.prototype._fillFunc = _fillFunc3;
+TextPath.prototype._strokeFunc = _strokeFunc3;
+TextPath.prototype._fillFuncHit = _fillFunc3;
+TextPath.prototype._strokeFuncHit = _strokeFunc3;
+TextPath.prototype.className = "TextPath";
+TextPath.prototype._attrsAffectingSize = ["text", "fontSize", "data"];
+_registerNode(TextPath);
+Factory.addGetterSetter(TextPath, "data");
+Factory.addGetterSetter(TextPath, "fontFamily", "Arial");
+Factory.addGetterSetter(TextPath, "fontSize", 12, getNumberValidator());
+Factory.addGetterSetter(TextPath, "fontStyle", NORMAL2);
+Factory.addGetterSetter(TextPath, "align", "left");
+Factory.addGetterSetter(TextPath, "letterSpacing", 0, getNumberValidator());
+Factory.addGetterSetter(TextPath, "textBaseline", "middle");
+Factory.addGetterSetter(TextPath, "fontVariant", NORMAL2);
+Factory.addGetterSetter(TextPath, "text", EMPTY_STRING2);
+Factory.addGetterSetter(TextPath, "textDecoration", null);
+Factory.addGetterSetter(TextPath, "kerningFunc", null);
+
+// node_modules/konva/lib/shapes/Transformer.js
+var EVENTS_NAME = "tr-konva";
+var ATTR_CHANGE_LIST3 = [
+  "resizeEnabledChange",
+  "rotateAnchorOffsetChange",
+  "rotateEnabledChange",
+  "enabledAnchorsChange",
+  "anchorSizeChange",
+  "borderEnabledChange",
+  "borderStrokeChange",
+  "borderStrokeWidthChange",
+  "borderDashChange",
+  "anchorStrokeChange",
+  "anchorStrokeWidthChange",
+  "anchorFillChange",
+  "anchorCornerRadiusChange",
+  "ignoreStrokeChange"
+].map((e2) => e2 + `.${EVENTS_NAME}`).join(" ");
+var NODES_RECT = "nodesRect";
+var TRANSFORM_CHANGE_STR2 = [
+  "widthChange",
+  "heightChange",
+  "scaleXChange",
+  "scaleYChange",
+  "skewXChange",
+  "skewYChange",
+  "rotationChange",
+  "offsetXChange",
+  "offsetYChange",
+  "transformsEnabledChange",
+  "strokeWidthChange"
+].map((e2) => e2 + `.${EVENTS_NAME}`).join(" ");
+var ANGLES = {
+  "top-left": -45,
+  "top-center": 0,
+  "top-right": 45,
+  "middle-right": -90,
+  "middle-left": 90,
+  "bottom-left": -135,
+  "bottom-center": 180,
+  "bottom-right": 135
+};
+var TOUCH_DEVICE = "ontouchstart" in Konva._global;
+function getCursor(anchorName, rad) {
+  if (anchorName === "rotater") {
+    return "crosshair";
+  }
+  rad += Util.degToRad(ANGLES[anchorName] || 0);
+  var angle = (Util.radToDeg(rad) % 360 + 360) % 360;
+  if (Util._inRange(angle, 315 + 22.5, 360) || Util._inRange(angle, 0, 22.5)) {
+    return "ns-resize";
+  } else if (Util._inRange(angle, 45 - 22.5, 45 + 22.5)) {
+    return "nesw-resize";
+  } else if (Util._inRange(angle, 90 - 22.5, 90 + 22.5)) {
+    return "ew-resize";
+  } else if (Util._inRange(angle, 135 - 22.5, 135 + 22.5)) {
+    return "nwse-resize";
+  } else if (Util._inRange(angle, 180 - 22.5, 180 + 22.5)) {
+    return "ns-resize";
+  } else if (Util._inRange(angle, 225 - 22.5, 225 + 22.5)) {
+    return "nesw-resize";
+  } else if (Util._inRange(angle, 270 - 22.5, 270 + 22.5)) {
+    return "ew-resize";
+  } else if (Util._inRange(angle, 315 - 22.5, 315 + 22.5)) {
+    return "nwse-resize";
+  } else {
+    Util.error("Transformer has unknown angle for cursor detection: " + angle);
+    return "pointer";
+  }
+}
+var ANCHORS_NAMES = [
+  "top-left",
+  "top-center",
+  "top-right",
+  "middle-right",
+  "middle-left",
+  "bottom-left",
+  "bottom-center",
+  "bottom-right"
+];
+var MAX_SAFE_INTEGER = 1e8;
+function getCenter(shape) {
+  return {
+    x: shape.x + shape.width / 2 * Math.cos(shape.rotation) + shape.height / 2 * Math.sin(-shape.rotation),
+    y: shape.y + shape.height / 2 * Math.cos(shape.rotation) + shape.width / 2 * Math.sin(shape.rotation)
+  };
+}
+function rotateAroundPoint(shape, angleRad, point) {
+  const x2 = point.x + (shape.x - point.x) * Math.cos(angleRad) - (shape.y - point.y) * Math.sin(angleRad);
+  const y2 = point.y + (shape.x - point.x) * Math.sin(angleRad) + (shape.y - point.y) * Math.cos(angleRad);
+  return Object.assign(Object.assign({}, shape), {
+    rotation: shape.rotation + angleRad,
+    x: x2,
+    y: y2
+  });
+}
+function rotateAroundCenter(shape, deltaRad) {
+  const center = getCenter(shape);
+  return rotateAroundPoint(shape, deltaRad, center);
+}
+function getSnap(snaps, newRotationRad, tol) {
+  let snapped = newRotationRad;
+  for (let i2 = 0; i2 < snaps.length; i2++) {
+    const angle = Konva.getAngle(snaps[i2]);
+    const absDiff = Math.abs(angle - newRotationRad) % (Math.PI * 2);
+    const dif = Math.min(absDiff, Math.PI * 2 - absDiff);
+    if (dif < tol) {
+      snapped = angle;
+    }
+  }
+  return snapped;
+}
+var Transformer = class extends Group4 {
+  constructor(config) {
+    super(config);
+    this._transforming = false;
+    this._createElements();
+    this._handleMouseMove = this._handleMouseMove.bind(this);
+    this._handleMouseUp = this._handleMouseUp.bind(this);
+    this.update = this.update.bind(this);
+    this.on(ATTR_CHANGE_LIST3, this.update);
+    if (this.getNode()) {
+      this.update();
+    }
+  }
+  attachTo(node2) {
+    this.setNode(node2);
+    return this;
+  }
+  setNode(node2) {
+    Util.warn("tr.setNode(shape), tr.node(shape) and tr.attachTo(shape) methods are deprecated. Please use tr.nodes(nodesArray) instead.");
+    return this.setNodes([node2]);
+  }
+  getNode() {
+    return this._nodes && this._nodes[0];
+  }
+  setNodes(nodes = []) {
+    if (this._nodes && this._nodes.length) {
+      this.detach();
+    }
+    this._nodes = nodes;
+    if (nodes.length === 1) {
+      this.rotation(nodes[0].getAbsoluteRotation());
+    } else {
+      this.rotation(0);
+    }
+    this._nodes.forEach((node2) => {
+      const additionalEvents = node2._attrsAffectingSize.map((prop) => prop + "Change." + EVENTS_NAME).join(" ");
+      const onChange2 = () => {
+        if (this.nodes().length === 1) {
+          this.rotation(this.nodes()[0].getAbsoluteRotation());
+        }
+        this._resetTransformCache();
+        if (!this._transforming && !this.isDragging()) {
+          this.update();
+        }
+      };
+      node2.on(additionalEvents, onChange2);
+      node2.on(TRANSFORM_CHANGE_STR2, onChange2);
+      node2.on(`absoluteTransformChange.${EVENTS_NAME}`, onChange2);
+      node2.on(`xChange.${EVENTS_NAME} yChange.${EVENTS_NAME}`, onChange2);
+      this._proxyDrag(node2);
+    });
+    this._resetTransformCache();
+    var elementsCreated = !!this.findOne(".top-left");
+    if (elementsCreated) {
+      this.update();
+    }
+    return this;
+  }
+  _proxyDrag(node2) {
+    let lastPos;
+    node2.on(`dragstart.${EVENTS_NAME}`, (e2) => {
+      lastPos = node2.getAbsolutePosition();
+      if (!this.isDragging() && node2 !== this.findOne(".back")) {
+        this.startDrag(e2, false);
+      }
+    });
+    node2.on(`dragmove.${EVENTS_NAME}`, (e2) => {
+      if (!lastPos) {
+        return;
+      }
+      const abs2 = node2.getAbsolutePosition();
+      const dx = abs2.x - lastPos.x;
+      const dy = abs2.y - lastPos.y;
+      this.nodes().forEach((otherNode) => {
+        if (otherNode === node2) {
+          return;
+        }
+        if (otherNode.isDragging()) {
+          return;
+        }
+        const otherAbs = otherNode.getAbsolutePosition();
+        otherNode.setAbsolutePosition({
+          x: otherAbs.x + dx,
+          y: otherAbs.y + dy
+        });
+        otherNode.startDrag(e2);
+      });
+      lastPos = null;
+    });
+  }
+  getNodes() {
+    return this._nodes || [];
+  }
+  getActiveAnchor() {
+    return this._movingAnchorName;
+  }
+  detach() {
+    if (this._nodes) {
+      this._nodes.forEach((node2) => {
+        node2.off("." + EVENTS_NAME);
+      });
+    }
+    this._nodes = [];
+    this._resetTransformCache();
+  }
+  _resetTransformCache() {
+    this._clearCache(NODES_RECT);
+    this._clearCache("transform");
+    this._clearSelfAndDescendantCache("absoluteTransform");
+  }
+  _getNodeRect() {
+    return this._getCache(NODES_RECT, this.__getNodeRect);
+  }
+  __getNodeShape(node2, rot = this.rotation(), relative) {
+    var rect = node2.getClientRect({
+      skipTransform: true,
+      skipShadow: true,
+      skipStroke: this.ignoreStroke()
+    });
+    var absScale = node2.getAbsoluteScale(relative);
+    var absPos = node2.getAbsolutePosition(relative);
+    var dx = rect.x * absScale.x - node2.offsetX() * absScale.x;
+    var dy = rect.y * absScale.y - node2.offsetY() * absScale.y;
+    const rotation = (Konva.getAngle(node2.getAbsoluteRotation()) + Math.PI * 2) % (Math.PI * 2);
+    const box = {
+      x: absPos.x + dx * Math.cos(rotation) + dy * Math.sin(-rotation),
+      y: absPos.y + dy * Math.cos(rotation) + dx * Math.sin(rotation),
+      width: rect.width * absScale.x,
+      height: rect.height * absScale.y,
+      rotation
+    };
+    return rotateAroundPoint(box, -Konva.getAngle(rot), {
+      x: 0,
+      y: 0
+    });
+  }
+  __getNodeRect() {
+    var node2 = this.getNode();
+    if (!node2) {
+      return {
+        x: -MAX_SAFE_INTEGER,
+        y: -MAX_SAFE_INTEGER,
+        width: 0,
+        height: 0,
+        rotation: 0
+      };
+    }
+    const totalPoints = [];
+    this.nodes().map((node3) => {
+      const box = node3.getClientRect({
+        skipTransform: true,
+        skipShadow: true,
+        skipStroke: this.ignoreStroke()
+      });
+      var points = [
+        {x: box.x, y: box.y},
+        {x: box.x + box.width, y: box.y},
+        {x: box.x + box.width, y: box.y + box.height},
+        {x: box.x, y: box.y + box.height}
+      ];
+      var trans = node3.getAbsoluteTransform();
+      points.forEach(function(point) {
+        var transformed = trans.point(point);
+        totalPoints.push(transformed);
+      });
+    });
+    const tr = new Transform();
+    tr.rotate(-Konva.getAngle(this.rotation()));
+    var minX, minY, maxX, maxY;
+    totalPoints.forEach(function(point) {
+      var transformed = tr.point(point);
+      if (minX === void 0) {
+        minX = maxX = transformed.x;
+        minY = maxY = transformed.y;
+      }
+      minX = Math.min(minX, transformed.x);
+      minY = Math.min(minY, transformed.y);
+      maxX = Math.max(maxX, transformed.x);
+      maxY = Math.max(maxY, transformed.y);
+    });
+    tr.invert();
+    const p2 = tr.point({x: minX, y: minY});
+    return {
+      x: p2.x,
+      y: p2.y,
+      width: maxX - minX,
+      height: maxY - minY,
+      rotation: Konva.getAngle(this.rotation())
+    };
+  }
+  getX() {
+    return this._getNodeRect().x;
+  }
+  getY() {
+    return this._getNodeRect().y;
+  }
+  getWidth() {
+    return this._getNodeRect().width;
+  }
+  getHeight() {
+    return this._getNodeRect().height;
+  }
+  _createElements() {
+    this._createBack();
+    ANCHORS_NAMES.forEach(function(name2) {
+      this._createAnchor(name2);
+    }.bind(this));
+    this._createAnchor("rotater");
+  }
+  _createAnchor(name2) {
+    var anchor = new Rect({
+      stroke: "rgb(0, 161, 255)",
+      fill: "white",
+      strokeWidth: 1,
+      name: name2 + " _anchor",
+      dragDistance: 0,
+      draggable: true,
+      hitStrokeWidth: TOUCH_DEVICE ? 10 : "auto"
+    });
+    var self2 = this;
+    anchor.on("mousedown touchstart", function(e2) {
+      self2._handleMouseDown(e2);
+    });
+    anchor.on("dragstart", (e2) => {
+      anchor.stopDrag();
+      e2.cancelBubble = true;
+    });
+    anchor.on("dragend", (e2) => {
+      e2.cancelBubble = true;
+    });
+    anchor.on("mouseenter", () => {
+      var rad = Konva.getAngle(this.rotation());
+      var cursor2 = getCursor(name2, rad);
+      anchor.getStage().content && (anchor.getStage().content.style.cursor = cursor2);
+      this._cursorChange = true;
+    });
+    anchor.on("mouseout", () => {
+      anchor.getStage().content && (anchor.getStage().content.style.cursor = "");
+      this._cursorChange = false;
+    });
+    this.add(anchor);
+  }
+  _createBack() {
+    var back = new Shape2({
+      name: "back",
+      width: 0,
+      height: 0,
+      draggable: true,
+      sceneFunc(ctx) {
+        var tr = this.getParent();
+        var padding = tr.padding();
+        ctx.beginPath();
+        ctx.rect(-padding, -padding, this.width() + padding * 2, this.height() + padding * 2);
+        ctx.moveTo(this.width() / 2, -padding);
+        if (tr.rotateEnabled()) {
+          ctx.lineTo(this.width() / 2, -tr.rotateAnchorOffset() * Util._sign(this.height()) - padding);
+        }
+        ctx.fillStrokeShape(this);
+      },
+      hitFunc: (ctx, shape) => {
+        if (!this.shouldOverdrawWholeArea()) {
+          return;
+        }
+        var padding = this.padding();
+        ctx.beginPath();
+        ctx.rect(-padding, -padding, shape.width() + padding * 2, shape.height() + padding * 2);
+        ctx.fillStrokeShape(shape);
+      }
+    });
+    this.add(back);
+    this._proxyDrag(back);
+    back.on("dragstart", (e2) => {
+      e2.cancelBubble = true;
+    });
+    back.on("dragmove", (e2) => {
+      e2.cancelBubble = true;
+    });
+    back.on("dragend", (e2) => {
+      e2.cancelBubble = true;
+    });
+  }
+  _handleMouseDown(e2) {
+    this._movingAnchorName = e2.target.name().split(" ")[0];
+    var attrs = this._getNodeRect();
+    var width = attrs.width;
+    var height = attrs.height;
+    var hypotenuse = Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
+    this.sin = Math.abs(height / hypotenuse);
+    this.cos = Math.abs(width / hypotenuse);
+    if (typeof window !== "undefined") {
+      window.addEventListener("mousemove", this._handleMouseMove);
+      window.addEventListener("touchmove", this._handleMouseMove);
+      window.addEventListener("mouseup", this._handleMouseUp, true);
+      window.addEventListener("touchend", this._handleMouseUp, true);
+    }
+    this._transforming = true;
+    var ap = e2.target.getAbsolutePosition();
+    var pos = e2.target.getStage().getPointerPosition();
+    this._anchorDragOffset = {
+      x: pos.x - ap.x,
+      y: pos.y - ap.y
+    };
+    this._fire("transformstart", {evt: e2, target: this.getNode()});
+    this._nodes.forEach((target) => {
+      target._fire("transformstart", {evt: e2, target});
+    });
+  }
+  _handleMouseMove(e2) {
+    var x2, y2, newHypotenuse;
+    var anchorNode = this.findOne("." + this._movingAnchorName);
+    var stage = anchorNode.getStage();
+    stage.setPointersPositions(e2);
+    const pp = stage.getPointerPosition();
+    var newNodePos = {
+      x: pp.x - this._anchorDragOffset.x,
+      y: pp.y - this._anchorDragOffset.y
+    };
+    const oldAbs = anchorNode.getAbsolutePosition();
+    anchorNode.setAbsolutePosition(newNodePos);
+    const newAbs = anchorNode.getAbsolutePosition();
+    if (oldAbs.x === newAbs.x && oldAbs.y === newAbs.y) {
+      return;
+    }
+    if (this._movingAnchorName === "rotater") {
+      var attrs = this._getNodeRect();
+      x2 = anchorNode.x() - attrs.width / 2;
+      y2 = -anchorNode.y() + attrs.height / 2;
+      let delta = Math.atan2(-y2, x2) + Math.PI / 2;
+      if (attrs.height < 0) {
+        delta -= Math.PI;
+      }
+      var oldRotation = Konva.getAngle(this.rotation());
+      const newRotation = oldRotation + delta;
+      const tol = Konva.getAngle(this.rotationSnapTolerance());
+      const snappedRot = getSnap(this.rotationSnaps(), newRotation, tol);
+      const diff = snappedRot - attrs.rotation;
+      const shape = rotateAroundCenter(attrs, diff);
+      this._fitNodesInto(shape, e2);
+      return;
+    }
+    var keepProportion = this.keepRatio() || e2.shiftKey;
+    var centeredScaling = this.centeredScaling() || e2.altKey;
+    if (this._movingAnchorName === "top-left") {
+      if (keepProportion) {
+        var comparePoint = centeredScaling ? {
+          x: this.width() / 2,
+          y: this.height() / 2
+        } : {
+          x: this.findOne(".bottom-right").x(),
+          y: this.findOne(".bottom-right").y()
+        };
+        newHypotenuse = Math.sqrt(Math.pow(comparePoint.x - anchorNode.x(), 2) + Math.pow(comparePoint.y - anchorNode.y(), 2));
+        var reverseX = this.findOne(".top-left").x() > comparePoint.x ? -1 : 1;
+        var reverseY = this.findOne(".top-left").y() > comparePoint.y ? -1 : 1;
+        x2 = newHypotenuse * this.cos * reverseX;
+        y2 = newHypotenuse * this.sin * reverseY;
+        this.findOne(".top-left").x(comparePoint.x - x2);
+        this.findOne(".top-left").y(comparePoint.y - y2);
+      }
+    } else if (this._movingAnchorName === "top-center") {
+      this.findOne(".top-left").y(anchorNode.y());
+    } else if (this._movingAnchorName === "top-right") {
+      if (keepProportion) {
+        var comparePoint = centeredScaling ? {
+          x: this.width() / 2,
+          y: this.height() / 2
+        } : {
+          x: this.findOne(".bottom-left").x(),
+          y: this.findOne(".bottom-left").y()
+        };
+        newHypotenuse = Math.sqrt(Math.pow(anchorNode.x() - comparePoint.x, 2) + Math.pow(comparePoint.y - anchorNode.y(), 2));
+        var reverseX = this.findOne(".top-right").x() < comparePoint.x ? -1 : 1;
+        var reverseY = this.findOne(".top-right").y() > comparePoint.y ? -1 : 1;
+        x2 = newHypotenuse * this.cos * reverseX;
+        y2 = newHypotenuse * this.sin * reverseY;
+        this.findOne(".top-right").x(comparePoint.x + x2);
+        this.findOne(".top-right").y(comparePoint.y - y2);
+      }
+      var pos = anchorNode.position();
+      this.findOne(".top-left").y(pos.y);
+      this.findOne(".bottom-right").x(pos.x);
+    } else if (this._movingAnchorName === "middle-left") {
+      this.findOne(".top-left").x(anchorNode.x());
+    } else if (this._movingAnchorName === "middle-right") {
+      this.findOne(".bottom-right").x(anchorNode.x());
+    } else if (this._movingAnchorName === "bottom-left") {
+      if (keepProportion) {
+        var comparePoint = centeredScaling ? {
+          x: this.width() / 2,
+          y: this.height() / 2
+        } : {
+          x: this.findOne(".top-right").x(),
+          y: this.findOne(".top-right").y()
+        };
+        newHypotenuse = Math.sqrt(Math.pow(comparePoint.x - anchorNode.x(), 2) + Math.pow(anchorNode.y() - comparePoint.y, 2));
+        var reverseX = comparePoint.x < anchorNode.x() ? -1 : 1;
+        var reverseY = anchorNode.y() < comparePoint.y ? -1 : 1;
+        x2 = newHypotenuse * this.cos * reverseX;
+        y2 = newHypotenuse * this.sin * reverseY;
+        anchorNode.x(comparePoint.x - x2);
+        anchorNode.y(comparePoint.y + y2);
+      }
+      pos = anchorNode.position();
+      this.findOne(".top-left").x(pos.x);
+      this.findOne(".bottom-right").y(pos.y);
+    } else if (this._movingAnchorName === "bottom-center") {
+      this.findOne(".bottom-right").y(anchorNode.y());
+    } else if (this._movingAnchorName === "bottom-right") {
+      if (keepProportion) {
+        var comparePoint = centeredScaling ? {
+          x: this.width() / 2,
+          y: this.height() / 2
+        } : {
+          x: this.findOne(".top-left").x(),
+          y: this.findOne(".top-left").y()
+        };
+        newHypotenuse = Math.sqrt(Math.pow(anchorNode.x() - comparePoint.x, 2) + Math.pow(anchorNode.y() - comparePoint.y, 2));
+        var reverseX = this.findOne(".bottom-right").x() < comparePoint.x ? -1 : 1;
+        var reverseY = this.findOne(".bottom-right").y() < comparePoint.y ? -1 : 1;
+        x2 = newHypotenuse * this.cos * reverseX;
+        y2 = newHypotenuse * this.sin * reverseY;
+        this.findOne(".bottom-right").x(comparePoint.x + x2);
+        this.findOne(".bottom-right").y(comparePoint.y + y2);
+      }
+    } else {
+      console.error(new Error("Wrong position argument of selection resizer: " + this._movingAnchorName));
+    }
+    var centeredScaling = this.centeredScaling() || e2.altKey;
+    if (centeredScaling) {
+      var topLeft = this.findOne(".top-left");
+      var bottomRight = this.findOne(".bottom-right");
+      var topOffsetX = topLeft.x();
+      var topOffsetY = topLeft.y();
+      var bottomOffsetX = this.getWidth() - bottomRight.x();
+      var bottomOffsetY = this.getHeight() - bottomRight.y();
+      bottomRight.move({
+        x: -topOffsetX,
+        y: -topOffsetY
+      });
+      topLeft.move({
+        x: bottomOffsetX,
+        y: bottomOffsetY
+      });
+    }
+    var absPos = this.findOne(".top-left").getAbsolutePosition();
+    x2 = absPos.x;
+    y2 = absPos.y;
+    var width = this.findOne(".bottom-right").x() - this.findOne(".top-left").x();
+    var height = this.findOne(".bottom-right").y() - this.findOne(".top-left").y();
+    this._fitNodesInto({
+      x: x2,
+      y: y2,
+      width,
+      height,
+      rotation: Konva.getAngle(this.rotation())
+    }, e2);
+  }
+  _handleMouseUp(e2) {
+    this._removeEvents(e2);
+  }
+  getAbsoluteTransform() {
+    return this.getTransform();
+  }
+  _removeEvents(e2) {
+    if (this._transforming) {
+      this._transforming = false;
+      if (typeof window !== "undefined") {
+        window.removeEventListener("mousemove", this._handleMouseMove);
+        window.removeEventListener("touchmove", this._handleMouseMove);
+        window.removeEventListener("mouseup", this._handleMouseUp, true);
+        window.removeEventListener("touchend", this._handleMouseUp, true);
+      }
+      var node2 = this.getNode();
+      this._fire("transformend", {evt: e2, target: node2});
+      if (node2) {
+        this._nodes.forEach((target) => {
+          target._fire("transformend", {evt: e2, target});
+        });
+      }
+      this._movingAnchorName = null;
+    }
+  }
+  _fitNodesInto(newAttrs, evt) {
+    var oldAttrs = this._getNodeRect();
+    const minSize = 1;
+    if (Util._inRange(newAttrs.width, -this.padding() * 2 - minSize, minSize)) {
+      this.update();
+      return;
+    }
+    if (Util._inRange(newAttrs.height, -this.padding() * 2 - minSize, minSize)) {
+      this.update();
+      return;
+    }
+    const allowNegativeScale = this.flipEnabled();
+    var t2 = new Transform();
+    t2.rotate(Konva.getAngle(this.rotation()));
+    if (this._movingAnchorName && newAttrs.width < 0 && this._movingAnchorName.indexOf("left") >= 0) {
+      const offset = t2.point({
+        x: -this.padding() * 2,
+        y: 0
+      });
+      newAttrs.x += offset.x;
+      newAttrs.y += offset.y;
+      newAttrs.width += this.padding() * 2;
+      this._movingAnchorName = this._movingAnchorName.replace("left", "right");
+      this._anchorDragOffset.x -= offset.x;
+      this._anchorDragOffset.y -= offset.y;
+      if (!allowNegativeScale) {
+        this.update();
+        return;
+      }
+    } else if (this._movingAnchorName && newAttrs.width < 0 && this._movingAnchorName.indexOf("right") >= 0) {
+      const offset = t2.point({
+        x: this.padding() * 2,
+        y: 0
+      });
+      this._movingAnchorName = this._movingAnchorName.replace("right", "left");
+      this._anchorDragOffset.x -= offset.x;
+      this._anchorDragOffset.y -= offset.y;
+      newAttrs.width += this.padding() * 2;
+      if (!allowNegativeScale) {
+        this.update();
+        return;
+      }
+    }
+    if (this._movingAnchorName && newAttrs.height < 0 && this._movingAnchorName.indexOf("top") >= 0) {
+      const offset = t2.point({
+        x: 0,
+        y: -this.padding() * 2
+      });
+      newAttrs.x += offset.x;
+      newAttrs.y += offset.y;
+      this._movingAnchorName = this._movingAnchorName.replace("top", "bottom");
+      this._anchorDragOffset.x -= offset.x;
+      this._anchorDragOffset.y -= offset.y;
+      newAttrs.height += this.padding() * 2;
+      if (!allowNegativeScale) {
+        this.update();
+        return;
+      }
+    } else if (this._movingAnchorName && newAttrs.height < 0 && this._movingAnchorName.indexOf("bottom") >= 0) {
+      const offset = t2.point({
+        x: 0,
+        y: this.padding() * 2
+      });
+      this._movingAnchorName = this._movingAnchorName.replace("bottom", "top");
+      this._anchorDragOffset.x -= offset.x;
+      this._anchorDragOffset.y -= offset.y;
+      newAttrs.height += this.padding() * 2;
+      if (!allowNegativeScale) {
+        this.update();
+        return;
+      }
+    }
+    if (this.boundBoxFunc()) {
+      const bounded = this.boundBoxFunc()(oldAttrs, newAttrs);
+      if (bounded) {
+        newAttrs = bounded;
+      } else {
+        Util.warn("boundBoxFunc returned falsy. You should return new bound rect from it!");
+      }
+    }
+    const baseSize = 1e7;
+    const oldTr = new Transform();
+    oldTr.translate(oldAttrs.x, oldAttrs.y);
+    oldTr.rotate(oldAttrs.rotation);
+    oldTr.scale(oldAttrs.width / baseSize, oldAttrs.height / baseSize);
+    const newTr = new Transform();
+    newTr.translate(newAttrs.x, newAttrs.y);
+    newTr.rotate(newAttrs.rotation);
+    newTr.scale(newAttrs.width / baseSize, newAttrs.height / baseSize);
+    const delta = newTr.multiply(oldTr.invert());
+    this._nodes.forEach((node2) => {
+      var _a;
+      const parentTransform = node2.getParent().getAbsoluteTransform();
+      const localTransform = node2.getTransform().copy();
+      localTransform.translate(node2.offsetX(), node2.offsetY());
+      const newLocalTransform = new Transform();
+      newLocalTransform.multiply(parentTransform.copy().invert()).multiply(delta).multiply(parentTransform).multiply(localTransform);
+      const attrs = newLocalTransform.decompose();
+      node2.setAttrs(attrs);
+      this._fire("transform", {evt, target: node2});
+      node2._fire("transform", {evt, target: node2});
+      (_a = node2.getLayer()) === null || _a === void 0 ? void 0 : _a.batchDraw();
+    });
+    this.rotation(Util._getRotation(newAttrs.rotation));
+    this._resetTransformCache();
+    this.update();
+    this.getLayer().batchDraw();
+  }
+  forceUpdate() {
+    this._resetTransformCache();
+    this.update();
+  }
+  _batchChangeChild(selector, attrs) {
+    const anchor = this.findOne(selector);
+    anchor.setAttrs(attrs);
+  }
+  update() {
+    var _a;
+    var attrs = this._getNodeRect();
+    this.rotation(Util._getRotation(attrs.rotation));
+    var width = attrs.width;
+    var height = attrs.height;
+    var enabledAnchors = this.enabledAnchors();
+    var resizeEnabled = this.resizeEnabled();
+    var padding = this.padding();
+    var anchorSize = this.anchorSize();
+    this.find("._anchor").forEach((node2) => {
+      node2.setAttrs({
+        width: anchorSize,
+        height: anchorSize,
+        offsetX: anchorSize / 2,
+        offsetY: anchorSize / 2,
+        stroke: this.anchorStroke(),
+        strokeWidth: this.anchorStrokeWidth(),
+        fill: this.anchorFill(),
+        cornerRadius: this.anchorCornerRadius()
+      });
+    });
+    this._batchChangeChild(".top-left", {
+      x: 0,
+      y: 0,
+      offsetX: anchorSize / 2 + padding,
+      offsetY: anchorSize / 2 + padding,
+      visible: resizeEnabled && enabledAnchors.indexOf("top-left") >= 0
+    });
+    this._batchChangeChild(".top-center", {
+      x: width / 2,
+      y: 0,
+      offsetY: anchorSize / 2 + padding,
+      visible: resizeEnabled && enabledAnchors.indexOf("top-center") >= 0
+    });
+    this._batchChangeChild(".top-right", {
+      x: width,
+      y: 0,
+      offsetX: anchorSize / 2 - padding,
+      offsetY: anchorSize / 2 + padding,
+      visible: resizeEnabled && enabledAnchors.indexOf("top-right") >= 0
+    });
+    this._batchChangeChild(".middle-left", {
+      x: 0,
+      y: height / 2,
+      offsetX: anchorSize / 2 + padding,
+      visible: resizeEnabled && enabledAnchors.indexOf("middle-left") >= 0
+    });
+    this._batchChangeChild(".middle-right", {
+      x: width,
+      y: height / 2,
+      offsetX: anchorSize / 2 - padding,
+      visible: resizeEnabled && enabledAnchors.indexOf("middle-right") >= 0
+    });
+    this._batchChangeChild(".bottom-left", {
+      x: 0,
+      y: height,
+      offsetX: anchorSize / 2 + padding,
+      offsetY: anchorSize / 2 - padding,
+      visible: resizeEnabled && enabledAnchors.indexOf("bottom-left") >= 0
+    });
+    this._batchChangeChild(".bottom-center", {
+      x: width / 2,
+      y: height,
+      offsetY: anchorSize / 2 - padding,
+      visible: resizeEnabled && enabledAnchors.indexOf("bottom-center") >= 0
+    });
+    this._batchChangeChild(".bottom-right", {
+      x: width,
+      y: height,
+      offsetX: anchorSize / 2 - padding,
+      offsetY: anchorSize / 2 - padding,
+      visible: resizeEnabled && enabledAnchors.indexOf("bottom-right") >= 0
+    });
+    this._batchChangeChild(".rotater", {
+      x: width / 2,
+      y: -this.rotateAnchorOffset() * Util._sign(height) - padding,
+      visible: this.rotateEnabled()
+    });
+    this._batchChangeChild(".back", {
+      width,
+      height,
+      visible: this.borderEnabled(),
+      stroke: this.borderStroke(),
+      strokeWidth: this.borderStrokeWidth(),
+      dash: this.borderDash(),
+      x: 0,
+      y: 0
+    });
+    (_a = this.getLayer()) === null || _a === void 0 ? void 0 : _a.batchDraw();
+  }
+  isTransforming() {
+    return this._transforming;
+  }
+  stopTransform() {
+    if (this._transforming) {
+      this._removeEvents();
+      var anchorNode = this.findOne("." + this._movingAnchorName);
+      if (anchorNode) {
+        anchorNode.stopDrag();
+      }
+    }
+  }
+  destroy() {
+    if (this.getStage() && this._cursorChange) {
+      this.getStage().content && (this.getStage().content.style.cursor = "");
+    }
+    Group4.prototype.destroy.call(this);
+    this.detach();
+    this._removeEvents();
+    return this;
+  }
+  toObject() {
+    return Node2.prototype.toObject.call(this);
+  }
+};
+function validateAnchors(val) {
+  if (!(val instanceof Array)) {
+    Util.warn("enabledAnchors value should be an array");
+  }
+  if (val instanceof Array) {
+    val.forEach(function(name2) {
+      if (ANCHORS_NAMES.indexOf(name2) === -1) {
+        Util.warn("Unknown anchor name: " + name2 + ". Available names are: " + ANCHORS_NAMES.join(", "));
+      }
+    });
+  }
+  return val || [];
+}
+Transformer.prototype.className = "Transformer";
+_registerNode(Transformer);
+Factory.addGetterSetter(Transformer, "enabledAnchors", ANCHORS_NAMES, validateAnchors);
+Factory.addGetterSetter(Transformer, "flipEnabled", true, getBooleanValidator());
+Factory.addGetterSetter(Transformer, "resizeEnabled", true);
+Factory.addGetterSetter(Transformer, "anchorSize", 10, getNumberValidator());
+Factory.addGetterSetter(Transformer, "rotateEnabled", true);
+Factory.addGetterSetter(Transformer, "rotationSnaps", []);
+Factory.addGetterSetter(Transformer, "rotateAnchorOffset", 50, getNumberValidator());
+Factory.addGetterSetter(Transformer, "rotationSnapTolerance", 5, getNumberValidator());
+Factory.addGetterSetter(Transformer, "borderEnabled", true);
+Factory.addGetterSetter(Transformer, "anchorStroke", "rgb(0, 161, 255)");
+Factory.addGetterSetter(Transformer, "anchorStrokeWidth", 1, getNumberValidator());
+Factory.addGetterSetter(Transformer, "anchorFill", "white");
+Factory.addGetterSetter(Transformer, "anchorCornerRadius", 0, getNumberValidator());
+Factory.addGetterSetter(Transformer, "borderStroke", "rgb(0, 161, 255)");
+Factory.addGetterSetter(Transformer, "borderStrokeWidth", 1, getNumberValidator());
+Factory.addGetterSetter(Transformer, "borderDash");
+Factory.addGetterSetter(Transformer, "keepRatio", true);
+Factory.addGetterSetter(Transformer, "centeredScaling", false);
+Factory.addGetterSetter(Transformer, "ignoreStroke", false);
+Factory.addGetterSetter(Transformer, "padding", 0, getNumberValidator());
+Factory.addGetterSetter(Transformer, "node");
+Factory.addGetterSetter(Transformer, "nodes");
+Factory.addGetterSetter(Transformer, "boundBoxFunc");
+Factory.addGetterSetter(Transformer, "shouldOverdrawWholeArea", false);
+Factory.backCompat(Transformer, {
+  lineEnabled: "borderEnabled",
+  rotateHandlerOffset: "rotateAnchorOffset",
+  enabledHandlers: "enabledAnchors"
+});
+
+// node_modules/konva/lib/shapes/Wedge.js
+var Wedge = class extends Shape2 {
+  _sceneFunc(context) {
+    context.beginPath();
+    context.arc(0, 0, this.radius(), 0, Konva.getAngle(this.angle()), this.clockwise());
+    context.lineTo(0, 0);
+    context.closePath();
+    context.fillStrokeShape(this);
+  }
+  getWidth() {
+    return this.radius() * 2;
+  }
+  getHeight() {
+    return this.radius() * 2;
+  }
+  setWidth(width) {
+    this.radius(width / 2);
+  }
+  setHeight(height) {
+    this.radius(height / 2);
+  }
+};
+Wedge.prototype.className = "Wedge";
+Wedge.prototype._centroid = true;
+Wedge.prototype._attrsAffectingSize = ["radius"];
+_registerNode(Wedge);
+Factory.addGetterSetter(Wedge, "radius", 0, getNumberValidator());
+Factory.addGetterSetter(Wedge, "angle", 0, getNumberValidator());
+Factory.addGetterSetter(Wedge, "clockwise", false);
+Factory.backCompat(Wedge, {
+  angleDeg: "angle",
+  getAngleDeg: "getAngle",
+  setAngleDeg: "setAngle"
+});
+
+// node_modules/konva/lib/filters/Blur.js
+function BlurStack() {
+  this.r = 0;
+  this.g = 0;
+  this.b = 0;
+  this.a = 0;
+  this.next = null;
+}
+var mul_table = [
+  512,
+  512,
+  456,
+  512,
+  328,
+  456,
+  335,
+  512,
+  405,
+  328,
+  271,
+  456,
+  388,
+  335,
+  292,
+  512,
+  454,
+  405,
+  364,
+  328,
+  298,
+  271,
+  496,
+  456,
+  420,
+  388,
+  360,
+  335,
+  312,
+  292,
+  273,
+  512,
+  482,
+  454,
+  428,
+  405,
+  383,
+  364,
+  345,
+  328,
+  312,
+  298,
+  284,
+  271,
+  259,
+  496,
+  475,
+  456,
+  437,
+  420,
+  404,
+  388,
+  374,
+  360,
+  347,
+  335,
+  323,
+  312,
+  302,
+  292,
+  282,
+  273,
+  265,
+  512,
+  497,
+  482,
+  468,
+  454,
+  441,
+  428,
+  417,
+  405,
+  394,
+  383,
+  373,
+  364,
+  354,
+  345,
+  337,
+  328,
+  320,
+  312,
+  305,
+  298,
+  291,
+  284,
+  278,
+  271,
+  265,
+  259,
+  507,
+  496,
+  485,
+  475,
+  465,
+  456,
+  446,
+  437,
+  428,
+  420,
+  412,
+  404,
+  396,
+  388,
+  381,
+  374,
+  367,
+  360,
+  354,
+  347,
+  341,
+  335,
+  329,
+  323,
+  318,
+  312,
+  307,
+  302,
+  297,
+  292,
+  287,
+  282,
+  278,
+  273,
+  269,
+  265,
+  261,
+  512,
+  505,
+  497,
+  489,
+  482,
+  475,
+  468,
+  461,
+  454,
+  447,
+  441,
+  435,
+  428,
+  422,
+  417,
+  411,
+  405,
+  399,
+  394,
+  389,
+  383,
+  378,
+  373,
+  368,
+  364,
+  359,
+  354,
+  350,
+  345,
+  341,
+  337,
+  332,
+  328,
+  324,
+  320,
+  316,
+  312,
+  309,
+  305,
+  301,
+  298,
+  294,
+  291,
+  287,
+  284,
+  281,
+  278,
+  274,
+  271,
+  268,
+  265,
+  262,
+  259,
+  257,
+  507,
+  501,
+  496,
+  491,
+  485,
+  480,
+  475,
+  470,
+  465,
+  460,
+  456,
+  451,
+  446,
+  442,
+  437,
+  433,
+  428,
+  424,
+  420,
+  416,
+  412,
+  408,
+  404,
+  400,
+  396,
+  392,
+  388,
+  385,
+  381,
+  377,
+  374,
+  370,
+  367,
+  363,
+  360,
+  357,
+  354,
+  350,
+  347,
+  344,
+  341,
+  338,
+  335,
+  332,
+  329,
+  326,
+  323,
+  320,
+  318,
+  315,
+  312,
+  310,
+  307,
+  304,
+  302,
+  299,
+  297,
+  294,
+  292,
+  289,
+  287,
+  285,
+  282,
+  280,
+  278,
+  275,
+  273,
+  271,
+  269,
+  267,
+  265,
+  263,
+  261,
+  259
+];
+var shg_table = [
+  9,
+  11,
+  12,
+  13,
+  13,
+  14,
+  14,
+  15,
+  15,
+  15,
+  15,
+  16,
+  16,
+  16,
+  16,
+  17,
+  17,
+  17,
+  17,
+  17,
+  17,
+  17,
+  18,
+  18,
+  18,
+  18,
+  18,
+  18,
+  18,
+  18,
+  18,
+  19,
+  19,
+  19,
+  19,
+  19,
+  19,
+  19,
+  19,
+  19,
+  19,
+  19,
+  19,
+  19,
+  19,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  21,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  22,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  23,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24,
+  24
+];
+function filterGaussBlurRGBA(imageData, radius) {
+  var pixels = imageData.data, width = imageData.width, height = imageData.height;
+  var x2, y2, i2, p2, yp, yi, yw, r_sum, g_sum, b_sum, a_sum, r_out_sum, g_out_sum, b_out_sum, a_out_sum, r_in_sum, g_in_sum, b_in_sum, a_in_sum, pr, pg, pb, pa, rbs;
+  var div = radius + radius + 1, widthMinus1 = width - 1, heightMinus1 = height - 1, radiusPlus1 = radius + 1, sumFactor = radiusPlus1 * (radiusPlus1 + 1) / 2, stackStart = new BlurStack(), stackEnd = null, stack = stackStart, stackIn = null, stackOut = null, mul_sum = mul_table[radius], shg_sum = shg_table[radius];
+  for (i2 = 1; i2 < div; i2++) {
+    stack = stack.next = new BlurStack();
+    if (i2 === radiusPlus1) {
+      stackEnd = stack;
+    }
+  }
+  stack.next = stackStart;
+  yw = yi = 0;
+  for (y2 = 0; y2 < height; y2++) {
+    r_in_sum = g_in_sum = b_in_sum = a_in_sum = r_sum = g_sum = b_sum = a_sum = 0;
+    r_out_sum = radiusPlus1 * (pr = pixels[yi]);
+    g_out_sum = radiusPlus1 * (pg = pixels[yi + 1]);
+    b_out_sum = radiusPlus1 * (pb = pixels[yi + 2]);
+    a_out_sum = radiusPlus1 * (pa = pixels[yi + 3]);
+    r_sum += sumFactor * pr;
+    g_sum += sumFactor * pg;
+    b_sum += sumFactor * pb;
+    a_sum += sumFactor * pa;
+    stack = stackStart;
+    for (i2 = 0; i2 < radiusPlus1; i2++) {
+      stack.r = pr;
+      stack.g = pg;
+      stack.b = pb;
+      stack.a = pa;
+      stack = stack.next;
+    }
+    for (i2 = 1; i2 < radiusPlus1; i2++) {
+      p2 = yi + ((widthMinus1 < i2 ? widthMinus1 : i2) << 2);
+      r_sum += (stack.r = pr = pixels[p2]) * (rbs = radiusPlus1 - i2);
+      g_sum += (stack.g = pg = pixels[p2 + 1]) * rbs;
+      b_sum += (stack.b = pb = pixels[p2 + 2]) * rbs;
+      a_sum += (stack.a = pa = pixels[p2 + 3]) * rbs;
+      r_in_sum += pr;
+      g_in_sum += pg;
+      b_in_sum += pb;
+      a_in_sum += pa;
+      stack = stack.next;
+    }
+    stackIn = stackStart;
+    stackOut = stackEnd;
+    for (x2 = 0; x2 < width; x2++) {
+      pixels[yi + 3] = pa = a_sum * mul_sum >> shg_sum;
+      if (pa !== 0) {
+        pa = 255 / pa;
+        pixels[yi] = (r_sum * mul_sum >> shg_sum) * pa;
+        pixels[yi + 1] = (g_sum * mul_sum >> shg_sum) * pa;
+        pixels[yi + 2] = (b_sum * mul_sum >> shg_sum) * pa;
+      } else {
+        pixels[yi] = pixels[yi + 1] = pixels[yi + 2] = 0;
+      }
+      r_sum -= r_out_sum;
+      g_sum -= g_out_sum;
+      b_sum -= b_out_sum;
+      a_sum -= a_out_sum;
+      r_out_sum -= stackIn.r;
+      g_out_sum -= stackIn.g;
+      b_out_sum -= stackIn.b;
+      a_out_sum -= stackIn.a;
+      p2 = yw + ((p2 = x2 + radius + 1) < widthMinus1 ? p2 : widthMinus1) << 2;
+      r_in_sum += stackIn.r = pixels[p2];
+      g_in_sum += stackIn.g = pixels[p2 + 1];
+      b_in_sum += stackIn.b = pixels[p2 + 2];
+      a_in_sum += stackIn.a = pixels[p2 + 3];
+      r_sum += r_in_sum;
+      g_sum += g_in_sum;
+      b_sum += b_in_sum;
+      a_sum += a_in_sum;
+      stackIn = stackIn.next;
+      r_out_sum += pr = stackOut.r;
+      g_out_sum += pg = stackOut.g;
+      b_out_sum += pb = stackOut.b;
+      a_out_sum += pa = stackOut.a;
+      r_in_sum -= pr;
+      g_in_sum -= pg;
+      b_in_sum -= pb;
+      a_in_sum -= pa;
+      stackOut = stackOut.next;
+      yi += 4;
+    }
+    yw += width;
+  }
+  for (x2 = 0; x2 < width; x2++) {
+    g_in_sum = b_in_sum = a_in_sum = r_in_sum = g_sum = b_sum = a_sum = r_sum = 0;
+    yi = x2 << 2;
+    r_out_sum = radiusPlus1 * (pr = pixels[yi]);
+    g_out_sum = radiusPlus1 * (pg = pixels[yi + 1]);
+    b_out_sum = radiusPlus1 * (pb = pixels[yi + 2]);
+    a_out_sum = radiusPlus1 * (pa = pixels[yi + 3]);
+    r_sum += sumFactor * pr;
+    g_sum += sumFactor * pg;
+    b_sum += sumFactor * pb;
+    a_sum += sumFactor * pa;
+    stack = stackStart;
+    for (i2 = 0; i2 < radiusPlus1; i2++) {
+      stack.r = pr;
+      stack.g = pg;
+      stack.b = pb;
+      stack.a = pa;
+      stack = stack.next;
+    }
+    yp = width;
+    for (i2 = 1; i2 <= radius; i2++) {
+      yi = yp + x2 << 2;
+      r_sum += (stack.r = pr = pixels[yi]) * (rbs = radiusPlus1 - i2);
+      g_sum += (stack.g = pg = pixels[yi + 1]) * rbs;
+      b_sum += (stack.b = pb = pixels[yi + 2]) * rbs;
+      a_sum += (stack.a = pa = pixels[yi + 3]) * rbs;
+      r_in_sum += pr;
+      g_in_sum += pg;
+      b_in_sum += pb;
+      a_in_sum += pa;
+      stack = stack.next;
+      if (i2 < heightMinus1) {
+        yp += width;
+      }
+    }
+    yi = x2;
+    stackIn = stackStart;
+    stackOut = stackEnd;
+    for (y2 = 0; y2 < height; y2++) {
+      p2 = yi << 2;
+      pixels[p2 + 3] = pa = a_sum * mul_sum >> shg_sum;
+      if (pa > 0) {
+        pa = 255 / pa;
+        pixels[p2] = (r_sum * mul_sum >> shg_sum) * pa;
+        pixels[p2 + 1] = (g_sum * mul_sum >> shg_sum) * pa;
+        pixels[p2 + 2] = (b_sum * mul_sum >> shg_sum) * pa;
+      } else {
+        pixels[p2] = pixels[p2 + 1] = pixels[p2 + 2] = 0;
+      }
+      r_sum -= r_out_sum;
+      g_sum -= g_out_sum;
+      b_sum -= b_out_sum;
+      a_sum -= a_out_sum;
+      r_out_sum -= stackIn.r;
+      g_out_sum -= stackIn.g;
+      b_out_sum -= stackIn.b;
+      a_out_sum -= stackIn.a;
+      p2 = x2 + ((p2 = y2 + radiusPlus1) < heightMinus1 ? p2 : heightMinus1) * width << 2;
+      r_sum += r_in_sum += stackIn.r = pixels[p2];
+      g_sum += g_in_sum += stackIn.g = pixels[p2 + 1];
+      b_sum += b_in_sum += stackIn.b = pixels[p2 + 2];
+      a_sum += a_in_sum += stackIn.a = pixels[p2 + 3];
+      stackIn = stackIn.next;
+      r_out_sum += pr = stackOut.r;
+      g_out_sum += pg = stackOut.g;
+      b_out_sum += pb = stackOut.b;
+      a_out_sum += pa = stackOut.a;
+      r_in_sum -= pr;
+      g_in_sum -= pg;
+      b_in_sum -= pb;
+      a_in_sum -= pa;
+      stackOut = stackOut.next;
+      yi += width;
+    }
+  }
+}
+var Blur = function Blur2(imageData) {
+  var radius = Math.round(this.blurRadius());
+  if (radius > 0) {
+    filterGaussBlurRGBA(imageData, radius);
+  }
+};
+Factory.addGetterSetter(Node2, "blurRadius", 0, getNumberValidator(), Factory.afterSetFilter);
+
+// node_modules/konva/lib/filters/Brighten.js
+var Brighten = function(imageData) {
+  var brightness = this.brightness() * 255, data2 = imageData.data, len = data2.length, i2;
+  for (i2 = 0; i2 < len; i2 += 4) {
+    data2[i2] += brightness;
+    data2[i2 + 1] += brightness;
+    data2[i2 + 2] += brightness;
+  }
+};
+Factory.addGetterSetter(Node2, "brightness", 0, getNumberValidator(), Factory.afterSetFilter);
+
+// node_modules/konva/lib/filters/Contrast.js
+var Contrast = function(imageData) {
+  var adjust = Math.pow((this.contrast() + 100) / 100, 2);
+  var data2 = imageData.data, nPixels = data2.length, red = 150, green = 150, blue = 150, i2;
+  for (i2 = 0; i2 < nPixels; i2 += 4) {
+    red = data2[i2];
+    green = data2[i2 + 1];
+    blue = data2[i2 + 2];
+    red /= 255;
+    red -= 0.5;
+    red *= adjust;
+    red += 0.5;
+    red *= 255;
+    green /= 255;
+    green -= 0.5;
+    green *= adjust;
+    green += 0.5;
+    green *= 255;
+    blue /= 255;
+    blue -= 0.5;
+    blue *= adjust;
+    blue += 0.5;
+    blue *= 255;
+    red = red < 0 ? 0 : red > 255 ? 255 : red;
+    green = green < 0 ? 0 : green > 255 ? 255 : green;
+    blue = blue < 0 ? 0 : blue > 255 ? 255 : blue;
+    data2[i2] = red;
+    data2[i2 + 1] = green;
+    data2[i2 + 2] = blue;
+  }
+};
+Factory.addGetterSetter(Node2, "contrast", 0, getNumberValidator(), Factory.afterSetFilter);
+
+// node_modules/konva/lib/filters/Emboss.js
+var Emboss = function(imageData) {
+  var strength = this.embossStrength() * 10, greyLevel = this.embossWhiteLevel() * 255, direction = this.embossDirection(), blend = this.embossBlend(), dirY = 0, dirX = 0, data2 = imageData.data, w3 = imageData.width, h2 = imageData.height, w4 = w3 * 4, y2 = h2;
+  switch (direction) {
+    case "top-left":
+      dirY = -1;
+      dirX = -1;
+      break;
+    case "top":
+      dirY = -1;
+      dirX = 0;
+      break;
+    case "top-right":
+      dirY = -1;
+      dirX = 1;
+      break;
+    case "right":
+      dirY = 0;
+      dirX = 1;
+      break;
+    case "bottom-right":
+      dirY = 1;
+      dirX = 1;
+      break;
+    case "bottom":
+      dirY = 1;
+      dirX = 0;
+      break;
+    case "bottom-left":
+      dirY = 1;
+      dirX = -1;
+      break;
+    case "left":
+      dirY = 0;
+      dirX = -1;
+      break;
+    default:
+      Util.error("Unknown emboss direction: " + direction);
+  }
+  do {
+    var offsetY = (y2 - 1) * w4;
+    var otherY = dirY;
+    if (y2 + otherY < 1) {
+      otherY = 0;
+    }
+    if (y2 + otherY > h2) {
+      otherY = 0;
+    }
+    var offsetYOther = (y2 - 1 + otherY) * w3 * 4;
+    var x2 = w3;
+    do {
+      var offset = offsetY + (x2 - 1) * 4;
+      var otherX = dirX;
+      if (x2 + otherX < 1) {
+        otherX = 0;
+      }
+      if (x2 + otherX > w3) {
+        otherX = 0;
+      }
+      var offsetOther = offsetYOther + (x2 - 1 + otherX) * 4;
+      var dR = data2[offset] - data2[offsetOther];
+      var dG = data2[offset + 1] - data2[offsetOther + 1];
+      var dB = data2[offset + 2] - data2[offsetOther + 2];
+      var dif = dR;
+      var absDif = dif > 0 ? dif : -dif;
+      var absG = dG > 0 ? dG : -dG;
+      var absB = dB > 0 ? dB : -dB;
+      if (absG > absDif) {
+        dif = dG;
+      }
+      if (absB > absDif) {
+        dif = dB;
+      }
+      dif *= strength;
+      if (blend) {
+        var r2 = data2[offset] + dif;
+        var g2 = data2[offset + 1] + dif;
+        var b2 = data2[offset + 2] + dif;
+        data2[offset] = r2 > 255 ? 255 : r2 < 0 ? 0 : r2;
+        data2[offset + 1] = g2 > 255 ? 255 : g2 < 0 ? 0 : g2;
+        data2[offset + 2] = b2 > 255 ? 255 : b2 < 0 ? 0 : b2;
+      } else {
+        var grey = greyLevel - dif;
+        if (grey < 0) {
+          grey = 0;
+        } else if (grey > 255) {
+          grey = 255;
+        }
+        data2[offset] = data2[offset + 1] = data2[offset + 2] = grey;
+      }
+    } while (--x2);
+  } while (--y2);
+};
+Factory.addGetterSetter(Node2, "embossStrength", 0.5, getNumberValidator(), Factory.afterSetFilter);
+Factory.addGetterSetter(Node2, "embossWhiteLevel", 0.5, getNumberValidator(), Factory.afterSetFilter);
+Factory.addGetterSetter(Node2, "embossDirection", "top-left", null, Factory.afterSetFilter);
+Factory.addGetterSetter(Node2, "embossBlend", false, null, Factory.afterSetFilter);
+
+// node_modules/konva/lib/filters/Enhance.js
+function remap(fromValue, fromMin, fromMax, toMin, toMax) {
+  var fromRange = fromMax - fromMin, toRange = toMax - toMin, toValue;
+  if (fromRange === 0) {
+    return toMin + toRange / 2;
+  }
+  if (toRange === 0) {
+    return toMin;
+  }
+  toValue = (fromValue - fromMin) / fromRange;
+  toValue = toRange * toValue + toMin;
+  return toValue;
+}
+var Enhance = function(imageData) {
+  var data2 = imageData.data, nSubPixels = data2.length, rMin = data2[0], rMax = rMin, r2, gMin = data2[1], gMax = gMin, g2, bMin = data2[2], bMax = bMin, b2, i2;
+  var enhanceAmount = this.enhance();
+  if (enhanceAmount === 0) {
+    return;
+  }
+  for (i2 = 0; i2 < nSubPixels; i2 += 4) {
+    r2 = data2[i2 + 0];
+    if (r2 < rMin) {
+      rMin = r2;
+    } else if (r2 > rMax) {
+      rMax = r2;
+    }
+    g2 = data2[i2 + 1];
+    if (g2 < gMin) {
+      gMin = g2;
+    } else if (g2 > gMax) {
+      gMax = g2;
+    }
+    b2 = data2[i2 + 2];
+    if (b2 < bMin) {
+      bMin = b2;
+    } else if (b2 > bMax) {
+      bMax = b2;
+    }
+  }
+  if (rMax === rMin) {
+    rMax = 255;
+    rMin = 0;
+  }
+  if (gMax === gMin) {
+    gMax = 255;
+    gMin = 0;
+  }
+  if (bMax === bMin) {
+    bMax = 255;
+    bMin = 0;
+  }
+  var rMid, rGoalMax, rGoalMin, gMid, gGoalMax, gGoalMin, bMid, bGoalMax, bGoalMin;
+  if (enhanceAmount > 0) {
+    rGoalMax = rMax + enhanceAmount * (255 - rMax);
+    rGoalMin = rMin - enhanceAmount * (rMin - 0);
+    gGoalMax = gMax + enhanceAmount * (255 - gMax);
+    gGoalMin = gMin - enhanceAmount * (gMin - 0);
+    bGoalMax = bMax + enhanceAmount * (255 - bMax);
+    bGoalMin = bMin - enhanceAmount * (bMin - 0);
+  } else {
+    rMid = (rMax + rMin) * 0.5;
+    rGoalMax = rMax + enhanceAmount * (rMax - rMid);
+    rGoalMin = rMin + enhanceAmount * (rMin - rMid);
+    gMid = (gMax + gMin) * 0.5;
+    gGoalMax = gMax + enhanceAmount * (gMax - gMid);
+    gGoalMin = gMin + enhanceAmount * (gMin - gMid);
+    bMid = (bMax + bMin) * 0.5;
+    bGoalMax = bMax + enhanceAmount * (bMax - bMid);
+    bGoalMin = bMin + enhanceAmount * (bMin - bMid);
+  }
+  for (i2 = 0; i2 < nSubPixels; i2 += 4) {
+    data2[i2 + 0] = remap(data2[i2 + 0], rMin, rMax, rGoalMin, rGoalMax);
+    data2[i2 + 1] = remap(data2[i2 + 1], gMin, gMax, gGoalMin, gGoalMax);
+    data2[i2 + 2] = remap(data2[i2 + 2], bMin, bMax, bGoalMin, bGoalMax);
+  }
+};
+Factory.addGetterSetter(Node2, "enhance", 0, getNumberValidator(), Factory.afterSetFilter);
+
+// node_modules/konva/lib/filters/Grayscale.js
+var Grayscale = function(imageData) {
+  var data2 = imageData.data, len = data2.length, i2, brightness;
+  for (i2 = 0; i2 < len; i2 += 4) {
+    brightness = 0.34 * data2[i2] + 0.5 * data2[i2 + 1] + 0.16 * data2[i2 + 2];
+    data2[i2] = brightness;
+    data2[i2 + 1] = brightness;
+    data2[i2 + 2] = brightness;
+  }
+};
+
+// node_modules/konva/lib/filters/HSL.js
+Factory.addGetterSetter(Node2, "hue", 0, getNumberValidator(), Factory.afterSetFilter);
+Factory.addGetterSetter(Node2, "saturation", 0, getNumberValidator(), Factory.afterSetFilter);
+Factory.addGetterSetter(Node2, "luminance", 0, getNumberValidator(), Factory.afterSetFilter);
+var HSL = function(imageData) {
+  var data2 = imageData.data, nPixels = data2.length, v2 = 1, s2 = Math.pow(2, this.saturation()), h2 = Math.abs(this.hue() + 360) % 360, l2 = this.luminance() * 127, i2;
+  var vsu = v2 * s2 * Math.cos(h2 * Math.PI / 180), vsw = v2 * s2 * Math.sin(h2 * Math.PI / 180);
+  var rr = 0.299 * v2 + 0.701 * vsu + 0.167 * vsw, rg = 0.587 * v2 - 0.587 * vsu + 0.33 * vsw, rb = 0.114 * v2 - 0.114 * vsu - 0.497 * vsw;
+  var gr = 0.299 * v2 - 0.299 * vsu - 0.328 * vsw, gg = 0.587 * v2 + 0.413 * vsu + 0.035 * vsw, gb = 0.114 * v2 - 0.114 * vsu + 0.293 * vsw;
+  var br = 0.299 * v2 - 0.3 * vsu + 1.25 * vsw, bg = 0.587 * v2 - 0.586 * vsu - 1.05 * vsw, bb = 0.114 * v2 + 0.886 * vsu - 0.2 * vsw;
+  var r2, g2, b2, a2;
+  for (i2 = 0; i2 < nPixels; i2 += 4) {
+    r2 = data2[i2 + 0];
+    g2 = data2[i2 + 1];
+    b2 = data2[i2 + 2];
+    a2 = data2[i2 + 3];
+    data2[i2 + 0] = rr * r2 + rg * g2 + rb * b2 + l2;
+    data2[i2 + 1] = gr * r2 + gg * g2 + gb * b2 + l2;
+    data2[i2 + 2] = br * r2 + bg * g2 + bb * b2 + l2;
+    data2[i2 + 3] = a2;
+  }
+};
+
+// node_modules/konva/lib/filters/HSV.js
+var HSV = function(imageData) {
+  var data2 = imageData.data, nPixels = data2.length, v2 = Math.pow(2, this.value()), s2 = Math.pow(2, this.saturation()), h2 = Math.abs(this.hue() + 360) % 360, i2;
+  var vsu = v2 * s2 * Math.cos(h2 * Math.PI / 180), vsw = v2 * s2 * Math.sin(h2 * Math.PI / 180);
+  var rr = 0.299 * v2 + 0.701 * vsu + 0.167 * vsw, rg = 0.587 * v2 - 0.587 * vsu + 0.33 * vsw, rb = 0.114 * v2 - 0.114 * vsu - 0.497 * vsw;
+  var gr = 0.299 * v2 - 0.299 * vsu - 0.328 * vsw, gg = 0.587 * v2 + 0.413 * vsu + 0.035 * vsw, gb = 0.114 * v2 - 0.114 * vsu + 0.293 * vsw;
+  var br = 0.299 * v2 - 0.3 * vsu + 1.25 * vsw, bg = 0.587 * v2 - 0.586 * vsu - 1.05 * vsw, bb = 0.114 * v2 + 0.886 * vsu - 0.2 * vsw;
+  var r2, g2, b2, a2;
+  for (i2 = 0; i2 < nPixels; i2 += 4) {
+    r2 = data2[i2 + 0];
+    g2 = data2[i2 + 1];
+    b2 = data2[i2 + 2];
+    a2 = data2[i2 + 3];
+    data2[i2 + 0] = rr * r2 + rg * g2 + rb * b2;
+    data2[i2 + 1] = gr * r2 + gg * g2 + gb * b2;
+    data2[i2 + 2] = br * r2 + bg * g2 + bb * b2;
+    data2[i2 + 3] = a2;
+  }
+};
+Factory.addGetterSetter(Node2, "hue", 0, getNumberValidator(), Factory.afterSetFilter);
+Factory.addGetterSetter(Node2, "saturation", 0, getNumberValidator(), Factory.afterSetFilter);
+Factory.addGetterSetter(Node2, "value", 0, getNumberValidator(), Factory.afterSetFilter);
+
+// node_modules/konva/lib/filters/Invert.js
+var Invert = function(imageData) {
+  var data2 = imageData.data, len = data2.length, i2;
+  for (i2 = 0; i2 < len; i2 += 4) {
+    data2[i2] = 255 - data2[i2];
+    data2[i2 + 1] = 255 - data2[i2 + 1];
+    data2[i2 + 2] = 255 - data2[i2 + 2];
+  }
+};
+
+// node_modules/konva/lib/filters/Kaleidoscope.js
+var ToPolar = function(src2, dst, opt) {
+  var srcPixels = src2.data, dstPixels = dst.data, xSize = src2.width, ySize = src2.height, xMid = opt.polarCenterX || xSize / 2, yMid = opt.polarCenterY || ySize / 2, i2, x2, y2, r2 = 0, g2 = 0, b2 = 0, a2 = 0;
+  var rad, rMax = Math.sqrt(xMid * xMid + yMid * yMid);
+  x2 = xSize - xMid;
+  y2 = ySize - yMid;
+  rad = Math.sqrt(x2 * x2 + y2 * y2);
+  rMax = rad > rMax ? rad : rMax;
+  var rSize = ySize, tSize = xSize, radius, theta;
+  var conversion = 360 / tSize * Math.PI / 180, sin, cos;
+  for (theta = 0; theta < tSize; theta += 1) {
+    sin = Math.sin(theta * conversion);
+    cos = Math.cos(theta * conversion);
+    for (radius = 0; radius < rSize; radius += 1) {
+      x2 = Math.floor(xMid + rMax * radius / rSize * cos);
+      y2 = Math.floor(yMid + rMax * radius / rSize * sin);
+      i2 = (y2 * xSize + x2) * 4;
+      r2 = srcPixels[i2 + 0];
+      g2 = srcPixels[i2 + 1];
+      b2 = srcPixels[i2 + 2];
+      a2 = srcPixels[i2 + 3];
+      i2 = (theta + radius * xSize) * 4;
+      dstPixels[i2 + 0] = r2;
+      dstPixels[i2 + 1] = g2;
+      dstPixels[i2 + 2] = b2;
+      dstPixels[i2 + 3] = a2;
+    }
+  }
+};
+var FromPolar = function(src2, dst, opt) {
+  var srcPixels = src2.data, dstPixels = dst.data, xSize = src2.width, ySize = src2.height, xMid = opt.polarCenterX || xSize / 2, yMid = opt.polarCenterY || ySize / 2, i2, x2, y2, dx, dy, r2 = 0, g2 = 0, b2 = 0, a2 = 0;
+  var rad, rMax = Math.sqrt(xMid * xMid + yMid * yMid);
+  x2 = xSize - xMid;
+  y2 = ySize - yMid;
+  rad = Math.sqrt(x2 * x2 + y2 * y2);
+  rMax = rad > rMax ? rad : rMax;
+  var rSize = ySize, tSize = xSize, radius, theta, phaseShift = opt.polarRotation || 0;
+  var x1, y1;
+  for (x2 = 0; x2 < xSize; x2 += 1) {
+    for (y2 = 0; y2 < ySize; y2 += 1) {
+      dx = x2 - xMid;
+      dy = y2 - yMid;
+      radius = Math.sqrt(dx * dx + dy * dy) * rSize / rMax;
+      theta = (Math.atan2(dy, dx) * 180 / Math.PI + 360 + phaseShift) % 360;
+      theta = theta * tSize / 360;
+      x1 = Math.floor(theta);
+      y1 = Math.floor(radius);
+      i2 = (y1 * xSize + x1) * 4;
+      r2 = srcPixels[i2 + 0];
+      g2 = srcPixels[i2 + 1];
+      b2 = srcPixels[i2 + 2];
+      a2 = srcPixels[i2 + 3];
+      i2 = (y2 * xSize + x2) * 4;
+      dstPixels[i2 + 0] = r2;
+      dstPixels[i2 + 1] = g2;
+      dstPixels[i2 + 2] = b2;
+      dstPixels[i2 + 3] = a2;
+    }
+  }
+};
+var Kaleidoscope = function(imageData) {
+  var xSize = imageData.width, ySize = imageData.height;
+  var x2, y2, xoff, i2, r2, g2, b2, a2, srcPos, dstPos;
+  var power = Math.round(this.kaleidoscopePower());
+  var angle = Math.round(this.kaleidoscopeAngle());
+  var offset = Math.floor(xSize * (angle % 360) / 360);
+  if (power < 1) {
+    return;
+  }
+  var tempCanvas = Util.createCanvasElement();
+  tempCanvas.width = xSize;
+  tempCanvas.height = ySize;
+  var scratchData = tempCanvas.getContext("2d").getImageData(0, 0, xSize, ySize);
+  ToPolar(imageData, scratchData, {
+    polarCenterX: xSize / 2,
+    polarCenterY: ySize / 2
+  });
+  var minSectionSize = xSize / Math.pow(2, power);
+  while (minSectionSize <= 8) {
+    minSectionSize = minSectionSize * 2;
+    power -= 1;
+  }
+  minSectionSize = Math.ceil(minSectionSize);
+  var sectionSize = minSectionSize;
+  var xStart = 0, xEnd = sectionSize, xDelta = 1;
+  if (offset + minSectionSize > xSize) {
+    xStart = sectionSize;
+    xEnd = 0;
+    xDelta = -1;
+  }
+  for (y2 = 0; y2 < ySize; y2 += 1) {
+    for (x2 = xStart; x2 !== xEnd; x2 += xDelta) {
+      xoff = Math.round(x2 + offset) % xSize;
+      srcPos = (xSize * y2 + xoff) * 4;
+      r2 = scratchData.data[srcPos + 0];
+      g2 = scratchData.data[srcPos + 1];
+      b2 = scratchData.data[srcPos + 2];
+      a2 = scratchData.data[srcPos + 3];
+      dstPos = (xSize * y2 + x2) * 4;
+      scratchData.data[dstPos + 0] = r2;
+      scratchData.data[dstPos + 1] = g2;
+      scratchData.data[dstPos + 2] = b2;
+      scratchData.data[dstPos + 3] = a2;
+    }
+  }
+  for (y2 = 0; y2 < ySize; y2 += 1) {
+    sectionSize = Math.floor(minSectionSize);
+    for (i2 = 0; i2 < power; i2 += 1) {
+      for (x2 = 0; x2 < sectionSize + 1; x2 += 1) {
+        srcPos = (xSize * y2 + x2) * 4;
+        r2 = scratchData.data[srcPos + 0];
+        g2 = scratchData.data[srcPos + 1];
+        b2 = scratchData.data[srcPos + 2];
+        a2 = scratchData.data[srcPos + 3];
+        dstPos = (xSize * y2 + sectionSize * 2 - x2 - 1) * 4;
+        scratchData.data[dstPos + 0] = r2;
+        scratchData.data[dstPos + 1] = g2;
+        scratchData.data[dstPos + 2] = b2;
+        scratchData.data[dstPos + 3] = a2;
+      }
+      sectionSize *= 2;
+    }
+  }
+  FromPolar(scratchData, imageData, {polarRotation: 0});
+};
+Factory.addGetterSetter(Node2, "kaleidoscopePower", 2, getNumberValidator(), Factory.afterSetFilter);
+Factory.addGetterSetter(Node2, "kaleidoscopeAngle", 0, getNumberValidator(), Factory.afterSetFilter);
+
+// node_modules/konva/lib/filters/Mask.js
+function pixelAt(idata, x2, y2) {
+  var idx = (y2 * idata.width + x2) * 4;
+  var d2 = [];
+  d2.push(idata.data[idx++], idata.data[idx++], idata.data[idx++], idata.data[idx++]);
+  return d2;
+}
+function rgbDistance(p1, p2) {
+  return Math.sqrt(Math.pow(p1[0] - p2[0], 2) + Math.pow(p1[1] - p2[1], 2) + Math.pow(p1[2] - p2[2], 2));
+}
+function rgbMean(pTab) {
+  var m2 = [0, 0, 0];
+  for (var i2 = 0; i2 < pTab.length; i2++) {
+    m2[0] += pTab[i2][0];
+    m2[1] += pTab[i2][1];
+    m2[2] += pTab[i2][2];
+  }
+  m2[0] /= pTab.length;
+  m2[1] /= pTab.length;
+  m2[2] /= pTab.length;
+  return m2;
+}
+function backgroundMask(idata, threshold) {
+  var rgbv_no = pixelAt(idata, 0, 0);
+  var rgbv_ne = pixelAt(idata, idata.width - 1, 0);
+  var rgbv_so = pixelAt(idata, 0, idata.height - 1);
+  var rgbv_se = pixelAt(idata, idata.width - 1, idata.height - 1);
+  var thres = threshold || 10;
+  if (rgbDistance(rgbv_no, rgbv_ne) < thres && rgbDistance(rgbv_ne, rgbv_se) < thres && rgbDistance(rgbv_se, rgbv_so) < thres && rgbDistance(rgbv_so, rgbv_no) < thres) {
+    var mean = rgbMean([rgbv_ne, rgbv_no, rgbv_se, rgbv_so]);
+    var mask2 = [];
+    for (var i2 = 0; i2 < idata.width * idata.height; i2++) {
+      var d2 = rgbDistance(mean, [
+        idata.data[i2 * 4],
+        idata.data[i2 * 4 + 1],
+        idata.data[i2 * 4 + 2]
+      ]);
+      mask2[i2] = d2 < thres ? 0 : 255;
+    }
+    return mask2;
+  }
+}
+function applyMask(idata, mask2) {
+  for (var i2 = 0; i2 < idata.width * idata.height; i2++) {
+    idata.data[4 * i2 + 3] = mask2[i2];
+  }
+}
+function erodeMask(mask2, sw, sh) {
+  var weights = [1, 1, 1, 1, 0, 1, 1, 1, 1];
+  var side = Math.round(Math.sqrt(weights.length));
+  var halfSide = Math.floor(side / 2);
+  var maskResult = [];
+  for (var y2 = 0; y2 < sh; y2++) {
+    for (var x2 = 0; x2 < sw; x2++) {
+      var so = y2 * sw + x2;
+      var a2 = 0;
+      for (var cy = 0; cy < side; cy++) {
+        for (var cx = 0; cx < side; cx++) {
+          var scy = y2 + cy - halfSide;
+          var scx = x2 + cx - halfSide;
+          if (scy >= 0 && scy < sh && scx >= 0 && scx < sw) {
+            var srcOff = scy * sw + scx;
+            var wt2 = weights[cy * side + cx];
+            a2 += mask2[srcOff] * wt2;
+          }
+        }
+      }
+      maskResult[so] = a2 === 255 * 8 ? 255 : 0;
+    }
+  }
+  return maskResult;
+}
+function dilateMask(mask2, sw, sh) {
+  var weights = [1, 1, 1, 1, 1, 1, 1, 1, 1];
+  var side = Math.round(Math.sqrt(weights.length));
+  var halfSide = Math.floor(side / 2);
+  var maskResult = [];
+  for (var y2 = 0; y2 < sh; y2++) {
+    for (var x2 = 0; x2 < sw; x2++) {
+      var so = y2 * sw + x2;
+      var a2 = 0;
+      for (var cy = 0; cy < side; cy++) {
+        for (var cx = 0; cx < side; cx++) {
+          var scy = y2 + cy - halfSide;
+          var scx = x2 + cx - halfSide;
+          if (scy >= 0 && scy < sh && scx >= 0 && scx < sw) {
+            var srcOff = scy * sw + scx;
+            var wt2 = weights[cy * side + cx];
+            a2 += mask2[srcOff] * wt2;
+          }
+        }
+      }
+      maskResult[so] = a2 >= 255 * 4 ? 255 : 0;
+    }
+  }
+  return maskResult;
+}
+function smoothEdgeMask(mask2, sw, sh) {
+  var weights = [1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9];
+  var side = Math.round(Math.sqrt(weights.length));
+  var halfSide = Math.floor(side / 2);
+  var maskResult = [];
+  for (var y2 = 0; y2 < sh; y2++) {
+    for (var x2 = 0; x2 < sw; x2++) {
+      var so = y2 * sw + x2;
+      var a2 = 0;
+      for (var cy = 0; cy < side; cy++) {
+        for (var cx = 0; cx < side; cx++) {
+          var scy = y2 + cy - halfSide;
+          var scx = x2 + cx - halfSide;
+          if (scy >= 0 && scy < sh && scx >= 0 && scx < sw) {
+            var srcOff = scy * sw + scx;
+            var wt2 = weights[cy * side + cx];
+            a2 += mask2[srcOff] * wt2;
+          }
+        }
+      }
+      maskResult[so] = a2;
+    }
+  }
+  return maskResult;
+}
+var Mask = function(imageData) {
+  var threshold = this.threshold(), mask2 = backgroundMask(imageData, threshold);
+  if (mask2) {
+    mask2 = erodeMask(mask2, imageData.width, imageData.height);
+    mask2 = dilateMask(mask2, imageData.width, imageData.height);
+    mask2 = smoothEdgeMask(mask2, imageData.width, imageData.height);
+    applyMask(imageData, mask2);
+  }
+  return imageData;
+};
+Factory.addGetterSetter(Node2, "threshold", 0, getNumberValidator(), Factory.afterSetFilter);
+
+// node_modules/konva/lib/filters/Noise.js
+var Noise = function(imageData) {
+  var amount = this.noise() * 255, data2 = imageData.data, nPixels = data2.length, half = amount / 2, i2;
+  for (i2 = 0; i2 < nPixels; i2 += 4) {
+    data2[i2 + 0] += half - 2 * half * Math.random();
+    data2[i2 + 1] += half - 2 * half * Math.random();
+    data2[i2 + 2] += half - 2 * half * Math.random();
+  }
+};
+Factory.addGetterSetter(Node2, "noise", 0.2, getNumberValidator(), Factory.afterSetFilter);
+
+// node_modules/konva/lib/filters/Pixelate.js
+var Pixelate = function(imageData) {
+  var pixelSize = Math.ceil(this.pixelSize()), width = imageData.width, height = imageData.height, x2, y2, i2, red, green, blue, alpha, nBinsX = Math.ceil(width / pixelSize), nBinsY = Math.ceil(height / pixelSize), xBinStart, xBinEnd, yBinStart, yBinEnd, xBin, yBin, pixelsInBin, data2 = imageData.data;
+  if (pixelSize <= 0) {
+    Util.error("pixelSize value can not be <= 0");
+    return;
+  }
+  for (xBin = 0; xBin < nBinsX; xBin += 1) {
+    for (yBin = 0; yBin < nBinsY; yBin += 1) {
+      red = 0;
+      green = 0;
+      blue = 0;
+      alpha = 0;
+      xBinStart = xBin * pixelSize;
+      xBinEnd = xBinStart + pixelSize;
+      yBinStart = yBin * pixelSize;
+      yBinEnd = yBinStart + pixelSize;
+      pixelsInBin = 0;
+      for (x2 = xBinStart; x2 < xBinEnd; x2 += 1) {
+        if (x2 >= width) {
+          continue;
+        }
+        for (y2 = yBinStart; y2 < yBinEnd; y2 += 1) {
+          if (y2 >= height) {
+            continue;
+          }
+          i2 = (width * y2 + x2) * 4;
+          red += data2[i2 + 0];
+          green += data2[i2 + 1];
+          blue += data2[i2 + 2];
+          alpha += data2[i2 + 3];
+          pixelsInBin += 1;
+        }
+      }
+      red = red / pixelsInBin;
+      green = green / pixelsInBin;
+      blue = blue / pixelsInBin;
+      alpha = alpha / pixelsInBin;
+      for (x2 = xBinStart; x2 < xBinEnd; x2 += 1) {
+        if (x2 >= width) {
+          continue;
+        }
+        for (y2 = yBinStart; y2 < yBinEnd; y2 += 1) {
+          if (y2 >= height) {
+            continue;
+          }
+          i2 = (width * y2 + x2) * 4;
+          data2[i2 + 0] = red;
+          data2[i2 + 1] = green;
+          data2[i2 + 2] = blue;
+          data2[i2 + 3] = alpha;
+        }
+      }
+    }
+  }
+};
+Factory.addGetterSetter(Node2, "pixelSize", 8, getNumberValidator(), Factory.afterSetFilter);
+
+// node_modules/konva/lib/filters/Posterize.js
+var Posterize = function(imageData) {
+  var levels = Math.round(this.levels() * 254) + 1, data2 = imageData.data, len = data2.length, scale = 255 / levels, i2;
+  for (i2 = 0; i2 < len; i2 += 1) {
+    data2[i2] = Math.floor(data2[i2] / scale) * scale;
+  }
+};
+Factory.addGetterSetter(Node2, "levels", 0.5, getNumberValidator(), Factory.afterSetFilter);
+
+// node_modules/konva/lib/filters/RGB.js
+var RGB = function(imageData) {
+  var data2 = imageData.data, nPixels = data2.length, red = this.red(), green = this.green(), blue = this.blue(), i2, brightness;
+  for (i2 = 0; i2 < nPixels; i2 += 4) {
+    brightness = (0.34 * data2[i2] + 0.5 * data2[i2 + 1] + 0.16 * data2[i2 + 2]) / 255;
+    data2[i2] = brightness * red;
+    data2[i2 + 1] = brightness * green;
+    data2[i2 + 2] = brightness * blue;
+    data2[i2 + 3] = data2[i2 + 3];
+  }
+};
+Factory.addGetterSetter(Node2, "red", 0, function(val) {
+  this._filterUpToDate = false;
+  if (val > 255) {
+    return 255;
+  } else if (val < 0) {
+    return 0;
+  } else {
+    return Math.round(val);
+  }
+});
+Factory.addGetterSetter(Node2, "green", 0, function(val) {
+  this._filterUpToDate = false;
+  if (val > 255) {
+    return 255;
+  } else if (val < 0) {
+    return 0;
+  } else {
+    return Math.round(val);
+  }
+});
+Factory.addGetterSetter(Node2, "blue", 0, RGBComponent, Factory.afterSetFilter);
+
+// node_modules/konva/lib/filters/RGBA.js
+var RGBA = function(imageData) {
+  var data2 = imageData.data, nPixels = data2.length, red = this.red(), green = this.green(), blue = this.blue(), alpha = this.alpha(), i2, ia;
+  for (i2 = 0; i2 < nPixels; i2 += 4) {
+    ia = 1 - alpha;
+    data2[i2] = red * alpha + data2[i2] * ia;
+    data2[i2 + 1] = green * alpha + data2[i2 + 1] * ia;
+    data2[i2 + 2] = blue * alpha + data2[i2 + 2] * ia;
+  }
+};
+Factory.addGetterSetter(Node2, "red", 0, function(val) {
+  this._filterUpToDate = false;
+  if (val > 255) {
+    return 255;
+  } else if (val < 0) {
+    return 0;
+  } else {
+    return Math.round(val);
+  }
+});
+Factory.addGetterSetter(Node2, "green", 0, function(val) {
+  this._filterUpToDate = false;
+  if (val > 255) {
+    return 255;
+  } else if (val < 0) {
+    return 0;
+  } else {
+    return Math.round(val);
+  }
+});
+Factory.addGetterSetter(Node2, "blue", 0, RGBComponent, Factory.afterSetFilter);
+Factory.addGetterSetter(Node2, "alpha", 1, function(val) {
+  this._filterUpToDate = false;
+  if (val > 1) {
+    return 1;
+  } else if (val < 0) {
+    return 0;
+  } else {
+    return val;
+  }
+});
+
+// node_modules/konva/lib/filters/Sepia.js
+var Sepia = function(imageData) {
+  var data2 = imageData.data, nPixels = data2.length, i2, r2, g2, b2;
+  for (i2 = 0; i2 < nPixels; i2 += 4) {
+    r2 = data2[i2 + 0];
+    g2 = data2[i2 + 1];
+    b2 = data2[i2 + 2];
+    data2[i2 + 0] = Math.min(255, r2 * 0.393 + g2 * 0.769 + b2 * 0.189);
+    data2[i2 + 1] = Math.min(255, r2 * 0.349 + g2 * 0.686 + b2 * 0.168);
+    data2[i2 + 2] = Math.min(255, r2 * 0.272 + g2 * 0.534 + b2 * 0.131);
+  }
+};
+
+// node_modules/konva/lib/filters/Solarize.js
+var Solarize = function(imageData) {
+  var data2 = imageData.data, w3 = imageData.width, h2 = imageData.height, w4 = w3 * 4, y2 = h2;
+  do {
+    var offsetY = (y2 - 1) * w4;
+    var x2 = w3;
+    do {
+      var offset = offsetY + (x2 - 1) * 4;
+      var r2 = data2[offset];
+      var g2 = data2[offset + 1];
+      var b2 = data2[offset + 2];
+      if (r2 > 127) {
+        r2 = 255 - r2;
+      }
+      if (g2 > 127) {
+        g2 = 255 - g2;
+      }
+      if (b2 > 127) {
+        b2 = 255 - b2;
+      }
+      data2[offset] = r2;
+      data2[offset + 1] = g2;
+      data2[offset + 2] = b2;
+    } while (--x2);
+  } while (--y2);
+};
+
+// node_modules/konva/lib/filters/Threshold.js
+var Threshold = function(imageData) {
+  var level = this.threshold() * 255, data2 = imageData.data, len = data2.length, i2;
+  for (i2 = 0; i2 < len; i2 += 1) {
+    data2[i2] = data2[i2] < level ? 0 : 255;
+  }
+};
+Factory.addGetterSetter(Node2, "threshold", 0.5, getNumberValidator(), Factory.afterSetFilter);
+
+// node_modules/konva/lib/_FullInternals.js
+var Konva3 = Konva2.Util._assign(Konva2, {
+  Arc,
+  Arrow,
+  Circle,
+  Ellipse,
+  Image,
+  Label,
+  Tag,
+  Line: Line2,
+  Path: Path2,
+  Rect,
+  RegularPolygon,
+  Ring,
+  Sprite: Sprite2,
+  Star,
+  Text,
+  TextPath,
+  Transformer,
+  Wedge,
+  Filters: {
+    Blur,
+    Brighten,
+    Contrast,
+    Emboss,
+    Enhance,
+    Grayscale,
+    HSL,
+    HSV,
+    Invert,
+    Kaleidoscope,
+    Mask,
+    Noise,
+    Pixelate,
+    Posterize,
+    RGB,
+    RGBA,
+    Sepia,
+    Solarize,
+    Threshold
+  }
+});
+
+// node_modules/react-konva/es/ReactKonvaCore.js
+var import_react20 = __toModule(require("react"));
+
+// node_modules/konva/lib/Core.js
+var Core_default = Konva2;
+
+// node_modules/react-konva/es/ReactKonvaCore.js
+var import_react_reconciler2 = __toModule(require_react_reconciler2());
+
+// node_modules/react-konva/es/ReactKonvaHostConfig.js
+var ReactKonvaHostConfig_exports = {};
+__export(ReactKonvaHostConfig_exports, {
+  appendChild: () => appendChild2,
+  appendChildToContainer: () => appendChildToContainer,
+  appendInitialChild: () => appendInitialChild,
+  cancelTimeout: () => cancelTimeout,
+  clearContainer: () => clearContainer,
+  commitMount: () => commitMount,
+  commitTextUpdate: () => commitTextUpdate,
+  commitUpdate: () => commitUpdate,
+  createInstance: () => createInstance2,
+  createTextInstance: () => createTextInstance,
+  finalizeInitialChildren: () => finalizeInitialChildren,
+  getChildHostContext: () => getChildHostContext,
+  getPublicInstance: () => getPublicInstance,
+  getRootHostContext: () => getRootHostContext,
+  hideInstance: () => hideInstance,
+  hideTextInstance: () => hideTextInstance,
+  idlePriority: () => import_scheduler2.unstable_IdlePriority,
+  insertBefore: () => insertBefore2,
+  insertInContainerBefore: () => insertInContainerBefore,
+  isPrimaryRenderer: () => isPrimaryRenderer,
+  noTimeout: () => noTimeout,
+  now: () => import_scheduler2.unstable_now,
+  prepareForCommit: () => prepareForCommit,
+  preparePortalMount: () => preparePortalMount,
+  prepareUpdate: () => prepareUpdate,
+  removeChild: () => removeChild2,
+  removeChildFromContainer: () => removeChildFromContainer,
+  resetAfterCommit: () => resetAfterCommit,
+  resetTextContent: () => resetTextContent,
+  run: () => import_scheduler2.unstable_runWithPriority,
+  scheduleTimeout: () => scheduleTimeout,
+  shouldDeprioritizeSubtree: () => shouldDeprioritizeSubtree,
+  shouldSetTextContent: () => shouldSetTextContent,
+  supportsMutation: () => supportsMutation,
+  unhideInstance: () => unhideInstance,
+  unhideTextInstance: () => unhideTextInstance,
+  warnsIfNotActing: () => warnsIfNotActing
+});
+
+// node_modules/react-konva/es/makeUpdates.js
+var propsToSkip = {
+  children: true,
+  ref: true,
+  key: true,
+  style: true,
+  forwardedRef: true,
+  unstable_applyCache: true,
+  unstable_applyDrawHitFromCache: true
+};
+var zIndexWarningShowed = false;
+var dragWarningShowed = false;
+var EVENTS_NAMESPACE = ".react-konva-event";
+var useStrictMode = false;
+var DRAGGABLE_WARNING = "ReactKonva: You have a Konva node with draggable = true and position defined but no onDragMove or onDragEnd events are handled.\nPosition of a node will be changed during drag&drop, so you should update state of the react app as well.\nConsider to add onDragMove or onDragEnd events.\nFor more info see: https://github.com/konvajs/react-konva/issues/256\n";
+var Z_INDEX_WARNING = 'ReactKonva: You are using "zIndex" attribute for a Konva node.\nreact-konva may get confused with ordering. Just define correct order of elements in your render function of a component.\nFor more info see: https://github.com/konvajs/react-konva/issues/194\n';
+var EMPTY_PROPS = {};
+function applyNodeProps(instance, props) {
+  var oldProps = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : EMPTY_PROPS;
+  if (props === oldProps) {
+    console.error("same props");
+  }
+  if (!zIndexWarningShowed && "zIndex" in props) {
+    console.warn(Z_INDEX_WARNING);
+    zIndexWarningShowed = true;
+  }
+  if (!dragWarningShowed && props.draggable) {
+    var hasPosition = props.x !== void 0 || props.y !== void 0;
+    var hasEvents = props.onDragEnd || props.onDragMove;
+    if (hasPosition && !hasEvents) {
+      console.warn(DRAGGABLE_WARNING);
+      dragWarningShowed = true;
+    }
+  }
+  for (var key in oldProps) {
+    if (propsToSkip[key]) {
+      continue;
+    }
+    var isEvent = key.slice(0, 2) === "on";
+    var propChanged = oldProps[key] !== props[key];
+    if (isEvent && propChanged) {
+      var eventName = key.substr(2).toLowerCase();
+      if (eventName.substr(0, 7) === "content") {
+        eventName = "content" + eventName.substr(7, 1).toUpperCase() + eventName.substr(8);
+      }
+      instance.off(eventName, oldProps[key]);
+    }
+    var toRemove = !props.hasOwnProperty(key);
+    if (toRemove) {
+      instance.setAttr(key, void 0);
+    }
+  }
+  var strictUpdate = useStrictMode || props._useStrictMode;
+  var updatedProps = {};
+  var hasUpdates = false;
+  var newEvents = {};
+  for (var key in props) {
+    if (propsToSkip[key]) {
+      continue;
+    }
+    var isEvent = key.slice(0, 2) === "on";
+    var toAdd = oldProps[key] !== props[key];
+    if (isEvent && toAdd) {
+      var eventName = key.substr(2).toLowerCase();
+      if (eventName.substr(0, 7) === "content") {
+        eventName = "content" + eventName.substr(7, 1).toUpperCase() + eventName.substr(8);
+      }
+      if (props[key]) {
+        newEvents[eventName] = props[key];
+      }
+    }
+    if (!isEvent && (props[key] !== oldProps[key] || strictUpdate && props[key] !== instance.getAttr(key))) {
+      hasUpdates = true;
+      updatedProps[key] = props[key];
+    }
+  }
+  if (hasUpdates) {
+    instance.setAttrs(updatedProps);
+    updatePicture(instance);
+  }
+  for (var eventName in newEvents) {
+    instance.on(eventName + EVENTS_NAMESPACE, newEvents[eventName]);
+  }
+}
+function updatePicture(node2) {
+  if (!Konva.autoDrawEnabled) {
+    var drawingNode = node2.getLayer() || node2.getStage();
+    drawingNode && drawingNode.batchDraw();
+  }
+}
+
+// node_modules/react-konva/es/ReactKonvaHostConfig.js
+var import_scheduler2 = __toModule(require_scheduler());
+var NO_CONTEXT = {};
+var UPDATE_SIGNAL = {};
+Core_default.Node.prototype._applyProps = applyNodeProps;
+function appendInitialChild(parentInstance, child) {
+  if (typeof child === "string") {
+    console.error("Do not use plain text as child of Konva.Node. You are using text: " + child);
+    return;
+  }
+  parentInstance.add(child);
+  updatePicture(parentInstance);
+}
+function createInstance2(type, props, internalInstanceHandle) {
+  var NodeClass = Core_default[type];
+  if (!NodeClass) {
+    console.error("Konva has no node with the type " + type + '. If you use minimal version of react-konva, just import required nodes into Konva: "import "konva/lib/shapes/' + type + '"  If you want to render DOM elements as part of canvas tree take a look into this demo: https://konvajs.github.io/docs/react/DOM_Portal.html');
+    return;
+  }
+  var propsWithoutEvents = {};
+  var propsWithOnlyEvents = {};
+  for (var key in props) {
+    var isEvent = key.slice(0, 2) === "on";
+    if (isEvent) {
+      propsWithOnlyEvents[key] = props[key];
+    } else {
+      propsWithoutEvents[key] = props[key];
+    }
+  }
+  var instance = new NodeClass(propsWithoutEvents);
+  applyNodeProps(instance, propsWithOnlyEvents);
+  return instance;
+}
+function createTextInstance(text, rootContainerInstance, internalInstanceHandle) {
+  console.error('Text components are not supported for now in ReactKonva. Your text is: "' + text + '"');
+}
+function finalizeInitialChildren(domElement, type, props) {
+  return false;
+}
+function getPublicInstance(instance) {
+  return instance;
+}
+function prepareForCommit() {
+  return null;
+}
+function preparePortalMount() {
+  return null;
+}
+function prepareUpdate(domElement, type, oldProps, newProps) {
+  return UPDATE_SIGNAL;
+}
+function resetAfterCommit() {
+}
+function resetTextContent(domElement) {
+}
+function shouldDeprioritizeSubtree(type, props) {
+  return false;
+}
+function getRootHostContext() {
+  return NO_CONTEXT;
+}
+function getChildHostContext() {
+  return NO_CONTEXT;
+}
+var scheduleTimeout = setTimeout;
+var cancelTimeout = clearTimeout;
+var noTimeout = -1;
+function shouldSetTextContent(type, props) {
+  return false;
+}
+var isPrimaryRenderer = false;
+var warnsIfNotActing = true;
+var supportsMutation = true;
+function appendChild2(parentInstance, child) {
+  if (child.parent === parentInstance) {
+    child.moveToTop();
+  } else {
+    parentInstance.add(child);
+  }
+  updatePicture(parentInstance);
+}
+function appendChildToContainer(parentInstance, child) {
+  if (child.parent === parentInstance) {
+    child.moveToTop();
+  } else {
+    parentInstance.add(child);
+  }
+  updatePicture(parentInstance);
+}
+function insertBefore2(parentInstance, child, beforeChild) {
+  child._remove();
+  parentInstance.add(child);
+  child.setZIndex(beforeChild.getZIndex());
+  updatePicture(parentInstance);
+}
+function insertInContainerBefore(parentInstance, child, beforeChild) {
+  insertBefore2(parentInstance, child, beforeChild);
+}
+function removeChild2(parentInstance, child) {
+  child.destroy();
+  child.off(EVENTS_NAMESPACE);
+  updatePicture(parentInstance);
+}
+function removeChildFromContainer(parentInstance, child) {
+  child.destroy();
+  child.off(EVENTS_NAMESPACE);
+  updatePicture(parentInstance);
+}
+function commitTextUpdate(textInstance, oldText, newText) {
+  console.error('Text components are not yet supported in ReactKonva. You text is: "' + newText + '"');
+}
+function commitMount(instance, type, newProps) {
+}
+function commitUpdate(instance, updatePayload, type, oldProps, newProps) {
+  applyNodeProps(instance, newProps, oldProps);
+}
+function hideInstance(instance) {
+  instance.hide();
+  updatePicture(instance);
+}
+function hideTextInstance(textInstance) {
+}
+function unhideInstance(instance, props) {
+  if (props.visible == null || props.visible) {
+    instance.show();
+  }
+}
+function unhideTextInstance(textInstance, text) {
+}
+function clearContainer(container) {
+}
+
+// node_modules/react-konva/es/ReactKonvaCore.js
+"use strict";
+var _extends3 = Object.assign || function(target) {
+  for (var i2 = 1; i2 < arguments.length; i2++) {
+    var source = arguments[i2];
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+  return target;
+};
+var EXPECTED_REACT_VERSION = "17";
+var __matchRectVersion = import_react20.default.version.split(".")[0] === EXPECTED_REACT_VERSION;
+if (!__matchRectVersion) {
+  command = "npm install react@" + EXPECTED_REACT_VERSION + " react-dom@" + EXPECTED_REACT_VERSION;
+  console.warn("Version mismatch detected for react-konva and react. react-konva expects to have react version " + EXPECTED_REACT_VERSION + ", but it has version " + import_react20.default.version + '. Make sure versions are matched, otherwise, react-konva work is not guaranteed. You can use this command: "' + command + '"');
+}
+var command;
+function usePrevious(value) {
+  var ref = import_react20.default.useRef();
+  import_react20.default.useLayoutEffect(function() {
+    ref.current = value;
+  });
+  return ref.current;
+}
+var StageWrap = function StageWrap2(props) {
+  var container = import_react20.default.useRef();
+  var stage = import_react20.default.useRef();
+  var fiberRef = import_react20.default.useRef();
+  var oldProps = usePrevious(props);
+  var _setRef = function _setRef2(stage2) {
+    var forwardedRef = props.forwardedRef;
+    if (!forwardedRef) {
+      return;
+    }
+    if (typeof forwardedRef === "function") {
+      forwardedRef(stage2);
+    } else {
+      forwardedRef.current = stage2;
+    }
+  };
+  import_react20.default.useLayoutEffect(function() {
+    stage.current = new Core_default.Stage({
+      width: props.width,
+      height: props.height,
+      container: container.current
+    });
+    _setRef(stage.current);
+    fiberRef.current = KonvaRenderer.createContainer(stage.current);
+    KonvaRenderer.updateContainer(props.children, fiberRef.current);
+    return function() {
+      if (!Core_default.isBrowser) {
+        return;
+      }
+      _setRef(null);
+      KonvaRenderer.updateContainer(null, fiberRef.current, null);
+      stage.current.destroy();
+    };
+  }, []);
+  import_react20.default.useLayoutEffect(function() {
+    _setRef(stage.current);
+    applyNodeProps(stage.current, props, oldProps);
+    KonvaRenderer.updateContainer(props.children, fiberRef.current, null);
+  });
+  return import_react20.default.createElement("div", {
+    ref: container,
+    accessKey: props.accessKey,
+    className: props.className,
+    role: props.role,
+    style: props.style,
+    tabIndex: props.tabIndex,
+    title: props.title
+  });
+};
+var Layer2 = "Layer";
+var Rect2 = "Rect";
+var KonvaRenderer = (0, import_react_reconciler2.default)(ReactKonvaHostConfig_exports);
+KonvaRenderer.injectIntoDevTools({
+  findHostInstanceByFiber: function findHostInstanceByFiber() {
+    return null;
+  },
+  bundleType: false ? 1 : 0,
+  version: import_react20.default.version,
+  rendererPackageName: "react-konva"
+});
+var Stage2 = import_react20.default.forwardRef(function(props, ref) {
+  return import_react20.default.createElement(StageWrap, _extends3({}, props, {forwardedRef: ref}));
+});
+
+// node_modules/react-konva/es/ReactKonva.js
+"use strict";
+
+// src/gol.tsx
+var valueAt = (cells, x2, y2, cols) => cells[(y2 * cols + x2) % cells.length] ? 1 : 0;
+var liveNeighbors = (cells, x2, y2, cols) => valueAt(cells, x2 - 1, y2 - 1, cols) + valueAt(cells, x2 - 0, y2 - 1, cols) + valueAt(cells, x2 + 1, y2 - 1, cols) + valueAt(cells, x2 - 1, y2 - 0, cols) + valueAt(cells, x2 + 1, y2 - 0, cols) + valueAt(cells, x2 - 1, y2 + 1, cols) + valueAt(cells, x2 - 0, y2 + 1, cols) + valueAt(cells, x2 + 1, y2 + 1, cols);
+var mapCells = (cells, cols, itr) => cells.map((cell, index4) => {
+  const x2 = index4 % cols;
+  const y2 = Math.floor(index4 / cols);
+  return itr(cell, liveNeighbors(cells, x2, y2, cols));
+});
+function Gol(props) {
+  const {cols, deadColor, framesPerSecond, height, liveColor, rows, width} = props;
+  const sX = width / cols;
+  const sY = height / rows;
+  const [cells, setCells] = (0, import_react21.useState)([]);
+  (0, import_react21.useEffect)(() => {
+    setCells([...Array(rows * cols)].map((it2) => Math.random() >= 0.5));
+  }, [rows, cols]);
+  const nextFrame = () => {
+    setCells(mapCells(cells, cols, (alive, liveNeighbors2) => {
+      if (liveNeighbors2 < 2 || liveNeighbors2 > 3) {
+        return false;
+      } else if (liveNeighbors2 === 3) {
+        return true;
+      }
+      return alive;
+    }));
+  };
+  (0, import_react21.useEffect)(() => {
+    const timer = setInterval(nextFrame, 1e3 / framesPerSecond);
+    return () => clearInterval(timer);
+  });
+  return /* @__PURE__ */ import_react21.default.createElement(Stage2, {
+    width: window.innerWidth,
+    height: window.innerHeight
+  }, /* @__PURE__ */ import_react21.default.createElement(Layer2, null, cells.map((cell, index4) => /* @__PURE__ */ import_react21.default.createElement(Rect2, {
+    key: index4,
+    x: sX * (index4 % cols) + 2,
+    y: sY * Math.floor(index4 / cols) + 2,
+    width: sX - 4,
+    height: sY - 4,
+    fill: cell ? liveColor : deadColor
+  }))));
+}
+var GolDescription = {
+  name: "Gol",
+  description: "The Gol Component ...",
+  author: "Playful Software",
+  icon: "...",
+  preview: "...",
+  collection: "React Test Kit",
+  renderer: Gol,
+  extends: "Play Kit/View",
+  properties: {
+    cols: {type: "number", title: "Cols", default: 20},
+    deadColor: {type: "string", title: "Dead Color", default: "transparent", editor: "Color"},
+    framesPerSecond: {type: "number", title: "Frames Per Second", default: 8},
+    height: {type: "number", title: "Height", default: 300},
+    liveColor: {type: "string", title: "Live Color", default: "#AFC", editor: "Color"},
+    rows: {type: "number", title: "Rows", default: 20},
+    width: {type: "number", title: "Width", default: 300}
+  }
+};
+
 // src/index.ts
 var kit = {
   title: "React Test Kit",
@@ -60088,7 +75165,8 @@ var kit = {
     import_chart_xkcd.RadarChartDescription,
     ClockDescription,
     WarpSpeedDescription,
-    MapDescription
+    MapDescription,
+    GolDescription
   ]
 };
 //# sourceMappingURL=index.js.map
