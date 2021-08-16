@@ -9,13 +9,6 @@ import L, { Map, TileLayer, Marker } from 'leaflet';
 // @ts-ignore
 import leafletCssUrl from 'url!./leaflet.css';
 
-// Dynamically load leaflet's CSS.
-// TODO: How to unload?
-const link = document.createElement('link');
-link.rel = 'stylesheet';
-link.href = leafletCssUrl;
-document.head.appendChild(link);
-
 // TODO: Ideally these images would be hosted alongside the component.
 L.Icon.Default.imagePath = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/';
 
@@ -129,9 +122,18 @@ const MapPrototype = {
   _map: undefined! as Map,
   _tileLayer: undefined! as TileLayer,
   _marker: undefined as Marker | undefined,
+  _link: undefined as HTMLLinkElement | undefined,
 
   mount(container: HTMLElement, insertBefore?: HTMLElement) {
     super.mount(container, insertBefore);
+
+    // Dynamically load leaflet's CSS.
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = leafletCssUrl;
+    const shadowRoot = (container.getRootNode() as HTMLElement) || document.head;
+    shadowRoot?.appendChild(link);
+    this._link = link;
 
     this._map = L.map(this._element, {
       // TODO: Make these options properties
@@ -164,6 +166,9 @@ const MapPrototype = {
     super.unmount();
     if (this._map) {
       this._map.remove();
+    }
+    if (this._link) {
+      this._link.remove();
     }
   },
 
