@@ -9729,7 +9729,6 @@ var require_WarpSpeed = __commonJS((exports2, module2) => {
       this.size = 0.5 + Math.random();
     }
     function WarpSpeed2(targetId, config) {
-      console.log(config);
       this.targetId = targetId;
       if (WarpSpeed2.RUNNING_INSTANCES === void 0)
         WarpSpeed2.RUNNING_INSTANCES = {};
@@ -9753,7 +9752,7 @@ var require_WarpSpeed = __commonJS((exports2, module2) => {
       this.WARP_EFFECT_LENGTH = config.warpEffectLength === void 0 ? 5 : config.warpEffectLength < 0 ? 0 : config.warpEffectLength;
       this.STAR_SCALE = config.starSize === void 0 || config.starSize <= 0 ? 3 : config.starSize;
       this.BACKGROUND_COLOR = config.backgroundColor === void 0 ? "hsl(263,45%,7%)" : config.backgroundColor;
-      var canvas = document.getElementById(this.targetId);
+      var canvas = this.canvas = config.canvas || document.getElementById(this.targetId);
       canvas.width = 1;
       canvas.height = 1;
       var ctx = canvas.getContext("2d");
@@ -9781,12 +9780,12 @@ var require_WarpSpeed = __commonJS((exports2, module2) => {
       constructor: WarpSpeed2,
       draw: function() {
         var TIME = timeStamp();
-        if (!document.getElementById(this.targetId)) {
+        if (!this.canvas && !document.getElementById(this.targetId)) {
           this.destroy();
           return;
         }
         this.move();
-        var canvas = document.getElementById(this.targetId);
+        var canvas = this.canvas;
         if (!this.PAUSED && isVisible(canvas)) {
           if (this.prevW !== canvas.clientWidth || this.prevH !== canvas.clientHeight) {
             canvas.width = (canvas.clientWidth < 10 ? 10 : canvas.clientWidth) * (window.devicePixelRatio || 1);
@@ -64319,7 +64318,8 @@ function WarpSpeedComponent(props) {
       depthFade,
       starSize,
       backgroundColor,
-      starColor: color
+      starColor: color,
+      canvas
     });
     if (pause) {
       ws.pause();
