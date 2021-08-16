@@ -60,7 +60,6 @@
     }
 
     function WarpSpeed(targetId,config){
-        console.log(config)
         this.targetId=targetId;
         if(WarpSpeed.RUNNING_INSTANCES===undefined)WarpSpeed.RUNNING_INSTANCES={};
         if(WarpSpeed.RUNNING_INSTANCES[targetId]){WarpSpeed.RUNNING_INSTANCES[targetId].destroy();}
@@ -75,8 +74,8 @@
         this.WARP_EFFECT=config.warpEffect===undefined?true:config.warpEffect;
         this.WARP_EFFECT_LENGTH=config.warpEffectLength===undefined?5:config.warpEffectLength<0?0:config.warpEffectLength;
         this.STAR_SCALE=config.starSize===undefined||config.starSize<=0?3:config.starSize;
-        this.BACKGROUND_COLOR=config.backgroundColor===undefined?"hsl(263,45%,7%)":config.backgroundColor;	
-        var canvas=document.getElementById(this.targetId);
+        this.BACKGROUND_COLOR=config.backgroundColor===undefined?"hsl(263,45%,7%)":config.backgroundColor;
+        var canvas = this.canvas = config.canvas || document.getElementById(this.targetId)
         canvas.width=1; canvas.height=1;
         var ctx=canvas.getContext("2d");
         ctx.fillStyle=this.BACKGROUND_COLOR;
@@ -101,12 +100,12 @@
         constructor:WarpSpeed,
         draw:function(){
             var TIME=timeStamp();
-            if(!(document.getElementById(this.targetId))){
+            if(!this.canvas && !(document.getElementById(this.targetId))){
                 this.destroy();
                 return;
             }
             this.move();
-            var canvas=document.getElementById(this.targetId);
+            var canvas=this.canvas;
             if(!this.PAUSED&&isVisible(canvas)){
                 if(this.prevW!==canvas.clientWidth||this.prevH!==canvas.clientHeight){
                     canvas.width=(canvas.clientWidth<10?10:canvas.clientWidth)*(window.devicePixelRatio||1);

@@ -52,6 +52,7 @@ function WarpSpeedComponent(props: WarpSpeedProperties) {
       starSize,
       backgroundColor,
       starColor: color,
+      canvas,
     });
     if (pause) {
       ws.pause();
