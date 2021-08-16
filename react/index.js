@@ -12562,14 +12562,14 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
             }, this);
           }
         }
-        var link2 = this._layersLink = create$1("a", className + "-toggle", container);
-        link2.href = "#";
-        link2.title = "Layers";
+        var link = this._layersLink = create$1("a", className + "-toggle", container);
+        link.href = "#";
+        link.title = "Layers";
         if (touch) {
-          on(link2, "click", stop);
-          on(link2, "click", this.expand, this);
+          on(link, "click", stop);
+          on(link, "click", this.expand, this);
         } else {
-          on(link2, "focus", this.expand, this);
+          on(link, "focus", this.expand, this);
         }
         if (!collapsed) {
           this.expand();
@@ -12758,17 +12758,17 @@ var require_leaflet_src = __commonJS((exports2, module2) => {
         }
       },
       _createButton: function(html, title, className, container, fn) {
-        var link2 = create$1("a", className, container);
-        link2.innerHTML = html;
-        link2.href = "#";
-        link2.title = title;
-        link2.setAttribute("role", "button");
-        link2.setAttribute("aria-label", title);
-        disableClickPropagation(link2);
-        on(link2, "click", stop);
-        on(link2, "click", fn, this);
-        on(link2, "click", this._refocusOnMap, this);
-        return link2;
+        var link = create$1("a", className, container);
+        link.innerHTML = html;
+        link.href = "#";
+        link.title = title;
+        link.setAttribute("role", "button");
+        link.setAttribute("aria-label", title);
+        disableClickPropagation(link);
+        on(link, "click", stop);
+        on(link, "click", fn, this);
+        on(link, "click", this._refocusOnMap, this);
+        return link;
       },
       _updateDisabled: function() {
         var map = this._map, className = "leaflet-disabled";
@@ -52722,8 +52722,8 @@ var StyleRule = /* @__PURE__ */ function(_BaseStyleRule) {
   };
   _proto2.toString = function toString(options2) {
     var sheet = this.options.sheet;
-    var link2 = sheet ? sheet.options.link : false;
-    var opts = link2 ? _extends({}, options2, {
+    var link = sheet ? sheet.options.link : false;
+    var opts = link ? _extends({}, options2, {
       allowEmpty: true
     }) : options2;
     return toCss(this.selectorText, this.style, opts);
@@ -52939,8 +52939,8 @@ var KeyframeRule = /* @__PURE__ */ function(_BaseStyleRule) {
   var _proto = KeyframeRule2.prototype;
   _proto.toString = function toString(options2) {
     var sheet = this.options.sheet;
-    var link2 = sheet ? sheet.options.link : false;
-    var opts = link2 ? _extends({}, options2, {
+    var link = sheet ? sheet.options.link : false;
+    var opts = link ? _extends({}, options2, {
       allowEmpty: true
     }) : options2;
     return toCss(this.key, this.style, opts);
@@ -53190,11 +53190,11 @@ var RuleList = /* @__PURE__ */ function() {
   _proto.toString = function toString(options2) {
     var str = "";
     var sheet = this.options.sheet;
-    var link2 = sheet ? sheet.options.link : false;
+    var link = sheet ? sheet.options.link : false;
     for (var index4 = 0; index4 < this.index.length; index4++) {
       var rule = this.index[index4];
       var css7 = rule.toString(options2);
-      if (!css7 && !link2)
+      if (!css7 && !link)
         continue;
       if (str)
         str += "\n";
@@ -55715,7 +55715,7 @@ var getStyles = function getStyles2(options2) {
   false ? tiny_warning_esm_default(styles.length !== 0, "[JSS] <" + (options2.name || "Hook") + ` />'s styles function doesn't rely on the "theme" argument. We recommend declaring styles as an object instead.`) : void 0;
   return styles(options2.theme);
 };
-function getSheetOptions(options2, link2) {
+function getSheetOptions(options2, link) {
   var minify;
   if (options2.context.id && options2.context.id.minify != null) {
     minify = options2.context.id.minify;
@@ -55732,7 +55732,7 @@ function getSheetOptions(options2, link2) {
     index: options2.index,
     meta,
     classNamePrefix,
-    link: link2,
+    link,
     generateId: options2.sheetOptions.generateId || options2.context.generateId
   });
 }
@@ -64457,10 +64457,6 @@ var WarpSpeedDescription = {
 // src/leaflet.tsx
 var import_leaflet = __toModule(require_leaflet_src());
 var import_leaflet2 = __toModule(require("url!./leaflet.css"));
-var link = document.createElement("link");
-link.rel = "stylesheet";
-link.href = import_leaflet2.default;
-document.head.appendChild(link);
 import_leaflet.default.Icon.Default.imagePath = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/";
 var tilesets = {
   custom: [void 0, void 0, 18],
@@ -64546,8 +64542,15 @@ var MapPrototype = {
   _map: void 0,
   _tileLayer: void 0,
   _marker: void 0,
+  _link: void 0,
   mount(container, insertBefore3) {
     super.mount(container, insertBefore3);
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = import_leaflet2.default;
+    const shadowRoot = container.getRootNode() || document.head;
+    shadowRoot == null ? void 0 : shadowRoot.appendChild(link);
+    this._link = link;
     this._map = import_leaflet.default.map(this._element, {
       attributionControl: true,
       zoomControl: true,
@@ -64574,6 +64577,9 @@ var MapPrototype = {
     super.unmount();
     if (this._map) {
       this._map.remove();
+    }
+    if (this._link) {
+      this._link.remove();
     }
   },
   update(changed) {
