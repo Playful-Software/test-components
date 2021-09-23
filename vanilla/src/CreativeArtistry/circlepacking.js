@@ -83,45 +83,47 @@ const CirclePackingPrototype = {
 };
 
 export const CirclePackingDescription = {
-  title: 'Circle Packing',
   name: 'CirclePacking',
   prototype: CirclePackingPrototype,
   extends: 'Test Kit/Canvas',
-  properties: {
-    color: { type: 'string', title: 'Color', default: '#ff0000', editor: 'Color' },
-    totalCircles: {
-      type: 'number',
-      title: 'Total Circles',
-      default: 500,
-      editor: { type: 'Number', min: 1, max: 1000 },
+  _meta: {
+    title: 'Circle Packing',
+    properties: {
+      color: { type: 'string', title: 'Color', default: '#ff0000', editor: 'Color' },
+      totalCircles: {
+        type: 'number',
+        title: 'Total Circles',
+        default: 500,
+        editor: { type: 'Number', min: 1, max: 1000 },
+      },
+      lineWidth: {
+        type: 'number',
+        title: 'Line Thickness',
+        default: 2,
+        editor: { type: 'Number', min: 1, max: 50, step: 1 },
+      },
+      minRadius: {
+        type: 'number',
+        title: 'Min Radius',
+        default: 1,
+        editor: { type: 'Number', min: 1, max: 200, step: 1 },
+      },
+      maxRadius: {
+        type: 'number',
+        title: 'Max Radius',
+        default: 100,
+        editor: { type: 'Number', min: 1, max: 100, step: 1 },
+      },
+      seed: {
+        type: 'number',
+        title: 'Random Seed',
+        default: 1,
+        editor: { type: 'Number', min: 1, max: 10000, step: 1 },
+      },
+      credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
+      width: { type: 'number', title: 'Width', default: 400 },
+      height: { type: 'number', title: 'Height', default: 400 },
     },
-    lineWidth: {
-      type: 'number',
-      title: 'Line Thickness',
-      default: 2,
-      editor: { type: 'Number', min: 1, max: 50, step: 1 },
-    },
-    minRadius: {
-      type: 'number',
-      title: 'Min Radius',
-      default: 1,
-      editor: { type: 'Number', min: 1, max: 200, step: 1 },
-    },
-    maxRadius: {
-      type: 'number',
-      title: 'Max Radius',
-      default: 100,
-      editor: { type: 'Number', min: 1, max: 100, step: 1 },
-    },
-    seed: {
-      type: 'number',
-      title: 'Random Seed',
-      default: 1,
-      editor: { type: 'Number', min: 1, max: 10000, step: 1 },
-    },
-    credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
-    width: { type: 'number', title: 'Width', default: 400 },
-    height: { type: 'number', title: 'Height', default: 400 },
   },
 };
 

@@ -498,31 +498,33 @@ function error(msg) {
 
 export const ShadertoyDescription = {
   name: 'Shadertoy',
-  description: 'https://shadertoy.com',
   extends: 'Play Kit/View',
   prototype: ShadertoyPrototype,
-  properties: {
-    title: { type: 'string', default: 'Sample', editor: { type: 'String', fullWidthEditor: true } },
-    description: {
-      type: 'string',
-      default: 'Sample shader from Shadertoy: https://www.shadertoy.com/',
-      editor: 'MultilineString',
-    },
-    fragmentShader: {
-      type: 'string',
-      default: defaultFragmentShader,
-      editor: {
-        type: 'Script',
+  _meta: {
+    description: 'https://shadertoy.com',
+    properties: {
+      title: { type: 'string', default: 'Sample', editor: { type: 'String', fullWidthEditor: true } },
+      description: {
+        type: 'string',
+        default: 'Sample shader from Shadertoy: https://www.shadertoy.com/',
+        editor: 'MultilineString',
       },
+      fragmentShader: {
+        type: 'string',
+        default: defaultFragmentShader,
+        editor: {
+          type: 'Script',
+        },
+      },
+      author: { type: 'string', default: '' },
+      link: { type: 'string', default: '' },
+      // TODO: allow type-inferred simple form ala pause: false?
+      play: { type: 'boolean', default: true },
+      backgroundColor: { type: 'string', default: '#000000ff', editor: 'Color' },
+      // TODO: How to present properties like this? (probably most readOnly properties are the same).
+      //error: { type: 'string', editor: 'MultilineString', readOnly: true },
+      width: { type: 'number', default: 1024 / 2 },
+      height: { type: 'number', default: 576 / 2 },
     },
-    author: { type: 'string', default: '' },
-    link: { type: 'string', default: '' },
-    // TODO: allow type-inferred simple form ala pause: false?
-    play: { type: 'boolean', default: true },
-    backgroundColor: { type: 'string', default: '#000000ff', editor: 'Color' },
-    // TODO: How to present properties like this? (probably most readOnly properties are the same).
-    //error: { type: 'string', editor: 'MultilineString', readOnly: true },
-    width: { type: 'number', default: 1024 / 2 },
-    height: { type: 'number', default: 576 / 2 },
   },
 };

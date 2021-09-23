@@ -45,33 +45,35 @@ const HypnoticSquaresPrototype = {
 };
 
 export const HypnoticSquaresDescription = {
-  title: 'Hypnotic Squares',
   name: 'HypnoticSquares',
   prototype: HypnoticSquaresPrototype,
   extends: 'Test Kit/Canvas',
-  properties: {
-    color: { type: 'string', title: 'Color', default: '#b17902', editor: 'Color' },
-    finalSize: {
-      type: 'number',
-      title: 'Final Size',
-      default: 3,
-      editor: { type: 'Number', min: 1, max: 50 },
+  _meta: {
+    title: 'Hypnotic Squares',
+    properties: {
+      color: { type: 'string', title: 'Color', default: '#b17902', editor: 'Color' },
+      finalSize: {
+        type: 'number',
+        title: 'Final Size',
+        default: 3,
+        editor: { type: 'Number', min: 1, max: 50 },
+      },
+      lineWidth: {
+        type: 'number',
+        title: 'Line Thickness',
+        default: 2,
+        editor: { type: 'Number', min: 1, max: 50, step: 1 },
+      },
+      seed: {
+        type: 'number',
+        title: 'Random Seed',
+        default: 1,
+        editor: { type: 'Number', min: 1, max: 10000, step: 1 },
+      },
+      credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
+      width: { type: 'number', title: 'Width', default: 400 },
+      height: { type: 'number', title: 'Height', default: 400 },
     },
-    lineWidth: {
-      type: 'number',
-      title: 'Line Thickness',
-      default: 2,
-      editor: { type: 'Number', min: 1, max: 50, step: 1 },
-    },
-    seed: {
-      type: 'number',
-      title: 'Random Seed',
-      default: 1,
-      editor: { type: 'Number', min: 1, max: 10000, step: 1 },
-    },
-    credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
-    width: { type: 'number', title: 'Width', default: 400 },
-    height: { type: 'number', title: 'Height', default: 400 },
   },
 };
 
