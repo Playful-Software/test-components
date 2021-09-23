@@ -65,67 +65,69 @@ function LineChart(props: LineChartProperties) {
 
 export const LineChartDescription: ComponentDescription = {
   name: 'LineChart',
-  title: 'Line Chart',
-  description: 'The Line Chart Component ...',
-  author: 'Playful Software', // TODO: userId or unique username?
-  icon: '...', // TODO: local file?
-  preview: '...', // TODO: local file?
-  collection: 'chart.XKCD Kit',
   renderer: LineChart,
   extends: 'Play Kit/View',
-  properties: {
-    data: {
-      type: 'string',
-      default: `{
-  labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
-  datasets: [
-    {
-      label: "Plan",
-      data: [30, 70, 200, 300, 500, 800, 1500, 2900, 5000, 8000],
-    },
-    {
-      label: "Reality",
-      data: [0, 1, 30, 70, 80, 100, 50, 80, 40, 150],
-    },
-  ],
-}`,
-      editor: { type: 'MultilineString', fullWidthEditor: true },
-    },
-    title: { type: 'string', default: 'Title' },
-    xLabel: { type: 'string', default: 'X' },
-    yLabel: { type: 'string', default: 'Y' },
-    /* TODO:
-    dataColors: { type: "array", default: [?, ?, ?] },
-    */
-    yTickCount: {
-      type: 'number',
-      default: '3',
-      editor: { type: 'Number', min: 0, max: 10 },
-    },
-    strokeColor: { type: 'string', default: 'black', editor: 'Color' },
-    backgroundColor: { type: 'string', default: 'white', editor: 'Color' },
-    fontFamily: {
-      type: 'string',
-      editor: 'FontFamily',
-    },
-    showLegend: { type: 'boolean', default: true },
-    legendPosition: {
-      type: 'number',
-      default: PositionType.upLeft,
-      editor: {
-        type: 'Option',
-        options: [
-          PositionType.upLeft,
-          PositionType.upRight,
-          PositionType.downLeft,
-          PositionType.downRight,
-        ],
-        // TODO: optionTitles: ["Up Left", "Up Right", "Down Left", "Down Right"],
+  _meta: {
+    title: 'Line Chart',
+    description: 'The Line Chart Component ...',
+    author: 'Playful Software', // TODO: userId or unique username?
+    icon: '...', // TODO: local file?
+    preview: '...', // TODO: local file?
+    collection: 'chart.XKCD Kit',
+    properties: {
+      data: {
+        type: 'string',
+        default: `{
+    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+    datasets: [
+      {
+        label: "Plan",
+        data: [30, 70, 200, 300, 500, 800, 1500, 2900, 5000, 8000],
       },
+      {
+        label: "Reality",
+        data: [0, 1, 30, 70, 80, 100, 50, 80, 40, 150],
+      },
+    ],
+}`  ,
+        editor: { type: 'MultilineString', fullWidthEditor: true },
+      },
+      title: { type: 'string', default: 'Title' },
+      xLabel: { type: 'string', default: 'X' },
+      yLabel: { type: 'string', default: 'Y' },
+      /* TODO:
+      dataColors: { type: "array", default: [?, ?, ?] },
+      */
+      yTickCount: {
+        type: 'number',
+        default: '3',
+        editor: { type: 'Number', min: 0, max: 10 },
+      },
+      strokeColor: { type: 'string', default: 'black', editor: 'Color' },
+      backgroundColor: { type: 'string', default: 'white', editor: 'Color' },
+      fontFamily: {
+        type: 'string',
+        editor: 'FontFamily',
+      },
+      showLegend: { type: 'boolean', default: true },
+      legendPosition: {
+        type: 'number',
+        default: PositionType.upLeft,
+        editor: {
+          type: 'Option',
+          options: [
+            PositionType.upLeft,
+            PositionType.upRight,
+            PositionType.downLeft,
+            PositionType.downRight,
+          ],
+          // TODO: optionTitles: ["Up Left", "Up Right", "Down Left", "Down Right"],
+        },
+      },
+      unxkcdify: { type: 'boolean', default: false },
+      width: { type: 'number', default: 400 },
+      height: { type: 'number', default: 267 },
     },
-    unxkcdify: { type: 'boolean', default: false },
-    width: { type: 'number', default: 400 },
-    height: { type: 'number', default: 267 },
   },
 };
 
