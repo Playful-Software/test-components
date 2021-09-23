@@ -8577,63 +8577,65 @@ var require_chart_xkcd = __commonJS((exports) => {
   }
   var LineChartDescription = {
     name: "LineChart",
-    title: "Line Chart",
-    description: "The Line Chart Component ...",
-    author: "Playful Software",
-    icon: "...",
-    preview: "...",
-    collection: "chart.XKCD Kit",
     renderer: LineChart,
     extends: "Play Kit/View",
-    properties: {
-      data: {
-        type: "string",
-        default: `{
-  labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
-  datasets: [
-    {
-      label: "Plan",
-      data: [30, 70, 200, 300, 500, 800, 1500, 2900, 5000, 8000],
-    },
-    {
-      label: "Reality",
-      data: [0, 1, 30, 70, 80, 100, 50, 80, 40, 150],
-    },
-  ],
+    _meta: {
+      title: "Line Chart",
+      description: "The Line Chart Component ...",
+      author: "Playful Software",
+      icon: "...",
+      preview: "...",
+      collection: "chart.XKCD Kit",
+      properties: {
+        data: {
+          type: "string",
+          default: `{
+    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+    datasets: [
+      {
+        label: "Plan",
+        data: [30, 70, 200, 300, 500, 800, 1500, 2900, 5000, 8000],
+      },
+      {
+        label: "Reality",
+        data: [0, 1, 30, 70, 80, 100, 50, 80, 40, 150],
+      },
+    ],
 }`,
-        editor: {type: "MultilineString", fullWidthEditor: true}
-      },
-      title: {type: "string", default: "Title"},
-      xLabel: {type: "string", default: "X"},
-      yLabel: {type: "string", default: "Y"},
-      yTickCount: {
-        type: "number",
-        default: "3",
-        editor: {type: "Number", min: 0, max: 10}
-      },
-      strokeColor: {type: "string", default: "black", editor: "Color"},
-      backgroundColor: {type: "string", default: "white", editor: "Color"},
-      fontFamily: {
-        type: "string",
-        editor: "FontFamily"
-      },
-      showLegend: {type: "boolean", default: true},
-      legendPosition: {
-        type: "number",
-        default: 1,
-        editor: {
-          type: "Option",
-          options: [
-            1,
-            2,
-            3,
-            4
-          ]
-        }
-      },
-      unxkcdify: {type: "boolean", default: false},
-      width: {type: "number", default: 400},
-      height: {type: "number", default: 267}
+          editor: {type: "MultilineString", fullWidthEditor: true}
+        },
+        title: {type: "string", default: "Title"},
+        xLabel: {type: "string", default: "X"},
+        yLabel: {type: "string", default: "Y"},
+        yTickCount: {
+          type: "number",
+          default: "3",
+          editor: {type: "Number", min: 0, max: 10}
+        },
+        strokeColor: {type: "string", default: "black", editor: "Color"},
+        backgroundColor: {type: "string", default: "white", editor: "Color"},
+        fontFamily: {
+          type: "string",
+          editor: "FontFamily"
+        },
+        showLegend: {type: "boolean", default: true},
+        legendPosition: {
+          type: "number",
+          default: 1,
+          editor: {
+            type: "Option",
+            options: [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        },
+        unxkcdify: {type: "boolean", default: false},
+        width: {type: "number", default: 400},
+        height: {type: "number", default: 267}
+      }
     }
   };
   function BarChart(props) {
@@ -51754,16 +51756,18 @@ function Three(props) {
 }
 var ThreeDescription = {
   name: "Three",
-  description: "The Three Component ...",
-  author: "Playful Software",
-  icon: "...",
-  preview: "...",
-  collection: "React Test Kit",
   renderer: Three,
   extends: "Play Kit/View",
-  properties: {
-    width: {type: "number", title: "Width", default: 400},
-    height: {type: "number", title: "Height", default: 200}
+  _meta: {
+    description: "The Three Component ...",
+    author: "Playful Software",
+    icon: "...",
+    preview: "...",
+    collection: "React Test Kit",
+    properties: {
+      width: {type: "number", title: "Width", default: 400},
+      height: {type: "number", title: "Height", default: 200}
+    }
   }
 };
 var Box = (props) => {
@@ -51826,17 +51830,19 @@ function XKCD(props) {
 }
 var XKCDDescription = {
   name: "XKCD",
-  description: "The XKCD Component .... Content copyright",
-  author: "Playful Software",
-  icon: "...",
-  preview: "...",
-  collection: "React Test Kit",
   renderer: XKCD,
   extends: "Play Kit/View",
-  properties: {
-    comic: {type: "number", default: 2293},
-    width: {type: "number", default: 400},
-    height: {type: "number", default: 400}
+  _meta: {
+    description: "The XKCD Component .... Content copyright",
+    author: "Playful Software",
+    icon: "...",
+    preview: "...",
+    collection: "React Test Kit",
+    properties: {
+      comic: {type: "number", default: 2293},
+      width: {type: "number", default: 400},
+      height: {type: "number", default: 400}
+    }
   }
 };
 
@@ -64240,43 +64246,45 @@ var ClockPrototype = {
 };
 var ClockDescription = {
   name: "Clock",
-  title: "Clock",
-  description: "The Clock Component ...",
-  author: "Playful Software",
   renderer: ClockRenderer,
   extends: "Play Kit/View",
   prototype: ClockPrototype,
-  properties: {
-    width: {type: "number", title: "Width", default: 100},
-    height: {type: "number", title: "Height", default: 100},
-    handColor: {type: "string", title: "Hand Color", default: "white", editor: "Color"},
-    faceColor: {type: "string", title: "Face Color", default: "white", editor: "Color"},
-    numberColor: {type: "string", title: "Number Color", default: "white", editor: "Color"},
-    borderColor: {type: "string", title: "Border Color", default: "white", editor: "Color"},
-    showNumbers: {type: "boolean", title: "Show Numbers", default: false},
-    showMinuteMarks: {type: "boolean", title: "Show Minute Marks", default: true},
-    showHourMarks: {type: "boolean", title: "Show Hour Marks", default: true},
-    showSecondHand: {type: "boolean", title: "Show Second Hand", default: true},
-    showMinuteHand: {type: "boolean", title: "Show Minute Hand", default: true},
-    timezone: {
-      type: "string",
-      title: "Time Zone",
-      editor: {
-        type: "String",
-        component: ({value, onValueChange}) => {
-          const handleChange = (timezone) => {
-            onValueChange(timezone.value);
-          };
-          return /* @__PURE__ */ import_react18.default.createElement(dist_default, {
-            value,
-            onChange: handleChange,
-            styles: {
-              option: (provided) => ({
-                ...provided,
-                color: "black"
-              })
-            }
-          });
+  _meta: {
+    title: "Clock",
+    description: "The Clock Component ...",
+    author: "Playful Software",
+    properties: {
+      width: {type: "number", title: "Width", default: 100},
+      height: {type: "number", title: "Height", default: 100},
+      handColor: {type: "string", title: "Hand Color", default: "white", editor: "Color"},
+      faceColor: {type: "string", title: "Face Color", default: "white", editor: "Color"},
+      numberColor: {type: "string", title: "Number Color", default: "white", editor: "Color"},
+      borderColor: {type: "string", title: "Border Color", default: "white", editor: "Color"},
+      showNumbers: {type: "boolean", title: "Show Numbers", default: false},
+      showMinuteMarks: {type: "boolean", title: "Show Minute Marks", default: true},
+      showHourMarks: {type: "boolean", title: "Show Hour Marks", default: true},
+      showSecondHand: {type: "boolean", title: "Show Second Hand", default: true},
+      showMinuteHand: {type: "boolean", title: "Show Minute Hand", default: true},
+      timezone: {
+        type: "string",
+        title: "Time Zone",
+        editor: {
+          type: "String",
+          component: ({value, onValueChange}) => {
+            const handleChange = (timezone) => {
+              onValueChange(timezone.value);
+            };
+            return /* @__PURE__ */ import_react18.default.createElement(dist_default, {
+              value,
+              onChange: handleChange,
+              styles: {
+                option: (provided) => ({
+                  ...provided,
+                  color: "black"
+                })
+              }
+            });
+          }
         }
       }
     }
@@ -64376,81 +64384,83 @@ function WarpSpeedComponent(props) {
 }
 var WarpSpeedDescription = {
   name: "WarpSpeed",
-  description: "The WarpSpeed Component ...",
-  author: "Playful Software",
-  icon: "...",
-  preview: "...",
-  collection: "React Test Kit",
   renderer: WarpSpeedComponent,
   extends: "Play Kit/View",
-  properties: {
-    speed: {
-      type: "number",
-      default: 0.7,
-      editor: {type: "Number", min: 0, max: 50, step: 0.1},
-      description: `The speed at which we're moving through the starfield.`
-    },
-    warpEffect: {
-      type: "boolean",
-      default: true,
-      description: `Draws lines instead of just the stars. Slower.`
-    },
-    warpEffectLength: {
-      type: "number",
-      default: 5,
-      editor: {type: "Number", min: 0, max: 30, step: 0.1},
-      description: `How long the warp strikes are in depth units.`
-    },
-    density: {
-      type: "number",
-      default: 0.7,
-      editor: {type: "Number", min: 0, max: 30, step: 0.01},
-      description: `Star density. Number of stars = density * drawDistance.`
-    },
-    depthFade: {
-      type: "boolean",
-      default: true,
-      description: `Stars that are further from the camera are less opaque. Slower.`
-    },
-    starSize: {
-      type: "number",
-      default: 3,
-      editor: {type: "Number", min: 1, max: 20},
-      description: `Size of stars.`
-    },
-    shape: {
-      type: "string",
-      default: "circle",
-      editor: {type: "Option", options: ["circle", "square"]},
-      description: `Drawing squares instead of circles is faster, but looks less pretty.`
-    },
-    speedAdjustmentFactor: {
-      type: "number",
-      default: 0.03,
-      editor: {type: "Number", min: 0, max: 1, step: 0.01},
-      description: `How fast the speed changes from the current speed to target speed. 0 = no change, 1 = instant change.`
-    },
-    backgroundColor: {
-      type: "string",
-      default: "hsl(263,45%,7%)",
-      editor: "Color",
-      description: `Background color. Alpha not recommended.`
-    },
-    color: {
-      type: "string",
-      title: "Star Color",
-      default: "#ffffff",
-      editor: "Color",
-      description: `Star color. Alpha not recommended.`
-    },
-    pause: {type: "boolean", default: false},
-    credits: {
-      type: "string",
-      default: `WarpSpeed.js by Federico Dossena (https://github.com/adolfintel/warpspeed)`,
-      readonly: true
-    },
-    width: {type: "number", title: "Width", default: 400},
-    height: {type: "number", title: "Height", default: 400}
+  _meta: {
+    description: "The WarpSpeed Component ...",
+    author: "Playful Software",
+    icon: "...",
+    preview: "...",
+    collection: "React Test Kit",
+    properties: {
+      speed: {
+        type: "number",
+        default: 0.7,
+        editor: {type: "Number", min: 0, max: 50, step: 0.1},
+        description: `The speed at which we're moving through the starfield.`
+      },
+      warpEffect: {
+        type: "boolean",
+        default: true,
+        description: `Draws lines instead of just the stars. Slower.`
+      },
+      warpEffectLength: {
+        type: "number",
+        default: 5,
+        editor: {type: "Number", min: 0, max: 30, step: 0.1},
+        description: `How long the warp strikes are in depth units.`
+      },
+      density: {
+        type: "number",
+        default: 0.7,
+        editor: {type: "Number", min: 0, max: 30, step: 0.01},
+        description: `Star density. Number of stars = density * drawDistance.`
+      },
+      depthFade: {
+        type: "boolean",
+        default: true,
+        description: `Stars that are further from the camera are less opaque. Slower.`
+      },
+      starSize: {
+        type: "number",
+        default: 3,
+        editor: {type: "Number", min: 1, max: 20},
+        description: `Size of stars.`
+      },
+      shape: {
+        type: "string",
+        default: "circle",
+        editor: {type: "Option", options: ["circle", "square"]},
+        description: `Drawing squares instead of circles is faster, but looks less pretty.`
+      },
+      speedAdjustmentFactor: {
+        type: "number",
+        default: 0.03,
+        editor: {type: "Number", min: 0, max: 1, step: 0.01},
+        description: `How fast the speed changes from the current speed to target speed. 0 = no change, 1 = instant change.`
+      },
+      backgroundColor: {
+        type: "string",
+        default: "hsl(263,45%,7%)",
+        editor: "Color",
+        description: `Background color. Alpha not recommended.`
+      },
+      color: {
+        type: "string",
+        title: "Star Color",
+        default: "#ffffff",
+        editor: "Color",
+        description: `Star color. Alpha not recommended.`
+      },
+      pause: {type: "boolean", default: false},
+      credits: {
+        type: "string",
+        default: `WarpSpeed.js by Federico Dossena (https://github.com/adolfintel/warpspeed)`,
+        readonly: true
+      },
+      width: {type: "number", title: "Width", default: 400},
+      height: {type: "number", title: "Height", default: 400}
+    }
   }
 };
 
@@ -64646,62 +64656,64 @@ var MapPrototype = {
 };
 var MapDescription = {
   name: "Map",
-  description: "The Map Component...",
-  author: "Playful Software",
-  icon: "...",
-  preview: "...",
-  collection: "React Test Kit",
   prototype: MapPrototype,
   extends: "Play Kit/View",
-  properties: {
-    latitude: {
-      type: "number",
-      default: 47.61213,
-      editor: {type: "Number", min: -90, max: 90, step: 0.1}
-    },
-    longitude: {
-      type: "number",
-      default: -122.33945,
-      editor: {type: "Number", min: -180, max: 180, step: 0.1}
-    },
-    zoom: {type: "number", default: 13, editor: {type: "Number", min: 0, max: 18, step: 1}},
-    tiles: {
-      type: "string",
-      default: "openstreetmap",
-      editor: {
-        fullWidthEditor: true,
-        type: "Option",
-        options: [
-          {title: "Custom", value: "custom"},
-          {title: "OpenStreetMap", value: "openstreetmap"},
-          {title: "OpenTopoMap", value: "opentopomap"},
-          {title: "Google Satellite", value: "google_satellite"},
-          {title: "Stamen Watercolor", value: "stamen_watercolor"},
-          {title: "Moon", value: "moon"},
-          {title: "Mars", value: "mars"},
-          {title: "Mars Elevation Color", value: "mars_elevation_color"},
-          {title: "Game Of Thrones", value: "game_of_thrones"}
-        ]
-      }
-    },
-    attribution: {type: "string", editor: {type: "MultilineString", fullWidthEditor: true}},
-    tilesUrl: {type: "string", editor: {type: "MultilineString", fullWidthEditor: true}},
-    marker: {type: "boolean", default: false},
-    markerLatitude: {
-      type: "number",
-      default: 47.61213,
-      editor: {type: "Number", min: -90, max: 90, step: 0.1}
-    },
-    markerLongitude: {
-      type: "number",
-      default: -122.33945,
-      editor: {type: "Number", min: -180, max: 180, step: 0.1}
-    },
-    maxZoom: {type: "number", default: 18},
-    zoomControl: {type: "boolean", default: true},
-    attributionLabel: {type: "boolean", default: true},
-    width: {type: "number", default: 400},
-    height: {type: "number", default: 400}
+  _meta: {
+    description: "The Map Component...",
+    author: "Playful Software",
+    icon: "...",
+    preview: "...",
+    collection: "React Test Kit",
+    properties: {
+      latitude: {
+        type: "number",
+        default: 47.61213,
+        editor: {type: "Number", min: -90, max: 90, step: 0.1}
+      },
+      longitude: {
+        type: "number",
+        default: -122.33945,
+        editor: {type: "Number", min: -180, max: 180, step: 0.1}
+      },
+      zoom: {type: "number", default: 13, editor: {type: "Number", min: 0, max: 18, step: 1}},
+      tiles: {
+        type: "string",
+        default: "openstreetmap",
+        editor: {
+          fullWidthEditor: true,
+          type: "Option",
+          options: [
+            {title: "Custom", value: "custom"},
+            {title: "OpenStreetMap", value: "openstreetmap"},
+            {title: "OpenTopoMap", value: "opentopomap"},
+            {title: "Google Satellite", value: "google_satellite"},
+            {title: "Stamen Watercolor", value: "stamen_watercolor"},
+            {title: "Moon", value: "moon"},
+            {title: "Mars", value: "mars"},
+            {title: "Mars Elevation Color", value: "mars_elevation_color"},
+            {title: "Game Of Thrones", value: "game_of_thrones"}
+          ]
+        }
+      },
+      attribution: {type: "string", editor: {type: "MultilineString", fullWidthEditor: true}},
+      tilesUrl: {type: "string", editor: {type: "MultilineString", fullWidthEditor: true}},
+      marker: {type: "boolean", default: false},
+      markerLatitude: {
+        type: "number",
+        default: 47.61213,
+        editor: {type: "Number", min: -90, max: 90, step: 0.1}
+      },
+      markerLongitude: {
+        type: "number",
+        default: -122.33945,
+        editor: {type: "Number", min: -180, max: 180, step: 0.1}
+      },
+      maxZoom: {type: "number", default: 18},
+      zoomControl: {type: "boolean", default: true},
+      attributionLabel: {type: "boolean", default: true},
+      width: {type: "number", default: 400},
+      height: {type: "number", default: 400}
+    }
   }
 };
 
@@ -75137,21 +75149,23 @@ function Gol(props) {
 }
 var GolDescription = {
   name: "Gol",
-  description: "The Gol Component ...",
-  author: "Playful Software",
-  icon: "...",
-  preview: "...",
-  collection: "React Test Kit",
   renderer: Gol,
   extends: "Play Kit/View",
-  properties: {
-    cols: {type: "number", title: "Cols", default: 20},
-    deadColor: {type: "string", title: "Dead Color", default: "transparent", editor: "Color"},
-    framesPerSecond: {type: "number", title: "Frames Per Second", default: 8},
-    height: {type: "number", title: "Height", default: 300},
-    liveColor: {type: "string", title: "Live Color", default: "#AFC", editor: "Color"},
-    rows: {type: "number", title: "Rows", default: 20},
-    width: {type: "number", title: "Width", default: 300}
+  _meta: {
+    description: "The Gol Component ...",
+    author: "Playful Software",
+    icon: "...",
+    preview: "...",
+    collection: "React Test Kit",
+    properties: {
+      cols: {type: "number", title: "Cols", default: 20},
+      deadColor: {type: "string", title: "Dead Color", default: "transparent", editor: "Color"},
+      framesPerSecond: {type: "number", title: "Frames Per Second", default: 8},
+      height: {type: "number", title: "Height", default: 300},
+      liveColor: {type: "string", title: "Live Color", default: "#AFC", editor: "Color"},
+      rows: {type: "number", title: "Rows", default: 20},
+      width: {type: "number", title: "Width", default: 300}
+    }
   }
 };
 
