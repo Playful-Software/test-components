@@ -21,17 +21,19 @@ function Three(props: ThreeProperties) {
 
 export const ThreeDescription: ComponentDescription = {
   name: 'Three',
-  description: 'The Three Component ...',
-  author: 'Playful Software', // TODO: userId or unique username?
-  icon: '...', // TODO: local file?
-  preview: '...', // TODO: local file?
-  collection: 'React Test Kit',
   renderer: Three,
   extends: 'Play Kit/View',
-  properties: {
-    // Override default width, height.
-    width: { type: 'number', title: 'Width', default: 400 },
-    height: { type: 'number', title: 'Height', default: 200 },
+  _meta: {
+    description: 'The Three Component ...',
+    author: 'Playful Software', // TODO: userId or unique username?
+    icon: '...', // TODO: local file?
+    preview: '...', // TODO: local file?
+    collection: 'React Test Kit',
+    properties: {
+      // Override default width, height.
+      width: { type: 'number', title: 'Width', default: 400 },
+      height: { type: 'number', title: 'Height', default: 200 },
+    },
   },
 };
 

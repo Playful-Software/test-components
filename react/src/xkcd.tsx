@@ -57,16 +57,18 @@ function XKCD(props: XKCDProperties) {
 
 export const XKCDDescription: ComponentDescription = {
   name: 'XKCD',
-  description: 'The XKCD Component .... Content copyright',
-  author: 'Playful Software', // TODO: userId or unique username?
-  icon: '...', // TODO: local file?
-  preview: '...', // TODO: local file?
-  collection: 'React Test Kit',
   renderer: XKCD,
   extends: 'Play Kit/View',
-  properties: {
-    comic: { type: 'number', default: 2293 },
-    width: { type: 'number', default: 400 },
-    height: { type: 'number', default: 400 },
+  _meta: {
+    description: 'The XKCD Component .... Content copyright',
+    author: 'Playful Software', // TODO: userId or unique username?
+    icon: '...', // TODO: local file?
+    preview: '...', // TODO: local file?
+    collection: 'React Test Kit',
+    properties: {
+      comic: { type: 'number', default: 2293 },
+      width: { type: 'number', default: 400 },
+      height: { type: 'number', default: 400 },
+    },
   },
 };

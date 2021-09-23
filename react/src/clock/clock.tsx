@@ -145,45 +145,47 @@ const ClockPrototype = {
 
 export const ClockDescription: ComponentDescription = {
   name: 'Clock',
-  title: 'Clock',
-  description: 'The Clock Component ...',
-  author: 'Playful Software',
   renderer: ClockRenderer,
   extends: 'Play Kit/View',
   prototype: ClockPrototype,
-  properties: {
-    width: { type: 'number', title: 'Width', default: 100 },
-    height: { type: 'number', title: 'Height', default: 100 },
-    handColor: { type: 'string', title: 'Hand Color', default: 'white', editor: 'Color' },
-    faceColor: { type: 'string', title: 'Face Color', default: 'white', editor: 'Color' },
-    numberColor: { type: 'string', title: 'Number Color', default: 'white', editor: 'Color' },
-    borderColor: { type: 'string', title: 'Border Color', default: 'white', editor: 'Color' },
-    showNumbers: { type: 'boolean', title: 'Show Numbers', default: false },
-    showMinuteMarks: { type: 'boolean', title: 'Show Minute Marks', default: true },
-    showHourMarks: { type: 'boolean', title: 'Show Hour Marks', default: true },
-    showSecondHand: { type: 'boolean', title: 'Show Second Hand', default: true },
-    showMinuteHand: { type: 'boolean', title: 'Show Minute Hand', default: true },
-    timezone: {
-      type: 'string',
-      title: 'Time Zone',
-      editor: {
-        type: 'String',
-        component: ({ value, onValueChange }) => {
-          const handleChange = (timezone: TimezoneSelectOption) => {
-            onValueChange(timezone.value);
-          };
-          return (
-            <TimezoneSelect
-              value={value}
-              onChange={handleChange}
-              styles={{
-                option: (provided: any) => ({
-                  ...provided,
-                  color: 'black',
-                }),
-              }}
-            />
-          );
+  _meta: {
+    title: 'Clock',
+    description: 'The Clock Component ...',
+    author: 'Playful Software',
+    properties: {
+      width: { type: 'number', title: 'Width', default: 100 },
+      height: { type: 'number', title: 'Height', default: 100 },
+      handColor: { type: 'string', title: 'Hand Color', default: 'white', editor: 'Color' },
+      faceColor: { type: 'string', title: 'Face Color', default: 'white', editor: 'Color' },
+      numberColor: { type: 'string', title: 'Number Color', default: 'white', editor: 'Color' },
+      borderColor: { type: 'string', title: 'Border Color', default: 'white', editor: 'Color' },
+      showNumbers: { type: 'boolean', title: 'Show Numbers', default: false },
+      showMinuteMarks: { type: 'boolean', title: 'Show Minute Marks', default: true },
+      showHourMarks: { type: 'boolean', title: 'Show Hour Marks', default: true },
+      showSecondHand: { type: 'boolean', title: 'Show Second Hand', default: true },
+      showMinuteHand: { type: 'boolean', title: 'Show Minute Hand', default: true },
+      timezone: {
+        type: 'string',
+        title: 'Time Zone',
+        editor: {
+          type: 'String',
+          component: ({ value, onValueChange }) => {
+            const handleChange = (timezone: TimezoneSelectOption) => {
+              onValueChange(timezone.value);
+            };
+            return (
+              <TimezoneSelect
+                value={value}
+                onChange={handleChange}
+                styles={{
+                  option: (provided: any) => ({
+                    ...provided,
+                    color: 'black',
+                  }),
+                }}
+              />
+            );
+          },
         },
       },
     },

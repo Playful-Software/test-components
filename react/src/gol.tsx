@@ -77,21 +77,23 @@ function Gol(props: GolProperties) {
 
 export const GolDescription: ComponentDescription = {
   name: 'Gol',
-  description: 'The Gol Component ...',
-  author: 'Playful Software', // TODO: userId or unique username?
-  icon: '...', // TODO: local file?
-  preview: '...', // TODO: local file?
-  collection: 'React Test Kit',
   renderer: Gol,
   extends: 'Play Kit/View',
-  properties: {
-    // Override default width, height.
-    cols: { type: 'number', title: 'Cols', default: 20 },
-    deadColor: { type: 'string', title: 'Dead Color', default: "transparent", editor: 'Color' },
-    framesPerSecond: { type: 'number', title: "Frames Per Second", default: 8 },
-    height: { type: 'number', title: 'Height', default: 300 },
-    liveColor: { type: 'string', title: 'Live Color', default: "#AFC", editor: 'Color' },
-    rows: { type: 'number', title: 'Rows', default: 20 },
-    width: { type: 'number', title: 'Width', default: 300 },
+  _meta: {
+    description: 'The Gol Component ...',
+    author: 'Playful Software', // TODO: userId or unique username?
+    icon: '...', // TODO: local file?
+    preview: '...', // TODO: local file?
+    collection: 'React Test Kit',
+    properties: {
+      // Override default width, height.
+      cols: { type: 'number', title: 'Cols', default: 20 },
+      deadColor: { type: 'string', title: 'Dead Color', default: "transparent", editor: 'Color' },
+      framesPerSecond: { type: 'number', title: "Frames Per Second", default: 8 },
+      height: { type: 'number', title: 'Height', default: 300 },
+      liveColor: { type: 'string', title: 'Live Color', default: "#AFC", editor: 'Color' },
+      rows: { type: 'number', title: 'Rows', default: 20 },
+      width: { type: 'number', title: 'Width', default: 300 },
+    },
   },
 };

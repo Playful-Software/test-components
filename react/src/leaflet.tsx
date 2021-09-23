@@ -252,61 +252,63 @@ const MapPrototype = {
 
 export const MapDescription: ComponentDescription = {
   name: 'Map',
-  description: 'The Map Component...',
-  author: 'Playful Software', // TODO: userId or unique username?
-  icon: '...', // TODO: local file?
-  preview: '...', // TODO: local file?
-  collection: 'React Test Kit',
   prototype: MapPrototype,
   extends: 'Play Kit/View',
-  properties: {
-    latitude: {
-      type: 'number',
-      default: 47.61213,
-      editor: { type: 'Number', min: -90, max: 90, step: 0.1 },
-    },
-    longitude: {
-      type: 'number',
-      default: -122.33945,
-      editor: { type: 'Number', min: -180, max: 180, step: 0.1 },
-    },
-    zoom: { type: 'number', default: 13, editor: { type: 'Number', min: 0, max: 18, step: 1 } },
-    tiles: {
-      type: 'string',
-      default: 'openstreetmap',
-      editor: {
-        fullWidthEditor: true,
-        type: 'Option',
-        options: [
-          { title: 'Custom', value: 'custom' },
-          { title: 'OpenStreetMap', value: 'openstreetmap' },
-          { title: 'OpenTopoMap', value: 'opentopomap' },
-          { title: 'Google Satellite', value: 'google_satellite' },
-          { title: 'Stamen Watercolor', value: 'stamen_watercolor' },
-          { title: 'Moon', value: 'moon' },
-          { title: 'Mars', value: 'mars' },
-          { title: 'Mars Elevation Color', value: 'mars_elevation_color' },
-          { title: 'Game Of Thrones', value: 'game_of_thrones' },
-        ],
+  _meta: {
+    description: 'The Map Component...',
+    author: 'Playful Software', // TODO: userId or unique username?
+    icon: '...', // TODO: local file?
+    preview: '...', // TODO: local file?
+    collection: 'React Test Kit',
+    properties: {
+      latitude: {
+        type: 'number',
+        default: 47.61213,
+        editor: { type: 'Number', min: -90, max: 90, step: 0.1 },
       },
+      longitude: {
+        type: 'number',
+        default: -122.33945,
+        editor: { type: 'Number', min: -180, max: 180, step: 0.1 },
+      },
+      zoom: { type: 'number', default: 13, editor: { type: 'Number', min: 0, max: 18, step: 1 } },
+      tiles: {
+        type: 'string',
+        default: 'openstreetmap',
+        editor: {
+          fullWidthEditor: true,
+          type: 'Option',
+          options: [
+            { title: 'Custom', value: 'custom' },
+            { title: 'OpenStreetMap', value: 'openstreetmap' },
+            { title: 'OpenTopoMap', value: 'opentopomap' },
+            { title: 'Google Satellite', value: 'google_satellite' },
+            { title: 'Stamen Watercolor', value: 'stamen_watercolor' },
+            { title: 'Moon', value: 'moon' },
+            { title: 'Mars', value: 'mars' },
+            { title: 'Mars Elevation Color', value: 'mars_elevation_color' },
+            { title: 'Game Of Thrones', value: 'game_of_thrones' },
+          ],
+        },
+      },
+      attribution: { type: 'string', editor: { type: 'MultilineString', fullWidthEditor: true } },
+      tilesUrl: { type: 'string', editor: { type: 'MultilineString', fullWidthEditor: true } },
+      marker: { type: 'boolean', default: false },
+      markerLatitude: {
+        type: 'number',
+        default: 47.61213,
+        editor: { type: 'Number', min: -90, max: 90, step: 0.1 },
+      },
+      markerLongitude: {
+        type: 'number',
+        default: -122.33945,
+        editor: { type: 'Number', min: -180, max: 180, step: 0.1 },
+      },
+      maxZoom: { type: 'number', default: 18 },
+      zoomControl: { type: 'boolean', default: true },
+      attributionLabel: { type: 'boolean', default: true },
+      width: { type: 'number', default: 400 },
+      height: { type: 'number', default: 400 },
     },
-    attribution: { type: 'string', editor: { type: 'MultilineString', fullWidthEditor: true } },
-    tilesUrl: { type: 'string', editor: { type: 'MultilineString', fullWidthEditor: true } },
-    marker: { type: 'boolean', default: false },
-    markerLatitude: {
-      type: 'number',
-      default: 47.61213,
-      editor: { type: 'Number', min: -90, max: 90, step: 0.1 },
-    },
-    markerLongitude: {
-      type: 'number',
-      default: -122.33945,
-      editor: { type: 'Number', min: -180, max: 180, step: 0.1 },
-    },
-    maxZoom: { type: 'number', default: 18 },
-    zoomControl: { type: 'boolean', default: true },
-    attributionLabel: { type: 'boolean', default: true },
-    width: { type: 'number', default: 400 },
-    height: { type: 'number', default: 400 },
   },
 };
