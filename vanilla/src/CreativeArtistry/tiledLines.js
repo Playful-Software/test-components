@@ -38,33 +38,35 @@ const TiledLinesPrototype = {
 };
 
 export const TiledLinesDescription = {
-  title: 'Tiled Lines',
   name: 'TiledLines',
   prototype: TiledLinesPrototype,
   extends: 'Test Kit/Canvas',
-  properties: {
-    color: { type: 'string', title: 'Color', default: '#04a893', editor: 'Color' },
-    step: {
-      type: 'number',
-      title: 'Step',
-      default: 20,
-      editor: { type: 'Number', min: 4, max: 50 },
+  _meta: {
+    title: 'Tiled Lines',
+    properties: {
+      color: { type: 'string', title: 'Color', default: '#04a893', editor: 'Color' },
+      step: {
+        type: 'number',
+        title: 'Step',
+        default: 20,
+        editor: { type: 'Number', min: 4, max: 50 },
+      },
+      lineWidth: {
+        type: 'number',
+        title: 'Line Thickness',
+        default: 2,
+        editor: { type: 'Number', min: 1, max: 25, step: 1 },
+      },
+      seed: {
+        type: 'number',
+        title: 'Random Seed',
+        default: 1,
+        editor: { type: 'Number', min: 1, max: 10000, step: 1 },
+      },
+      credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
+      width: { type: 'number', title: 'Width', default: 400 },
+      height: { type: 'number', title: 'Height', default: 400 },
     },
-    lineWidth: {
-      type: 'number',
-      title: 'Line Thickness',
-      default: 2,
-      editor: { type: 'Number', min: 1, max: 25, step: 1 },
-    },
-    seed: {
-      type: 'number',
-      title: 'Random Seed',
-      default: 1,
-      editor: { type: 'Number', min: 1, max: 10000, step: 1 },
-    },
-    credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
-    width: { type: 'number', title: 'Width', default: 400 },
-    height: { type: 'number', title: 'Height', default: 400 },
   },
 };
 

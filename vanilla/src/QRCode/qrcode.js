@@ -36,16 +36,18 @@ export const QRCodePrototype = {
 
 export const QRCodeDescription = {
   name: 'QRCode',
-  title: 'QR Code',
   prototype: QRCodePrototype,
   extends: 'Play Kit/View',
-  properties: {
-    content: {
-      type: 'string',
-      default: 'https://play.playful.software',
-      editor: { type: 'MultilineString' },
+  _meta: {
+    title: 'QR Code',
+    properties: {
+      content: {
+        type: 'string',
+        default: 'https://play.playful.software',
+        editor: { type: 'MultilineString' },
+      },
+      width: { type: 'number', default: 256 },
+      height: { type: 'number', default: 256 },
     },
-    width: { type: 'number', default: 256 },
-    height: { type: 'number', default: 256 },
   },
 };
