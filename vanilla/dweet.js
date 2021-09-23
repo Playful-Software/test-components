@@ -173,36 +173,38 @@ const DweetPrototype = {
 // TODO: anything that can be removed? title?
 export const DweetDescription = {
   name: 'Dweet',
-  description: `
-  dweet(t) is called 60 times per second.
-  t: elapsed time in seconds.
-  c: A 1920x1080 canvas.
-  x: A 2D context for that canvas.
-  S: Math.sin
-  C: Math.cos
-  T: Math.tan
-  R: Generates rgba-strings, ex.: R(255, 255, 255, 0.5)
-`,
   extends: 'Play Kit/View',
   prototype: DweetPrototype,
-  properties: {
-    dweet: {
-      type: 'string',
-      default:
-        'c.width=2e3;t*=4;x.translate(980,540);for(i=0;i<32;)x.rotate(!i*C(t-=.03)+!(i++%4)*S(t)/9+1.57),x.fillRect(9*i,9*i,99,99)',
-      editor: {
-        type: 'MultilineString',
-        fullWidthEditor: true,
+  _meta: {
+    description: `
+    dweet(t) is called 60 times per second.
+    t: elapsed time in seconds.
+    c: A 1920x1080 canvas.
+    x: A 2D context for that canvas.
+    S: Math.sin
+    C: Math.cos
+    T: Math.tan
+    R: Generates rgba-strings, ex.: R(255, 255, 255, 0.5)
+  `,
+    properties: {
+      dweet: {
+        type: 'string',
+        default:
+          'c.width=2e3;t*=4;x.translate(980,540);for(i=0;i<32;)x.rotate(!i*C(t-=.03)+!(i++%4)*S(t)/9+1.57),x.fillRect(9*i,9*i,99,99)',
+        editor: {
+          type: 'MultilineString',
+          fullWidthEditor: true,
+        },
       },
+      title: { type: 'string', default: '' },
+      author: { type: 'string', default: '' },
+      link: { type: 'string', default: '' },
+      // TODO: allow type-inferred simple form ala pause: false?
+      play: { type: 'boolean', default: true },
+      backgroundColor: { type: 'string', default: '#ffffff', editor: 'Color' },
+      width: { type: 'number', default: 568 },
+      height: { type: 'number', default: 320 },
     },
-    title: { type: 'string', default: '' },
-    author: { type: 'string', default: '' },
-    link: { type: 'string', default: '' },
-    // TODO: allow type-inferred simple form ala pause: false?
-    play: { type: 'boolean', default: true },
-    backgroundColor: { type: 'string', default: '#ffffff', editor: 'Color' },
-    width: { type: 'number', default: 568 },
-    height: { type: 'number', default: 320 },
   },
 };
 

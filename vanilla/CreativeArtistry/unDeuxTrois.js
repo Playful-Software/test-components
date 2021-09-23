@@ -47,39 +47,41 @@ const UnDeuxTroisPrototype = {
 };
 
 export const UnDeuxTroisDescription = {
-  title: 'Un Deux Trois',
   name: 'UnDeuxTrois',
   prototype: UnDeuxTroisPrototype,
   extends: 'Test Kit/Canvas',
-  properties: {
-    color: { type: 'string', title: 'Color', default: '#af0202', editor: 'Color' },
-    step: {
-      type: 'number',
-      title: 'Step',
-      default: 20,
-      editor: { type: 'Number', min: 4, max: 30 },
+  _meta: {
+    title: 'Un Deux Trois',
+    properties: {
+      color: { type: 'string', title: 'Color', default: '#af0202', editor: 'Color' },
+      step: {
+        type: 'number',
+        title: 'Step',
+        default: 20,
+        editor: { type: 'Number', min: 4, max: 30 },
+      },
+      rotateMultiplier: {
+        type: 'number',
+        title: 'Rotate Multiplier',
+        default: 5,
+        editor: { type: 'Number', min: 1, max: 10, step: 0.1 },
+      },
+      lineWidth: {
+        type: 'number',
+        title: 'Line Thickness',
+        default: 4,
+        editor: { type: 'Number', min: 1, max: 20, step: 1 },
+      },
+      seed: {
+        type: 'number',
+        title: 'Random Seed',
+        default: 1,
+        editor: { type: 'Number', min: 1, max: 10000, step: 1 },
+      },
+      credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
+      width: { type: 'number', title: 'Width', default: 400 },
+      height: { type: 'number', title: 'Height', default: 400 },
     },
-    rotateMultiplier: {
-      type: 'number',
-      title: 'Rotate Multiplier',
-      default: 5,
-      editor: { type: 'Number', min: 1, max: 10, step: 0.1 },
-    },
-    lineWidth: {
-      type: 'number',
-      title: 'Line Thickness',
-      default: 4,
-      editor: { type: 'Number', min: 1, max: 20, step: 1 },
-    },
-    seed: {
-      type: 'number',
-      title: 'Random Seed',
-      default: 1,
-      editor: { type: 'Number', min: 1, max: 10000, step: 1 },
-    },
-    credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
-    width: { type: 'number', title: 'Width', default: 400 },
-    height: { type: 'number', title: 'Height', default: 400 },
   },
 };
 

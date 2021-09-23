@@ -41,51 +41,53 @@ const CubicDisarrayPrototype = {
 };
 
 export const CubicDisarrayDescription = {
-  title: 'Cubic Disarray',
   name: 'CubicDisarray',
   prototype: CubicDisarrayPrototype,
   extends: 'Test Kit/Canvas',
-  properties: {
-    color: { type: 'string', title: 'Color', default: '#056905', editor: 'Color' },
-    displacement: {
-      type: 'number',
-      title: 'Displacement',
-      default: 15,
-      editor: { type: 'Number', min: 1, max: 1000 },
+  _meta: {
+    title: 'Cubic Disarray',
+    properties: {
+      color: { type: 'string', title: 'Color', default: '#056905', editor: 'Color' },
+      displacement: {
+        type: 'number',
+        title: 'Displacement',
+        default: 15,
+        editor: { type: 'Number', min: 1, max: 1000 },
+      },
+      rotateMultiplier: {
+        type: 'number',
+        title: 'Rotate Multiplier',
+        default: 30,
+        editor: { type: 'Number', min: 1, max: 500, step: 1 },
+      },
+      offset: {
+        type: 'number',
+        title: 'Offset',
+        default: 10,
+        editor: { type: 'Number', min: 1, max: 500, step: 1 },
+      },
+      squareSize: {
+        type: 'number',
+        title: 'Square Size',
+        default: 30,
+        editor: { type: 'Number', min: 4, max: 100, step: 1 },
+      },
+      lineWidth: {
+        type: 'number',
+        title: 'Line Thickness',
+        default: 2,
+        editor: { type: 'Number', min: 1, max: 25, step: 1 },
+      },
+      seed: {
+        type: 'number',
+        title: 'Random Seed',
+        default: 1,
+        editor: { type: 'Number', min: 1, max: 10000, step: 1 },
+      },
+      credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
+      width: { type: 'number', title: 'Width', default: 400 },
+      height: { type: 'number', title: 'Height', default: 400 },
     },
-    rotateMultiplier: {
-      type: 'number',
-      title: 'Rotate Multiplier',
-      default: 30,
-      editor: { type: 'Number', min: 1, max: 500, step: 1 },
-    },
-    offset: {
-      type: 'number',
-      title: 'Offset',
-      default: 10,
-      editor: { type: 'Number', min: 1, max: 500, step: 1 },
-    },
-    squareSize: {
-      type: 'number',
-      title: 'Square Size',
-      default: 30,
-      editor: { type: 'Number', min: 4, max: 100, step: 1 },
-    },
-    lineWidth: {
-      type: 'number',
-      title: 'Line Thickness',
-      default: 2,
-      editor: { type: 'Number', min: 1, max: 25, step: 1 },
-    },
-    seed: {
-      type: 'number',
-      title: 'Random Seed',
-      default: 1,
-      editor: { type: 'Number', min: 1, max: 10000, step: 1 },
-    },
-    credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
-    width: { type: 'number', title: 'Width', default: 400 },
-    height: { type: 'number', title: 'Height', default: 400 },
   },
 };
 

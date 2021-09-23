@@ -53,41 +53,43 @@ export const RidgelineDescription = {
   name: 'Ridgeline',
   prototype: RidgelinePrototype,
   extends: 'Test Kit/Canvas',
-  properties: {
-    color: { type: 'string', title: 'Color', default: '#0000c0', editor: 'Color' },
-    step: {
-      type: 'number',
-      title: 'Step',
-      default: 10,
-      editor: { type: 'Number', min: 2, max: 57 },
+  _meta: {
+    properties: {
+      color: { type: 'string', title: 'Color', default: '#0000c0', editor: 'Color' },
+      step: {
+        type: 'number',
+        title: 'Step',
+        default: 10,
+        editor: { type: 'Number', min: 2, max: 57 },
+      },
+      start: {
+        type: 'number',
+        title: 'Start',
+        default: 5,
+        editor: { type: 'Number', min: 0, max: 40, step: 1 },
+      },
+      baseline: {
+        type: 'number',
+        title: 'Baseline',
+        default: 50,
+        editor: { type: 'Number', min: 1, max: 200, step: 1 },
+      },
+      lineWidth: {
+        type: 'number',
+        title: 'Line Thickness',
+        default: 2,
+        editor: { type: 'Number', min: 1, max: 15, step: 1 },
+      },
+      seed: {
+        type: 'number',
+        title: 'Random Seed',
+        default: 1,
+        editor: { type: 'Number', min: 1, max: 10000, step: 1 },
+      },
+      credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
+      width: { type: 'number', title: 'Width', default: 400 },
+      height: { type: 'number', title: 'Height', default: 400 },
     },
-    start: {
-      type: 'number',
-      title: 'Start',
-      default: 5,
-      editor: { type: 'Number', min: 0, max: 40, step: 1 },
-    },
-    baseline: {
-      type: 'number',
-      title: 'Baseline',
-      default: 50,
-      editor: { type: 'Number', min: 1, max: 200, step: 1 },
-    },
-    lineWidth: {
-      type: 'number',
-      title: 'Line Thickness',
-      default: 2,
-      editor: { type: 'Number', min: 1, max: 15, step: 1 },
-    },
-    seed: {
-      type: 'number',
-      title: 'Random Seed',
-      default: 1,
-      editor: { type: 'Number', min: 1, max: 10000, step: 1 },
-    },
-    credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
-    width: { type: 'number', title: 'Width', default: 400 },
-    height: { type: 'number', title: 'Height', default: 400 },
   },
 };
 

@@ -67,33 +67,35 @@ const TriangularMeshPrototype = {
 };
 
 export const TriangularMeshDescription = {
-  title: 'Triangular Mesh',
   name: 'TriangularMesh',
   prototype: TriangularMeshPrototype,
   extends: 'Test Kit/Canvas',
-  properties: {
-    color: { type: 'string', title: 'Color', default: '#ec91d8', editor: 'Color' },
-    gap: {
-      type: 'number',
-      title: 'Gap',
-      default: 8,
-      editor: { type: 'Number', min: 1, max: 50 },
+  _meta: {
+    title: 'Triangular Mesh',
+    properties: {
+      color: { type: 'string', title: 'Color', default: '#ec91d8', editor: 'Color' },
+      gap: {
+        type: 'number',
+        title: 'Gap',
+        default: 8,
+        editor: { type: 'Number', min: 1, max: 50 },
+      },
+      lineWidth: {
+        type: 'number',
+        title: 'Line Thickness',
+        default: 2,
+        editor: { type: 'Number', min: 1, max: 25, step: 1 },
+      },
+      seed: {
+        type: 'number',
+        title: 'Random Seed',
+        default: 1,
+        editor: { type: 'Number', min: 1, max: 10000, step: 1 },
+      },
+      credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
+      width: { type: 'number', title: 'Width', default: 400 },
+      height: { type: 'number', title: 'Height', default: 400 },
     },
-    lineWidth: {
-      type: 'number',
-      title: 'Line Thickness',
-      default: 2,
-      editor: { type: 'Number', min: 1, max: 25, step: 1 },
-    },
-    seed: {
-      type: 'number',
-      title: 'Random Seed',
-      default: 1,
-      editor: { type: 'Number', min: 1, max: 10000, step: 1 },
-    },
-    credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
-    width: { type: 'number', title: 'Width', default: 400 },
-    height: { type: 'number', title: 'Height', default: 400 },
   },
 };
 

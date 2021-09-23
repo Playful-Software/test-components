@@ -110,42 +110,44 @@ const MondrianPrototype = {
 };
 
 export const MondrianDescription = {
-  title: 'Piet Mondrian',
   name: 'Mondrian',
   prototype: MondrianPrototype,
   extends: 'Test Kit/Canvas',
-  properties: {
-    color1: { type: 'string', title: 'Color 1', default: '#D40920', editor: 'Color' },
-    color2: { type: 'string', title: 'Color 2', default: '#1356A2', editor: 'Color' },
-    color3: { type: 'string', title: 'Color 3', default: '#00ff00', editor: 'Color' },
-    white: { type: 'string', title: 'White', default: '#F2F5F1', editor: 'Color' },
-    step: {
-      type: 'number',
-      title: 'Step',
-      default: 7,
-      editor: { type: 'Number', min: 1, max: 10 },
+  _meta: {
+    title: 'Piet Mondrian',
+    properties: {
+      color1: { type: 'string', title: 'Color 1', default: '#D40920', editor: 'Color' },
+      color2: { type: 'string', title: 'Color 2', default: '#1356A2', editor: 'Color' },
+      color3: { type: 'string', title: 'Color 3', default: '#00ff00', editor: 'Color' },
+      white: { type: 'string', title: 'White', default: '#F2F5F1', editor: 'Color' },
+      step: {
+        type: 'number',
+        title: 'Step',
+        default: 7,
+        editor: { type: 'Number', min: 1, max: 10 },
+      },
+      colors: {
+        type: 'number',
+        title: 'Color Count',
+        default: 3,
+        editor: { type: 'Number', min: 0, max: 10, step: 1 },
+      },
+      lineWidth: {
+        type: 'number',
+        title: 'Line Thickness',
+        default: 6,
+        editor: { type: 'Number', min: 1, max: 15, step: 1 },
+      },
+      seed: {
+        type: 'number',
+        title: 'Random Seed',
+        default: 1,
+        editor: { type: 'Number', min: 1, max: 10000, step: 1 },
+      },
+      credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
+      width: { type: 'number', title: 'Width', default: 400 },
+      height: { type: 'number', title: 'Height', default: 400 },
     },
-    colors: {
-      type: 'number',
-      title: 'Color Count',
-      default: 3,
-      editor: { type: 'Number', min: 0, max: 10, step: 1 },
-    },
-    lineWidth: {
-      type: 'number',
-      title: 'Line Thickness',
-      default: 6,
-      editor: { type: 'Number', min: 1, max: 15, step: 1 },
-    },
-    seed: {
-      type: 'number',
-      title: 'Random Seed',
-      default: 1,
-      editor: { type: 'Number', min: 1, max: 10000, step: 1 },
-    },
-    credits: { type: 'string', default: 'https://generativeartistry.com/tutorials/' },
-    width: { type: 'number', title: 'Width', default: 400 },
-    height: { type: 'number', title: 'Height', default: 400 },
   },
 };
 
